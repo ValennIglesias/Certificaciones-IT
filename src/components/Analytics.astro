@@ -1,0 +1,50 @@
+---
+/**
+ * Tres integraciones de Google, todas apagadas por defecto y controladas por
+ * variables de entorno (ver .env.example). Si la variable está vacía, no se
+ * emite absolutamente nada: cero peso, cero requests.
+ *
+ *   PUBLIC_GA_ID             -> Google Analytics 4
+ *   PUBLIC_GSC_VERIFICATION  -> meta tag de Search Console
+ *   PUBLIC_ADSENSE_CLIENT    -> id de AdSense
+ *   PUBLIC_ADSENSE_ENABLED   -> "true" recién cuando AdSense apruebe la cuenta
+ *
+ * Este componente va en el <head>.
+ */
+const gaId = import.meta.env.PUBLIC_GA_ID?.trim();
+const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION?.trim();
+const adsenseClient = import.meta.env.PUBLIC_ADSENSE_CLIENT?.trim();
+const adsenseEnabled = import.meta.env.PUBLIC_ADSENSE_ENABLED?.trim() === 'true' && !!adsenseClient;
+---
+
+{/* Verificación de Google Search Console */}
+{gscVerification && <meta name="google-site-verification" content={gscVerification} />}
+
+{/* Google Analytics 4 */}
+{gaId && (
+	<>
+		<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+		<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+		<script is:inline define:vars={{ gaId }}>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', gaId);
+		</script>
+	</>
+)}
+
+{/*
+  Google AdSense. No lo enciendas antes de la aprobación: el script no hace nada
+  útil y penaliza el rendimiento. Poné PUBLIC_ADSENSE_ENABLED="true" el día que
+  la cuenta esté aprobada y redeployá.
+*/}
+{adsenseEnabled && (
+	<script
+		is:inline
+		async
+		src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
+		crossorigin="anonymous"></script>
+)}

@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { SITE, CLUSTERS, CLUSTER_IDS } from '../consts';
+import { getArticles } from '../lib/articles';
+
+const articles = await getArticles();
+const latest = articles.slice(0, 7);
+---
+
+<BaseLayout
+	title={SITE.titleDefault}
+	description={SITE.description}
+	useTitleTemplate={false}>
+	<section class="border-b border-app surface-muted">
+		<div class="mx-auto max-w-5xl px-4 py-14 sm:py-20">
+			<h1 class="max-w-2xl text-3xl font-black leading-tight tracking-tight text-app sm:text-5xl">
+				Certificaciones IT explicadas en español, sin humo
+			</h1>
+			<p class="mt-5 max-w-2xl text-lg text-app-muted">
+				Qué certificación sirve para qué, cuánto cuesta, cuánto lleva prepararla y qué puestos
+				abre de verdad. Desde la primera certificación hasta la especialización.
+			</p>
+			<div class="mt-7 flex flex-wrap gap-2">
+				{
+					CLUSTER_IDS.map((id) => (
+						<a
+							href={`/${id}/`}
+							class="rounded-lg border border-app surface px-4 py-2 text-sm font-medium text-app transition-colors hover:border-brand-400 hover:text-brand-600">
+							{CLUSTERS[id].short}
+						</a>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<div class="mx-auto max-w-5xl px-4 py-12">
+		<h2 class="text-2xl font-bold tracking-tight text-app">Últimos artículos</h2>
+
+		{
+			latest.length === 0 ? (
+				<p class="mt-6 rounded-xl border border-dashed border-app p-8 text-center text-app-muted">
+					Todavía no hay artículos publicados. Agregá archivos <code>.md</code> en{' '}
+					<code>src/content/articles/&lt;cluster&gt;/</code>.
+				</p>
+			) : (
+				<div class="mt-6 grid gap-5 sm:grid-cols-2">
+					{latest.map((article, i) => (
+						<ArticleCard article={article} featured={i === 0} />
+					))}
+				</div>
+			)
+		}
+
+		<AdSlot adSlot="0000000002" minHeight={280} />
+
+		<section class="mt-12" aria-labelledby="temas">
+			<h2 id="temas" class="text-2xl font-bold tracking-tight text-app">Por dónde empezar</h2>
+			<div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+				{
+					CLUSTER_IDS.map((id) => (
+						<a
+							href={`/${id}/`}
+							class="rounded-xl border border-app surface p-5 transition-shadow hover:shadow-md">
+							<h3 class="font-bold text-app">{CLUSTERS[id].name}</h3>
+							<p class="mt-2 text-sm text-app-muted">{CLUSTERS[id].description}</p>
+							<span class="mt-3 inline-block text-sm font-medium text-brand-600 dark:text-brand-300">
+								Ver artículos →
+							</span>
+						</a>
+					))
+				}
+			</div>
+		</section>
+	</div>
+</BaseLayout>

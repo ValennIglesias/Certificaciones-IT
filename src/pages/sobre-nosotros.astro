@@ -1,0 +1,45 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { SITE } from '../consts';
+
+// CONTENIDO PLACEHOLDER — reemplazar antes de solicitar la aprobación de AdSense.
+// AdSense revisa esta página: pide identidad real, quién escribe y cómo contactar.
+---
+
+<PageLayout
+	title="Sobre nosotros"
+	description={`Quiénes somos y cómo trabajamos en ${SITE.name}: guías en español sobre certificaciones IT y carrera en tecnología.`}>
+	<p>
+		<strong>{SITE.name}</strong> es un sitio en español dedicado a explicar certificaciones de
+		tecnología —CompTIA, Cisco, AWS, Microsoft Azure, ITIL y otras— y el camino profesional que hay
+		alrededor de ellas.
+	</p>
+
+	<h2>Qué hacemos</h2>
+	<p>
+		Publicamos guías que responden las preguntas concretas que aparecen antes de invertir tiempo y
+		dinero en una certificación: qué mide el examen, cuánto cuesta, cuánto lleva prepararlo, qué
+		material sirve y qué puestos abre en el mercado real.
+	</p>
+
+	<h2>Cómo escribimos</h2>
+	<ul>
+		<li>Verificamos precios, temarios y requisitos contra la documentación oficial del proveedor.</li>
+		<li>Indicamos la fecha de publicación y de última revisión en cada artículo.</li>
+		<li>Corregimos los artículos cuando un examen cambia de versión o de temario.</li>
+	</ul>
+
+	<h2>Independencia</h2>
+	<p>
+		No estamos afiliados a CompTIA, Cisco, Amazon Web Services, Microsoft, AXELOS ni a ningún otro
+		organismo certificador. Los nombres y marcas mencionados pertenecen a sus respectivos titulares
+		y se usan únicamente con fines descriptivos.
+	</p>
+
+	<h2>Contacto</h2>
+	<p>
+		{/* TODO: reemplazar por el correo real antes de publicar. */}
+		Escribinos a <em>[correo de contacto pendiente]</em> para correcciones, sugerencias o consultas
+		editoriales.
+	</p>
+</PageLayout>

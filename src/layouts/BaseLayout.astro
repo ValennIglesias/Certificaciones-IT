@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+import { SITE } from '../consts';
+import SEO from '../components/SEO.astro';
+import Analytics from '../components/Analytics.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+	title: string;
+	description: string;
+	type?: 'website' | 'article';
+	image?: string;
+	imageAlt?: string;
+	noindex?: boolean;
+	publishedTime?: Date;
+	modifiedTime?: Date;
+	author?: string;
+	section?: string;
+	useTitleTemplate?: boolean;
+}
+
+const props = Astro.props;
+---
+
+<!doctype html>
+<html lang={SITE.lang}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<meta name="generator" content={Astro.generator} />
+
+		<SEO {...props} />
+
+		<!-- GA4, Search Console y AdSense: apagados salvo que las env vars los enciendan. -->
+		<Analytics />
+
+		<slot name="head" />
+	</head>
+
+	<body class="flex min-h-screen flex-col">
+		<a href="#contenido" class="skip-link">Saltar al contenido</a>
+		<Header />
+
+		<main id="contenido" class="flex-1">
+			<slot />
+		</main>
+
+		<Footer />
+	</body>
+</html>

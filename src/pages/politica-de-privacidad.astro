@@ -1,0 +1,99 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { SITE } from '../consts';
+
+// CONTENIDO PLACEHOLDER — revisar con criterio legal antes de publicar.
+// Marcados con TODO los datos que solo puede completar el titular del sitio.
+---
+
+<PageLayout
+	title="Política de privacidad"
+	description={`Cómo ${SITE.name} trata los datos de navegación, las cookies y la publicidad de terceros.`}
+	updated="pendiente de completar">
+	<p class="!text-app-muted">
+		<em>
+			Borrador inicial. Completá los campos marcados y hacelo revisar según la jurisdicción que
+			corresponda antes de enviar el sitio a AdSense.
+		</em>
+	</p>
+
+	<h2>Responsable del sitio</h2>
+	<p>
+		{/* TODO: nombre o razón social, domicilio y correo de contacto. */}
+		<em>[Titular del sitio pendiente]</em>, responsable de <strong>{SITE.name}</strong>. Consultas
+		sobre privacidad: <em>[correo de contacto pendiente]</em>.
+	</p>
+
+	<h2>Qué datos recogemos</h2>
+	<p>
+		No pedimos registro ni almacenamos datos personales en servidores propios: el sitio es estático
+		y no tiene base de datos. Los datos que se generan provienen de servicios de terceros:
+	</p>
+	<ul>
+		<li>
+			<strong>Datos de navegación</strong> (páginas vistas, duración, dispositivo, país aproximado,
+			origen de la visita), recogidos por la herramienta de analítica.
+		</li>
+		<li>
+			<strong>Datos técnicos de la conexión</strong> (dirección IP, agente de usuario), procesados
+			por el proveedor de hosting para servir las páginas.
+		</li>
+	</ul>
+
+	<h2>Cookies y tecnologías similares</h2>
+	<p>El sitio puede usar cookies de los siguientes terceros:</p>
+	<ul>
+		<li>
+			<strong>Google Analytics 4</strong>: métricas de audiencia de forma agregada. Podés inhabilitarlo
+			con el
+			<a
+				href="https://tools.google.com/dlpage/gaoptout"
+				rel="nofollow noopener"
+				target="_blank">complemento de exclusión de Google Analytics</a
+			>.
+		</li>
+		<li>
+			<strong>Google AdSense</strong>: publicidad. Google y sus proveedores asociados pueden usar
+			cookies para mostrar anuncios basados en visitas previas a este y otros sitios.
+		</li>
+	</ul>
+
+	<h2>Publicidad de Google</h2>
+	<ul>
+		<li>Google, como proveedor externo, utiliza cookies para publicar anuncios en este sitio.</li>
+		<li>
+			El uso por parte de Google de las cookies de publicidad le permite mostrar anuncios a los
+			usuarios en función de sus visitas a este y a otros sitios de Internet.
+		</li>
+		<li>
+			Los usuarios pueden inhabilitar la publicidad personalizada en la
+			<a
+				href="https://www.google.com/settings/ads"
+				rel="nofollow noopener"
+				target="_blank">Configuración de anuncios de Google</a
+			>, o la de otros proveedores externos en
+			<a href="https://www.aboutads.info/choices/" rel="nofollow noopener" target="_blank"
+				>aboutads.info</a
+			>.
+		</li>
+	</ul>
+
+	<h2>Base legal y derechos</h2>
+	<p>
+		{/* TODO: ajustar según jurisdicción (RGPD, LGPD, Ley 25.326, CCPA, etc.). */}
+		Podés solicitar acceso, rectificación o supresión de tus datos, así como oponerte a su
+		tratamiento, escribiendo a <em>[correo de contacto pendiente]</em>.
+	</p>
+
+	<h2>Enlaces a terceros</h2>
+	<p>
+		Algunos artículos enlazan a sitios de organismos certificadores o proveedores de formación. Esta
+		política no cubre esos sitios; revisá la política de privacidad de cada uno.
+	</p>
+
+	<h2>Cambios en esta política</h2>
+	<p>
+		Cualquier modificación se publica en esta misma página, con su fecha de actualización en la
+		cabecera.
+	</p>
+</PageLayout>
