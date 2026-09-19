@@ -1,25 +1,35 @@
 ---
 title: "Cómo empezar en IT sin experiencia previa"
 description: "Qué certificación conviene como primera parada, cuánto tiempo lleva y qué esperar del mercado laboral cuando arrancás desde cero."
-keyword: "como empezar en it sin experiencia"
+keyword: "cómo empezar a trabajar en soporte técnico sin experiencia"
 cluster: "entrada"
 pubDate: 2026-09-15
 author: "Equipo Certificaciones IT"
 draft: false
 heroImage: "../../../assets/hero-comptia-a-plus.jpg"
-heroAlt: "Placa con el texto CompTIA A+"
+heroAlt: "Placa con el texto «CompTIA A+», certificación de entrada"
 ---
 
-> **Artículo de ejemplo.** Sirve para ver la plantilla funcionando; reemplazalo por el contenido real.
+Entrar a IT sin experiencia previa tiene un problema de orden: hay demasiadas certificaciones dando vueltas y casi ninguna guía dice, en serio, cuál conviene sacar primero.
 
-Entrar a IT sin experiencia previa tiene un problema de orden: hay demasiadas
-certificaciones y casi ninguna guía dice cuál va primero.
+## Las tres puertas de entrada más comunes
 
-## Los tres caminos habituales
+- **Soporte técnico / Help Desk** — la puerta de entrada más transitada. Certificación de referencia: CompTIA A+ (o ITIL Foundation si el rol tiene más de gestión de incidentes que de hardware).
+- **Redes** — arranca más técnico desde el día uno, pero tiene mejor techo salarial a mediano plazo. Certificación de referencia: CompTIA Network+.
+- **Cloud** — el camino más corto al salario alto, y también el más exigente si no tenés base de infraestructura. Certificación de referencia: AWS Cloud Practitioner o Microsoft Azure Fundamentals (AZ-900).
 
-1. **Soporte técnico** — la puerta de entrada más común.
-2. **Redes** — más técnico desde el principio, mejor techo salarial.
-3. **Cloud** — el camino más corto al salario alto, pero el más exigente.
+## Qué certificación conviene sacar primero
+
+| Si tu objetivo es... | Empezá por |
+| --- | --- |
+| Conseguir el primer empleo lo antes posible | CompTIA A+ |
+| Trabajar en un service desk con procesos formales (ITSM) | ITIL Foundation |
+| Apuntar directo a redes o ciberseguridad | CompTIA Network+ |
+| Apuntar directo a cloud sin pasar por soporte | AWS Cloud Practitioner o AZ-900 |
+
+## Cuánto sale certificarse
+
+CompTIA A+ se rinde en dos exámenes independientes (Core 1 y Core 2), a unos US$253 cada uno — cerca de US$506 en total. ITIL Foundation ronda los US$400-500 según el proveedor. El Google IT Support Professional Certificate es gratuito si lo cursás en modo auditoría en Coursera, o alrededor de US$49/mes si querés el certificado.
 
 ## Qué esperar del primer año
 
@@ -31,6 +41,6 @@ certificaciones y casi ninguna guía dice cuál va primero.
 
 ## Errores frecuentes
 
-- Acumular certificaciones sin práctica de laboratorio.
-- Empezar por una certificación profesional saltándose los fundamentos.
-- Estudiar solo con volcados de examen: aprueba el examen, no la entrevista.
+- Acumular certificaciones sin practicar en un laboratorio real (virtual o casero).
+- Saltar directo a una certificación profesional (Security+, CCNA) sin resolver los fundamentos primero.
+- Estudiar solo con volcados de examen ("dumps"): aprueba el examen, no la entrevista técnica.
