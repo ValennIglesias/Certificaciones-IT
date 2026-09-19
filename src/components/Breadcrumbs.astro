@@ -1,0 +1,31 @@
+---
+/**
+ * Migas de pan visibles. El BreadcrumbList de Schema.org se inyecta aparte,
+ * en el layout del artículo, para no duplicar el JSON-LD.
+ */
+interface Props {
+	items: { label: string; href?: string }[];
+}
+const { items } = Astro.props;
+---
+
+<nav aria-label="Ruta de navegación" class="text-sm">
+	<ol class="flex flex-wrap items-center gap-1 text-app-muted">
+		{
+			items.map((item, i) => (
+				<li class="flex items-center gap-1">
+					{item.href ? (
+						<a href={item.href} class="hover:text-brand-600">
+							{item.label}
+						</a>
+					) : (
+						<span aria-current="page" class="text-app">
+							{item.label}
+						</span>
+					)}
+					{i < items.length - 1 && <span aria-hidden="true">/</span>}
+				</li>
+			))
+		}
+	</ol>
+</nav>

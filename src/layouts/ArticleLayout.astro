@@ -1,0 +1,156 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { SITE, CLUSTERS, type ClusterId } from '../consts';
+import { articlePath, formatDate, readingTime, type Article } from '../lib/articles';
+
+interface Props {
+	article: Article;
+	related: Article[];
+}
+
+const { article, related } = Astro.props;
+const { title, description, cluster, pubDate, updatedDate, author, keyword, heroImage, heroAlt } =
+	article.data;
+
+const clusterId = cluster as ClusterId;
+const clusterMeta = CLUSTERS[clusterId];
+const url = new URL(articlePath(article), Astro.site).toString();
+const minutes = readingTime(article.body);
+
+const imageUrl = heroImage
+	? new URL(heroImage.src, Astro.site).toString()
+	: new URL(SITE.defaultImage, Astro.site).toString();
+
+// --- Schema.org ---
+const articleSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Article',
+	headline: title,
+	description,
+	image: [imageUrl],
+	datePublished: pubDate.toISOString(),
+	dateModified: (updatedDate ?? pubDate).toISOString(),
+	author: { '@type': 'Person', name: author },
+	publisher: {
+		'@type': 'Organization',
+		name: SITE.name,
+		url: Astro.site?.toString(),
+	},
+	mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+	articleSection: clusterMeta.name,
+	keywords: keyword,
+	inLanguage: SITE.lang,
+};
+
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Inicio', item: Astro.site?.toString() },
+		{
+			'@type': 'ListItem',
+			position: 2,
+			name: clusterMeta.name,
+			item: new URL(`/${clusterId}/`, Astro.site).toString(),
+		},
+		{ '@type': 'ListItem', position: 3, name: title, item: url },
+	],
+};
+---
+
+<BaseLayout
+	title={title}
+	description={description}
+	type="article"
+	image={heroImage?.src}
+	imageAlt={heroAlt ?? title}
+	publishedTime={pubDate}
+	modifiedTime={updatedDate ?? pubDate}
+	author={author}
+	section={clusterMeta.name}>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} is:inline />
+		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
+	</Fragment>
+
+	<article class="mx-auto max-w-3xl px-4 py-8">
+		<Breadcrumbs
+			items={[
+				{ label: 'Inicio', href: '/' },
+				{ label: clusterMeta.name, href: `/${clusterId}/` },
+				{ label: title },
+			]}
+		/>
+
+		<header class="mt-6">
+			<a
+				href={`/${clusterId}/`}
+				class="inline-block rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 dark:bg-brand-900 dark:text-brand-200">
+				{clusterMeta.name}
+			</a>
+
+			<h1 class="mt-4 text-3xl font-black leading-tight tracking-tight text-app sm:text-4xl">
+				{title}
+			</h1>
+
+			<p class="mt-4 text-lg text-app-muted">{description}</p>
+
+			<div class="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-app-muted">
+				<span>Por {author}</span>
+				<span aria-hidden="true">·</span>
+				<time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
+				{
+					updatedDate && (
+						<>
+							<span aria-hidden="true">·</span>
+							<span>
+								Actualizado el <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time>
+							</span>
+						</>
+					)
+				}
+				<span aria-hidden="true">·</span>
+				<span>{minutes} min de lectura</span>
+			</div>
+		</header>
+
+		{
+			heroImage && (
+				<Image
+					src={heroImage}
+					alt={heroAlt ?? ''}
+					widths={[640, 960, 1280]}
+					sizes="(min-width: 768px) 768px, 100vw"
+					loading="eager"
+					fetchpriority="high"
+					class="mt-8 w-full rounded-xl border border-app object-cover"
+				/>
+			)
+		}
+
+		<div class="prose prose-article mt-10 max-w-none prose-headings:scroll-mt-24 prose-a:underline-offset-2">
+			<slot />
+		</div>
+
+		<AdSlot adSlot="0000000001" label="Publicidad" minHeight={280} class="mt-12" />
+
+		{
+			related.length > 0 && (
+				<section class="mt-12 border-t border-app pt-8" aria-labelledby="relacionados">
+					<h2 id="relacionados" class="text-xl font-bold text-app">
+						Seguí leyendo sobre {clusterMeta.short.toLowerCase()}
+					</h2>
+					<div class="mt-5 grid gap-4 sm:grid-cols-2">
+						{related.map((item) => (
+							<ArticleCard article={item} />
+						))}
+					</div>
+				</section>
+			)
+		}
+	</article>
+</BaseLayout>

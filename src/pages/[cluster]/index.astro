@@ -1,0 +1,47 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { CLUSTERS, CLUSTER_IDS, type ClusterId } from '../../consts';
+import { getArticles } from '../../lib/articles';
+
+// Una ruta por cluster. Los clusters son fijos (5) y viven en consts.ts.
+export const getStaticPaths = (() =>
+	CLUSTER_IDS.map((cluster) => ({ params: { cluster } }))) satisfies GetStaticPaths;
+
+const cluster = Astro.params.cluster as ClusterId;
+const meta = CLUSTERS[cluster];
+const articles = await getArticles(cluster);
+---
+
+<BaseLayout title={meta.name} description={meta.description}>
+	<div class="mx-auto max-w-5xl px-4 py-8">
+		<Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: meta.name }]} />
+
+		<header class="mt-6 border-b border-app pb-8">
+			<h1 class="text-3xl font-black tracking-tight text-app sm:text-4xl">{meta.name}</h1>
+			<p class="mt-4 max-w-2xl text-lg text-app-muted">{meta.description}</p>
+			<p class="mt-4 text-sm text-app-muted">
+				{articles.length} {articles.length === 1 ? 'artículo' : 'artículos'}
+			</p>
+		</header>
+
+		{
+			articles.length === 0 ? (
+				<p class="mt-8 rounded-xl border border-dashed border-app p-8 text-center text-app-muted">
+					Todavía no hay artículos en esta categoría.
+				</p>
+			) : (
+				<div class="mt-8 grid gap-5 sm:grid-cols-2">
+					{articles.map((article) => (
+						<ArticleCard article={article} />
+					))}
+				</div>
+			)
+		}
+
+		<AdSlot adSlot="0000000003" minHeight={280} />
+	</div>
+</BaseLayout>

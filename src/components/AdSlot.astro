@@ -1,0 +1,62 @@
+---
+/**
+ * Hueco reservado para un bloque de AdSense.
+ *
+ * Mientras PUBLIC_ADSENSE_ENABLED no sea "true" no renderiza el <ins> de AdSense,
+ * pero sí reserva la altura mínima: así el layout no se mueve el día que los
+ * anuncios se enciendan (evita CLS, que es lo que rompe el Lighthouse).
+ *
+ * Uso: <AdSlot adSlot="1234567890" />  (el id sale del panel de AdSense)
+ *
+ * El prop se llama `adSlot` y no `slot` a propósito: `slot` es un atributo
+ * reservado de Astro para asignar contenido a slots con nombre.
+ */
+interface Props {
+	/** Id del bloque de anuncios creado en AdSense. */
+	adSlot?: string;
+	format?: string;
+	/** Altura mínima reservada, en px. */
+	minHeight?: number;
+	label?: string;
+	class?: string;
+}
+
+const {
+	adSlot,
+	format = 'auto',
+	minHeight = 280,
+	label = 'Publicidad',
+	class: className = '',
+} = Astro.props;
+
+const client = import.meta.env.PUBLIC_ADSENSE_CLIENT?.trim();
+const enabled = import.meta.env.PUBLIC_ADSENSE_ENABLED?.trim() === 'true' && !!client && !!adSlot;
+const isDev = import.meta.env.DEV;
+---
+
+<aside
+	class:list={['my-8 w-full', className]}
+	style={`min-height:${minHeight}px`}
+	aria-label={label}>
+	{enabled ? (
+		<>
+			<p class="mb-1 text-center text-[11px] uppercase tracking-widest text-app-muted">{label}</p>
+			<ins
+				class="adsbygoogle block"
+				style={`display:block;min-height:${minHeight}px`}
+				data-ad-client={client}
+				data-ad-slot={adSlot}
+				data-ad-format={format}
+				data-full-width-responsive="true"></ins>
+			<script is:inline>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</>
+	) : isDev ? (
+		<div
+			class="flex h-full w-full items-center justify-center rounded-lg border border-dashed border-app text-xs text-app-muted"
+			style={`min-height:${minHeight}px`}>
+			Espacio reservado para AdSense{adSlot ? ` (slot ${adSlot})` : ''}
+		</div>
+	) : null}
+</aside>
