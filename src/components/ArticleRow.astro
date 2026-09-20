@@ -1,0 +1,66 @@
+---
+import { CLUSTERS, type ClusterId } from '../consts';
+import { articlePath, formatDate, type Article } from '../lib/articles';
+
+/**
+ * Fila de índice. Reemplaza a la tarjeta: sin caja, sin sombra, sin radio.
+ * La jerarquía la hacen la regla de 1px y el espacio.
+ */
+interface Props {
+	article: Article;
+	/** Cuando el listado ya está dentro de un cluster, el rótulo sobra. */
+	showCluster?: boolean;
+}
+
+const { article, showCluster = true } = Astro.props;
+const { title, description, cluster, pubDate, draft } = article.data;
+const meta = CLUSTERS[cluster as ClusterId];
+---
+
+<article class="index-row">
+	<div class="riel">
+		{showCluster && <span class="cluster-tag">{meta.short}</span>}
+		<time datetime={pubDate.toISOString()} class="meta figure">{formatDate(pubDate)}</time>
+		{draft && <span class="borrador">Borrador</span>}
+	</div>
+
+	<div>
+		<a href={articlePath(article)} class="index-link">{title}</a>
+		<p class="meta bajada">{description}</p>
+	</div>
+</article>
+
+<style>
+	.riel {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.5rem 0.75rem;
+	}
+
+	@media (min-width: 48rem) {
+		.riel {
+			display: block;
+		}
+
+		.riel > * + * {
+			margin-top: 0.25rem;
+		}
+
+		.riel time {
+			display: block;
+		}
+	}
+
+	.bajada {
+		margin-top: 0.5rem;
+		max-width: 44rem;
+		font-size: 0.9375rem;
+	}
+
+	.borrador {
+		color: var(--accent-ink);
+		font-size: 0.8125rem;
+		font-weight: 700;
+	}
+</style>

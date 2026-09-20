@@ -46,11 +46,8 @@ const devReason = !ADSENSE_ENABLED
 
 {
 	slot ? (
-		<aside
-			class:list={['my-8 w-full', className]}
-			style={`min-height:${minHeight}px`}
-			aria-label={label}>
-			<p class="mb-1 text-center text-[11px] uppercase tracking-widest text-app-muted">{label}</p>
+		<aside class:list={['ad', className]} style={`min-height:${minHeight}px`} aria-label={label}>
+			<p class="ad-rotulo">{label}</p>
 			<ins
 				class="adsbygoogle block"
 				style={`display:block;min-height:${minHeight}px`}
@@ -61,13 +58,36 @@ const devReason = !ADSENSE_ENABLED
 			/>
 		</aside>
 	) : isDev ? (
-		<aside class:list={['my-8 w-full', className]} aria-hidden="true">
-			<div
-				class="flex w-full flex-col items-center justify-center gap-1 rounded-lg border border-dashed border-app p-4 text-center text-xs text-app-muted"
-				style={`min-height:${minHeight}px`}>
-				<span class="font-semibold">Hueco de AdSense — ubicación «{placement}»</span>
+		<aside class:list={['ad', className]} aria-hidden="true">
+			<div class="ad-dev" style={`min-height:${minHeight}px`}>
+				<span>Hueco de AdSense — ubicación «{placement}»</span>
 				<span>No se renderiza en producción: {devReason}.</span>
 			</div>
 		</aside>
 	) : null
 }
+
+<style>
+	.ad {
+		width: 100%;
+		margin-block: 3rem;
+	}
+
+	.ad-rotulo {
+		font-size: 0.6875rem;
+		font-weight: 500;
+		color: var(--grafito);
+		margin-bottom: 0.5rem;
+	}
+
+	.ad-dev {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 0.25rem;
+		padding: 1rem;
+		border: 1px dashed var(--regla);
+		font-size: 0.75rem;
+		color: var(--grafito);
+	}
+</style>

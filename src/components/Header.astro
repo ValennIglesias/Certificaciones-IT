@@ -1,5 +1,6 @@
 ---
 import { SITE, NAV_LINKS } from '../consts';
+import ThemeToggle from './ThemeToggle.astro';
 
 // Navegación sin JavaScript: en mobile la barra de clusters scrollea en
 // horizontal en vez de esconderse detrás de un menú hamburguesa.
@@ -7,34 +8,69 @@ const path = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.ur
 const isActive = (href: string) => path === href || path.startsWith(href);
 ---
 
-<header class="sticky top-0 z-40 border-b border-app surface/95 backdrop-blur">
-	<div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
-		<a href="/" class="flex items-center gap-2 font-bold tracking-tight text-app">
-			<span
-				class="grid h-8 w-8 place-items-center rounded-md bg-brand-600 text-sm font-black text-white"
-				aria-hidden="true">IT</span
-			>
-			<span class="text-base sm:text-lg">{SITE.name}</span>
-		</a>
-	</div>
-	<nav aria-label="Categorías" class="border-t border-app surface-muted">
-		<ul
-			class="mx-auto flex max-w-5xl gap-1 overflow-x-auto px-2 py-1 text-sm [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+<header class="rule-b">
+	<div class="wrap header-bar">
+		<a href="/" class="marca">{SITE.name}</a>
+
+		<nav aria-label="Categorías" class="nav">
 			{
 				NAV_LINKS.map((link) => (
-					<li class="shrink-0">
-						<a
-							href={link.href}
-							aria-current={isActive(link.href) ? 'page' : undefined}
-							class:list={[
-								'block rounded-md px-3 py-2 font-medium transition-colors hover:text-brand-600',
-								isActive(link.href) ? 'text-brand-600 dark:text-brand-300' : 'text-app-muted',
-							]}>
-							{link.label}
-						</a>
-					</li>
+					<a
+						href={link.href}
+						aria-current={isActive(link.href) ? 'page' : undefined}
+						class:list={['nav-link', isActive(link.href) && 'nav-link--activo']}>
+						{link.label}
+					</a>
 				))
 			}
-		</ul>
-	</nav>
+		</nav>
+
+		<ThemeToggle />
+	</div>
 </header>
+
+<style>
+	.header-bar {
+		display: flex;
+		align-items: baseline;
+		gap: 1.5rem;
+		padding-block: 1.125rem;
+		flex-wrap: wrap;
+	}
+
+	.marca {
+		font-weight: 700;
+		font-size: 1rem;
+		letter-spacing: -0.02em;
+		text-decoration: none;
+		color: var(--tinta);
+	}
+
+	.nav {
+		display: flex;
+		gap: 1.25rem;
+		margin-right: auto;
+		overflow-x: auto;
+		scrollbar-width: none;
+		font-size: 0.9375rem;
+	}
+
+	.nav::-webkit-scrollbar {
+		display: none;
+	}
+
+	.nav-link {
+		color: var(--grafito);
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+	.nav-link:hover {
+		color: var(--tinta);
+	}
+
+	.nav-link--activo {
+		color: var(--accent-ink);
+		font-weight: 700;
+	}
+</style>

@@ -1,13 +1,12 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ArticleCard from '../../components/ArticleCard.astro';
+import ArticleRow from '../../components/ArticleRow.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import { CLUSTERS, CLUSTER_IDS, type ClusterId } from '../../consts';
 import { getArticles } from '../../lib/articles';
 
-// Una ruta por cluster. Los clusters son fijos (5) y viven en consts.ts.
 export const getStaticPaths = (() =>
 	CLUSTER_IDS.map((cluster) => ({ params: { cluster } }))) satisfies GetStaticPaths;
 
@@ -16,32 +15,83 @@ const meta = CLUSTERS[cluster];
 const articles = await getArticles(cluster);
 ---
 
-<BaseLayout title={meta.name} description={meta.description}>
-	<div class="mx-auto max-w-5xl px-4 py-8">
-		<Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: meta.name }]} />
+<BaseLayout title={meta.name} description={meta.description} accent={cluster}>
+	<div class="wrap">
+		<div class="miga">
+			<Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: meta.name }]} />
+		</div>
 
-		<header class="mt-6 border-b border-app pb-8">
-			<h1 class="text-3xl font-black tracking-tight text-app sm:text-4xl">{meta.name}</h1>
-			<p class="mt-4 max-w-2xl text-lg text-app-muted">{meta.description}</p>
-			<p class="mt-4 text-sm text-app-muted">
-				{articles.length} {articles.length === 1 ? 'artículo' : 'artículos'}
-			</p>
+		<header class="cabecera rule-t">
+			<h1 class="title">{meta.name}</h1>
+			<div class="cabecera-pie">
+				<p class="bajada">{meta.description}</p>
+				<p class="total figure">
+					{articles.length}
+					<span>{articles.length === 1 ? 'guía' : 'guías'}</span>
+				</p>
+			</div>
 		</header>
 
 		{
 			articles.length === 0 ? (
-				<p class="mt-8 rounded-xl border border-dashed border-app p-8 text-center text-app-muted">
-					Todavía no hay artículos en esta categoría.
-				</p>
+				<p class="vacio rule-t">Todavía no hay artículos en esta categoría.</p>
 			) : (
-				<div class="mt-8 grid gap-5 sm:grid-cols-2">
-					{articles.map((article) => (
-						<ArticleCard article={article} />
-					))}
-				</div>
+				articles.map((article) => <ArticleRow article={article} showCluster={false} />)
 			)
 		}
 
 		<AdSlot placement="category" minHeight={280} />
 	</div>
 </BaseLayout>
+
+<style>
+	.miga {
+		padding-block: 1.25rem;
+	}
+
+	.cabecera {
+		padding-block: 2.5rem;
+	}
+
+	.cabecera-pie {
+		display: grid;
+		gap: 1.25rem;
+		margin-top: 1.25rem;
+		align-items: start;
+	}
+
+	@media (min-width: 48rem) {
+		.cabecera-pie {
+			grid-template-columns: minmax(0, 40rem) auto;
+			justify-content: space-between;
+		}
+	}
+
+	.bajada {
+		color: var(--grafito);
+		font-size: 1.0625rem;
+		max-width: 40rem;
+	}
+
+	.total {
+		font-weight: 700;
+		font-size: clamp(2rem, 5vw, 3rem);
+		line-height: 0.9;
+		letter-spacing: -0.04em;
+		color: var(--accent-ink);
+	}
+
+	.total span {
+		display: block;
+		font-size: 0.8125rem;
+		font-weight: 500;
+		letter-spacing: 0;
+		color: var(--grafito);
+		margin-top: 0.375rem;
+	}
+
+	.vacio {
+		padding-block: 3rem;
+		color: var(--grafito);
+	}
+</style>

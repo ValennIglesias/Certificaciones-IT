@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { SITE } from '../consts';
+import { SITE, CLUSTERS, type ClusterId } from '../consts';
 import SEO from '../components/SEO.astro';
 import Analytics from '../components/Analytics.astro';
 import Header from '../components/Header.astro';
@@ -19,13 +19,23 @@ interface Props {
 	author?: string;
 	section?: string;
 	useTitleTemplate?: boolean;
+	/** Cluster de la página. Define el único acento visible. Sin esto, acromática. */
+	accent?: ClusterId;
 }
 
-const props = Astro.props;
+const { accent, ...props } = Astro.props;
+
+// Un acento por página: se inyectan los tres valores del cluster y el CSS
+// elige cuál usar según el tema. Sin cluster, las variables no existen y
+// el sistema cae a tinta.
+const meta = accent ? CLUSTERS[accent] : null;
+const accentVars = meta
+	? `--accent-l:${meta.accent};--accent-ink-l:${meta.accentInk};--accent-d:${meta.accentDark}`
+	: undefined;
 ---
 
 <!doctype html>
-<html lang={SITE.lang}>
+<html lang={SITE.lang} style={accentVars}>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,24 +44,30 @@ const props = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 
 		<SEO {...props} />
-
-		<!-- GA4, Search Console y AdSense: apagados salvo que las env vars los enciendan. -->
 		<Analytics />
+
+		{/* Antes del primer pintado, para que no haya flash de tema incorrecto. */}
+		<script is:inline>
+			(function () {
+				try {
+					var t = localStorage.getItem('cit:theme');
+					if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+				} catch (e) {}
+			})();
+		</script>
 
 		<slot name="head" />
 	</head>
 
-	<body class="flex min-h-screen flex-col">
+	<body>
 		<a href="#contenido" class="skip-link">Saltar al contenido</a>
 		<Header />
 
-		<main id="contenido" class="flex-1">
+		<main id="contenido">
 			<slot />
 		</main>
 
 		<Footer />
-
-		{/* Banner de cookies. Solo se renderiza si GA o AdSense están configurados. */}
 		<ConsentBanner />
 	</body>
 </html>

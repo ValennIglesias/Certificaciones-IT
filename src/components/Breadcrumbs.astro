@@ -1,7 +1,7 @@
 ---
 /**
- * Migas de pan visibles. El BreadcrumbList de Schema.org se inyecta aparte,
- * en el layout del artículo, para no duplicar el JSON-LD.
+ * Migas de pan. El BreadcrumbList de Schema.org se inyecta aparte, en el
+ * layout del artículo, para no duplicar el JSON-LD.
  */
 interface Props {
 	items: { label: string; href?: string }[];
@@ -9,23 +9,55 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<nav aria-label="Ruta de navegación" class="text-sm">
-	<ol class="flex flex-wrap items-center gap-1 text-app-muted">
+<nav aria-label="Ruta de navegación" class="miga">
+	<ol>
 		{
 			items.map((item, i) => (
-				<li class="flex items-center gap-1">
-					{item.href ? (
-						<a href={item.href} class="hover:text-brand-600">
-							{item.label}
-						</a>
-					) : (
-						<span aria-current="page" class="text-app">
-							{item.label}
-						</span>
-					)}
-					{i < items.length - 1 && <span aria-hidden="true">/</span>}
+				<li>
+					{item.href ? <a href={item.href}>{item.label}</a> : <span aria-current="page">{item.label}</span>}
+					{i < items.length - 1 && <span class="sep" aria-hidden="true">/</span>}
 				</li>
 			))
 		}
 	</ol>
 </nav>
+
+<style>
+	.miga {
+		font-size: 0.8125rem;
+		color: var(--grafito);
+	}
+
+	ol {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.375rem;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		display: flex;
+		gap: 0.375rem;
+	}
+
+	a {
+		color: var(--grafito);
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: var(--tinta);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	[aria-current='page'] {
+		color: var(--tinta);
+	}
+
+	.sep {
+		color: var(--regla);
+	}
+</style>
