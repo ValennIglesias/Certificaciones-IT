@@ -14,10 +14,13 @@ archivo en el repo.
 | Estilos | Tailwind CSS 4 (plugin de Vite) + `@tailwindcss/typography` |
 | Imágenes | `astro:assets` (WebP y `srcset` automáticos) |
 | SEO | `@astrojs/sitemap`, `robots.txt` generado, Schema.org |
+| Cookies | Banner propio con Google Consent Mode v2, sin librerías |
 | Hosting | Vercel (plan gratuito) |
 
-El sitio no envía **ningún** JavaScript al cliente: funciona entero con JS
-desactivado.
+Con GA4 y AdSense apagados —la configuración por defecto— el sitio no envía
+**ningún** JavaScript al cliente. Al activarlos se suma un único script inline
+(~1,5 kB, sin request extra): el banner de consentimiento. El contenido sigue
+siendo legible al 100% con JavaScript desactivado.
 
 ## Puesta en marcha
 
@@ -46,7 +49,7 @@ description: "Qué certificación conviene..."          # máx. 200, única por 
 keyword: "como empezar en it sin experiencia"         # keyword principal
 cluster: "entrada"                                    # entrada | redes | seguridad | cloud | carrera
 pubDate: 2026-09-15
-author: "Equipo Certificaciones IT"
+author: "Valentin"
 draft: false
 
 # Opcionales
@@ -84,19 +87,68 @@ correspondiente no emite absolutamente nada (cero requests). Ver
 | `PUBLIC_GSC_VERIFICATION` | Meta tag de verificación de Search Console |
 | `PUBLIC_ADSENSE_CLIENT` | Id de AdSense (`ca-pub-...`) |
 | `PUBLIC_ADSENSE_ENABLED` | `"true"` **solo** cuando AdSense apruebe la cuenta |
+| `PUBLIC_ADSENSE_SLOT_ARTICLE` | Id del bloque dentro del artículo |
+| `PUBLIC_ADSENSE_SLOT_CATEGORY` | Id del bloque en los listados por categoría |
+| `PUBLIC_ADSENSE_SLOT_HOME` | Id del bloque en la home |
 
 En Vercel se cargan en *Settings → Environment Variables*. Cambiarlas requiere
 un redeploy: son valores de build, no de runtime.
 
+### Banner de cookies
+
+Implementado en [`src/components/ConsentBanner.astro`](src/components/ConsentBanner.astro), sin
+librerías de terceros. Cómo funciona:
+
+1. [`Analytics.astro`](src/components/Analytics.astro) fija **Consent Mode v2 en `denied`** en el
+   `<head>`, antes de que exista cualquier etiqueta de Google (`ad_storage`, `ad_user_data`,
+   `ad_personalization` y `analytics_storage`).
+2. Los scripts de GA4 y AdSense **no están en el HTML**. Se crean con `createElement` y se insertan
+   en el DOM recién cuando el usuario pulsa «Aceptar».
+3. La decisión se guarda en `localStorage` (`cit:consent`), así el banner no vuelve a aparecer.
+4. «Rechazar» y «Aceptar» son dos botones del mismo tamaño, uno al lado del otro, a un clic.
+5. El enlace **«Preferencias de cookies»** del footer reabre el banner. Si se retira un
+   consentimiento previo, se borran las cookies `_ga*`/`_gcl*` y se recarga la página para que no
+   quede nada cargado.
+
+**El banner solo se renderiza si hay algo que consentir.** Con `PUBLIC_GA_ID` vacío y
+`PUBLIC_ADSENSE_ENABLED` en `false`, no se emite ni el banner ni JavaScript alguno.
+
+Para probarlo en local:
+
+```bash
+PUBLIC_GA_ID="G-TEST123456" npm run build && npm run preview
+```
+
 ### AdSense
 
-1. Los huecos ya están reservados en el layout (`src/components/AdSlot.astro`),
-   con altura mínima para que encender los anuncios no mueva el contenido (CLS).
-2. Mientras `PUBLIC_ADSENSE_ENABLED` no sea `"true"`, no se carga el script ni
-   se renderiza el `<ins>`.
-3. Cuando la cuenta esté aprobada: poné los ids de bloque reales en los
-   `adSlot="..."` de `index.astro`, `[cluster]/index.astro` y `ArticleLayout.astro`,
-   activá la variable y redeployá.
+Los ids de bloque **no están en el código**: cada ubicación los toma de su
+variable de entorno. Los componentes reciben una ubicación (`placement`), no un
+id:
+
+```astro
+<AdSlot placement="article" />    <!-- usa PUBLIC_ADSENSE_SLOT_ARTICLE -->
+<AdSlot placement="category" />   <!-- usa PUBLIC_ADSENSE_SLOT_CATEGORY -->
+<AdSlot placement="home" />       <!-- usa PUBLIC_ADSENSE_SLOT_HOME -->
+```
+
+**Falla cerrado.** Un bloque se renderiza solo si AdSense está activado *y* su id
+existe *y* no es un placeholder (un id de solo ceros, o con cualquier carácter
+no numérico, se descarta). Si algo falta, no se renderiza nada: ni el anuncio ni
+un hueco vacío. La validación es por ubicación, así que un id faltante no afecta
+a los demás.
+
+Para que el fallo no sea silencioso, el build imprime un aviso nombrando las
+variables que falten:
+
+```
+[adsense] PUBLIC_ADSENSE_ENABLED="true" pero estos ids faltan o siguen
+          en un valor placeholder:
+            - PUBLIC_ADSENSE_SLOT_CATEGORY
+          Esos bloques de anuncios NO se van a renderizar.
+```
+
+Pasos para encenderlo, una vez aprobada la cuenta: cargá `PUBLIC_ADSENSE_CLIENT`
+y los tres ids de bloque, poné `PUBLIC_ADSENSE_ENABLED="true"` y redeployá.
 
 ## Deploy en Vercel
 
@@ -123,10 +175,13 @@ redirecciones ni contenido duplicado.
 ```
 src/
 ├─ assets/              imágenes optimizadas por astro:assets
-├─ components/          SEO, Header, Footer, ArticleCard, Breadcrumbs, AdSlot, Analytics
+├─ components/          SEO, Header, Footer, ArticleCard, Breadcrumbs, AdSlot,
+│                      Analytics, ConsentBanner
 ├─ content/articles/    los artículos, una carpeta por cluster
 ├─ layouts/             BaseLayout, ArticleLayout, PageLayout
-├─ lib/articles.ts      filtrado de borradores, orden, slugs, fechas
+├─ lib/
+│  ├─ articles.ts       filtrado de borradores, orden, slugs, fechas
+│  └─ analytics.ts      lectura central de las env vars de Google
 ├─ pages/
 │  ├─ index.astro              /
 │  ├─ [cluster]/index.astro    /entrada/, /redes/, ...

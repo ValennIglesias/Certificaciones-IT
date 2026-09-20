@@ -2,8 +2,10 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import { SITE } from '../consts';
 
-// CONTENIDO PLACEHOLDER — reemplazar antes de solicitar la aprobación de AdSense.
-// AdSense revisa esta página: pide identidad real, quién escribe y cómo contactar.
+// Datos del titular y del autor, provistos por el dueño del sitio.
+const CONTACT_EMAIL = 'guias.info@gmail.com';
+const OWNER = 'Valen — Certificaciones IT';
+const AUTHOR = 'Valentin';
 ---
 
 <PageLayout
@@ -36,10 +38,25 @@ import { SITE } from '../consts';
 		y se usan únicamente con fines descriptivos.
 	</p>
 
+	<h2>Quién está detrás</h2>
+	<p>
+		<strong>{OWNER}</strong> es el responsable del sitio y de su contenido editorial.
+	</p>
+	<p>
+		Las guías las escribe y revisa <strong>{AUTHOR}</strong>, técnico de soporte IT, actualmente
+		estudiando administración de infraestructura de TI. Combina su experiencia real en soporte con
+		investigación propia sobre cada certificación: lo que funciona en un service desk de verdad,
+		contrastado con la documentación oficial de cada examen.
+	</p>
+
 	<h2>Contacto</h2>
 	<p>
-		{/* TODO: reemplazar por el correo real antes de publicar. */}
-		Escribinos a <em>[correo de contacto pendiente]</em> para correcciones, sugerencias o consultas
-		editoriales.
+		Escribinos a <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> para correcciones,
+		sugerencias o consultas editoriales. Si detectás un dato desactualizado en alguna guía —un
+		precio, un temario, una versión de examen— avisanos y lo corregimos.
+	</p>
+	<p>
+		Para consultas sobre datos personales y privacidad, escribí al mismo correo; el detalle está en
+		nuestra <a href="/politica-de-privacidad/">política de privacidad</a>.
 	</p>
 </PageLayout>

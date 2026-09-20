@@ -1,0 +1,197 @@
+---
+/**
+ * Banner de consentimiento de cookies. Va al final del <body>.
+ *
+ * Cómo funciona:
+ *  1. Analytics.astro ya dejó Consent Mode v2 en "denied" en el <head>.
+ *  2. Este componente NO emite ningún <script src> de Google en el HTML.
+ *     Los scripts de GA4 y AdSense se crean con createElement y se insertan en
+ *     el DOM recién cuando el usuario acepta (o en cargas posteriores, si ya
+ *     había aceptado antes). Si rechaza, nunca entran al DOM.
+ *  3. La decisión se guarda en localStorage y el banner no vuelve a aparecer,
+ *     salvo que se use el botón "Cookies" del footer.
+ *
+ * Sin librerías: son ~40 líneas de JS inline, sin request adicional.
+ * Si no hay GA ni AdSense configurados, no se renderiza nada.
+ */
+import { GA_ID, ADSENSE_CLIENT, ADSENSE_ENABLED, CONSENT_REQUIRED, CONSENT_STORAGE_KEY } from '../lib/analytics';
+
+const config = {
+	ga: GA_ID,
+	ads: ADSENSE_ENABLED ? ADSENSE_CLIENT : '',
+	key: CONSENT_STORAGE_KEY,
+};
+---
+
+{
+	CONSENT_REQUIRED && (
+		<>
+			{/*
+			  hidden de entrada: el JS lo muestra solo si no hay decisión guardada.
+			  Así quien ya decidió no ve ningún parpadeo, y quien tiene JS desactivado
+			  no ve el banner — correcto, porque sin JS tampoco se carga nada de Google.
+			  Al ser position:fixed no desplaza contenido: no genera CLS.
+			*/}
+			<div
+				id="cookie-consent"
+				hidden
+				role="region"
+				aria-label="Consentimiento de cookies"
+				class="fixed inset-x-0 bottom-0 z-50 p-3 sm:p-4">
+				<div class="mx-auto flex max-w-3xl flex-col gap-4 rounded-xl border border-app surface p-4 shadow-lg sm:p-5">
+					<div>
+						<p class="text-sm font-bold text-app">Cookies en este sitio</p>
+						<p class="mt-1 text-sm text-app-muted">
+							Usamos cookies de Google Analytics para medir el tráfico y de Google AdSense para
+							mostrar publicidad. No se activan si no las aceptás.{' '}
+							<a
+								href="/politica-de-privacidad/"
+								class="font-medium text-brand-600 underline underline-offset-2 dark:text-brand-300">
+								Política de privacidad
+							</a>
+							.
+						</p>
+					</div>
+
+					{/*
+					  Rechazar y Aceptar: mismo tamaño, mismo peso tipográfico, uno al lado
+					  del otro y a un solo clic. Rechazar va primero en el DOM, así que
+					  también es lo primero que se alcanza con el teclado.
+					*/}
+					<div class="flex flex-col gap-2 sm:flex-row sm:justify-end">
+						<button
+							type="button"
+							data-consent="denied"
+							class="w-full rounded-lg border border-app px-5 py-2.5 text-sm font-semibold text-app transition-colors hover:surface-muted sm:w-auto">
+							Rechazar
+						</button>
+						<button
+							type="button"
+							data-consent="granted"
+							class="w-full rounded-lg border border-brand-600 bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 sm:w-auto">
+							Aceptar
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<script is:inline define:vars={{ config }}>
+				(function () {
+					var banner = document.getElementById('cookie-consent');
+					var loaded = false;
+
+					function read() {
+						try {
+							return localStorage.getItem(config.key);
+						} catch (e) {
+							return null; /* modo privado o storage bloqueado */
+						}
+					}
+
+					function save(value) {
+						try {
+							localStorage.setItem(config.key, value);
+						} catch (e) {
+							/* si no se puede guardar, se volverá a preguntar: es el lado seguro */
+						}
+					}
+
+					/* Inserta los scripts de Google en el DOM. Solo se llama con consentimiento. */
+					function loadGoogle() {
+						if (loaded) return;
+						loaded = true;
+
+						if (config.ga) {
+							var ga = document.createElement('script');
+							ga.async = true;
+							ga.src = 'https://www.googletagmanager.com/gtag/js?id=' + config.ga;
+							document.head.appendChild(ga);
+							gtag('js', new Date());
+							gtag('config', config.ga);
+						}
+
+						if (config.ads) {
+							var ads = document.createElement('script');
+							ads.async = true;
+							ads.crossOrigin = 'anonymous';
+							ads.src =
+								'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' +
+								config.ads;
+							document.head.appendChild(ads);
+
+							/* Un push por cada hueco de anuncio presente en la página. */
+							window.adsbygoogle = window.adsbygoogle || [];
+							var slots = document.querySelectorAll('ins.adsbygoogle');
+							for (var i = 0; i < slots.length; i++) window.adsbygoogle.push({});
+						}
+					}
+
+					function updateConsent(state) {
+						gtag('consent', 'update', {
+							ad_storage: state,
+							ad_user_data: state,
+							ad_personalization: state,
+							analytics_storage: state,
+						});
+					}
+
+					function accept() {
+						updateConsent('granted');
+						loadGoogle();
+					}
+
+					/* Borra las cookies que hubieran quedado de una aceptación anterior. */
+					function clearGoogleCookies() {
+						var names = document.cookie.split(';');
+						for (var i = 0; i < names.length; i++) {
+							var name = names[i].split('=')[0].trim();
+							if (name.indexOf('_ga') === 0 || name.indexOf('_gcl') === 0) {
+								document.cookie =
+									name + '=; Max-Age=0; path=/; domain=.' + location.hostname;
+								document.cookie = name + '=; Max-Age=0; path=/';
+							}
+						}
+					}
+
+					function decide(value) {
+						save(value);
+						banner.hidden = true;
+
+						if (value === 'granted') {
+							accept();
+							return;
+						}
+
+						updateConsent('denied');
+						clearGoogleCookies();
+
+						/*
+						  Si el usuario había aceptado antes, los scripts ya están en esta
+						  página. Consent Mode corta el uso de cookies, pero la única forma
+						  de dejar la página realmente limpia es recargarla: al volver a
+						  cargar, la decisión guardada es 'denied' y no se inyecta nada.
+						*/
+						if (loaded) location.reload();
+					}
+
+					banner.addEventListener('click', function (event) {
+						var button = event.target.closest('[data-consent]');
+						if (button) decide(button.getAttribute('data-consent'));
+					});
+
+					/* Botón "Cookies" del footer: permite revisar la decisión cuando se quiera. */
+					document.addEventListener('click', function (event) {
+						if (event.target.closest('[data-consent-reopen]')) {
+							banner.hidden = false;
+							banner.querySelector('[data-consent]').focus();
+						}
+					});
+
+					var stored = read();
+					if (stored === 'granted') accept();
+					else if (stored !== 'denied') banner.hidden = false;
+				})();
+			</script>
+		</>
+	)
+}

@@ -2,26 +2,29 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import { SITE } from '../consts';
 
-// CONTENIDO PLACEHOLDER — revisar con criterio legal antes de publicar.
-// Marcados con TODO los datos que solo puede completar el titular del sitio.
+// Datos del titular provistos por el dueño del sitio (jurisdicción: Argentina).
+//
+// El banner de consentimiento está implementado (ConsentBanner.astro): fija
+// Consent Mode v2 en "denied" y no inyecta los scripts de GA4 ni de AdSense en
+// el DOM hasta que el usuario acepta. Lo que dice la sección "Consentimiento"
+// coincide con el comportamiento real del sitio.
+//
+// Conviene que un profesional revise el texto antes de publicarlo.
+const CONTACT_EMAIL = 'guias.info@gmail.com';
+const OWNER = 'Valen — Certificaciones IT';
+const OWNER_LOCATION = 'Buenos Aires, Argentina';
+const LAST_UPDATED = '20 de septiembre de 2026';
 ---
 
 <PageLayout
 	title="Política de privacidad"
 	description={`Cómo ${SITE.name} trata los datos de navegación, las cookies y la publicidad de terceros.`}
-	updated="pendiente de completar">
-	<p class="!text-app-muted">
-		<em>
-			Borrador inicial. Completá los campos marcados y hacelo revisar según la jurisdicción que
-			corresponda antes de enviar el sitio a AdSense.
-		</em>
-	</p>
-
+	updated={LAST_UPDATED}>
 	<h2>Responsable del sitio</h2>
 	<p>
-		{/* TODO: nombre o razón social, domicilio y correo de contacto. */}
-		<em>[Titular del sitio pendiente]</em>, responsable de <strong>{SITE.name}</strong>. Consultas
-		sobre privacidad: <em>[correo de contacto pendiente]</em>.
+		<strong>{OWNER}</strong>, con domicilio en {OWNER_LOCATION}, es el responsable
+		de <strong>{SITE.name}</strong>. Para cualquier consulta sobre privacidad o sobre el
+		tratamiento de tus datos, escribinos a <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
 	</p>
 
 	<h2>Qué datos recogemos</h2>
@@ -31,69 +34,130 @@ import { SITE } from '../consts';
 	</p>
 	<ul>
 		<li>
-			<strong>Datos de navegación</strong> (páginas vistas, duración, dispositivo, país aproximado,
-			origen de la visita), recogidos por la herramienta de analítica.
+			<strong>Datos de navegación</strong> (páginas vistas, duración de la visita, tipo de
+			dispositivo, país aproximado y origen del tráfico), recogidos por Google Analytics 4.
 		</li>
 		<li>
-			<strong>Datos técnicos de la conexión</strong> (dirección IP, agente de usuario), procesados
-			por el proveedor de hosting para servir las páginas.
+			<strong>Datos técnicos de la conexión</strong> (dirección IP y agente de usuario), procesados
+			por el proveedor de hosting para poder servir las páginas.
+		</li>
+		<li>
+			<strong>Datos de publicidad</strong> (identificadores de cookies e interacción con los
+			anuncios), procesados por Google AdSense y sus proveedores asociados.
 		</li>
 	</ul>
 
-	<h2>Cookies y tecnologías similares</h2>
-	<p>El sitio puede usar cookies de los siguientes terceros:</p>
-	<ul>
-		<li>
-			<strong>Google Analytics 4</strong>: métricas de audiencia de forma agregada. Podés inhabilitarlo
-			con el
-			<a
-				href="https://tools.google.com/dlpage/gaoptout"
-				rel="nofollow noopener"
-				target="_blank">complemento de exclusión de Google Analytics</a
-			>.
-		</li>
-		<li>
-			<strong>Google AdSense</strong>: publicidad. Google y sus proveedores asociados pueden usar
-			cookies para mostrar anuncios basados en visitas previas a este y otros sitios.
-		</li>
-	</ul>
-
-	<h2>Publicidad de Google</h2>
-	<ul>
-		<li>Google, como proveedor externo, utiliza cookies para publicar anuncios en este sitio.</li>
-		<li>
-			El uso por parte de Google de las cookies de publicidad le permite mostrar anuncios a los
-			usuarios en función de sus visitas a este y a otros sitios de Internet.
-		</li>
-		<li>
-			Los usuarios pueden inhabilitar la publicidad personalizada en la
-			<a
-				href="https://www.google.com/settings/ads"
-				rel="nofollow noopener"
-				target="_blank">Configuración de anuncios de Google</a
-			>, o la de otros proveedores externos en
-			<a href="https://www.aboutads.info/choices/" rel="nofollow noopener" target="_blank"
-				>aboutads.info</a
-			>.
-		</li>
-	</ul>
-
-	<h2>Base legal y derechos</h2>
+	<h2>Servicios de terceros que utilizamos</h2>
 	<p>
-		{/* TODO: ajustar según jurisdicción (RGPD, LGPD, Ley 25.326, CCPA, etc.). */}
-		Podés solicitar acceso, rectificación o supresión de tus datos, así como oponerte a su
-		tratamiento, escribiendo a <em>[correo de contacto pendiente]</em>.
+		Este sitio utiliza dos servicios de Google, ambos proveedores externos que tratan los datos bajo
+		sus propias políticas:
+	</p>
+	<ul>
+		<li>
+			<strong>Google Analytics 4 (GA4)</strong>: lo usamos para medir el tráfico del sitio —cuánta
+			gente nos visita, qué artículos lee y por qué canal llega—, siempre de forma agregada.
+		</li>
+		<li>
+			<strong>Google AdSense</strong>: lo usamos para mostrar publicidad. Es la forma en que se
+			financia el sitio.
+		</li>
+	</ul>
+	<p>
+		Ambos servicios utilizan <strong>cookies y tecnologías similares</strong> (identificadores de
+		dispositivo, almacenamiento local y píxeles de seguimiento) para funcionar. Al usarlos, Google
+		actúa como tratante independiente de esos datos: podés consultar el detalle en la{' '}
+		<a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">
+			Política de Privacidad de Google</a
+		>.
+	</p>
+
+	<h2>Consentimiento</h2>
+	<p>
+		Las cookies de Google Analytics y de Google AdSense <strong
+			>solo se activan una vez que aceptás su uso</strong
+		> mediante el banner de consentimiento que aparece en tu primera visita. Hasta que no des esa
+		aceptación, los scripts de esos servicios ni siquiera se descargan: el sitio arranca con el
+		modo de consentimiento de Google (Consent Mode v2) en estado denegado para las cookies de
+		analítica y de publicidad, y solo cambia a concedido si pulsás «Aceptar».
+	</p>
+	<p>
+		Podés cambiar tu decisión en cualquier momento desde el enlace{' '}
+		<strong>«Preferencias de cookies»</strong> que está al pie de todas las páginas: vuelve a abrir
+		el banner para que elijas de nuevo. Rechazar es tan simple como aceptar: son dos botones al
+		mismo nivel, sin pasos intermedios.
+	</p>
+
+	<h2>Cómo desactivar el seguimiento y la publicidad personalizada</h2>
+	<p>Más allá del banner del sitio, tenés estas opciones directas con Google:</p>
+	<ul>
+		<li>
+			Desactivar la publicidad personalizada desde la{' '}
+			<a href="https://adssettings.google.com/" rel="nofollow noopener" target="_blank">
+				Configuración de anuncios de Google</a
+			>.
+		</li>
+		<li>
+			Bloquear Google Analytics en todos los sitios con el{' '}
+			<a href="https://tools.google.com/dlpage/gaoptout" rel="nofollow noopener" target="_blank">
+				complemento de inhabilitación para navegadores</a
+			>.
+		</li>
+		<li>
+			Gestionar las preferencias de otros proveedores de publicidad en{' '}
+			<a href="https://www.aboutads.info/choices/" rel="nofollow noopener" target="_blank">
+				aboutads.info</a
+			>.
+		</li>
+		<li>Configurar tu navegador para rechazar o eliminar cookies de terceros.</li>
+	</ul>
+	<p>
+		Rechazar las cookies de publicidad no hace que desaparezcan los anuncios: hace que dejen de estar
+		personalizados según tu historial de navegación.
+	</p>
+
+	<h2>Cuánto tiempo se conservan los datos</h2>
+	<p>
+		El sitio no conserva datos por su cuenta: no tiene base de datos ni almacena información de los
+		visitantes en servidores propios. Los datos de navegación quedan en poder de Google y se
+		conservan según los{' '}
+		<strong>períodos de retención predeterminados de Google Analytics 4</strong>, sin que apliquemos
+		ningún período de retención adicional. Vencido ese plazo, Google elimina o anonimiza los datos
+		de usuario y evento según sus propias políticas.
+	</p>
+	{/*
+		PENDIENTE: si en el panel de GA4 se configura un período de retención distinto
+		del predeterminado (Administrar → Configuración de datos → Retención de datos),
+		hay que indicar acá el plazo exacto elegido.
+	*/}
+
+	<h2>Base legal y tus derechos</h2>
+	<p>
+		Este sitio se rige por la legislación de la <strong>República Argentina</strong>, en particular
+		por la Ley 25.326 de Protección de los Datos Personales. La base legal para el uso de cookies de
+		analítica y publicidad es tu consentimiento, que otorgás mediante el banner descripto más arriba.
+	</p>
+	<p>
+		Tenés derecho a solicitar el acceso, la rectificación, la actualización y la supresión de tus
+		datos personales, así como a oponerte a su tratamiento. Para ejercerlos, escribinos a{' '}
+		<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+	</p>
+	<p>
+		La Agencia de Acceso a la Información Pública, en su carácter de autoridad de control de la Ley
+		25.326, tiene la atribución de atender las denuncias y reclamos que presenten quienes resulten
+		afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de
+		datos personales.
 	</p>
 
 	<h2>Enlaces a terceros</h2>
 	<p>
-		Algunos artículos enlazan a sitios de organismos certificadores o proveedores de formación. Esta
-		política no cubre esos sitios; revisá la política de privacidad de cada uno.
+		Algunos artículos enlazan a sitios de organismos certificadores, proveedores de formación o
+		documentación oficial. Esta política no cubre esos sitios: cuando los visites, se aplican sus
+		propias políticas de privacidad.
 	</p>
 
 	<h2>Cambios en esta política</h2>
 	<p>
 		Cualquier modificación se publica en esta misma página, con su fecha de actualización en la
-		cabecera.
+		cabecera. Te recomendamos revisarla periódicamente.
 	</p>
 </PageLayout>
