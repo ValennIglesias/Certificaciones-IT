@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import ArticleCard from '../components/ArticleCard.astro';
+import ArticleRow from '../components/ArticleRow.astro';
 import AdSlot from '../components/AdSlot.astro';
 import JsonLd from '../components/JsonLd.astro';
 import { SITE, CLUSTERS, type ClusterId } from '../consts';
@@ -26,7 +26,6 @@ const imageUrl = heroImage
 	? new URL(heroImage.src, Astro.site).toString()
 	: new URL(SITE.defaultImage, Astro.site).toString();
 
-// --- Schema.org ---
 const articleSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'Article',
@@ -36,11 +35,7 @@ const articleSchema = {
 	datePublished: pubDate.toISOString(),
 	dateModified: (updatedDate ?? pubDate).toISOString(),
 	author: { '@type': 'Person', name: author },
-	publisher: {
-		'@type': 'Organization',
-		name: SITE.name,
-		url: Astro.site?.toString(),
-	},
+	publisher: { '@type': 'Organization', name: SITE.name, url: Astro.site?.toString() },
 	mainEntityOfPage: { '@type': 'WebPage', '@id': url },
 	articleSection: clusterMeta.name,
 	keywords: keyword,
@@ -72,50 +67,43 @@ const breadcrumbSchema = {
 	publishedTime={pubDate}
 	modifiedTime={updatedDate ?? pubDate}
 	author={author}
-	section={clusterMeta.name}>
+	section={clusterMeta.name}
+	accent={clusterId}>
 	<Fragment slot="head">
 		<JsonLd schema={articleSchema} />
 		<JsonLd schema={breadcrumbSchema} />
 	</Fragment>
 
-	<article class="mx-auto max-w-3xl px-4 py-8">
-		<Breadcrumbs
-			items={[
-				{ label: 'Inicio', href: '/' },
-				{ label: clusterMeta.name, href: `/${clusterId}/` },
-				{ label: title },
-			]}
-		/>
+	<article class="wrap">
+		<div class="miga">
+			<Breadcrumbs
+				items={[
+					{ label: 'Inicio', href: '/' },
+					{ label: clusterMeta.name, href: `/${clusterId}/` },
+					{ label: title },
+				]}
+			/>
+		</div>
 
-		<header class="mt-6">
-			<a
-				href={`/${clusterId}/`}
-				class="inline-block rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 dark:bg-brand-900 dark:text-brand-200">
-				{clusterMeta.name}
-			</a>
-
-			<h1 class="mt-4 text-3xl font-black leading-tight tracking-tight text-app sm:text-4xl">
-				{title}
-			</h1>
-
-			<p class="mt-4 text-lg text-app-muted">{description}</p>
-
-			<div class="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-app-muted">
-				<span>Por {author}</span>
-				<span aria-hidden="true">·</span>
-				<time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
+		<header class="rail cabecera rule-t">
+			{/* Riel: metadatos apilados, sin separadores. */}
+			<div class="riel">
+				<a href={`/${clusterId}/`} class="cluster-tag">{clusterMeta.short}</a>
+				<time datetime={pubDate.toISOString()} class="meta figure">{formatDate(pubDate)}</time>
 				{
 					updatedDate && (
-						<>
-							<span aria-hidden="true">·</span>
-							<span>
-								Actualizado el <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time>
-							</span>
-						</>
+						<span class="meta figure">
+							Act. <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time>
+						</span>
 					)
 				}
-				<span aria-hidden="true">·</span>
-				<span>{minutes} min de lectura</span>
+				<span class="meta figure">{minutes} min de lectura</span>
+				<span class="meta">{author}</span>
+			</div>
+
+			<div>
+				<h1 class="title">{title}</h1>
+				<p class="bajada">{description}</p>
 			</div>
 		</header>
 
@@ -125,33 +113,87 @@ const breadcrumbSchema = {
 					src={heroImage}
 					alt={heroAlt ?? ''}
 					widths={[640, 960, 1280]}
-					sizes="(min-width: 768px) 768px, 100vw"
+					sizes="(min-width: 60rem) 44rem, 100vw"
 					loading="eager"
 					fetchpriority="high"
-					class="mt-8 w-full rounded-xl border border-app object-cover"
+					class="hero"
 				/>
 			)
 		}
 
-		<div class="prose prose-article mt-10 max-w-none prose-headings:scroll-mt-24 prose-a:underline-offset-2">
-			<slot />
+		<div class="rail cuerpo">
+			<div aria-hidden="true"></div>
+			<div class="prose prose-article max-w-none">
+				<slot />
+			</div>
 		</div>
 
-		<AdSlot placement="article" minHeight={280} class="mt-12" />
+		<div class="rail">
+			<div aria-hidden="true"></div>
+			<div>
+				<AdSlot placement="article" minHeight={280} />
 
-		{
-			related.length > 0 && (
-				<section class="mt-12 border-t border-app pt-8" aria-labelledby="relacionados">
-					<h2 id="relacionados" class="text-xl font-bold text-app">
-						Seguí leyendo sobre {clusterMeta.short.toLowerCase()}
-					</h2>
-					<div class="mt-5 grid gap-4 sm:grid-cols-2">
-						{related.map((item) => (
-							<ArticleCard article={item} />
-						))}
-					</div>
-				</section>
-			)
-		}
+				{
+					related.length > 0 && (
+						<section class="rule-t relacionados" aria-labelledby="relacionados">
+							<h2 id="relacionados" class="relacionados-titulo">
+								Seguí leyendo sobre {clusterMeta.short.toLowerCase()}
+							</h2>
+							{related.map((item) => (
+								<ArticleRow article={item} showCluster={false} />
+							))}
+						</section>
+					)
+				}
+			</div>
+		</div>
 	</article>
 </BaseLayout>
+
+<style>
+	.miga {
+		padding-block: 1.25rem;
+	}
+
+	.cabecera {
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+	}
+
+	.riel > * {
+		display: block;
+	}
+
+	.riel > * + * {
+		margin-top: 0.25rem;
+	}
+
+	.bajada {
+		margin-top: 1.25rem;
+		color: var(--grafito);
+		font-size: 1.125rem;
+		max-width: 40rem;
+	}
+
+	.hero {
+		width: 100%;
+		margin-block: 2rem;
+		border: 1px solid var(--regla);
+	}
+
+	.cuerpo {
+		padding-bottom: 2rem;
+	}
+
+	.relacionados {
+		margin-top: 3rem;
+		padding-top: 2rem;
+	}
+
+	.relacionados-titulo {
+		font-size: 0.8125rem;
+		font-weight: 700;
+		color: var(--grafito);
+		margin-bottom: 0.5rem;
+	}
+</style>

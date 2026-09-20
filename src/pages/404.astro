@@ -7,34 +7,62 @@ import { CLUSTERS, CLUSTER_IDS } from '../consts';
 	title="Página no encontrada"
 	description="La página que buscás no existe o cambió de dirección."
 	noindex>
-	<div class="mx-auto max-w-3xl px-4 py-20 text-center">
-		<p class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-300">
-			Error 404
-		</p>
-		<h1 class="mt-3 text-3xl font-black tracking-tight text-app sm:text-4xl">
-			Esta página no existe
-		</h1>
-		<p class="mt-4 text-app-muted">
-			Puede que el enlace esté roto o que el artículo haya cambiado de dirección. Probá con una
-			categoría:
+	<div class="wrap error">
+		<p class="codigo figure">404</p>
+		<h1 class="title">Esta página no existe</h1>
+		<p class="bajada">
+			Puede que el enlace esté roto o que el artículo haya cambiado de dirección.
 		</p>
 
-		<div class="mt-8 flex flex-wrap justify-center gap-2">
+		<div class="clusters rule-t">
 			{
 				CLUSTER_IDS.map((id) => (
-					<a
-						href={`/${id}/`}
-						class="rounded-lg border border-app surface px-4 py-2 text-sm font-medium text-app hover:border-brand-400 hover:text-brand-600">
-						{CLUSTERS[id].short}
-					</a>
+					<a href={`/${id}/`}>{CLUSTERS[id].short}</a>
 				))
 			}
 		</div>
-
-		<p class="mt-8">
-			<a href="/" class="font-medium text-brand-600 hover:underline dark:text-brand-300">
-				Volver al inicio
-			</a>
-		</p>
 	</div>
 </BaseLayout>
+
+<style>
+	.error {
+		padding-block: clamp(3rem, 8vw, 6rem);
+		max-width: 44rem;
+	}
+
+	.codigo {
+		font-weight: 700;
+		font-size: clamp(3rem, 10vw, 5.5rem);
+		line-height: 0.9;
+		letter-spacing: -0.04em;
+		color: var(--regla);
+	}
+
+	.title {
+		margin-top: 1rem;
+	}
+
+	.bajada {
+		margin-top: 1rem;
+		color: var(--grafito);
+	}
+
+	.clusters {
+		margin-top: 2.5rem;
+		padding-top: 1.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.25rem;
+		font-weight: 700;
+	}
+
+	.clusters a {
+		color: var(--tinta);
+		text-decoration: none;
+	}
+
+	.clusters a:hover {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+</style>

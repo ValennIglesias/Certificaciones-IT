@@ -4,22 +4,20 @@ import { CONSENT_REQUIRED } from '../lib/analytics';
 const year = new Date().getFullYear();
 ---
 
-<footer class="mt-16 border-t border-app surface-muted">
-	<div class="mx-auto grid max-w-5xl gap-8 px-4 py-10 sm:grid-cols-3">
+<footer class="rule-t pie">
+	<div class="wrap pie-grid">
 		<div>
-			<p class="font-bold text-app">{SITE.name}</p>
-			<p class="mt-2 text-sm text-app-muted">{SITE.description}</p>
+			<p class="pie-marca">{SITE.name}</p>
+			<p class="meta pie-desc">{SITE.description}</p>
 		</div>
 
 		<nav aria-label="Categorías del sitio">
-			<p class="text-sm font-semibold text-app">Categorías</p>
-			<ul class="mt-2 space-y-1 text-sm">
+			<p class="pie-titulo">Categorías</p>
+			<ul class="pie-lista">
 				{
 					CLUSTER_IDS.map((id) => (
 						<li>
-							<a href={`/${id}/`} class="text-app-muted hover:text-brand-600">
-								{CLUSTERS[id].name}
-							</a>
+							<a href={`/${id}/`}>{CLUSTERS[id].name}</a>
 						</li>
 					))
 				}
@@ -27,28 +25,15 @@ const year = new Date().getFullYear();
 		</nav>
 
 		<nav aria-label="Enlaces legales">
-			<p class="text-sm font-semibold text-app">El sitio</p>
-			<ul class="mt-2 space-y-1 text-sm">
-				<li>
-					<a href="/sobre-nosotros/" class="text-app-muted hover:text-brand-600">Sobre nosotros</a>
-				</li>
-				<li>
-					<a href="/politica-de-privacidad/" class="text-app-muted hover:text-brand-600">
-						Política de privacidad
-					</a>
-				</li>
-				<li>
-					<a href="/sitemap-index.xml" class="text-app-muted hover:text-brand-600">Sitemap</a>
-				</li>
+			<p class="pie-titulo">El sitio</p>
+			<ul class="pie-lista">
+				<li><a href="/sobre-nosotros/">Sobre nosotros</a></li>
+				<li><a href="/politica-de-privacidad/">Política de privacidad</a></li>
+				<li><a href="/sitemap-index.xml">Sitemap</a></li>
 				{
-					/* Permite revisar la decisión de cookies en cualquier momento.
-					   ConsentBanner.astro engancha el click por [data-consent-reopen]. */
 					CONSENT_REQUIRED && (
 						<li>
-							<button
-								type="button"
-								data-consent-reopen
-								class="text-app-muted underline-offset-2 hover:text-brand-600 hover:underline">
+							<button type="button" data-consent-reopen class="pie-boton">
 								Preferencias de cookies
 							</button>
 						</li>
@@ -58,10 +43,76 @@ const year = new Date().getFullYear();
 		</nav>
 	</div>
 
-	<div class="border-t border-app">
-		<p class="mx-auto max-w-5xl px-4 py-4 text-xs text-app-muted">
+	<div class="wrap rule-t pie-legal">
+		<p class="meta">
 			© {year} {SITE.name}. Contenido informativo; los nombres de certificaciones y sus marcas
 			pertenecen a sus respectivos titulares.
 		</p>
 	</div>
 </footer>
+
+<style>
+	.pie {
+		margin-top: 5rem;
+	}
+
+	.pie-grid {
+		display: grid;
+		gap: 2.5rem;
+		padding-block: 3rem;
+	}
+
+	@media (min-width: 48rem) {
+		.pie-grid {
+			grid-template-columns: minmax(0, 1.4fr) 1fr 1fr;
+		}
+	}
+
+	.pie-marca {
+		font-weight: 700;
+		letter-spacing: -0.02em;
+	}
+
+	.pie-desc {
+		margin-top: 0.5rem;
+		max-width: 32rem;
+	}
+
+	.pie-titulo {
+		font-weight: 700;
+		font-size: 0.9375rem;
+	}
+
+	.pie-lista {
+		margin-top: 0.75rem;
+		display: grid;
+		gap: 0.375rem;
+		font-size: 0.9375rem;
+	}
+
+	.pie-lista a,
+	.pie-boton {
+		color: var(--grafito);
+		text-decoration: none;
+	}
+
+	.pie-lista a:hover,
+	.pie-boton:hover {
+		color: var(--tinta);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	.pie-boton {
+		font: inherit;
+		background: none;
+		border: 0;
+		padding: 0;
+		cursor: pointer;
+		text-align: left;
+	}
+
+	.pie-legal {
+		padding-block: 1.25rem;
+	}
+</style>

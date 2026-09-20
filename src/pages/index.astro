@@ -1,78 +1,149 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ArticleCard from '../components/ArticleCard.astro';
+import ArticleRow from '../components/ArticleRow.astro';
 import AdSlot from '../components/AdSlot.astro';
 import { SITE, CLUSTERS, CLUSTER_IDS } from '../consts';
 import { getArticles } from '../lib/articles';
 
 const articles = await getArticles();
-const latest = articles.slice(0, 7);
+
+// Conteo real por cluster: el índice dice cuánto hay, no lo promete.
+const porCluster = CLUSTER_IDS.map((id) => ({
+	id,
+	meta: CLUSTERS[id],
+	total: articles.filter((a) => a.data.cluster === id).length,
+}));
 ---
 
-<BaseLayout
-	title={SITE.titleDefault}
-	description={SITE.description}
-	useTitleTemplate={false}>
-	<section class="border-b border-app surface-muted">
-		<div class="mx-auto max-w-5xl px-4 py-14 sm:py-20">
-			<h1 class="max-w-2xl text-3xl font-black leading-tight tracking-tight text-app sm:text-5xl">
-				Certificaciones IT explicadas en español, sin humo
-			</h1>
-			<p class="mt-5 max-w-2xl text-lg text-app-muted">
+<BaseLayout title={SITE.titleDefault} description={SITE.description} useTitleTemplate={false}>
+	<section class="wrap portada">
+		<h1 class="display">Certificaciones IT explicadas en español, sin humo</h1>
+		<div class="portada-pie">
+			<p class="portada-bajada">
 				Qué certificación sirve para qué, cuánto cuesta, cuánto lleva prepararla y qué puestos
 				abre de verdad. Desde la primera certificación hasta la especialización.
 			</p>
-			<div class="mt-7 flex flex-wrap gap-2">
-				{
-					CLUSTER_IDS.map((id) => (
-						<a
-							href={`/${id}/`}
-							class="rounded-lg border border-app surface px-4 py-2 text-sm font-medium text-app transition-colors hover:border-brand-400 hover:text-brand-600">
-							{CLUSTERS[id].short}
-						</a>
-					))
-				}
-			</div>
+			<p class="portada-total figure">
+				{articles.length}
+				<span>{articles.length === 1 ? 'guía' : 'guías'}</span>
+			</p>
 		</div>
 	</section>
 
-	<div class="mx-auto max-w-5xl px-4 py-12">
-		<h2 class="text-2xl font-bold tracking-tight text-app">Últimos artículos</h2>
+	<section class="wrap" aria-labelledby="indice">
+		<h2 id="indice" class="seccion-titulo">Índice</h2>
 
 		{
-			latest.length === 0 ? (
-				<p class="mt-6 rounded-xl border border-dashed border-app p-8 text-center text-app-muted">
-					Todavía no hay artículos publicados. Agregá archivos <code>.md</code> en{' '}
-					<code>src/content/articles/&lt;cluster&gt;/</code>.
-				</p>
-			) : (
-				<div class="mt-6 grid gap-5 sm:grid-cols-2">
-					{latest.map((article, i) => (
-						<ArticleCard article={article} featured={i === 0} />
-					))}
-				</div>
-			)
-		}
-
-		<AdSlot placement="home" minHeight={280} />
-
-		<section class="mt-12" aria-labelledby="temas">
-			<h2 id="temas" class="text-2xl font-bold tracking-tight text-app">Por dónde empezar</h2>
-			<div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-				{
-					CLUSTER_IDS.map((id) => (
-						<a
-							href={`/${id}/`}
-							class="rounded-xl border border-app surface p-5 transition-shadow hover:shadow-md">
-							<h3 class="font-bold text-app">{CLUSTERS[id].name}</h3>
-							<p class="mt-2 text-sm text-app-muted">{CLUSTERS[id].description}</p>
-							<span class="mt-3 inline-block text-sm font-medium text-brand-600 dark:text-brand-300">
-								Ver artículos →
-							</span>
+			porCluster.map(({ id, meta, total }) => (
+				<div class="banda rule-t">
+					<div class="banda-riel">
+						<a href={`/${id}/`} class="banda-nombre">
+							{meta.short}
 						</a>
-					))
-				}
-			</div>
-		</section>
+						<p class="meta figure">
+							{total} {total === 1 ? 'guía' : 'guías'}
+						</p>
+					</div>
+
+					<ul class="banda-lista">
+						{articles
+							.filter((a) => a.data.cluster === id)
+							.map((a) => (
+								<li>
+									<a href={`/${a.data.cluster}/${a.id.split('/').pop()}/`} class="index-link">
+										{a.data.title}
+									</a>
+								</li>
+							))}
+					</ul>
+				</div>
+			))
+		}
+	</section>
+
+	<div class="wrap">
+		<AdSlot placement="home" minHeight={280} />
 	</div>
 </BaseLayout>
+
+<style>
+	.portada {
+		padding-block: clamp(3rem, 9vw, 6rem);
+	}
+
+	.portada-pie {
+		display: grid;
+		gap: 1.5rem;
+		margin-top: 2rem;
+		align-items: start;
+	}
+
+	@media (min-width: 48rem) {
+		.portada-pie {
+			grid-template-columns: minmax(0, 40rem) auto;
+			justify-content: space-between;
+		}
+	}
+
+	.portada-bajada {
+		color: var(--grafito);
+		font-size: 1.0625rem;
+		max-width: 40rem;
+	}
+
+	.portada-total {
+		font-weight: 700;
+		font-size: clamp(2.5rem, 7vw, 4rem);
+		line-height: 0.9;
+		letter-spacing: -0.04em;
+	}
+
+	.portada-total span {
+		display: block;
+		font-size: 0.875rem;
+		font-weight: 500;
+		letter-spacing: 0;
+		color: var(--grafito);
+		margin-top: 0.375rem;
+	}
+
+	.seccion-titulo {
+		font-size: 0.8125rem;
+		font-weight: 700;
+		color: var(--grafito);
+		padding-bottom: 0.75rem;
+	}
+
+	.banda {
+		display: grid;
+		gap: 0.75rem 2.5rem;
+		padding-block: 1.75rem;
+	}
+
+	@media (min-width: 48rem) {
+		.banda {
+			grid-template-columns: 9.5rem minmax(0, 1fr);
+		}
+	}
+
+	.banda-nombre {
+		font-weight: 700;
+		font-size: 1.0625rem;
+		text-decoration: none;
+		color: var(--tinta);
+	}
+
+	.banda-nombre:hover {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	.banda-riel > * + * {
+		margin-top: 0.25rem;
+	}
+
+	.banda-lista {
+		display: grid;
+		gap: 0.875rem;
+	}
+</style>

@@ -15,12 +15,14 @@ archivo en el repo.
 | Imágenes | `astro:assets` (WebP y `srcset` automáticos) |
 | SEO | `@astrojs/sitemap`, `robots.txt` generado, Schema.org |
 | Cookies | Banner propio con Google Consent Mode v2, sin librerías |
+| Diseño | Sistema Swiss propio: un acento por cluster, modo oscuro opcional |
 | Hosting | Vercel (plan gratuito) |
 
-Con GA4 y AdSense apagados —la configuración por defecto— el sitio no envía
-**ningún** JavaScript al cliente. Al activarlos se suma un único script inline
-(~1,5 kB, sin request extra): el banner de consentimiento. El contenido sigue
-siendo legible al 100% con JavaScript desactivado.
+El sitio envía **0 archivos JavaScript**. Lo único que viaja es ~0,9 kB de
+script inline, sin request extra: el conmutador de tema y, si activás GA4 o
+AdSense, el banner de consentimiento. El contenido es legible al 100% con
+JavaScript desactivado; sin JS el sitio queda en modo claro, que es el
+canónico.
 
 ## Puesta en marcha
 
@@ -175,8 +177,8 @@ redirecciones ni contenido duplicado.
 ```
 src/
 ├─ assets/              imágenes optimizadas por astro:assets
-├─ components/          SEO, Header, Footer, ArticleCard, Breadcrumbs, AdSlot,
-│                      Analytics, ConsentBanner
+├─ components/          SEO, Header, Footer, ArticleRow, Breadcrumbs, AdSlot,
+│                      Analytics, ConsentBanner, ThemeToggle, JsonLd
 ├─ content/articles/    los artículos, una carpeta por cluster
 ├─ layouts/             BaseLayout, ArticleLayout, PageLayout
 ├─ lib/

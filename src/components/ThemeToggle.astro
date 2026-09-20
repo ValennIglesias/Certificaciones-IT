@@ -1,0 +1,56 @@
+---
+/**
+ * Alterna entre el modo claro (el canonico) y el oscuro, y recuerda la
+ * eleccion. El script de pre-pintado que evita el flash de tema vive en
+ * BaseLayout, porque tiene que correr en el <head> antes del primer render.
+ *
+ * Es texto, no un glifo: un icono de luna en unicode no es iconografia.
+ */
+---
+
+<button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">
+	<span data-theme-label>Oscuro</span>
+</button>
+
+<style>
+	.theme-toggle {
+		font: inherit;
+		font-size: 0.8125rem;
+		font-weight: 500;
+		color: var(--grafito);
+		background: none;
+		border: 0;
+		padding: 0.25rem 0;
+		cursor: pointer;
+	}
+
+	.theme-toggle:hover {
+		color: var(--tinta);
+	}
+</style>
+
+<script is:inline>
+	(function () {
+		var boton = document.getElementById('theme-toggle');
+		if (!boton) return;
+		var etiqueta = boton.querySelector('[data-theme-label]');
+
+		function pintar(tema) {
+			document.documentElement.dataset.theme = tema;
+			etiqueta.textContent = tema === 'dark' ? 'Claro' : 'Oscuro';
+			boton.setAttribute('aria-pressed', tema === 'dark' ? 'true' : 'false');
+		}
+
+		pintar(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
+
+		boton.addEventListener('click', function () {
+			var nuevo = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+			pintar(nuevo);
+			try {
+				localStorage.setItem('cit:theme', nuevo);
+			} catch (e) {
+				/* sin storage la eleccion vale solo para esta pagina */
+			}
+		});
+	})();
+</script>

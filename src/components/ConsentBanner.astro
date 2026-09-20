@@ -32,45 +32,20 @@ const config = {
 			  no ve el banner — correcto, porque sin JS tampoco se carga nada de Google.
 			  Al ser position:fixed no desplaza contenido: no genera CLS.
 			*/}
-			<div
-				id="cookie-consent"
-				hidden
-				role="region"
-				aria-label="Consentimiento de cookies"
-				class="fixed inset-x-0 bottom-0 z-50 p-3 sm:p-4">
-				<div class="mx-auto flex max-w-3xl flex-col gap-4 rounded-xl border border-app surface p-4 shadow-lg sm:p-5">
-					<div>
-						<p class="text-sm font-bold text-app">Cookies en este sitio</p>
-						<p class="mt-1 text-sm text-app-muted">
+			<div id="cookie-consent" hidden role="region" aria-label="Consentimiento de cookies">
+				<div class="cc-caja">
+					<div class="cc-texto">
+						<p class="cc-titulo">Cookies en este sitio</p>
+						<p class="cc-cuerpo">
 							Usamos cookies de Google Analytics para medir el tráfico y de Google AdSense para
 							mostrar publicidad. No se activan si no las aceptás.{' '}
-							<a
-								href="/politica-de-privacidad/"
-								class="font-medium text-brand-600 underline underline-offset-2 dark:text-brand-300">
-								Política de privacidad
-							</a>
-							.
+							<a href="/politica-de-privacidad/">Política de privacidad</a>.
 						</p>
 					</div>
 
-					{/*
-					  Rechazar y Aceptar: mismo tamaño, mismo peso tipográfico, uno al lado
-					  del otro y a un solo clic. Rechazar va primero en el DOM, así que
-					  también es lo primero que se alcanza con el teclado.
-					*/}
-					<div class="flex flex-col gap-2 sm:flex-row sm:justify-end">
-						<button
-							type="button"
-							data-consent="denied"
-							class="w-full rounded-lg border border-app px-5 py-2.5 text-sm font-semibold text-app transition-colors hover:surface-muted sm:w-auto">
-							Rechazar
-						</button>
-						<button
-							type="button"
-							data-consent="granted"
-							class="w-full rounded-lg border border-brand-600 bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 sm:w-auto">
-							Aceptar
-						</button>
+					<div class="cc-botones">
+						<button type="button" data-consent="denied" class="cc-boton">Rechazar</button>
+						<button type="button" data-consent="granted" class="cc-boton cc-boton--si">Aceptar</button>
 					</div>
 				</div>
 			</div>
@@ -195,3 +170,72 @@ const config = {
 		</>
 	)
 }
+
+<style>
+	#cookie-consent {
+		position: fixed;
+		inset-inline: 0;
+		bottom: 0;
+		z-index: 50;
+		background-color: var(--papel);
+		border-top: 1px solid var(--tinta);
+	}
+
+	.cc-caja {
+		max-width: 68rem;
+		margin-inline: auto;
+		padding: 1.25rem;
+		display: grid;
+		gap: 1rem;
+		align-items: center;
+	}
+
+	@media (min-width: 48rem) {
+		.cc-caja {
+			grid-template-columns: minmax(0, 1fr) auto;
+		}
+	}
+
+	.cc-titulo {
+		font-weight: 700;
+		font-size: 0.9375rem;
+	}
+
+	.cc-cuerpo {
+		margin-top: 0.25rem;
+		font-size: 0.875rem;
+		color: var(--grafito);
+		max-width: 46rem;
+	}
+
+	.cc-cuerpo a {
+		color: var(--tinta);
+	}
+
+	.cc-botones {
+		display: flex;
+		gap: 0.75rem;
+	}
+
+	/* Rechazar y aceptar: mismo tamaño, mismo peso, un solo clic cada uno. */
+	.cc-boton {
+		font: inherit;
+		font-size: 0.875rem;
+		font-weight: 700;
+		padding: 0.625rem 1.25rem;
+		border: 1px solid var(--tinta);
+		background-color: var(--papel);
+		color: var(--tinta);
+		cursor: pointer;
+		flex: 1 1 auto;
+	}
+
+	.cc-boton--si {
+		background-color: var(--tinta);
+		color: var(--papel);
+	}
+
+	.cc-boton:hover {
+		opacity: 0.85;
+	}
+</style>
