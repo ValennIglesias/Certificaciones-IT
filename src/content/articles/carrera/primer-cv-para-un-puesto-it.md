@@ -4,7 +4,7 @@ description: "Qué poner en el CV cuando todavía no tenés experiencia laboral 
 keyword: "cómo pasar de soporte técnico a administrador de infraestructura"
 cluster: "carrera"
 pubDate: 2026-09-05
-author: "Equipo Certificaciones IT"
+author: "Valentin"
 draft: false
 ---
 

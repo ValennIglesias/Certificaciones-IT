@@ -1,62 +1,73 @@
 ---
+import { adSlotFor, AD_SLOT_ENV_VAR, ADSENSE_ENABLED, ADSENSE_CLIENT, type AdPlacement } from '../lib/analytics';
+
 /**
- * Hueco reservado para un bloque de AdSense.
+ * Bloque de anuncios de AdSense.
  *
- * Mientras PUBLIC_ADSENSE_ENABLED no sea "true" no renderiza el <ins> de AdSense,
- * pero sí reserva la altura mínima: así el layout no se mueve el día que los
- * anuncios se enciendan (evita CLS, que es lo que rompe el Lighthouse).
+ * No recibe el id del bloque: recibe la UBICACIÓN ("article", "category",
+ * "home") y el id sale de la variable de entorno correspondiente. Así no hay
+ * ids hardcodeados en las páginas ni riesgo de publicar un placeholder.
  *
- * Uso: <AdSlot adSlot="1234567890" />  (el id sale del panel de AdSense)
+ * Falla cerrado: si AdSense está apagado, o si falta el id, o si el id sigue
+ * siendo un placeholder tipo "0000000000", no se renderiza NADA — ni el
+ * anuncio ni el hueco reservado. Mejor que quede el contenido junto a que
+ * aparezca una franja vacía o un anuncio roto.
  *
- * El prop se llama `adSlot` y no `slot` a propósito: `slot` es un atributo
- * reservado de Astro para asignar contenido a slots con nombre.
+ * El <ins> es solo un contenedor: no carga nada ni instala cookies por sí
+ * mismo. Quien lo llena es ConsentBanner.astro, que inyecta el script de
+ * AdSense y hace el push de cada hueco recién cuando hay consentimiento.
  */
 interface Props {
-	/** Id del bloque de anuncios creado en AdSense. */
-	adSlot?: string;
+	/** Dónde va este bloque. Determina qué variable de entorno se usa. */
+	placement: AdPlacement;
 	format?: string;
-	/** Altura mínima reservada, en px. */
+	/** Altura mínima reservada, en px. Evita el salto de layout al cargar. */
 	minHeight?: number;
 	label?: string;
 	class?: string;
 }
 
 const {
-	adSlot,
+	placement,
 	format = 'auto',
 	minHeight = 280,
 	label = 'Publicidad',
 	class: className = '',
 } = Astro.props;
 
-const client = import.meta.env.PUBLIC_ADSENSE_CLIENT?.trim();
-const enabled = import.meta.env.PUBLIC_ADSENSE_ENABLED?.trim() === 'true' && !!client && !!adSlot;
+const slot = adSlotFor(placement);
 const isDev = import.meta.env.DEV;
+
+/** Por qué no se muestra el anuncio. Solo se usa para el aviso en desarrollo. */
+const devReason = !ADSENSE_ENABLED
+	? 'PUBLIC_ADSENSE_ENABLED no es "true"'
+	: `falta ${AD_SLOT_ENV_VAR[placement]} (o sigue en un placeholder)`;
 ---
 
-<aside
-	class:list={['my-8 w-full', className]}
-	style={`min-height:${minHeight}px`}
-	aria-label={label}>
-	{enabled ? (
-		<>
+{
+	slot ? (
+		<aside
+			class:list={['my-8 w-full', className]}
+			style={`min-height:${minHeight}px`}
+			aria-label={label}>
 			<p class="mb-1 text-center text-[11px] uppercase tracking-widest text-app-muted">{label}</p>
 			<ins
 				class="adsbygoogle block"
 				style={`display:block;min-height:${minHeight}px`}
-				data-ad-client={client}
-				data-ad-slot={adSlot}
+				data-ad-client={ADSENSE_CLIENT}
+				data-ad-slot={slot}
 				data-ad-format={format}
-				data-full-width-responsive="true"></ins>
-			<script is:inline>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		</>
+				data-full-width-responsive="true"
+			/>
+		</aside>
 	) : isDev ? (
-		<div
-			class="flex h-full w-full items-center justify-center rounded-lg border border-dashed border-app text-xs text-app-muted"
-			style={`min-height:${minHeight}px`}>
-			Espacio reservado para AdSense{adSlot ? ` (slot ${adSlot})` : ''}
-		</div>
-	) : null}
-</aside>
+		<aside class:list={['my-8 w-full', className]} aria-hidden="true">
+			<div
+				class="flex w-full flex-col items-center justify-center gap-1 rounded-lg border border-dashed border-app p-4 text-center text-xs text-app-muted"
+				style={`min-height:${minHeight}px`}>
+				<span class="font-semibold">Hueco de AdSense — ubicación «{placement}»</span>
+				<span>No se renderiza en producción: {devReason}.</span>
+			</div>
+		</aside>
+	) : null
+}

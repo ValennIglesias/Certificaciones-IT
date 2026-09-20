@@ -4,7 +4,7 @@ description: "Qué evalúa el examen Security+, cuánto tiempo lleva prepararlo 
 keyword: "CompTIA Security+ guía de estudio en español"
 cluster: "seguridad"
 pubDate: 2026-09-10
-author: "Equipo Certificaciones IT"
+author: "Valentin"
 draft: false
 heroImage: "../../../assets/hero-security-plus.jpg"
 heroAlt: "Placa con el texto «Security+», certificación de ciberseguridad"

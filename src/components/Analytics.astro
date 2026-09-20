@@ -1,50 +1,50 @@
 ---
 /**
- * Tres integraciones de Google, todas apagadas por defecto y controladas por
- * variables de entorno (ver .env.example). Si la variable está vacía, no se
- * emite absolutamente nada: cero peso, cero requests.
+ * Va en el <head>. NO carga ningún script de Google: solo deja preparado el
+ * dataLayer y fija Consent Mode v2 en "denied" antes de que exista cualquier
+ * etiqueta. La carga real de GA4 y AdSense la hace ConsentBanner.astro, recién
+ * cuando el usuario acepta.
  *
- *   PUBLIC_GA_ID             -> Google Analytics 4
- *   PUBLIC_GSC_VERIFICATION  -> meta tag de Search Console
- *   PUBLIC_ADSENSE_CLIENT    -> id de AdSense
- *   PUBLIC_ADSENSE_ENABLED   -> "true" recién cuando AdSense apruebe la cuenta
+ * El shim de gtag() es código propio de dos líneas: encola llamadas en un array.
+ * No hace requests ni instala cookies, así que puede ejecutarse antes del
+ * consentimiento — de hecho DEBE hacerlo, porque el estado "denied" por defecto
+ * tiene que estar en la cola antes de que gtag.js se cargue.
  *
- * Este componente va en el <head>.
+ * Variables: ver .env.example.
  */
-const gaId = import.meta.env.PUBLIC_GA_ID?.trim();
-const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION?.trim();
-const adsenseClient = import.meta.env.PUBLIC_ADSENSE_CLIENT?.trim();
-const adsenseEnabled = import.meta.env.PUBLIC_ADSENSE_ENABLED?.trim() === 'true' && !!adsenseClient;
+import { GA_ID, GSC_VERIFICATION, ADSENSE_ENABLED, CONSENT_REQUIRED } from '../lib/analytics';
 ---
 
-{/* Verificación de Google Search Console */}
-{gscVerification && <meta name="google-site-verification" content={gscVerification} />}
+{/* Verificación de Search Console: es un meta tag, no instala cookies. */}
+{GSC_VERIFICATION && <meta name="google-site-verification" content={GSC_VERIFICATION} />}
 
-{/* Google Analytics 4 */}
-{gaId && (
-	<>
-		<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-		<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
-		<script is:inline define:vars={{ gaId }}>
+{
+	CONSENT_REQUIRED && (
+		<script is:inline>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
-				dataLayer.push(arguments);
+				window.dataLayer.push(arguments);
 			}
-			gtag('js', new Date());
-			gtag('config', gaId);
-		</script>
-	</>
-)}
+			window.gtag = gtag;
 
-{/*
-  Google AdSense. No lo enciendas antes de la aprobación: el script no hace nada
-  útil y penaliza el rendimiento. Poné PUBLIC_ADSENSE_ENABLED="true" el día que
-  la cuenta esté aprobada y redeployá.
-*/}
-{adsenseEnabled && (
-	<script
-		is:inline
-		async
-		src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
-		crossorigin="anonymous"></script>
-)}
+			/* Consent Mode v2: todo denegado hasta que el usuario decida. */
+			gtag('consent', 'default', {
+				ad_storage: 'denied',
+				ad_user_data: 'denied',
+				ad_personalization: 'denied',
+				analytics_storage: 'denied',
+				functionality_storage: 'granted',
+				security_storage: 'granted',
+			});
+		</script>
+	)
+}
+
+{
+	/*
+	  Preconnect solo a los orígenes que se van a usar si hay consentimiento.
+	  No descarga nada ni instala cookies; ahorra el handshake si el usuario acepta.
+	*/
+	GA_ID && <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+}
+{ADSENSE_ENABLED && <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />}

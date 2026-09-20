@@ -9,7 +9,8 @@ export const SITE = {
 		'Guías en español sobre certificaciones IT (CompTIA, Cisco, AWS, Azure, ITIL) y cómo construir una carrera en tecnología.',
 	lang: 'es',
 	locale: 'es_ES',
-	author: 'Equipo Certificaciones IT',
+	/** Autor por defecto. Hoy cada artículo declara el suyo en el frontmatter. */
+	author: 'Valentin',
 	/** Imagen Open Graph por defecto, relativa a /public. */
 	defaultImage: '/og-default.jpg',
 } as const;

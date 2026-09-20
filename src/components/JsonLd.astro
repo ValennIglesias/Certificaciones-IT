@@ -1,0 +1,19 @@
+---
+/**
+ * Inyecta un bloque de Schema.org de forma segura.
+ *
+ * Usar SIEMPRE este componente en lugar de escribir a mano
+ * `<script type="application/ld+json" set:html={JSON.stringify(...)}>`:
+ * ese patrón no escapa nada y permite romper la etiqueta con un "</script>"
+ * dentro del frontmatter. Ver src/lib/jsonLd.ts.
+ */
+import { serializeJsonLd } from '../lib/jsonLd';
+
+interface Props {
+	schema: unknown;
+}
+
+const { schema } = Astro.props;
+---
+
+<script type="application/ld+json" set:html={serializeJsonLd(schema)} is:inline />

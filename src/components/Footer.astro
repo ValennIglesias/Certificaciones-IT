@@ -1,5 +1,6 @@
 ---
 import { SITE, CLUSTERS, CLUSTER_IDS } from '../consts';
+import { CONSENT_REQUIRED } from '../lib/analytics';
 const year = new Date().getFullYear();
 ---
 
@@ -39,6 +40,20 @@ const year = new Date().getFullYear();
 				<li>
 					<a href="/sitemap-index.xml" class="text-app-muted hover:text-brand-600">Sitemap</a>
 				</li>
+				{
+					/* Permite revisar la decisión de cookies en cualquier momento.
+					   ConsentBanner.astro engancha el click por [data-consent-reopen]. */
+					CONSENT_REQUIRED && (
+						<li>
+							<button
+								type="button"
+								data-consent-reopen
+								class="text-app-muted underline-offset-2 hover:text-brand-600 hover:underline">
+								Preferencias de cookies
+							</button>
+						</li>
+					)
+				}
 			</ul>
 		</nav>
 	</div>

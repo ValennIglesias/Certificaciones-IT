@@ -4,7 +4,7 @@ description: "Criterios concretos para decidir entre el camino de certificación
 keyword: "Azure AZ-900 vs AWS Cloud Practitioner cuál conviene sacar primero"
 cluster: "cloud"
 pubDate: 2026-09-08
-author: "Equipo Certificaciones IT"
+author: "Valentin"
 draft: false
 ---
 

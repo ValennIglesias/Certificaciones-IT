@@ -4,6 +4,7 @@ import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import AdSlot from '../components/AdSlot.astro';
+import JsonLd from '../components/JsonLd.astro';
 import { SITE, CLUSTERS, type ClusterId } from '../consts';
 import { articlePath, formatDate, readingTime, type Article } from '../lib/articles';
 
@@ -73,8 +74,8 @@ const breadcrumbSchema = {
 	author={author}
 	section={clusterMeta.name}>
 	<Fragment slot="head">
-		<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} is:inline />
-		<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} is:inline />
+		<JsonLd schema={articleSchema} />
+		<JsonLd schema={breadcrumbSchema} />
 	</Fragment>
 
 	<article class="mx-auto max-w-3xl px-4 py-8">
@@ -136,7 +137,7 @@ const breadcrumbSchema = {
 			<slot />
 		</div>
 
-		<AdSlot adSlot="0000000001" label="Publicidad" minHeight={280} class="mt-12" />
+		<AdSlot placement="article" minHeight={280} class="mt-12" />
 
 		{
 			related.length > 0 && (
