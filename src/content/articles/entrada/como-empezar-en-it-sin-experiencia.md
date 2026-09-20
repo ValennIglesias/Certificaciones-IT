@@ -44,3 +44,5 @@ CompTIA A+ se rinde en dos exámenes independientes (Core 1 y Core 2), a unos US
 - Acumular certificaciones sin practicar en un laboratorio real (virtual o casero).
 - Saltar directo a una certificación profesional (Security+, CCNA) sin resolver los fundamentos primero.
 - Estudiar solo con volcados de examen ("dumps"): aprueba el examen, no la entrevista técnica.
+
+Y una vez que tengas la primera, ¿qué sigue? El [roadmap de certificaciones IT](/carrera/roadmap-certificaciones-it/) ordena qué sacar segundo y tercero según a dónde quieras llegar.

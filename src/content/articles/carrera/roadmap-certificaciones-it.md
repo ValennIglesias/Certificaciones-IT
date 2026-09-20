@@ -10,6 +10,15 @@ draft: false
 
 No existe un orden universal de certificaciones. Existe un orden que tiene sentido según a dónde querés llegar — y eso cambia bastante la respuesta a "qué saco primero".
 
+**La respuesta corta, según tu objetivo:**
+
+- **Soporte y administración de infraestructura** → CompTIA A+ o ITIL Foundation.
+- **Redes** → CompTIA Network+.
+- **Seguridad** → CompTIA Security+.
+- **Cloud** → AWS Cloud Practitioner o Azure AZ-900.
+
+El detalle de qué viene después de cada una está [en el desglose por objetivo](#el-roadmap-según-tu-objetivo). Antes, un ejemplo de cómo se ve esto fuera del papel.
+
 ## Un ejemplo real de cómo se ve en la práctica
 
 Un camino habitual empieza así: un puesto trainee de help desk, sin certificación todavía, pero con buen manejo de Windows y ganas genuinas de entender por qué falla algo, no solo cómo resetearlo. Ese conocimiento de base —resolver problemas de hardware, instalar sistemas, entender el sistema operativo de memoria— suele venir de la curiosidad de mucho antes de tener el primer trabajo.
@@ -20,14 +29,31 @@ Esto no significa que estudiar antes de trabajar esté mal — es una alternativ
 
 ## El roadmap según tu objetivo
 
-| Objetivo | Base | Intermedio | Especialización |
-| --- | --- | --- | --- |
-| Soporte → Administración de infraestructura | [CompTIA A+ o ITIL Foundation](/entrada/como-empezar-en-it-sin-experiencia/) | Experiencia práctica con Active Directory / Azure AD y un sistema de gestión de tickets (ITSM) | Certificación de infraestructura o formación formal (tecnicatura/carrera) que valide lo aprendido en el puesto |
-| Redes | [CompTIA Network+](/redes/fundamentos-de-redes-para-certificarte/) | Cisco CCNA | Certificaciones de especialización Cisco (CCNP) |
-| Seguridad | [CompTIA Security+](/seguridad/security-plus-vale-la-pena/) | CISSP o CompTIA CySA+ | Certificaciones de especialización (pentesting, GRC) |
-| Cloud | [AWS Cloud Practitioner o Azure AZ-900](/cloud/aws-o-azure-cual-elegir/) | AWS Solutions Architect Associate o Azure Administrator (AZ-104) | Certificación profesional del proveedor elegido |
+### Soporte → Administración de infraestructura
 
-La fila de Soporte → Infraestructura es la que más se aparta del resto: acá la experiencia práctica suele ir *antes* que la certificación formal, no después.
+| Base | Intermedio | Especialización |
+| --- | --- | --- |
+| [CompTIA A+ o ITIL Foundation](/entrada/como-empezar-en-it-sin-experiencia/) | Experiencia práctica con Active Directory / Azure AD y un sistema de gestión de tickets (ITSM) | Certificación de infraestructura o formación formal (tecnicatura/carrera) que valide lo aprendido en el puesto |
+
+Es el recorrido que más se aparta del resto: acá la experiencia práctica suele ir *antes* que la certificación formal, no después.
+
+### Redes
+
+| Base | Intermedio | Especialización |
+| --- | --- | --- |
+| [CompTIA Network+](/redes/fundamentos-de-redes-para-certificarte/) | Cisco CCNA | Certificaciones de especialización Cisco (CCNP) |
+
+### Seguridad
+
+| Base | Intermedio | Especialización |
+| --- | --- | --- |
+| [CompTIA Security+](/seguridad/security-plus-vale-la-pena/) | CISSP o CompTIA CySA+ | Certificaciones de especialización (pentesting, GRC) |
+
+### Cloud
+
+| Base | Intermedio | Especialización |
+| --- | --- | --- |
+| [AWS Cloud Practitioner o Azure AZ-900](/cloud/aws-o-azure-cual-elegir/) | AWS Solutions Architect Associate o Azure Administrator (AZ-104) | Certificación profesional del proveedor elegido |
 
 ## Lo que importa más que el orden exacto
 

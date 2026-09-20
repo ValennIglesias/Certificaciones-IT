@@ -32,7 +32,7 @@ El examen ronda los US$400-425 según la región y el momento. No hay requisitos
 
 ## Requisito previo real
 
-No es obligatorio, pero llegar con los fundamentos de redes resueltos (ver la guía de fundamentos de redes) cambia por completo la dificultad percibida del examen — buena parte de las preguntas de arquitectura y operaciones dan por sabido ese conocimiento.
+No es obligatorio, pero llegar con los fundamentos de redes resueltos (ver la [guía de fundamentos de redes](/redes/fundamentos-de-redes-para-certificarte/)) cambia por completo la dificultad percibida del examen — buena parte de las preguntas de arquitectura y operaciones dan por sabido ese conocimiento.
 
 ## Qué puestos lo piden
 
@@ -44,3 +44,5 @@ No es obligatorio, pero llegar con los fundamentos de redes resueltos (ver la gu
 ## Cómo prepararlo
 
 Un plan de 6 a 8 semanas, dominio por dominio, combinado con exámenes de práctica frecuentes, alcanza para la mayoría de quienes ya vienen de soporte técnico o redes. Sin esa base, conviene sumar 2-3 semanas extra a los conceptos de redes antes de entrar de lleno a los dominios de seguridad.
+
+Security+ rara vez es la primera certificación de nadie. Dónde encaja dentro del recorrido completo está en el [roadmap de certificaciones IT](/carrera/roadmap-certificaciones-it/).
