@@ -4,7 +4,7 @@ description: "Modelo OSI, direccionamiento IP, subredes y enrutamiento: la base 
 keyword: "fundamentos de redes que todo técnico IT debería saber"
 cluster: "redes"
 pubDate: 2026-09-12
-author: "Valentin"
+author: "Valentín"
 draft: false
 ---
 
@@ -52,3 +52,5 @@ PC1 --- SW1 --- R1 --- R2 --- SW2 --- PC2
 ```
 
 Armar esa topología básica y lograr que los dos extremos se vean (hacer ping de PC1 a PC2 con los routers configurados en el medio) cubre buena parte de lo que evalúan tanto Network+ como CCNA.
+
+Si todavía estás decidiendo si redes es tu camino, el [roadmap de certificaciones IT](/carrera/roadmap-certificaciones-it/) compara las cuatro rutas —soporte, redes, seguridad y cloud— con el orden sugerido para cada una.

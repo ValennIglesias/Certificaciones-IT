@@ -4,7 +4,7 @@ description: "Criterios concretos para decidir entre el camino de certificación
 keyword: "Azure AZ-900 vs AWS Cloud Practitioner cuál conviene sacar primero"
 cluster: "cloud"
 pubDate: 2026-09-08
-author: "Valentin"
+author: "Valentín"
 draft: false
 ---
 
@@ -32,3 +32,5 @@ Los conceptos de fondo —redes virtuales, gestión de identidades y accesos (IA
 ## Nuestra recomendación de arranque
 
 Si todavía no tenés un empleador ni un rol objetivo definido, empezar por **AWS Cloud Practitioner** es la apuesta más segura: es el proveedor con más cuota de mercado global y la certificación de entrada más reconocida en procesos de selección. Si ya trabajás en una empresa con infraestructura Microsoft, **AZ-900** tiene sentido inmediato porque vas a usar esos conceptos en tu día a día desde ya.
+
+Elegir proveedor es un escalón dentro de un recorrido más largo: el [roadmap de certificaciones IT](/carrera/roadmap-certificaciones-it/) muestra qué viene antes y qué después de la certificación de entrada de cloud.

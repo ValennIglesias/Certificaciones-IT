@@ -4,10 +4,8 @@ description: "Qué certificación conviene como primera parada, cuánto tiempo l
 keyword: "cómo empezar a trabajar en soporte técnico sin experiencia"
 cluster: "entrada"
 pubDate: 2026-09-15
-author: "Valentin"
+author: "Valentín"
 draft: false
-heroImage: "../../../assets/hero-comptia-a-plus.jpg"
-heroAlt: "Placa con el texto «CompTIA A+», certificación de entrada"
 ---
 
 Entrar a IT sin experiencia previa tiene un problema de orden: hay demasiadas certificaciones dando vueltas y casi ninguna guía dice, en serio, cuál conviene sacar primero.
@@ -44,3 +42,5 @@ CompTIA A+ se rinde en dos exámenes independientes (Core 1 y Core 2), a unos US
 - Acumular certificaciones sin practicar en un laboratorio real (virtual o casero).
 - Saltar directo a una certificación profesional (Security+, CCNA) sin resolver los fundamentos primero.
 - Estudiar solo con volcados de examen ("dumps"): aprueba el examen, no la entrevista técnica.
+
+Y una vez que tengas la primera, ¿qué sigue? El [roadmap de certificaciones IT](/carrera/roadmap-certificaciones-it/) ordena qué sacar segundo y tercero según a dónde quieras llegar.

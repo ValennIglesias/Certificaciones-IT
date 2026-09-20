@@ -24,6 +24,13 @@ const articles = defineCollection({
 			/** Imagen destacada, optimizada por astro:assets. Relativa al .md. */
 			heroImage: image().optional(),
 			heroAlt: z.string().optional(),
+			/**
+			 * Datos pendientes de confirmar antes de dar el artículo por cerrado.
+			 * Va acá y no en un comentario HTML porque el frontmatter nunca se
+			 * renderiza: un `<!-- VERIFICAR -->` queda visible en el código fuente
+			 * de la página publicada. Además, el build avisa si queda alguno.
+			 */
+			verificar: z.array(z.string()).optional(),
 		}),
 });
 

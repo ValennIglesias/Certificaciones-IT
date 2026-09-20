@@ -49,7 +49,7 @@ description: "Qué certificación conviene..."          # máx. 200, única por 
 keyword: "como empezar en it sin experiencia"         # keyword principal
 cluster: "entrada"                                    # entrada | redes | seguridad | cloud | carrera
 pubDate: 2026-09-15
-author: "Valentin"
+author: "Valentín"
 draft: false
 
 # Opcionales

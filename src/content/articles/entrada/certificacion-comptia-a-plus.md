@@ -1,0 +1,89 @@
+---
+title: "Certificación CompTIA A+: qué es, cuánto cuesta y cómo rendirla"
+description: "Qué mide cada examen de CompTIA A+, cuánto sale certificarse en 2026 y cómo prepararla sin gastar de más."
+keyword: "certificación CompTIA A+ qué es cuánto cuesta cómo rendirla"
+cluster: "entrada"
+pubDate: 2026-09-24
+author: "Valentín"
+draft: false
+heroImage: "../../../assets/hero-comptia-a-plus.jpg"
+heroAlt: "Placa con el texto «CompTIA A+», certificación de entrada"
+---
+
+CompTIA A+ es la certificación que más veces vas a ver recomendada para arrancar en soporte técnico, y no es casualidad: valida justo lo que un puesto de help desk te pide desde el primer día.
+
+En resumen:
+
+- Es una certificación de entrada que valida hardware, redes básicas, sistemas operativos y seguridad.
+- Se rinde en dos exámenes independientes: Core 1 (220-1201) y Core 2 (220-1202).
+- Cada examen cuesta alrededor de US$274, así que certificarte completo ronda los US$548.
+- **Se rinde en inglés, alemán o japonés: no hay versión en español.**
+- No hay requisitos formales para inscribirte, aunque CompTIA recomienda unos 12 meses de experiencia práctica en soporte. Con 1-2 horas diarias, la preparación lleva entre 6 y 10 semanas.
+
+## Qué mide cada examen
+
+La versión vigente del examen (220-1201/220-1202, la llamada "V15") reemplazó a la anterior 220-1101/220-1102. Si estás juntando material de estudio, confirmá que esté actualizado a esta versión — el contenido viejo todavía circula dando vueltas por internet. Y tené en cuenta que **los dos exámenes tienen que ser de la misma versión**: no se puede rendir Core 1 de una y Core 2 de otra.
+
+**Core 1 (220-1201):**
+
+| Dominio | Peso |
+| --- | --- |
+| Hardware y solución de problemas de red | 28% |
+| Hardware | 25% |
+| Redes | 23% |
+| Dispositivos móviles | 13% |
+| Virtualización y cloud computing | 11% |
+
+**Core 2 (220-1202):**
+
+| Dominio | Peso |
+| --- | --- |
+| Sistemas operativos | 28% |
+| Seguridad | 28% |
+| Solución de problemas de software | 23% |
+| Procedimientos operativos | 21% |
+
+## Cuánto sale y cómo se rinde
+
+Cada examen cuesta **US$274**, y como hay que rendir los dos, la certificación completa ronda los **US$548**. CompTIA también vende un voucher con reintento incluido, a US$359 por examen, que conviene mirar si no te sentís del todo seguro de aprobar en el primer intento.
+
+Son precios de lista en dólares: si estás fuera de Estados Unidos, consultá el equivalente al tipo de cambio del día y si tu región tiene precio propio.
+
+| Ítem | Detalle |
+| --- | --- |
+| Preguntas | Hasta 90 por examen (opción múltiple, arrastrar y soltar, simulaciones) |
+| Duración | 90 minutos por examen |
+| Puntaje de aprobación | Core 1: 675 sobre 900 · Core 2: 700 sobre 900 |
+| Idiomas | Inglés, alemán y japonés |
+| Modalidad | Centro Pearson VUE o remoto con supervisión online |
+
+La opción remota es la más práctica si estás trabajando full-time y no querés perder medio día de viaje para rendir.
+
+Si preferís rendir presencial, **en Argentina hay centros autorizados**: en Buenos Aires (incluidas CABA, Martínez y Parque Patricios), Córdoba y Corrientes. La lista cambia, así que conviene confirmar la sede y la disponibilidad de fechas en el [buscador de centros de Pearson VUE](https://www.pearsonvue.com/us/en/comptia.html) antes de comprar el voucher.
+
+El examen **no está disponible en español**, así que conviene medir tu nivel de inglés técnico antes de pagar el voucher. No hace falta hablarlo con fluidez —es lectura técnica, con vocabulario muy repetitivo— pero sí leerlo con comodidad bajo presión de tiempo.
+
+## Vale la pena si...
+
+- Estás arrancando en IT sin experiencia previa y necesitás algo que un reclutador reconozca sin explicación.
+- Tu objetivo de corto plazo es un puesto de soporte técnico o help desk, no redes o seguridad directamente.
+- Preferís una certificación amplia (hardware + software + redes básicas) antes de especializarte en una rama.
+
+Si ya tenés claro que tu objetivo es redes o seguridad de entrada, puede convenirte más arrancar directo por [CompTIA Network+](/redes/fundamentos-de-redes-para-certificarte/) — el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) tiene el detalle completo según tu objetivo.
+
+## Cómo prepararla sin gastar de más
+
+- **Material oficial de CompTIA**: el más alineado al examen, pero también el más caro.
+- **Cursos en video de plataformas como Udemy**: bajan de precio seguido en promociones, y varios están actualizados a la versión 220-1201/1202.
+- **Laboratorio propio**: armar y desarmar una PC, o usar una VM para practicar sistemas operativos, cubre buena parte de Core 1 y Core 2 sin gastar nada extra.
+- **Exámenes de práctica**: son el mejor indicador de si ya estás listo — si consistentemente sacás por encima del puntaje de aprobación en simulacros, es momento de agendar la fecha real.
+
+## Errores comunes al encarar el examen
+
+- Estudiar solo teoría sin tocar hardware real ni una VM — varias preguntas son de simulación práctica, no solo de memoria.
+- Preparar material de la versión vieja (220-1101/1102) sin darte cuenta de que ya no es la vigente.
+- Rendir los dos exámenes muy separados en el tiempo: si pasan varios meses entre Core 1 y Core 2, se pierde continuidad y hay que repasar de nuevo lo ya visto.
+
+## Qué hacer ahora
+
+Si decidís que A+ es tu punto de partida: elegí la modalidad de examen (presencial o remoto), calculá cuántas semanas necesitás según tu ritmo real de estudio (no el ideal), y agendá el Core 1 con esa fecha — recién ahí arrancás a estudiar en serio, no antes.

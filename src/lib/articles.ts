@@ -60,3 +60,26 @@ export function readingTime(body: string | undefined): number {
 	const words = body.trim().split(/\s+/).length;
 	return Math.max(1, Math.round(words / 200));
 }
+
+/**
+ * Avisa una vez por build si quedan artículos con datos sin confirmar.
+ * Un pendiente en el frontmatter no se ve en la página; sin este aviso, se
+ * olvida.
+ */
+let yaAviso = false;
+
+export function avisarPendientes(articles: Article[]): void {
+	if (yaAviso) return;
+	yaAviso = true;
+
+	const conPendientes = articles.filter((a) => (a.data.verificar?.length ?? 0) > 0);
+	if (conPendientes.length === 0) return;
+
+	console.warn('[contenido] Artículos publicados con datos sin confirmar:');
+	for (const article of conPendientes) {
+		console.warn(`            ${articlePath(article)}`);
+		for (const item of article.data.verificar ?? []) {
+			console.warn(`              - ${item}`);
+		}
+	}
+}

@@ -4,7 +4,7 @@ description: "Qué poner en el CV cuando todavía no tenés experiencia laboral 
 keyword: "cómo pasar de soporte técnico a administrador de infraestructura"
 cluster: "carrera"
 pubDate: 2026-09-05
-author: "Valentin"
+author: "Valentín"
 draft: false
 ---
 
@@ -35,3 +35,5 @@ Es concreto, verificable y muestra herramientas específicas — exactamente lo 
 ## De soporte técnico a administrador de infraestructura
 
 Si el objetivo de mediano plazo es pasar de un rol de soporte a uno de administración de infraestructura, el CV (y el LinkedIn) deberían mostrar esa dirección desde ya: sumar certificaciones de redes o cloud, documentar cualquier tarea de administración de servidores que hayas tocado aunque no fuera tu rol principal, y nombrar explícitamente el objetivo en el resumen del perfil. Los reclutadores internos priorizan a quien ya viene mostrando esa trayectoria antes de que se abra la vacante formal.
+
+Si además estás definiendo qué certificación sacar para llenar ese CV, empezá por el [roadmap de certificaciones IT](/carrera/roadmap-certificaciones-it/).

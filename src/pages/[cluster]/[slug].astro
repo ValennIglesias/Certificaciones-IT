@@ -2,10 +2,11 @@
 import type { GetStaticPaths } from 'astro';
 import { render } from 'astro:content';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
-import { getArticles, getRelatedArticles, articleSlug } from '../../lib/articles';
+import { getArticles, getRelatedArticles, articleSlug, avisarPendientes } from '../../lib/articles';
 
 export const getStaticPaths = (async () => {
 	const articles = await getArticles();
+	avisarPendientes(articles);
 	return articles.map((article) => ({
 		params: { cluster: article.data.cluster, slug: articleSlug(article) },
 		props: { article },

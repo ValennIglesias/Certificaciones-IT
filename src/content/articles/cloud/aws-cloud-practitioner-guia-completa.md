@@ -1,0 +1,80 @@
+---
+title: "AWS Cloud Practitioner: guía completa para principiantes"
+description: "Qué mide el examen CLF-C02, cuánto cuesta certificarse en AWS y cómo prepararlo sin experiencia técnica previa."
+keyword: "AWS Cloud Practitioner guía completa para principiantes"
+cluster: "cloud"
+pubDate: 2026-09-26
+author: "Valentín"
+draft: false
+---
+
+AWS Cloud Practitioner es la puerta de entrada al ecosistema de cloud más grande del mercado, y a diferencia de otras certificaciones de entrada, no te exige saber programar ni administrar servidores.
+
+En resumen:
+
+- Es la certificación de entrada de AWS (código de examen CLF-C02), sin prerrequisitos formales.
+- El examen tiene 65 preguntas, dura 90 minutos, y se aprueba con 700 sobre 1000.
+- Cuesta US$100 — la certificación de entrada más barata entre los grandes proveedores de cloud.
+- Es válida por 3 años, después hay que recertificar.
+- Cubre 4 dominios: conceptos de cloud, seguridad, tecnología y servicios, y facturación.
+
+## Qué mide el examen
+
+| Dominio | Peso |
+| --- | --- |
+| Tecnología y servicios de AWS | 34% |
+| Seguridad y cumplimiento | 30% |
+| Conceptos de cloud | 24% |
+| Facturación, precios y soporte | 12% |
+
+A diferencia de CompTIA A+, que solo se rinde en inglés, alemán y japonés, **este examen está disponible en español**, tanto de Latinoamérica como de España. Es una ventaja concreta si el inglés técnico bajo presión de tiempo te preocupa.
+
+El examen evalúa conceptos, no implementación técnica profunda — no vas a tener que escribir código ni configurar nada en la práctica, sino entender qué hace cada servicio y cuándo conviene usarlo.
+
+## Cuánto sale y cómo se rinde
+
+| Ítem | Detalle |
+| --- | --- |
+| Preguntas | 65, opción múltiple y de múltiple respuesta |
+| Duración | 90 minutos |
+| Puntaje de aprobación | 700 sobre 1000 |
+| Idiomas | Incluye español (Latinoamérica y España) |
+| Modalidad | Centro Pearson VUE o remoto con supervisión online |
+| Validez | 3 años |
+
+## Qué servicios de AWS tenés que conocer
+
+No hace falta dominarlos, pero sí entender para qué sirve cada uno y en qué categoría entra:
+
+- **Cómputo**: EC2 (servidores virtuales), Lambda (código sin administrar servidor)
+- **Almacenamiento**: S3 (archivos), EBS (discos para EC2)
+- **Base de datos**: RDS (bases relacionales administradas)
+- **Redes**: VPC (red virtual privada), CloudFront (distribución de contenido)
+- **Seguridad e identidad**: IAM (gestión de accesos y permisos)
+- **Monitoreo**: CloudWatch (métricas y logs)
+
+## Vale la pena si...
+
+- Todavía no sabés si tu camino es AWS, Azure o Google Cloud, y querés una certificación reconocida para probar el ecosistema más grande sin comprometerte de entrada.
+- Tu objetivo de mediano plazo es una certificación técnica de AWS más avanzada (Solutions Architect, por ejemplo) y preferís empezar por los conceptos antes de la parte técnica.
+- Buscás una certificación de entrada barata y relativamente rápida de preparar comparada con las de nivel asociado.
+
+Si en tu trabajo actual ya usan herramientas de Microsoft, puede convenirte más arrancar por Azure — el artículo de [AWS o Azure: cuál certificación elegir primero](/cloud/aws-o-azure-cual-elegir/) tiene el detalle de esa comparación.
+
+## Cómo prepararla sin gastar de más
+
+- **AWS Skill Builder**: la plataforma oficial de AWS tiene cursos gratuitos alineados al examen.
+- **AWS Free Tier**: crear una cuenta y tocar los servicios reales (dentro de la capa gratuita) ayuda mucho más que solo leer teoría.
+- **Exámenes de práctica**: sirven para detectar en qué dominio flaqueás antes de gastar en el examen real.
+
+Un dato para planificar el gasto a futuro: al aprobar cualquier certificación de AWS, quedás con un **50% de descuento para el siguiente examen de AWS**. Si tu plan es seguir hacia Solutions Architect, ese descuento sale de esta certificación.
+
+## Errores comunes
+
+- Estudiar solo de memoria los nombres de los servicios sin entender para qué se usa cada uno — el examen es de escenarios, no de definiciones.
+- Subestimar el dominio de Seguridad (30% del examen) por asumir que "es solo conceptos".
+- No tocar la consola real de AWS ni una sola vez antes del examen.
+
+## Qué hacer ahora
+
+Creá una cuenta de AWS Free Tier hoy mismo y navegá la consola 15-20 minutos antes de arrancar a estudiar en serio — vas a entender el resto de la teoría mucho más rápido si ya viste la interfaz real. El [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) tiene el resto del camino si después de esta querés seguir hacia una certificación técnica de AWS.
