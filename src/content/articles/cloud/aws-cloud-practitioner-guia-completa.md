@@ -25,7 +25,9 @@ En resumen:
 | Tecnología y servicios de AWS | 34% |
 | Seguridad y cumplimiento | 30% |
 | Conceptos de cloud | 24% |
-| Facturación y precios | 12% |
+| Facturación, precios y soporte | 12% |
+
+A diferencia de CompTIA A+, que solo se rinde en inglés, alemán y japonés, **este examen está disponible en español**, tanto de Latinoamérica como de España. Es una ventaja concreta si el inglés técnico bajo presión de tiempo te preocupa.
 
 El examen evalúa conceptos, no implementación técnica profunda — no vas a tener que escribir código ni configurar nada en la práctica, sino entender qué hace cada servicio y cuándo conviene usarlo.
 
@@ -36,10 +38,9 @@ El examen evalúa conceptos, no implementación técnica profunda — no vas a t
 | Preguntas | 65, opción múltiple y de múltiple respuesta |
 | Duración | 90 minutos |
 | Puntaje de aprobación | 700 sobre 1000 |
-| Modalidad | Centro de examen o remoto con supervisión online |
+| Idiomas | Incluye español (Latinoamérica y España) |
+| Modalidad | Centro Pearson VUE o remoto con supervisión online |
 | Validez | 3 años |
-
-<!-- VERIFICAR: confirmar el precio exacto en pesos argentinos con el tipo de cambio vigente al momento de publicar, y si hay descuento por examen de práctica oficial de AWS disponible en la región. -->
 
 ## Qué servicios de AWS tenés que conocer
 
@@ -65,6 +66,8 @@ Si en tu trabajo actual ya usan herramientas de Microsoft, puede convenirte más
 - **AWS Skill Builder**: la plataforma oficial de AWS tiene cursos gratuitos alineados al examen.
 - **AWS Free Tier**: crear una cuenta y tocar los servicios reales (dentro de la capa gratuita) ayuda mucho más que solo leer teoría.
 - **Exámenes de práctica**: sirven para detectar en qué dominio flaqueás antes de gastar en el examen real.
+
+Un dato para planificar el gasto a futuro: al aprobar cualquier certificación de AWS, quedás con un **50% de descuento para el siguiente examen de AWS**. Si tu plan es seguir hacia Solutions Architect, ese descuento sale de esta certificación.
 
 ## Errores comunes
 

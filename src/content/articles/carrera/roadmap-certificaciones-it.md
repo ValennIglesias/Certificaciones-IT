@@ -47,13 +47,13 @@ Es el recorrido que más se aparta del resto: acá la experiencia práctica suel
 
 | Base | Intermedio | Especialización |
 | --- | --- | --- |
-| [CompTIA Security+](/seguridad/security-plus-vale-la-pena/) | CISSP o CompTIA CySA+ | Certificaciones de especialización (pentesting, GRC) |
+| [CompTIA Security+](/seguridad/security-plus-vale-la-pena/) | [CISSP](/seguridad/cissp-requisitos-costo-experiencia/) o CompTIA CySA+ | Certificaciones de especialización (pentesting, GRC) |
 
 ### Cloud
 
 | Base | Intermedio | Especialización |
 | --- | --- | --- |
-| [AWS Cloud Practitioner o Azure AZ-900](/cloud/aws-o-azure-cual-elegir/) | AWS Solutions Architect Associate o Azure Administrator (AZ-104) | Certificación profesional del proveedor elegido |
+| [AWS Cloud Practitioner](/cloud/aws-cloud-practitioner-guia-completa/) o [Azure AZ-900](/cloud/aws-o-azure-cual-elegir/) | AWS Solutions Architect Associate o Azure Administrator (AZ-104) | Certificación profesional del proveedor elegido |
 
 ## Lo que importa más que el orden exacto
 

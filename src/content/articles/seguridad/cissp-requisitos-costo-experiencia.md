@@ -6,6 +6,8 @@ cluster: "seguridad"
 pubDate: 2026-09-28
 author: "Valentín"
 draft: false
+verificar:
+  - "Ventana del Associate of ISC2: el artículo dice 6 años para completar la experiencia"
 ---
 
 CISSP no es una certificación para arrancar: es la que se saca cuando ya tenés varios años encima en seguridad y necesitás algo que lo demuestre en un CV o una licitación.
@@ -23,7 +25,7 @@ En resumen:
 | Dominio | Peso |
 | --- | --- |
 | Seguridad y gestión de riesgo | 16% |
-| Arquitectura y seguridad | 13% |
+| Arquitectura e ingeniería de seguridad | 13% |
 | Seguridad de comunicaciones y redes | 13% |
 | Gestión de identidades y accesos (IAM) | 13% |
 | Operaciones de seguridad | 13% |
@@ -37,22 +39,20 @@ Comparado con [Security+](/seguridad/security-plus-vale-la-pena/), que evalúa c
 
 | Situación | Qué se pide |
 | --- | --- |
-| Sin título universitario | 5 años de experiencia paga en 2+ de los 8 dominios |
-| Con título de 4 años (o equivalente) | 4 años de experiencia paga en 2+ de los 8 dominios |
-| Con una credencial aprobada por ISC2 (ej. CompTIA Security+) | También descuenta 1 año del requisito |
+| Sin título universitario ni credencial aprobada | 5 años de experiencia paga en 2+ de los 8 dominios |
+| Con título de 4 años, o con una credencial aprobada por ISC2 (ej. CompTIA Security+) | 4 años de experiencia paga en 2+ de los 8 dominios |
 
-El trabajo part-time cuenta proporcionalmente, pero el trabajo voluntario no cuenta. Además, alguien que ya sea miembro de ISC2 tiene que confirmar (endosar) tu experiencia — ese proceso puede tardar varias semanas, conviene tenerlo en cuenta antes de fijar una fecha de examen.
+El waiver es de **máximo 1 año en total, no acumulable**: tener título universitario y además Security+ sigue descontando solo un año, no dos. El trabajo part-time cuenta de forma proporcional, y las pasantías (pagas o no) también son válidas si están bien documentadas. Además, alguien que ya sea miembro de ISC2 tiene que confirmar (endosar) tu experiencia — ese proceso puede tardar varias semanas, conviene tenerlo en cuenta antes de fijar una fecha de examen.
 
 ## Cuánto sale (inicial y mantenimiento)
 
 | Concepto | Costo |
 | --- | --- |
-| Examen | US$749 |
+| Examen | US$749 (se rinde dentro de los 365 días de la compra) |
+| Examen con segundo intento incluido | US$998 (segunda oportunidad dentro de 180 días) |
 | Reprogramar el examen | US$50 |
 | Cancelar el examen | US$100 |
-| Mantenimiento anual | US$85/año (o US$255 cada 3 años) |
-
-<!-- VERIFICAR: confirmar el precio exacto en pesos argentinos con el tipo de cambio vigente al momento de publicar. -->
+| Mantenimiento anual (AMF) | US$135/año una vez certificado (US$50/año mientras sos Associate of ISC2) |
 
 Además del examen, hay que sumar créditos de educación continua (120 CPE cada 3 años) para mantener la certificación activa una vez aprobada.
 
