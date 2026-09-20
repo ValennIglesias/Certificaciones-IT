@@ -4,7 +4,7 @@ description: "Qué certificación conviene como primera parada, cuánto tiempo l
 keyword: "cómo empezar a trabajar en soporte técnico sin experiencia"
 cluster: "entrada"
 pubDate: 2026-09-15
-author: "Valentin"
+author: "Valentín"
 draft: false
 heroImage: "../../../assets/hero-comptia-a-plus.jpg"
 heroAlt: "Placa con el texto «CompTIA A+», certificación de entrada"

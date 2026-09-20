@@ -127,3 +127,28 @@
 		--tw-prose-quote-borders: var(--color-brand-700);
 	}
 }
+
+/*
+  Tablas anchas dentro de un artículo.
+
+  Con 3-4 columnas de texto largo, la tabla se pasa del ancho de lectura y en
+  mobile queda cortada contra el borde de la pantalla: la última columna se
+  vuelve ilegible. Haciéndola un bloque con scroll horizontal propio, el
+  contenido se conserva entero y se desplaza dentro de su caja, sin generar
+  scroll lateral en toda la página.
+*/
+.prose-article table {
+	display: block;
+	max-width: 100%;
+	overflow-x: auto;
+	/* El scroll táctil no debería arrastrar la página entera. */
+	overscroll-behavior-x: contain;
+}
+
+/* En pantallas donde la tabla entra completa, que ocupe todo el ancho. */
+@media (min-width: 768px) {
+	.prose-article table {
+		display: table;
+		width: 100%;
+	}
+}

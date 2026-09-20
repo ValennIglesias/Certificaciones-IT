@@ -10,7 +10,7 @@ export const SITE = {
 	lang: 'es',
 	locale: 'es_ES',
 	/** Autor por defecto. Hoy cada artículo declara el suyo en el frontmatter. */
-	author: 'Valentin',
+	author: 'Valentín',
 	/** Imagen Open Graph por defecto, relativa a /public. */
 	defaultImage: '/og-default.jpg',
 } as const;

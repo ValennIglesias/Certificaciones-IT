@@ -4,7 +4,7 @@ description: "Modelo OSI, direccionamiento IP, subredes y enrutamiento: la base 
 keyword: "fundamentos de redes que todo técnico IT debería saber"
 cluster: "redes"
 pubDate: 2026-09-12
-author: "Valentin"
+author: "Valentín"
 draft: false
 ---
 
