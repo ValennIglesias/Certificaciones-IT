@@ -6,8 +6,6 @@ cluster: "entrada"
 pubDate: 2026-09-15
 author: "Valentín"
 draft: false
-heroImage: "../../../assets/hero-comptia-a-plus.jpg"
-heroAlt: "Placa con el texto «CompTIA A+», certificación de entrada"
 ---
 
 Entrar a IT sin experiencia previa tiene un problema de orden: hay demasiadas certificaciones dando vueltas y casi ninguna guía dice, en serio, cuál conviene sacar primero.

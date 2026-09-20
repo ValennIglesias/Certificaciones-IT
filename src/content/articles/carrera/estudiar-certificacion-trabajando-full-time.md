@@ -16,7 +16,8 @@ En resumen, lo que mejor funciona:
 - Sumar microsesiones de 15-20 minutos entre semana — no reemplazan una sesión larga, pero acumulan.
 - Fijar la fecha del examen apenas empezás a estudiar, no cuando "te sientas listo".
 - Reservar un bloque largo el fin de semana para laboratorio y práctica que necesita foco continuo.
-- El orden de qué certificación estudiar primero depende de tu objetivo — para eso está el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/).
+
+Todo esto asume que ya sabés qué certificación vas a rendir. Si todavía no lo definiste, el orden depende de tu objetivo: para eso está el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/).
 
 ## Aprovechar los tiempos que ya tenés, en vez de inventar nuevos
 
@@ -28,7 +29,7 @@ No hace falta una rutina rígida de "una hora todos los días a las 7am" para av
 
 La lógica común a los tres puntos: en vez de pelear por crear tiempo nuevo, se reutiliza tiempo que de otra forma se perdía en espera o traslado.
 
-## Qué dice la evidencia sobre lo que funciona
+## Qué funciona según quienes ya pasaron por esto
 
 Más allá de la experiencia propia, hay patrones que se repiten en comunidades de gente que se certificó trabajando full-time:
 
@@ -44,7 +45,14 @@ Más allá de la experiencia propia, hay patrones que se repiten en comunidades 
 
 ## Cuánto tiempo lleva, en números realistas
 
-Varía según la certificación y el ritmo, pero como referencia: una certificación de entrada (CompTIA A+, ITIL Foundation) con 1-2 horas diarias de estudio distribuido suele tomar entre 6 y 10 semanas. Una certificación intermedia como CCNA o Security+, con ese mismo ritmo, ronda los 2 a 4 meses. Lo que más cambia el resultado no es cuántas horas totales se acumulan, sino qué tan constante es el ritmo semana a semana.
+Varía según la certificación y el ritmo, pero como referencia:
+
+| Certificación | Ritmo | Tiempo estimado |
+| --- | --- | --- |
+| Entrada (CompTIA A+, ITIL Foundation) | 1-2 h diarias distribuidas | 6 a 10 semanas |
+| Intermedia (CCNA, Security+) | 1-2 h diarias distribuidas | 2 a 4 meses |
+
+Lo que más cambia el resultado no es cuántas horas totales se acumulan, sino qué tan constante es el ritmo semana a semana.
 
 ## Plan simple para arrancar
 

@@ -33,7 +33,7 @@ Esto no significa que estudiar antes de trabajar esté mal — es una alternativ
 
 | Base | Intermedio | Especialización |
 | --- | --- | --- |
-| [CompTIA A+ o ITIL Foundation](/entrada/como-empezar-en-it-sin-experiencia/) | Experiencia práctica con Active Directory / Azure AD y un sistema de gestión de tickets (ITSM) | Certificación de infraestructura o formación formal (tecnicatura/carrera) que valide lo aprendido en el puesto |
+| [CompTIA A+](/entrada/certificacion-comptia-a-plus/) o ITIL Foundation | Experiencia práctica con Active Directory / Azure AD y un sistema de gestión de tickets (ITSM) | Certificación de infraestructura o formación formal (tecnicatura/carrera) que valide lo aprendido en el puesto |
 
 Es el recorrido que más se aparta del resto: acá la experiencia práctica suele ir *antes* que la certificación formal, no después.
 

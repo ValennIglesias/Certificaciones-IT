@@ -35,10 +35,18 @@ convenciones que ya siguen los artículos publicados del sitio.
 > 2. **Respuesta corta** inmediatamente después: 3-5 viñetas o un párrafo que
 >    respondan la keyword sin rodeos. Quien llega de Google tiene que poder
 >    irse satisfecho sin bajar más.
+>
+>    Las viñetas tienen que ser **todas del mismo tipo**: si la lista se
+>    presenta como "lo que mejor funciona", todos los ítems son tácticas. Los
+>    punteros a otros artículos van **fuera** de la lista, como línea aparte
+>    debajo. Una lista que mezcla tácticas con enlaces se lee floja.
 > 3. **Cuerpo en H2 descriptivos** (`## Cuánto sale certificarse`, no
->    `## Costos`). Entre 4 y 6 secciones. Al menos una tabla o lista comparativa
->    con el dato duro del artículo.
-> 4. **Cierre accionable**: qué hacer ahora, no un resumen de lo dicho.
+>    `## Costos`). Entre 4 y 6 secciones.
+> 4. **Al menos una tabla** con el dato duro del artículo. Si escribiste cifras
+>    concretas dentro de un párrafo —precios, plazos, porcentajes, pesos de
+>    examen—, sacalas a tabla. Es el contenido más escaneable y el que más se
+>    cita; enterrado en prosa se pierde.
+> 5. **Cierre accionable**: qué hacer ahora, no un resumen de lo dicho.
 >
 > **Enlaces internos (importante):**
 >
@@ -50,8 +58,10 @@ convenciones que ya siguen los artículos publicados del sitio.
 >   no lo dejes en texto plano para el final.
 > - Rutas internas siempre **con barra final**: `/redes/mi-articulo/`.
 >
-> **Tablas:** máximo 3 columnas si el texto de las celdas es largo. Con 4
-> columnas hay que hacer scroll en mobile, que ya funciona pero se lee peor.
+> **Tablas:** **máximo 3 columnas.** Con 4 hay que hacer scroll en mobile y la
+> última columna se lee mal. Si necesitás una cuarta dimensión, partí la tabla
+> en subsecciones con `###` —una por categoría— y dejá 3 columnas en cada una.
+> Así se resolvió la tabla del roadmap.
 >
 > **Tono:**
 >
@@ -62,8 +72,24 @@ convenciones que ya siguen los artículos publicados del sitio.
 >   como experiencia de primera mano.
 >
 > **Datos:** no inventes precios, porcentajes, códigos de examen ni pesos de
-> dominio. Si no tenés el dato verificado, escribí el texto sin él o dejalo
-> marcado como `<!-- VERIFICAR -->` para completarlo a mano después.
+> dominio. Si no tenés el dato verificado, escribí el texto sin él o anotá el
+> pendiente en el frontmatter:
+>
+> ```yaml
+> verificar:
+>   - "Costo exacto del examen al momento de publicar"
+> ```
+>
+> **No uses `<!-- VERIFICAR -->` en el cuerpo**: los comentarios HTML llegan al
+> código fuente de la página publicada. El campo `verificar` no se renderiza
+> nunca, y el build lista los pendientes en cada corrida para que no se
+> olviden.
+>
+> **Encabezados honestos:** el H2 no puede prometer más de lo que entrega el
+> cuerpo. `## Qué dice la evidencia` obliga a citar fuentes; si lo que tenés son
+> patrones vistos en foros y comunidades, el título es
+> `## Qué funciona según quienes ya pasaron por esto`. Con AdSense evaluando la
+> calidad editorial, prometer de más en un encabezado cuesta caro.
 >
 > **Extensión:** 800-1.500 palabras. Mejor 900 densas que 2.000 infladas.
 
@@ -71,14 +97,26 @@ convenciones que ya siguen los artículos publicados del sitio.
 
 ## Checklist antes de publicar
 
+- [ ] **El archivo está en `src/content/articles/<cluster>/`**, no en la raíz
+      del repo. Un `.md` en la raíz se commitea sin error y **no se publica**:
+      Astro solo lee la colección. Si la URL no aparece en el build, es esto.
 - [ ] `npm run build` sin errores (el schema valida el frontmatter y **rompe el
       build** si falta un campo o el cluster no es uno de los cinco).
 - [ ] La `description` es única: no repetir la de otro artículo.
 - [ ] La respuesta a la keyword está arriba, antes de cualquier narrativa.
 - [ ] Enlaza al roadmap, y el roadmap o algún otro artículo enlaza a este.
 - [ ] Ningún enlace interno roto y todos con barra final.
-- [ ] Si hay tabla de 4+ columnas, revisada en mobile.
+- [ ] Ninguna tabla pasa de 3 columnas.
+- [ ] Las cifras concretas están en tabla, no sueltas en un párrafo.
+- [ ] Las viñetas del resumen son todas del mismo tipo.
+- [ ] Ningún H2 promete más de lo que entrega su sección.
+- [ ] `pubDate` es la fecha real de publicación (una fecha futura se publica
+      igual y encabeza la home).
 - [ ] Datos verificados contra la fuente oficial del proveedor.
+- [ ] Los pendientes van en el campo `verificar` del frontmatter, no en
+      comentarios HTML.
+- [ ] Si el artículo cubre una certificación que ya se nombra en otro (por
+      ejemplo en el roadmap), actualizar ese enlace para que apunte acá.
 
 ## Convenciones que ya están resueltas y no hay que tocar
 
