@@ -11,8 +11,8 @@ export const SITE = {
 	locale: 'es_ES',
 	/** Autor por defecto. Hoy cada artículo declara el suyo en el frontmatter. */
 	author: 'Valentín',
-	/** Imagen Open Graph por defecto, relativa a /public. */
-	defaultImage: '/og-default.jpg',
+	/** Imagen Open Graph por defecto. La genera scripts/generate-og.mjs. */
+	defaultImage: '/og/home.jpg',
 } as const;
 
 export const CLUSTERS = {

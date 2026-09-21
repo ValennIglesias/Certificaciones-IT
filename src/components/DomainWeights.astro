@@ -1,0 +1,150 @@
+---
+/**
+ * Pesos de dominio de un examen, como barras proporcionales.
+ *
+ * Reemplaza a la tabla de markdown, no la duplica: sigue siendo una <table>
+ * semántica con encabezados de fila, así que no pierde nada de accesibilidad
+ * ni de indexación, y gana la comparación visual.
+ *
+ * La escala va de 0 a 100 %, que es lo que el dato significa: la porción del
+ * examen que ocupa cada dominio. Escalar al máximo haría las barras más
+ * vistosas y el dato, mentiroso.
+ */
+
+interface Props {
+	/** Título del bloque. Ej: "Core 1 (220-1201)". */
+	titulo: string;
+	dominios: { nombre: string; peso: number }[];
+}
+
+const { titulo, dominios } = Astro.props;
+
+// Si los pesos no suman 100, el examen o la transcripción tienen un problema:
+// mejor romper el build que publicar un gráfico que no cierra.
+const suma = dominios.reduce((total, d) => total + d.peso, 0);
+if (suma !== 100) {
+	throw new Error(`[DomainWeights] "${titulo}": los pesos suman ${suma}%, deberían sumar 100%.`);
+}
+---
+
+<figure class="pesos">
+	<table>
+		<caption>{titulo}</caption>
+		<thead>
+			<tr>
+				<th scope="col">Dominio</th>
+				<th scope="col">Peso</th>
+			</tr>
+		</thead>
+		<tbody>
+			{
+				dominios.map((d) => (
+					<tr>
+						<th scope="row">{d.nombre}</th>
+						<td>
+							<span class="dato">
+								<span class="pista" aria-hidden="true">
+									<span class="barra" style={`width:${d.peso}%`} />
+								</span>
+								<span class="cifra">{d.peso} %</span>
+							</span>
+						</td>
+					</tr>
+				))
+			}
+		</tbody>
+	</table>
+</figure>
+
+<style>
+	.pesos {
+		margin: 2rem 0 2.5rem;
+	}
+
+	.pesos table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.9375rem;
+	}
+
+	.pesos caption {
+		display: block;
+		width: 100%;
+		text-align: left;
+		font-weight: 700;
+		font-size: 0.9375rem;
+		padding-bottom: 0.75rem;
+		border-bottom: 2px solid var(--tinta);
+	}
+
+	/*
+	  El encabezado de columna no aporta: cada fila ya dice el dominio y la
+	  cifra lleva su signo de porcentaje. Queda para lectores de pantalla.
+	*/
+	.pesos thead {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+	}
+
+	/*
+	  Una sola disposición en todos los anchos: etiqueta arriba, barra abajo
+	  a todo el ancho de lectura. Con dos columnas el track quedaba tan corto
+	  que 16 % y 10 % se veían casi iguales.
+	*/
+	.pesos table,
+	.pesos tbody,
+	.pesos tbody tr,
+	.pesos tbody th,
+	.pesos tbody td {
+		display: block;
+		width: auto;
+	}
+
+	.pesos tbody tr {
+		padding-block: 0.875rem;
+		border-bottom: 1px solid var(--regla);
+	}
+
+	.pesos tbody tr:last-child {
+		border-bottom: 0;
+	}
+
+	.pesos tbody th {
+		text-align: left;
+		font-weight: 400;
+		padding: 0 0 0.5rem;
+	}
+
+	.pesos tbody td {
+		padding: 0;
+	}
+
+	.dato {
+		display: flex;
+		align-items: center;
+		gap: 0.875rem;
+	}
+
+	.pista {
+		flex: 1 1 auto;
+		height: 0.5rem;
+		background-color: var(--neutro);
+	}
+
+	.barra {
+		display: block;
+		height: 100%;
+		background-color: var(--accent);
+	}
+
+	.cifra {
+		flex: 0 0 auto;
+		min-width: 3rem;
+		text-align: right;
+		font-variant-numeric: tabular-nums;
+		font-weight: 700;
+	}
+</style>

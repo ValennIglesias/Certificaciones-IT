@@ -10,6 +10,8 @@ heroImage: "../../../assets/hero-comptia-a-plus.jpg"
 heroAlt: "Placa con el texto «CompTIA A+», certificación de entrada"
 ---
 
+import DomainWeights from '../../../components/DomainWeights.astro';
+
 CompTIA A+ es la certificación que más veces vas a ver recomendada para arrancar en soporte técnico, y no es casualidad: valida justo lo que un puesto de help desk te pide desde el primer día.
 
 En resumen:
@@ -24,24 +26,15 @@ En resumen:
 
 La versión vigente del examen (220-1201/220-1202, la llamada "V15") reemplazó a la anterior 220-1101/220-1102. Si estás juntando material de estudio, confirmá que esté actualizado a esta versión — el contenido viejo todavía circula dando vueltas por internet. Y tené en cuenta que **los dos exámenes tienen que ser de la misma versión**: no se puede rendir Core 1 de una y Core 2 de otra.
 
-**Core 1 (220-1201):**
+<DomainWeights
+	titulo="Core 1 (220-1201)"
+	dominios={[{"nombre": "Hardware y solución de problemas de red", "peso": 28}, {"nombre": "Hardware", "peso": 25}, {"nombre": "Redes", "peso": 23}, {"nombre": "Dispositivos móviles", "peso": 13}, {"nombre": "Virtualización y cloud computing", "peso": 11}]}
+/>
 
-| Dominio | Peso |
-| --- | --- |
-| Hardware y solución de problemas de red | 28% |
-| Hardware | 25% |
-| Redes | 23% |
-| Dispositivos móviles | 13% |
-| Virtualización y cloud computing | 11% |
-
-**Core 2 (220-1202):**
-
-| Dominio | Peso |
-| --- | --- |
-| Sistemas operativos | 28% |
-| Seguridad | 28% |
-| Solución de problemas de software | 23% |
-| Procedimientos operativos | 21% |
+<DomainWeights
+	titulo="Core 2 (220-1202)"
+	dominios={[{"nombre": "Sistemas operativos", "peso": 28}, {"nombre": "Seguridad", "peso": 28}, {"nombre": "Solución de problemas de software", "peso": 23}, {"nombre": "Procedimientos operativos", "peso": 21}]}
+/>
 
 ## Cuánto sale y cómo se rinde
 

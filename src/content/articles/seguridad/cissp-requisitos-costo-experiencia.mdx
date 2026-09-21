@@ -10,6 +10,8 @@ verificar:
   - "Ventana del Associate of ISC2: el artículo dice 6 años para completar la experiencia"
 ---
 
+import DomainWeights from '../../../components/DomainWeights.astro';
+
 CISSP no es una certificación para arrancar: es la que se saca cuando ya tenés varios años encima en seguridad y necesitás algo que lo demuestre en un CV o una licitación.
 
 En resumen:
@@ -22,16 +24,10 @@ En resumen:
 
 ## Los 8 dominios que cubre
 
-| Dominio | Peso |
-| --- | --- |
-| Seguridad y gestión de riesgo | 16% |
-| Arquitectura e ingeniería de seguridad | 13% |
-| Seguridad de comunicaciones y redes | 13% |
-| Gestión de identidades y accesos (IAM) | 13% |
-| Operaciones de seguridad | 13% |
-| Evaluación y testing de seguridad | 12% |
-| Seguridad de activos | 10% |
-| Seguridad en el desarrollo de software | 10% |
+<DomainWeights
+	titulo="Los 8 dominios y su peso"
+	dominios={[{"nombre": "Seguridad y gestión de riesgo", "peso": 16}, {"nombre": "Arquitectura e ingeniería de seguridad", "peso": 13}, {"nombre": "Seguridad de comunicaciones y redes", "peso": 13}, {"nombre": "Gestión de identidades y accesos (IAM)", "peso": 13}, {"nombre": "Operaciones de seguridad", "peso": 13}, {"nombre": "Evaluación y testing de seguridad", "peso": 12}, {"nombre": "Seguridad de activos", "peso": 10}, {"nombre": "Seguridad en el desarrollo de software", "peso": 10}]}
+/>
 
 Comparado con [Security+](/seguridad/security-plus-vale-la-pena/), que evalúa conceptos, CISSP evalúa criterio de decisión — el examen está armado para gente que ya tuvo que tomar ese tipo de decisiones en un trabajo real, no solo estudiarlas.
 

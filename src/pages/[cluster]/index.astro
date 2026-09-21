@@ -15,7 +15,12 @@ const meta = CLUSTERS[cluster];
 const articles = await getArticles(cluster);
 ---
 
-<BaseLayout title={meta.name} description={meta.description} accent={cluster}>
+<BaseLayout
+	title={meta.name}
+	description={meta.description}
+	accent={cluster}
+	image={`/og/cluster-${cluster}.jpg`}
+	imageAlt={meta.name}>
 	<div class="wrap">
 		<div class="miga">
 			<Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: meta.name }]} />
