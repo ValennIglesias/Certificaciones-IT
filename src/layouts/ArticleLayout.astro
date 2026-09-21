@@ -6,7 +6,7 @@ import ArticleRow from '../components/ArticleRow.astro';
 import AdSlot from '../components/AdSlot.astro';
 import JsonLd from '../components/JsonLd.astro';
 import { SITE, CLUSTERS, type ClusterId } from '../consts';
-import { articlePath, formatDate, readingTime, type Article } from '../lib/articles';
+import { articlePath, articleSlug, formatDate, readingTime, type Article } from '../lib/articles';
 
 interface Props {
 	article: Article;
@@ -22,9 +22,13 @@ const clusterMeta = CLUSTERS[clusterId];
 const url = new URL(articlePath(article), Astro.site).toString();
 const minutes = readingTime(article.body);
 
+// Open Graph propia, generada con el título real del artículo. En un preview
+// de WhatsApp o LinkedIn el título legible rinde más que una placa genérica.
+const ogImage = `/og/${clusterId}-${articleSlug(article)}.jpg`;
+
 const imageUrl = heroImage
 	? new URL(heroImage.src, Astro.site).toString()
-	: new URL(SITE.defaultImage, Astro.site).toString();
+	: new URL(`/og/${clusterId}-${articleSlug(article)}.jpg`, Astro.site).toString();
 
 const articleSchema = {
 	'@context': 'https://schema.org',
@@ -62,8 +66,8 @@ const breadcrumbSchema = {
 	title={title}
 	description={description}
 	type="article"
-	image={heroImage?.src}
-	imageAlt={heroAlt ?? title}
+	image={ogImage}
+	imageAlt={title}
 	publishedTime={pubDate}
 	modifiedTime={updatedDate ?? pubDate}
 	author={author}

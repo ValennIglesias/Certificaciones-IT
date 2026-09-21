@@ -8,6 +8,8 @@ author: "Valentín"
 draft: false
 ---
 
+import DomainWeights from '../../../components/DomainWeights.astro';
+
 AWS Cloud Practitioner es la puerta de entrada al ecosistema de cloud más grande del mercado, y a diferencia de otras certificaciones de entrada, no te exige saber programar ni administrar servidores.
 
 En resumen:
@@ -20,12 +22,10 @@ En resumen:
 
 ## Qué mide el examen
 
-| Dominio | Peso |
-| --- | --- |
-| Tecnología y servicios de AWS | 34% |
-| Seguridad y cumplimiento | 30% |
-| Conceptos de cloud | 24% |
-| Facturación, precios y soporte | 12% |
+<DomainWeights
+	titulo="Dominios del examen CLF-C02"
+	dominios={[{"nombre": "Tecnología y servicios de AWS", "peso": 34}, {"nombre": "Seguridad y cumplimiento", "peso": 30}, {"nombre": "Conceptos de cloud", "peso": 24}, {"nombre": "Facturación, precios y soporte", "peso": 12}]}
+/>
 
 A diferencia de CompTIA A+, que solo se rinde en inglés, alemán y japonés, **este examen está disponible en español**, tanto de Latinoamérica como de España. Es una ventaja concreta si el inglés técnico bajo presión de tiempo te preocupa.
 

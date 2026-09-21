@@ -10,19 +10,18 @@ heroImage: "../../../assets/hero-security-plus.jpg"
 heroAlt: "Placa con el texto «Security+», certificación de ciberseguridad"
 ---
 
+import DomainWeights from '../../../components/DomainWeights.astro';
+
 Security+ es la certificación de seguridad que más aparece como requisito excluyente en vacantes de nivel inicial de ciberseguridad.
 
 ## Qué mide el examen (SY0-701)
 
 La versión vigente del examen se organiza en cinco dominios:
 
-| Dominio | Peso |
-| --- | --- |
-| Conceptos generales de seguridad | 12% |
-| Amenazas, ataques y vulnerabilidades | 22% |
-| Arquitectura de seguridad | 18% |
-| Operaciones de seguridad | 28% |
-| Gestión y gobierno del programa de seguridad | 20% |
+<DomainWeights
+	titulo="Dominios del examen SY0-701"
+	dominios={[{"nombre": "Conceptos generales de seguridad", "peso": 12}, {"nombre": "Amenazas, ataques y vulnerabilidades", "peso": 22}, {"nombre": "Arquitectura de seguridad", "peso": 18}, {"nombre": "Operaciones de seguridad", "peso": 28}, {"nombre": "Gestión y gobierno del programa de seguridad", "peso": 20}]}
+/>
 
 El examen tiene hasta 90 preguntas (opción múltiple y basadas en desempeño), 90 minutos de duración, y el puntaje de aprobación es 750 sobre 900.
 
