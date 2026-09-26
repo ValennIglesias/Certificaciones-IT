@@ -1,0 +1,143 @@
+# Mapa de keywords y plan de contenido — Desde Cero IT
+
+Basado en los datos de Google Keyword Planner del 25/09/2026.
+Los volúmenes citados son de los mercados hispanohablantes, no del
+total con EE.UU. y Brasil incluidos.
+
+---
+
+## Parte 1 — Corrección de los 11 artículos publicados
+
+### Artículos que SÍ tienen keyword con demanda
+
+| Artículo | Keyword actual (sin volumen) | Keyword nueva | Volumen | Comp. |
+| --- | --- | --- | --- | --- |
+| `seguridad/security-plus-vale-la-pena` | CompTIA Security+ guía de estudio en español | **security+** | 5.000 | Medio |
+| `cloud/aws-cloud-practitioner-guia-completa` | AWS Cloud Practitioner guía completa para principiantes | **curso aws cloud practitioner** | 500 | Alto |
+| `seguridad/cissp-requisitos-costo-experiencia` | CISSP requisitos costo experiencia necesaria | **cissp** | alto | Bajo |
+| `entrada/certificacion-comptia-a-plus` | certificación CompTIA A+ qué es cuánto cuesta cómo rendirla | **comptia a+** | 500 (ES) | Medio |
+| `redes/fundamentos-de-redes-para-certificarte` | fundamentos de redes que todo técnico IT debería saber | **ccna desde cero** | 500 | Bajo |
+| `cloud/aws-o-azure-cual-elegir` | Azure AZ-900 vs AWS Cloud Practitioner cuál conviene sacar primero | **az 900 vs aws cloud practitioner** | bajo pero intención alta | Medio |
+
+### Artículos sin keyword viable — pasan a ser contenido de apoyo
+
+Estos cuatro no tienen ningún término con volumen medible. **No significa
+que haya que borrarlos**: cumplen función de enlazado interno, de señal de
+autoría (E-E-A-T) y de conversión para quien ya llegó al sitio. Pero no
+hay que esperar que traigan tráfico de Google.
+
+| Artículo | Situación |
+| --- | --- |
+| `carrera/roadmap-certificaciones-it` | Pilar interno. Sigue siendo el hub que enlaza todo. |
+| `carrera/estudiar-certificacion-trabajando-full-time` | Apoyo. Buen contenido, sin demanda de búsqueda. |
+| `carrera/primer-cv-para-un-puesto-it` | Apoyo. |
+| `entrada/como-empezar-en-it-sin-experiencia` | Apoyo. El término "empezar en soporte técnico" está contaminado por búsquedas de atención al cliente de Apple/HP/Samsung. |
+
+**Regla nueva para el cluster Carrera:** dejar de escribir ahí salvo que
+la keyword tenga volumen verificado. El único ángulo del cluster con
+demanda real es el de sueldos (ver artículo #4 del plan).
+
+---
+
+## Parte 2 — Los próximos 10 artículos, por prioridad
+
+Ordenados por volumen × puja × facilidad. Los primeros seis son los que
+más rinden.
+
+### 1. Curso CCNA: cómo prepararte, gratis y pago
+- **Keyword:** `curso ccna` — 5.000/mes, competencia Media
+- **Cluster:** redes
+- **Por qué primero:** el mayor volumen accionable de todo el nicho. La
+  gente busca *cómo aprender* mucho más que *qué es la certificación*.
+- **Slug sugerido:** `curso-ccna-como-prepararte`
+
+### 2. Examen AZ-900: formato, preguntas y cómo prepararlo
+- **Keyword:** `az 900 examen` — 5.000/mes, competencia Baja
+- **Cluster:** cloud
+- **Por qué:** una de las pujas más altas de todo el dataset, con
+  competencia baja. Combinación inusual.
+- **Slug sugerido:** `examen-az-900-formato-y-preparacion`
+
+### 3. Examen CompTIA Security+: formato y estrategia de preparación
+- **Keyword:** `comptia security+ examen` — 5.000/mes, competencia Media
+- **Cluster:** seguridad
+- **Nota — división de keywords, importante:** el artículo existente
+  (`security-plus-vale-la-pena`) se queda con `security+` y responde "qué
+  es y para qué sirve". Este se queda con `comptia security+ examen` y
+  responde "cómo es el examen y cómo prepararlo". No deben solaparse: dos
+  artículos apuntando a la misma keyword compiten entre sí en Google.
+- **Slug sugerido:** `examen-comptia-security-plus`
+
+### 4. Cuánto gana un ingeniero en informática
+- **Keyword:** `ingeniero en informatica cuanto gana` — 5.000/mes, Baja
+- **Cluster:** carrera
+- **Por qué:** el único ángulo del cluster Carrera con demanda real, y con
+  puja alta. Los datos de sueldo hay que verificarlos por país.
+- **Slug sugerido:** `cuanto-gana-ingeniero-informatica`
+
+### 5. CCNA 200-301: temario completo explicado
+- **Keyword:** `ccna 200 301` — 5.000/mes, competencia Baja
+- **Cluster:** redes
+- **Slug sugerido:** `ccna-200-301-temario`
+
+### 6. Cisco Networking Academy: qué es y cómo entrar
+- **Keyword:** `cisco network academy` / `ccna netacad` — 5.000/mes, Baja
+- **Cluster:** redes
+- **Por qué:** puja muy alta y competencia baja. Además es información
+  práctica que casi nadie explica bien en español.
+- **Slug sugerido:** `cisco-networking-academy-como-entrar`
+
+### 7. Ciberseguridad desde cero: por dónde empezar
+- **Keyword:** `ciberseguridad desde cero` — 500/mes, Media
+- **Cluster:** seguridad
+- **Nota:** `ciberseguridad` a secas tiene volumen enorme pero es
+  imposible de rankear para un sitio nuevo. Esta variante es la puerta
+  de entrada realista al término.
+- **Slug sugerido:** `ciberseguridad-desde-cero`
+
+### 8. Curso AZ-900: opciones para prepararte
+- **Keyword:** `curso az 900` — 500/mes, Media
+- **Cluster:** cloud
+- **Slug sugerido:** `curso-az-900-opciones`
+
+### 9. Certificaciones Cisco: el mapa completo
+- **Keyword:** `certificaciones en cisco` — 5.000/mes, Baja
+- **Cluster:** redes
+- **Por qué:** artículo pilar del cluster que pasa a ser principal.
+  Enlaza a todos los satélites de CCNA.
+- **Slug sugerido:** `certificaciones-cisco-mapa-completo`
+
+### 10. Cuánto cuesta el CCNA
+- **Keyword:** `ccna cisco precio` / `price ccna` — 500-5.000/mes, Baja
+- **Cluster:** redes
+- **Slug sugerido:** `cuanto-cuesta-el-ccna`
+
+---
+
+## Parte 3 — Reordenamiento de clusters
+
+| Cluster | Rol anterior | Rol nuevo | Artículos objetivo |
+| --- | --- | --- | --- |
+| Redes (CCNA/Cisco) | secundario | **principal** | 5 de los próximos 10 |
+| Cloud (AZ-900, AWS) | secundario | segundo | 2 de los próximos 10 |
+| Seguridad | secundario | tercero | 2 de los próximos 10 |
+| Carrera | principal | apoyo + sueldos | 1 de los próximos 10 |
+| Entrada | principal | mantener, no expandir | 0 |
+
+---
+
+## Parte 4 — Reglas nuevas para elegir keywords
+
+1. **Keyword corta, no frase de título.** `comptia a+ precio`, no
+   `cuánto cuesta el examen CompTIA A+`. El título del artículo puede
+   ser largo; el campo `keyword` no.
+2. **Verificar volumen ANTES de escribir.** Ningún artículo nuevo sin
+   pasar la keyword por Keyword Planner primero.
+3. **Preferir intención de "curso/aprender" sobre "certificación".** Los
+   datos muestran que `curso cisco` (5.000) supera ampliamente a
+   `certificacion ccna` (500).
+4. **Descartar términos contaminados.** `soporte tecnico` parece tener
+   volumen, pero viene mezclado con búsquedas de atención al cliente de
+   Apple, HP y Samsung — intención incompatible.
+5. **Ignorar los volúmenes de EE.UU. y Brasil** para términos que son
+   iguales en varios idiomas (ccna, cissp, comptia a+, az 900).

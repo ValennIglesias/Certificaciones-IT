@@ -103,6 +103,8 @@ convenciones que ya siguen los artículos publicados del sitio.
 - [ ] `npm run build` sin errores (el schema valida el frontmatter y **rompe el
       build** si falta un campo o el cluster no es uno de los cinco).
 - [ ] La `description` es única: no repetir la de otro artículo.
+- [ ] La keyword tiene volumen verificado en Keyword Planner y no está ya
+      asignada a otro artículo (ver docs/mapa-keywords.md).
 - [ ] La respuesta a la keyword está arriba, antes de cualquier narrativa.
 - [ ] Enlaza al roadmap, y el roadmap o algún otro artículo enlaza a este.
 - [ ] Ningún enlace interno roto y todos con barra final.

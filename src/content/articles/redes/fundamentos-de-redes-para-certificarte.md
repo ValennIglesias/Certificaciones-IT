@@ -1,14 +1,14 @@
 ---
-title: "Fundamentos de redes que toda certificación te va a pedir"
-description: "Modelo OSI, direccionamiento IP, subredes y enrutamiento: la base que comparten Network+, CCNA y cualquier examen de redes."
-keyword: "fundamentos de redes que todo técnico IT debería saber"
+title: "CCNA desde cero: los fundamentos de redes que te va a pedir"
+description: "Para preparar el CCNA desde cero: modelo OSI, direccionamiento IP, subredes y enrutamiento, la misma base que piden Network+ y cualquier examen de redes."
+keyword: "ccna desde cero"
 cluster: "redes"
 pubDate: 2026-09-12
 author: "Valentín"
 draft: false
 ---
 
-Todas las certificaciones de redes —Network+, CCNA, y hasta el módulo de redes de Security+— miden el mismo núcleo. Lo que cambia es la profundidad, no el temario base.
+Si vas a preparar el CCNA desde cero, no arranques por los comandos de Cisco: arrancá por el núcleo que miden todas las certificaciones de redes —Network+, CCNA, y hasta el módulo de redes de Security+—. Lo que cambia entre ellas es la profundidad, no el temario base.
 
 ## El modelo que hay que dominar de memoria
 
@@ -43,7 +43,7 @@ Cuando algo falla, saber "en qué capa vive el problema" es la habilidad que má
 - **DHCP**: asigna direcciones IP automáticamente a los dispositivos que se conectan.
 - **NAT**: traduce direcciones privadas a una dirección pública para salir a internet.
 
-## Cómo practicar sin comprar equipamiento
+## Cómo practicar el CCNA desde cero sin comprar equipamiento
 
 Un laboratorio virtual (Cisco Packet Tracer, GNS3 o EVE-NG) cubre el 90% del temario de nivel asociado, sin gastar en routers ni switches físicos.
 
