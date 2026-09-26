@@ -3,7 +3,7 @@ title: "Examen AZ-900: formato, puntaje y cómo rendirlo gratis"
 description: "Qué evalúa el examen AZ-900, cuánto cuesta, cuál es el puntaje mínimo para aprobar y el camino legítimo para rendirlo sin pagar."
 keyword: "az 900 examen"
 cluster: "cloud"
-pubDate: 2026-10-02
+pubDate: 2026-09-24
 author: "Valentín"
 draft: false
 ---
