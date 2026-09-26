@@ -31,6 +31,6 @@ Los conceptos de fondo —redes virtuales, gestión de identidades y accesos (IA
 
 ## Nuestra recomendación de arranque
 
-Si todavía no tenés un empleador ni un rol objetivo definido, empezar por **AWS Cloud Practitioner** es la apuesta más segura: es el proveedor con más cuota de mercado global y la certificación de entrada más reconocida en procesos de selección. Si ya trabajás en una empresa con infraestructura Microsoft, **AZ-900** tiene sentido inmediato porque vas a usar esos conceptos en tu día a día desde ya.
+Si todavía no tenés un empleador ni un rol objetivo definido, empezar por **AWS Cloud Practitioner** es la apuesta más segura: es el proveedor con más cuota de mercado global y la certificación de entrada más reconocida en procesos de selección. Si ya trabajás en una empresa con infraestructura Microsoft, **AZ-900** tiene sentido inmediato porque vas a usar esos conceptos en tu día a día desde ya. La [guía del examen AZ-900](/cloud/examen-az-900-formato-y-preparacion/) tiene el formato, el puntaje y cómo rendirlo gratis.
 
 Elegir proveedor es un escalón dentro de un recorrido más largo: el [roadmap de certificaciones IT](/carrera/roadmap-certificaciones-it/) muestra qué viene antes y qué después de la certificación de entrada de cloud.
