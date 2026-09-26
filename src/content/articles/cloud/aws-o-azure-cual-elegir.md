@@ -1,14 +1,14 @@
 ---
-title: "AWS o Azure: cuál certificación elegir primero"
-description: "Criterios concretos para decidir entre el camino de certificación de AWS y el de Microsoft Azure según el mercado en el que buscás trabajo."
-keyword: "Azure AZ-900 vs AWS Cloud Practitioner cuál conviene sacar primero"
+title: "AZ-900 vs AWS Cloud Practitioner: cuál certificación de cloud elegir primero"
+description: "AZ-900 vs AWS Cloud Practitioner: criterios concretos para decidir qué certificación de cloud sacar primero según el mercado en el que buscás trabajo."
+keyword: "az 900 vs aws cloud practitioner"
 cluster: "cloud"
 pubDate: 2026-09-08
 author: "Valentín"
 draft: false
 ---
 
-La respuesta corta: mirá las vacantes de tu ciudad antes que los rankings globales de cuota de mercado.
+Entre AZ-900 y AWS Cloud Practitioner, la respuesta corta es: mirá las vacantes de tu ciudad antes que los rankings globales de cuota de mercado.
 
 ## Criterios de decisión
 
@@ -16,7 +16,7 @@ La respuesta corta: mirá las vacantes de tu ciudad antes que los rankings globa
 - **Punto de partida**: si en tu trabajo actual ya usás herramientas de Microsoft, Azure reduce la curva de aprendizaje inicial.
 - **Rol objetivo**: infraestructura, datos, seguridad y desarrollo tienen rutas de certificación distintas en cada proveedor — conviene mirar la ruta completa, no solo el primer escalón.
 
-## Las certificaciones de entrada, lado a lado
+## AZ-900 vs AWS Cloud Practitioner, lado a lado
 
 | | AWS | Azure |
 | --- | --- | --- |
