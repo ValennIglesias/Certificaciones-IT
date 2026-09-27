@@ -35,7 +35,7 @@ La ruta económica es la que mejor relación costo-beneficio tiene para la mayor
 Dos cosas que sí hacen que valga la pena de todos modos:
 
 - **Packet Tracer** es gratis y es el simulador que vas a usar para practicar configuraciones sin comprar un solo router. Es de lo mejor que existe en educación de redes, pago o gratuito.
-- Si después pasás a un curso **con instructor** de NetAcad (pago, a través de una academia), podés acceder a un **descuento cercano al 58% en el examen**, siempre que aprueben el examen final del curso con 70% o más en el primer intento. Los requisitos completos están en la guía de [cómo entrar a Cisco Networking Academy](/redes/cisco-networking-academy-como-entrar/).
+- Si después pasás a un curso **con instructor** de NetAcad (pago, a través de una academia), podés acceder a un **descuento cercano al 58% en el examen**, siempre que apruebes el examen final del curso con 70% o más en el primer intento. Los requisitos completos están en la guía de [cómo entrar a Cisco Networking Academy](/redes/cisco-networking-academy-como-entrar/).
 
 Si querés entender primero los conceptos que todo el temario da por sabidos, la guía de [fundamentos de redes para certificarte](/redes/fundamentos-de-redes-para-certificarte/) cubre el modelo OSI, direccionamiento IP y subredes antes de meterte en material específico de Cisco.
 
