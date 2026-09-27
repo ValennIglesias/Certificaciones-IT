@@ -35,7 +35,7 @@ La ruta económica es la que mejor relación costo-beneficio tiene para la mayor
 Dos cosas que sí hacen que valga la pena de todos modos:
 
 - **Packet Tracer** es gratis y es el simulador que vas a usar para practicar configuraciones sin comprar un solo router. Es de lo mejor que existe en educación de redes, pago o gratuito.
-- Los estudiantes que completan el currículum formal de NetAcad pueden acceder a **descuentos de hasta 50% en el examen** — que sobre US$300 no es menor.
+- Si después pasás a un curso **con instructor** de NetAcad (pago, a través de una academia), podés acceder a un **descuento cercano al 58% en el examen**, siempre que aprueben el examen final del curso con 70% o más en el primer intento. Los requisitos completos están en la guía de [cómo entrar a Cisco Networking Academy](/redes/cisco-networking-academy-como-entrar/).
 
 Si querés entender primero los conceptos que todo el temario da por sabidos, la guía de [fundamentos de redes para certificarte](/redes/fundamentos-de-redes-para-certificarte/) cubre el modelo OSI, direccionamiento IP y subredes antes de meterte en material específico de Cisco.
 
@@ -85,4 +85,4 @@ Si estás trabajando full-time mientras estudiás, las tácticas de [cómo estud
 
 ## Qué hacer ahora
 
-Creá una cuenta gratuita en Cisco Networking Academy y descargá Packet Tracer hoy mismo, antes de decidir si vas a pagar un curso. Con dos o tres semanas de material gratuito vas a tener una idea mucho más concreta de cuánta ayuda externa necesitás de verdad — y si terminás completando el currículum formal, el descuento en el examen te devuelve parte de lo que ibas a gastar igual. Y si querés ver adónde lleva el CCNA una vez que lo tengas, el [mapa completo de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/) muestra los niveles y especializaciones que vienen después.
+Creá una cuenta gratuita en Cisco Networking Academy y descargá Packet Tracer hoy mismo, antes de decidir si vas a pagar un curso. Con dos o tres semanas de material gratuito vas a tener una idea mucho más concreta de cuánta ayuda externa necesitás de verdad — y si después elegís un curso con instructor de NetAcad y cumplís los requisitos, el descuento en el examen te devuelve parte de lo que pagues. Y si querés ver adónde lleva el CCNA una vez que lo tengas, el [mapa completo de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/) muestra los niveles y especializaciones que vienen después.
