@@ -85,4 +85,4 @@ Si estás trabajando full-time mientras estudiás, las tácticas de [cómo estud
 
 ## Qué hacer ahora
 
-Creá una cuenta gratuita en Cisco Networking Academy y descargá Packet Tracer hoy mismo, antes de decidir si vas a pagar un curso. Con dos o tres semanas de material gratuito vas a tener una idea mucho más concreta de cuánta ayuda externa necesitás de verdad — y si terminás completando el currículum formal, el descuento en el examen te devuelve parte de lo que ibas a gastar igual.
+Creá una cuenta gratuita en Cisco Networking Academy y descargá Packet Tracer hoy mismo, antes de decidir si vas a pagar un curso. Con dos o tres semanas de material gratuito vas a tener una idea mucho más concreta de cuánta ayuda externa necesitás de verdad — y si terminás completando el currículum formal, el descuento en el examen te devuelve parte de lo que ibas a gastar igual. Y si querés ver adónde lleva el CCNA una vez que lo tengas, el [mapa completo de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/) muestra los niveles y especializaciones que vienen después.
