@@ -16,6 +16,8 @@ Entrar a IT sin experiencia previa tiene un problema de orden: hay demasiadas ce
 - **Redes** — arranca más técnico desde el día uno, pero tiene mejor techo salarial a mediano plazo. Certificación de referencia: CompTIA Network+.
 - **Cloud** — el camino más corto al salario alto, y también el más exigente si no tenés base de infraestructura. Certificación de referencia: AWS Cloud Practitioner o Microsoft Azure Fundamentals (AZ-900).
 
+Ciberseguridad no aparece en la lista a propósito: casi no tiene puestos de entrada, y se llega desde alguno de estos caminos. La guía de [ciberseguridad desde cero](/seguridad/ciberseguridad-desde-cero/) explica cuáles son los roles puente.
+
 ## Qué certificación conviene sacar primero
 
 | Si tu objetivo es... | Empezá por |
@@ -27,7 +29,7 @@ Entrar a IT sin experiencia previa tiene un problema de orden: hay demasiadas ce
 
 ## Cuánto sale certificarse
 
-CompTIA A+ se rinde en dos exámenes independientes (Core 1 y Core 2), a unos US$253 cada uno — cerca de US$506 en total. ITIL Foundation ronda los US$400-500 según el proveedor. El Google IT Support Professional Certificate es gratuito si lo cursás en modo auditoría en Coursera, o alrededor de US$49/mes si querés el certificado.
+CompTIA A+ se rinde en dos exámenes independientes (Core 1 y Core 2), a unos US$274 cada uno — cerca de US$548 en total. ITIL Foundation ronda los US$400-500 según el proveedor. El Google IT Support Professional Certificate es gratuito si lo cursás en modo auditoría en Coursera, o alrededor de US$49/mes si querés el certificado.
 
 ## Qué esperar del primer año
 

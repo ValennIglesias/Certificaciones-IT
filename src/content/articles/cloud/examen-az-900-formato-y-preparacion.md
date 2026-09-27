@@ -3,7 +3,7 @@ title: "Examen AZ-900: formato, puntaje y cómo rendirlo gratis"
 description: "Qué evalúa el examen AZ-900, cuánto cuesta, cuál es el puntaje mínimo para aprobar y el camino legítimo para rendirlo sin pagar."
 keyword: "az 900 examen"
 cluster: "cloud"
-pubDate: 2026-10-02
+pubDate: 2026-09-24
 author: "Valentín"
 draft: false
 ---
@@ -27,6 +27,8 @@ El temario de 2026 se organiza en tres dominios:
 | Arquitectura y servicios de Azure | 35-40% |
 | Gestión y gobernanza de Azure | 30-35% |
 | Conceptos de cloud | 25-30% |
+
+Desde el **20 de julio de 2026** rige una versión nueva del temario que incorpora contenido de inteligencia artificial, Copilot e IA responsable. Los pesos de los tres dominios no cambiaron: lo nuevo se sumó dentro de ellos, así que el material anterior a esa fecha cubre la estructura pero no ese contenido.
 
 Es un examen **conceptual**, no de implementación: se evalúa que sepas describir qué hace cada servicio y cuándo se usa, no que sepas configurarlo. Aun así, entre el 30% y el 40% de las preguntas vienen planteadas como escenarios ("una empresa necesita X, ¿qué servicio corresponde?"), que es donde más gente tropieza por estudiar definiciones sueltas.
 
@@ -57,11 +59,7 @@ No es una promoción puntual ni un truco: es un canal oficial y permanente de Mi
 
 ## Cómo prepararlo
 
-Las rutas de aprendizaje oficiales de Microsoft Learn cubren el temario completo y son gratuitas, lo cual ya te resuelve la parte teórica. Lo que conviene sumarle:
-
-- **Práctica en la consola real**: crear una máquina virtual, una cuenta de almacenamiento y una red virtual con la capa gratuita de Azure. Las preguntas de escenario se responden mucho mejor si viste la interfaz.
-- **Exámenes de práctica**: la regla que recomiendan quienes ya lo rindieron es no agendar el examen hasta sacar consistentemente 85% o más en simulacros de dos proveedores distintos.
-- **Foco en costos y gobernanza**: la calculadora de precios, la de TCO, Azure Policy, RBAC y etiquetas caen seguido y son la parte que más se subestima por parecer "administrativa".
+Todo el material oficial para prepararlo es gratuito. Qué recurso usar en cada etapa, en qué orden y cuándo conviene pagar un curso está en la guía de [cursos y recursos para el AZ-900](/cloud/curso-az-900-opciones/).
 
 Si todavía estás decidiendo entre el ecosistema de Microsoft y el de Amazon, la comparación [AZ-900 vs AWS Cloud Practitioner](/cloud/aws-o-azure-cual-elegir/) cubre esa decisión antes de que inviertas tiempo en cualquiera de las dos.
 
