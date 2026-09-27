@@ -77,13 +77,13 @@ Otros dos datos de la misma encuesta: quienes tienen título universitario cobra
 
 ## Lo que sí mueve el número
 
-Los dos primeros salen medidos de las fuentes citadas; los tres restantes aparecen mencionados en los informes pero sin una medición aislada que permita compararlos entre sí:
+Los tres primeros salen medidos de las fuentes citadas; los dos restantes aparecen mencionados en los informes pero sin una medición aislada que permita compararlos entre sí:
 
 - **El origen de la empresa.** Es el factor más determinante, por encima del país donde vivís. Una empresa estadounidense pagando desde el exterior cambia el orden de magnitud.
-- **La moneda de cobro.** En economías con inflación alta, cobrar en dólares no es un beneficio menor: es la diferencia entre mantener o perder poder adquisitivo cada año.
 - **El seniority.** Entre junior y senior, la mediana argentina se multiplica por 2,3.
-- **El inglés.** Es el filtro de entrada a todo lo anterior. Sin inglés, las posiciones que pagan en dólares no están disponibles.
 - **El título universitario.** Un 25% de diferencia según la encuesta argentina — significativo, pero menos que los factores anteriores.
+- **La moneda de cobro.** En economías con inflación alta, cobrar en dólares no es un beneficio menor: es la diferencia entre mantener o perder poder adquisitivo cada año.
+- **El inglés.** Es el filtro de entrada a todo lo anterior. Sin inglés, las posiciones que pagan en dólares no están disponibles.
 
 Llama la atención que las certificaciones aparecen poco en estos informes como variable medida de forma aislada. Donde sí figuran es en ciberseguridad, donde el informe de Randstad las menciona junto con la experiencia como condición para superar los €50.000 en España. Es coherente con lo que se ve en las vacantes: las certificaciones funcionan más como filtro de acceso a ciertos puestos que como multiplicador directo del sueldo.
 
