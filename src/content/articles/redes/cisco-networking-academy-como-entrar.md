@@ -41,7 +41,7 @@ Esta es la parte que vale la pena leer con atención, porque las condiciones son
 4. **Hay que solicitar el voucher desde tu perfil** de NetAcad, en la sección correspondiente. No llega solo.
 5. **El voucher vence.** Tiene un período de validez limitado, así que conviene agendar el examen apenas lo recibís.
 
-Para el CCNA, el curso que habilita el descuento es el tercero de la secuencia: Enterprise Networking, Security and Automation (ENSA).
+Para el CCNA, el curso que habilita el descuento es el tercero de la secuencia: Enterprise Networking, Security and Automation (ENSA). Qué cubre cada uno de los tres cursos de la serie, y en qué orden se hacen, está en la guía de [CCNA 1, 2 y 3 en NetAcad](/redes/ccna-1-2-3-cursos-netacad/).
 
 Dos detalles más que conviene tener presentes: es **un voucher por estudiante y por certificación**, y el porcentaje exacto **puede variar según la región**, porque Cisco ajusta los descuentos según factores económicos locales.
 
