@@ -50,9 +50,9 @@ El CCNA 200-301 se organiza en seis áreas:
 - Fundamentos de seguridad
 - Automatización y programabilidad
 
-<!-- VERIFICAR: los pesos porcentuales de cada dominio están en el blueprint oficial de Cisco. Confirmar contra cisco.com antes de publicarlos, no los incluí porque no pude verificarlos contra la fuente oficial. -->
+Qué entra en cada dominio y cuánto pesa está en el [temario completo del CCNA 200-301](/redes/ccna-200-301-temario/).
 
-Un cambio importante de 2026: Cisco actualizó el examen a la **versión 1.1**, que incorpora temas de inteligencia artificial, cloud y machine learning. El código sigue siendo 200-301, así que es fácil no darse cuenta — pero si comprás material de estudio, verificá que esté alineado a la v1.1 y no a la versión anterior.
+Un cambio importante de 2024: Cisco actualizó el examen a la **versión 1.1**, que incorpora temas de inteligencia artificial, cloud y machine learning. El código sigue siendo 200-301, así que es fácil no darse cuenta — pero si comprás material de estudio, verificá que esté alineado a la v1.1 y no a la versión anterior.
 
 ## Cuánto cuesta en total
 

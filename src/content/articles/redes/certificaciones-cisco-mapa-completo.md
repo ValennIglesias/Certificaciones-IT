@@ -64,7 +64,7 @@ Cada pista se obtiene aprobando un examen central más uno de concentración a e
 
 ## Por dónde empezar según tu objetivo
 
-Todos los caminos arrancan igual, con el CCNA 200-301, y se bifurcan después:
+Todos los caminos arrancan igual, con el [CCNA 200-301](/redes/ccna-200-301-temario/), y se bifurcan después:
 
 | Objetivo | Camino |
 | --- | --- |
