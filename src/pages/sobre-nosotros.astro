@@ -1,10 +1,10 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import { SITE } from '../consts';
+import { SITE, AUTHORS } from '../consts';
 
 // Datos del titular y del autor, provistos por el dueño del sitio.
 const CONTACT_EMAIL = 'guias.info@gmail.com';
-const AUTHOR = 'Valentín';
+const AUTHOR = AUTHORS['Valentín'];
 ---
 
 <PageLayout
@@ -42,8 +42,9 @@ const AUTHOR = 'Valentín';
 		<strong>{SITE.owner}</strong> es el responsable del sitio y de su contenido editorial.
 	</p>
 	<p>
-		Las guías las escribe y revisa <strong>{AUTHOR}</strong>, técnico de soporte IT, actualmente
-		estudiando administración de infraestructura de TI. Combina su experiencia real en soporte con
+		Las guías las escribe y revisa <a href={`/autor/${AUTHOR.slug}/`}>{AUTHOR.name}</a>. Trabajó en
+		soporte técnico e infraestructura IT y hoy lidera proyectos de experiencia de usuario (UX) en
+		aplicaciones. Combina su experiencia real en soporte con
 		investigación propia sobre cada certificación: lo que funciona en un service desk de verdad,
 		contrastado con la documentación oficial de cada examen.
 	</p>

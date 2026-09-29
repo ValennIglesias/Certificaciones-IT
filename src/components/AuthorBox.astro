@@ -1,0 +1,82 @@
+---
+import { Image } from 'astro:assets';
+import { authorPath, authorPhoto, getAuthor } from '../lib/authors';
+
+/**
+ * Caja de autor al pie de cada artículo. La inserta ArticleLayout: no se
+ * agrega a mano en ningún archivo de contenido.
+ */
+interface Props {
+	/** Valor del campo `author` del frontmatter. */
+	author: string;
+}
+
+const author = getAuthor(Astro.props.author);
+const photo = authorPhoto(author);
+const href = authorPath(author);
+---
+
+<aside class="rule-t autor" aria-label="Sobre el autor">
+	{
+		photo && (
+			<Image src={photo} alt={author.name} width={96} height={96} class="autor-foto" loading="lazy" />
+		)
+	}
+	<div>
+		<p class="meta">Escrito por</p>
+		<p class="autor-nombre"><a href={href}>{author.name}</a></p>
+		<p class="autor-bio">{author.shortBio}</p>
+		<p class="autor-mas"><a href={href}>Más sobre el autor</a></p>
+	</div>
+</aside>
+
+<style>
+	.autor {
+		display: flex;
+		gap: 1.25rem;
+		align-items: flex-start;
+		margin-top: 3rem;
+		padding-top: 2rem;
+	}
+
+	.autor-foto {
+		flex: none;
+		width: 4.5rem;
+		height: 4.5rem;
+		object-fit: cover;
+		border: 1px solid var(--regla);
+	}
+
+	.autor-nombre {
+		font-weight: 700;
+		font-size: 1.0625rem;
+	}
+
+	.autor-nombre a {
+		color: var(--tinta);
+		text-decoration: none;
+	}
+
+	.autor-nombre a:hover,
+	.autor-mas a:hover {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	.autor-bio {
+		margin-top: 0.375rem;
+		color: var(--grafito);
+		font-size: 0.9375rem;
+		max-width: 38rem;
+	}
+
+	.autor-mas {
+		margin-top: 0.5rem;
+		font-size: 0.875rem;
+		font-weight: 700;
+	}
+
+	.autor-mas a {
+		color: var(--tinta);
+	}
+</style>

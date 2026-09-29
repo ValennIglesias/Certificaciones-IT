@@ -4,9 +4,11 @@ import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ArticleRow from '../components/ArticleRow.astro';
 import AdSlot from '../components/AdSlot.astro';
+import AuthorBox from '../components/AuthorBox.astro';
 import JsonLd from '../components/JsonLd.astro';
 import { SITE, CLUSTERS, type ClusterId } from '../consts';
 import { articlePath, articleSlug, formatDate, readingTime, type Article } from '../lib/articles';
+import { authorPath, getAuthor, personSchema } from '../lib/authors';
 
 interface Props {
 	article: Article;
@@ -21,6 +23,7 @@ const clusterId = cluster as ClusterId;
 const clusterMeta = CLUSTERS[clusterId];
 const url = new URL(articlePath(article), Astro.site).toString();
 const minutes = readingTime(article.body);
+const authorData = getAuthor(author);
 
 // Open Graph propia, generada con el título real del artículo. En un preview
 // de WhatsApp o LinkedIn el título legible rinde más que una placa genérica.
@@ -38,7 +41,7 @@ const articleSchema = {
 	image: [imageUrl],
 	datePublished: pubDate.toISOString(),
 	dateModified: (updatedDate ?? pubDate).toISOString(),
-	author: { '@type': 'Person', name: author },
+	author: personSchema(authorData, Astro.site),
 	publisher: {
 		'@type': 'Organization',
 		'@id': `${Astro.site?.toString()}#organization`,
@@ -75,7 +78,7 @@ const breadcrumbSchema = {
 	imageAlt={title}
 	publishedTime={pubDate}
 	modifiedTime={updatedDate ?? pubDate}
-	author={author}
+	author={authorData.name}
 	section={clusterMeta.name}
 	accent={clusterId}>
 	<Fragment slot="head">
@@ -107,7 +110,7 @@ const breadcrumbSchema = {
 					)
 				}
 				<span class="meta figure">{minutes} min de lectura</span>
-				<span class="meta">{author}</span>
+				<a href={authorPath(authorData)} class="meta autor-link">{authorData.name}</a>
 			</div>
 
 			<div>
@@ -154,6 +157,8 @@ const breadcrumbSchema = {
 						</section>
 					)
 				}
+
+				<AuthorBox author={author} />
 			</div>
 		</div>
 	</article>
@@ -175,6 +180,16 @@ const breadcrumbSchema = {
 
 	.riel > * + * {
 		margin-top: 0.25rem;
+	}
+
+	.autor-link {
+		text-decoration: none;
+	}
+
+	.autor-link:hover {
+		color: var(--tinta);
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 
 	.bajada {

@@ -17,6 +17,47 @@ export const SITE = {
 	defaultImage: '/og/home.jpg',
 } as const;
 
+/**
+ * Autores del sitio. La clave es el valor del campo `author` del frontmatter
+ * ("Valentín"), así los artículos no repiten los datos: el layout arma la
+ * entidad Person completa a partir de acá. Un `author` que no esté en esta
+ * tabla rompe el build (ver content.config.ts).
+ */
+export const AUTHORS = {
+	Valentín: {
+		slug: 'valentin-iglesias',
+		name: 'Valentín Iglesias',
+		jobTitle: 'Líder de proyectos de experiencia de usuario (UX)',
+		/** Una o dos líneas para la caja de autor al pie de cada artículo. */
+		shortBio:
+			'Trabajó en soporte técnico e infraestructura IT y hoy lidera proyectos de experiencia de usuario en aplicaciones. Escribe y revisa las guías de Desde Cero IT.',
+		linkedin: 'https://www.linkedin.com/in/valentin-iglesias1/',
+		knowsAbout: [
+			'Soporte técnico',
+			'Infraestructura IT',
+			'Administración de sistemas',
+			'Certificaciones IT',
+			'Experiencia de usuario (UX)',
+			'Microsoft Azure',
+		],
+		/** Certificados de cursos obtenidos. No son exámenes de certificación. */
+		formacion: [
+			{ nombre: 'Administración de sistemas y servicios de infraestructura de TI', emisor: 'Google (Coursera)' },
+			{ nombre: 'Fundamentos de la carrera en administración de sistemas', emisor: 'Microsoft y LinkedIn Learning' },
+			{ nombre: 'Fundamentos de AWS', emisor: 'LinkedIn Learning' },
+			{ nombre: 'Desarrollo Frontend', emisor: 'Coderhouse' },
+		],
+		enCurso: [
+			{ nombre: 'Generative AI Leader', emisor: 'Google Cloud', estado: '' },
+			{ nombre: 'Microsoft Azure Fundamentals (AZ-900)', emisor: 'Microsoft', estado: 'Temario estudiado, examen todavía sin rendir' },
+		],
+	},
+} as const;
+
+export type AuthorKey = keyof typeof AUTHORS;
+
+export const AUTHOR_KEYS = Object.keys(AUTHORS) as AuthorKey[];
+
 export const CLUSTERS = {
 	entrada: {
 		name: 'Certificaciones de entrada',
