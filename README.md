@@ -1,4 +1,4 @@
-# Certificaciones IT
+# Desde Cero IT
 
 Sitio de contenido en español sobre certificaciones IT y carrera en tecnología.
 Astro en modo estático (SSG), sin backend ni base de datos: cada artículo es un

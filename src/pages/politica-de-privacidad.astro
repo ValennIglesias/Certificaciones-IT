@@ -11,9 +11,8 @@ import { SITE } from '../consts';
 //
 // Conviene que un profesional revise el texto antes de publicarlo.
 const CONTACT_EMAIL = 'guias.info@gmail.com';
-const OWNER = 'Valen — Certificaciones IT';
 const OWNER_LOCATION = 'Buenos Aires, Argentina';
-const LAST_UPDATED = '20 de septiembre de 2026';
+const LAST_UPDATED = '28 de septiembre de 2026';
 ---
 
 <PageLayout
@@ -22,7 +21,7 @@ const LAST_UPDATED = '20 de septiembre de 2026';
 	updated={LAST_UPDATED}>
 	<h2>Responsable del sitio</h2>
 	<p>
-		<strong>{OWNER}</strong>, con domicilio en {OWNER_LOCATION}, es el responsable
+		<strong>{SITE.owner}</strong>, con domicilio en {OWNER_LOCATION}, es el responsable
 		de <strong>{SITE.name}</strong>. Para cualquier consulta sobre privacidad o sobre el
 		tratamiento de tus datos, escribinos a <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
 	</p>

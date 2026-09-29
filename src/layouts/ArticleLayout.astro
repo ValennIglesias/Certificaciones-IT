@@ -39,7 +39,12 @@ const articleSchema = {
 	datePublished: pubDate.toISOString(),
 	dateModified: (updatedDate ?? pubDate).toISOString(),
 	author: { '@type': 'Person', name: author },
-	publisher: { '@type': 'Organization', name: SITE.name, url: Astro.site?.toString() },
+	publisher: {
+		'@type': 'Organization',
+		'@id': `${Astro.site?.toString()}#organization`,
+		name: SITE.name,
+		url: Astro.site?.toString(),
+	},
 	mainEntityOfPage: { '@type': 'WebPage', '@id': url },
 	articleSection: clusterMeta.name,
 	keywords: keyword,

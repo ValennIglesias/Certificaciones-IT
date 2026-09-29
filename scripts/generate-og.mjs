@@ -90,7 +90,7 @@ function tarjeta({ rotulo, titulo, pie, accent }) {
   <text font-family="Helvetica, Arial, sans-serif" font-size="${tamano}" font-weight="700" fill="${TINTA}" letter-spacing="-1.5">${tspans}</text>
 
   <line x1="${MARGEN}" y1="${ALTO - 104}" x2="${ANCHO - MARGEN}" y2="${ALTO - 104}" stroke="${REGLA}" stroke-width="1"/>
-  <text x="${MARGEN}" y="${ALTO - 62}" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="${TINTA}">Certificaciones IT</text>
+  <text x="${MARGEN}" y="${ALTO - 62}" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="${TINTA}">Desde Cero IT</text>
   <text x="${ANCHO - MARGEN}" y="${ALTO - 62}" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="500" fill="${GRAFITO}">${escapar(pie)}</text>
 </svg>`;
 }

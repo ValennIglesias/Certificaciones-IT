@@ -1,10 +1,12 @@
 /** Configuración global del sitio. Un solo lugar para tocar nombre, dominio y clusters. */
 
 export const SITE = {
-	name: 'Certificaciones IT',
+	name: 'Desde Cero IT',
 	/** Título por defecto y sufijo de las páginas internas. */
-	titleDefault: 'Certificaciones IT — Guías en español para certificarte y crecer en tecnología',
-	titleTemplate: '%s | Certificaciones IT',
+	titleDefault: 'Desde Cero IT — Guías en español para certificarte y crecer en tecnología',
+	titleTemplate: '%s | Desde Cero IT',
+	/** Titular legal del sitio: páginas legales y Schema.org. */
+	owner: 'Valentín Iglesias — Desde Cero IT',
 	description:
 		'Guías en español sobre certificaciones IT (CompTIA, Cisco, AWS, Azure, ITIL) y cómo construir una carrera en tecnología.',
 	lang: 'es',

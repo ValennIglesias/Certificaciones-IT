@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleRow from '../components/ArticleRow.astro';
 import AdSlot from '../components/AdSlot.astro';
+import JsonLd from '../components/JsonLd.astro';
 import { SITE, CLUSTERS, CLUSTER_IDS } from '../consts';
 import { getArticles } from '../lib/articles';
 
@@ -13,9 +14,35 @@ const porCluster = CLUSTER_IDS.map((id) => ({
 	meta: CLUSTERS[id],
 	total: articles.filter((a) => a.data.cluster === id).length,
 }));
+
+const siteUrl = Astro.site?.toString();
+
+// Identidad del sitio para Schema.org. El publisher de cada artículo apunta a
+// esta misma Organization por su @id.
+const siteSchema = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'WebSite',
+			'@id': `${siteUrl}#website`,
+			name: SITE.name,
+			url: siteUrl,
+			description: SITE.description,
+			inLanguage: SITE.lang,
+			publisher: { '@id': `${siteUrl}#organization` },
+		},
+		{
+			'@type': 'Organization',
+			'@id': `${siteUrl}#organization`,
+			name: SITE.name,
+			url: siteUrl,
+		},
+	],
+};
 ---
 
 <BaseLayout title={SITE.titleDefault} description={SITE.description} useTitleTemplate={false}>
+	<JsonLd slot="head" schema={siteSchema} />
 	<section class="wrap portada">
 		<h1 class="display">Certificaciones IT explicadas en español, sin humo</h1>
 		<div class="portada-pie">
