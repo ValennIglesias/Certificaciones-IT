@@ -14,7 +14,7 @@ Lo esencial:
 
 - El blueprint v1.1 tiene **seis dominios y 53 objetivos numerados**.
 - **Los dominios 1, 2 y 3 concentran el 65% del examen**: ahí es donde rinde el tiempo de estudio.
-- El examen dura **120 minutos** y cuesta **US$300**.
+- El examen dura **120 minutos**. Sobre el precio, Cisco publica dos cifras distintas: **US$300** en la página de temas del examen y **US$400** en la página de certificación. Conviene verificar el importe al momento de agendar, ya que además varía por región.
 - **Cisco no publica el puntaje mínimo de aprobación.** Cualquier cifra exacta que encuentres circulando es una estimación de terceros.
 - La **v2.0 arranca el 3 de febrero de 2027**, manteniendo el mismo número de examen: 200-301.
 

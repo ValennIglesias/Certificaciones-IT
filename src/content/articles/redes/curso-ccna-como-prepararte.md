@@ -12,7 +12,7 @@ Podés prepararte para el CCNA gastando cero en formación, o podés gastar mile
 
 Lo esencial antes de bajar:
 
-- El examen CCNA 200-301 cuesta **US$300 más impuestos**, y eso no incluye ningún curso.
+- Cisco publica dos precios distintos para el examen CCNA 200-301: **US$300** en la página de temas del examen y **US$400** en la página de certificación. Conviene verificar el importe al momento de agendar, ya que además varía por región. En cualquier caso, no incluye ningún curso.
 - Cisco **no exige** hacer un curso ni tener experiencia previa para rendirlo.
 - Los cursos gratuitos de Cisco Networking Academy cubren aproximadamente el primer tercio del temario.
 - Los cursos pagos van desde ~US$15 (video bajo demanda en promoción) hasta US$4.500 (bootcamp presencial).
@@ -58,12 +58,12 @@ Un cambio importante de 2024: Cisco actualizó el examen a la **versión 1.1**, 
 
 | Concepto | Costo |
 | --- | --- |
-| Examen 200-301 | US$300 + impuestos |
+| Examen 200-301 | US$300 o US$400 según la página de Cisco que consultes, + impuestos (varía por región) |
 | Examen de práctica oficial de Cisco | ~US$79 |
-| Recuperatorio (si desaprobás) | US$300 completo, sin descuento |
+| Recuperatorio (si desaprobás) | Se paga de nuevo el precio completo del examen, sin descuento |
 | Libro oficial de preparación | US$5 a US$80 |
 
-Dos detalles del recuperatorio que conviene tener presentes: **no hay reintentos gratuitos**, y hay que esperar cinco días calendario antes de volver a rendir. Con una tasa de aprobación que ronda el 50%, presupuestar solo los US$300 iniciales es optimista.
+Dos detalles del recuperatorio que conviene tener presentes: **no hay reintentos gratuitos**, y hay que esperar cinco días calendario antes de volver a rendir. Con una tasa de aprobación que ronda el 50%, presupuestar un solo intento es optimista.
 
 ## Cuánto tiempo lleva
 
