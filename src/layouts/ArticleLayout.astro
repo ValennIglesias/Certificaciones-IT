@@ -1,10 +1,12 @@
 ---
 import { Image } from 'astro:assets';
+import type { MarkdownHeading } from 'astro';
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ArticleRow from '../components/ArticleRow.astro';
 import AdSlot from '../components/AdSlot.astro';
 import AuthorBox from '../components/AuthorBox.astro';
+import TableOfContents from '../components/TableOfContents.astro';
 import JsonLd from '../components/JsonLd.astro';
 import { SITE, CLUSTERS, type ClusterId } from '../consts';
 import { articlePath, articleSlug, formatDate, readingTime, type Article } from '../lib/articles';
@@ -13,9 +15,10 @@ import { authorPath, getAuthor, personSchema } from '../lib/authors';
 interface Props {
 	article: Article;
 	related: Article[];
+	headings: MarkdownHeading[];
 }
 
-const { article, related } = Astro.props;
+const { article, related, headings } = Astro.props;
 const { title, description, cluster, pubDate, updatedDate, author, keyword, heroImage, heroAlt } =
 	article.data;
 
@@ -24,6 +27,9 @@ const clusterMeta = CLUSTERS[clusterId];
 const url = new URL(articlePath(article), Astro.site).toString();
 const minutes = readingTime(article.body);
 const authorData = getAuthor(author);
+// Si el fallback sumó artículos de otro cluster, el título no puede prometer
+// que todos son del cluster actual, y cada fila muestra su cluster.
+const relatedMixed = related.some((a) => a.data.cluster !== cluster);
 
 // Open Graph propia, generada con el título real del artículo. En un preview
 // de WhatsApp o LinkedIn el título legible rinde más que una placa genérica.
@@ -105,7 +111,7 @@ const breadcrumbSchema = {
 				{
 					updatedDate && (
 						<span class="meta figure">
-							Act. <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time>
+							Actualizado el <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time>
 						</span>
 					)
 				}
@@ -134,9 +140,14 @@ const breadcrumbSchema = {
 		}
 
 		<div class="rail cuerpo">
-			<div aria-hidden="true"></div>
-			<div class="prose prose-article max-w-none">
-				<slot />
+			<div>
+				<TableOfContents headings={headings} variant="riel" />
+			</div>
+			<div>
+				<TableOfContents headings={headings} variant="movil" />
+				<div class="prose prose-article max-w-none">
+					<slot />
+				</div>
 			</div>
 		</div>
 
@@ -149,10 +160,10 @@ const breadcrumbSchema = {
 					related.length > 0 && (
 						<section class="rule-t relacionados" aria-labelledby="relacionados">
 							<h2 id="relacionados" class="relacionados-titulo">
-								Seguí leyendo sobre {clusterMeta.short.toLowerCase()}
+								{relatedMixed ? 'Seguí leyendo' : `Seguí leyendo sobre ${clusterMeta.short.toLowerCase()}`}
 							</h2>
 							{related.map((item) => (
-								<ArticleRow article={item} showCluster={false} />
+								<ArticleRow article={item} showCluster={relatedMixed} />
 							))}
 						</section>
 					)
