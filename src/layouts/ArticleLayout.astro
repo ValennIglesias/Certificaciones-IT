@@ -11,6 +11,7 @@ import JsonLd from '../components/JsonLd.astro';
 import { SITE, CLUSTERS, type ClusterId } from '../consts';
 import { articlePath, articleSlug, formatDate, readingTime, type Article } from '../lib/articles';
 import { authorPath, getAuthor, personSchema } from '../lib/authors';
+import { adSlotFor } from '../lib/analytics';
 
 interface Props {
 	article: Article;
@@ -30,6 +31,13 @@ const authorData = getAuthor(author);
 // Si el fallback sumó artículos de otro cluster, el título no puede prometer
 // que todos son del cluster actual, y cada fila muestra su cluster.
 const relatedMixed = related.some((a) => a.data.cluster !== cluster);
+
+// Anuncios dentro del cuerpo: los marcadores los pone ad-anchors-plugin.mjs y
+// quedan ocultos. Esta clase los vuelve visibles (con la altura reservada)
+// solo si el bloque del artículo está configurado. En desarrollo, sin AdSense,
+// se muestran como huecos punteados para revisar dónde caen.
+const inlineAds = adSlotFor('article') !== null;
+const inlineAdsDev = !inlineAds && import.meta.env.DEV;
 
 // Open Graph propia, generada con el título real del artículo. En un preview
 // de WhatsApp o LinkedIn el título legible rinde más que una placa genérica.
@@ -92,7 +100,7 @@ const breadcrumbSchema = {
 		<JsonLd schema={breadcrumbSchema} />
 	</Fragment>
 
-	<article class="wrap">
+	<article class:list={['wrap', inlineAds && 'con-anuncios', inlineAdsDev && 'anuncios-dev']}>
 		<div class="miga">
 			<Breadcrumbs
 				items={[
