@@ -7,7 +7,7 @@ convenciones que ya siguen los artículos publicados del sitio.
 
 ## El prompt
 
-> Escribí un artículo para Certificaciones IT.
+> Escribí un artículo para Desde Cero IT.
 >
 > **Tema:** `<tema>`
 > **Keyword principal:** `<keyword exacta>`
@@ -123,7 +123,7 @@ convenciones que ya siguen los artículos publicados del sitio.
 ## Convenciones que ya están resueltas y no hay que tocar
 
 - **Autor:** siempre `"Valentín"`, con tilde. Es el único nombre de autor del
-  sitio (`Valen — Certificaciones IT` es el titular legal, cosa distinta).
+  sitio (`Valentín Iglesias — Desde Cero IT` es el titular legal, cosa distinta).
 - **Ubicación del archivo:** `src/content/articles/<cluster>/<slug>.md`. La
   carpeta es convención; la URL sale del frontmatter y del nombre del archivo.
 - **Borradores:** `draft: true` se ve en `npm run dev` y queda fuera del build

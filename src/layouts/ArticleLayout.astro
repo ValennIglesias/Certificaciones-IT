@@ -1,19 +1,25 @@
 ---
 import { Image } from 'astro:assets';
+import type { MarkdownHeading } from 'astro';
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ArticleRow from '../components/ArticleRow.astro';
 import AdSlot from '../components/AdSlot.astro';
+import AuthorBox from '../components/AuthorBox.astro';
+import TableOfContents from '../components/TableOfContents.astro';
 import JsonLd from '../components/JsonLd.astro';
 import { SITE, CLUSTERS, type ClusterId } from '../consts';
 import { articlePath, articleSlug, formatDate, readingTime, type Article } from '../lib/articles';
+import { authorPath, getAuthor, personSchema } from '../lib/authors';
+import { adSlotFor } from '../lib/analytics';
 
 interface Props {
 	article: Article;
 	related: Article[];
+	headings: MarkdownHeading[];
 }
 
-const { article, related } = Astro.props;
+const { article, related, headings } = Astro.props;
 const { title, description, cluster, pubDate, updatedDate, author, keyword, heroImage, heroAlt } =
 	article.data;
 
@@ -21,6 +27,17 @@ const clusterId = cluster as ClusterId;
 const clusterMeta = CLUSTERS[clusterId];
 const url = new URL(articlePath(article), Astro.site).toString();
 const minutes = readingTime(article.body);
+const authorData = getAuthor(author);
+// Si el fallback sumó artículos de otro cluster, el título no puede prometer
+// que todos son del cluster actual, y cada fila muestra su cluster.
+const relatedMixed = related.some((a) => a.data.cluster !== cluster);
+
+// Anuncios dentro del cuerpo: los marcadores los pone ad-anchors-plugin.mjs y
+// quedan ocultos. Esta clase los vuelve visibles (con la altura reservada)
+// solo si el bloque del artículo está configurado. En desarrollo, sin AdSense,
+// se muestran como huecos punteados para revisar dónde caen.
+const inlineAds = adSlotFor('article') !== null;
+const inlineAdsDev = !inlineAds && import.meta.env.DEV;
 
 // Open Graph propia, generada con el título real del artículo. En un preview
 // de WhatsApp o LinkedIn el título legible rinde más que una placa genérica.
@@ -38,8 +55,13 @@ const articleSchema = {
 	image: [imageUrl],
 	datePublished: pubDate.toISOString(),
 	dateModified: (updatedDate ?? pubDate).toISOString(),
-	author: { '@type': 'Person', name: author },
-	publisher: { '@type': 'Organization', name: SITE.name, url: Astro.site?.toString() },
+	author: personSchema(authorData, Astro.site),
+	publisher: {
+		'@type': 'Organization',
+		'@id': `${Astro.site?.toString()}#organization`,
+		name: SITE.name,
+		url: Astro.site?.toString(),
+	},
 	mainEntityOfPage: { '@type': 'WebPage', '@id': url },
 	articleSection: clusterMeta.name,
 	keywords: keyword,
@@ -70,7 +92,7 @@ const breadcrumbSchema = {
 	imageAlt={title}
 	publishedTime={pubDate}
 	modifiedTime={updatedDate ?? pubDate}
-	author={author}
+	author={authorData.name}
 	section={clusterMeta.name}
 	accent={clusterId}>
 	<Fragment slot="head">
@@ -78,7 +100,7 @@ const breadcrumbSchema = {
 		<JsonLd schema={breadcrumbSchema} />
 	</Fragment>
 
-	<article class="wrap">
+	<article class:list={['wrap', inlineAds && 'con-anuncios', inlineAdsDev && 'anuncios-dev']}>
 		<div class="miga">
 			<Breadcrumbs
 				items={[
@@ -97,12 +119,12 @@ const breadcrumbSchema = {
 				{
 					updatedDate && (
 						<span class="meta figure">
-							Act. <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time>
+							Actualizado el <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time>
 						</span>
 					)
 				}
 				<span class="meta figure">{minutes} min de lectura</span>
-				<span class="meta">{author}</span>
+				<a href={authorPath(authorData)} class="meta autor-link">{authorData.name}</a>
 			</div>
 
 			<div>
@@ -126,9 +148,14 @@ const breadcrumbSchema = {
 		}
 
 		<div class="rail cuerpo">
-			<div aria-hidden="true"></div>
-			<div class="prose prose-article max-w-none">
-				<slot />
+			<div>
+				<TableOfContents headings={headings} variant="riel" />
+			</div>
+			<div>
+				<TableOfContents headings={headings} variant="movil" />
+				<div class="prose prose-article max-w-none">
+					<slot />
+				</div>
 			</div>
 		</div>
 
@@ -141,14 +168,16 @@ const breadcrumbSchema = {
 					related.length > 0 && (
 						<section class="rule-t relacionados" aria-labelledby="relacionados">
 							<h2 id="relacionados" class="relacionados-titulo">
-								Seguí leyendo sobre {clusterMeta.short.toLowerCase()}
+								{relatedMixed ? 'Seguí leyendo' : `Seguí leyendo sobre ${clusterMeta.short.toLowerCase()}`}
 							</h2>
 							{related.map((item) => (
-								<ArticleRow article={item} showCluster={false} />
+								<ArticleRow article={item} showCluster={relatedMixed} />
 							))}
 						</section>
 					)
 				}
+
+				<AuthorBox author={author} />
 			</div>
 		</div>
 	</article>
@@ -170,6 +199,16 @@ const breadcrumbSchema = {
 
 	.riel > * + * {
 		margin-top: 0.25rem;
+	}
+
+	.autor-link {
+		text-decoration: none;
+	}
+
+	.autor-link:hover {
+		color: var(--tinta);
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 
 	.bajada {

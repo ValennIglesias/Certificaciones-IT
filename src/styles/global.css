@@ -319,3 +319,46 @@
 .prose-article td:only-child {
 	text-align: left;
 }
+
+/* --- Anuncios dentro del cuerpo ------------------------------------------ */
+/* Marcadores de ad-anchors-plugin.mjs, ocultos por defecto. Con AdSense,
+   la altura se reserva desde el primer pintado: el <ins> que llega después no
+   desplaza el texto (CLS). 280px del anuncio + el rótulo "Publicidad".
+   Sin el atributo `hidden` a propósito: el preflight de Tailwind lo fuerza con
+   !important y no habría forma de mostrarlos. */
+[data-ad-anchor] {
+	display: none;
+}
+
+.con-anuncios [data-ad-anchor] {
+	display: block;
+	min-height: calc(280px + 1.5rem);
+	margin-block: 3rem;
+}
+
+.con-anuncios [data-ad-anchor]::before,
+.anuncios-dev [data-ad-anchor]::before {
+	display: block;
+	font-size: 0.6875rem;
+	font-weight: 500;
+	/* Alto fijo: 1rem de línea + 0.5rem de margen = el 1.5rem que suma min-height. */
+	line-height: 1rem;
+	color: var(--grafito);
+	margin-bottom: 0.5rem;
+}
+
+.con-anuncios [data-ad-anchor]::before {
+	content: 'Publicidad';
+}
+
+.anuncios-dev [data-ad-anchor] {
+	display: block;
+	min-height: 280px;
+	margin-block: 3rem;
+	padding: 1rem;
+	border: 1px dashed var(--regla);
+}
+
+.anuncios-dev [data-ad-anchor]::before {
+	content: 'Hueco de AdSense dentro del cuerpo — ' attr(data-ad-anchor) '. No se renderiza en producción sin PUBLIC_ADSENSE_SLOT_ARTICLE.';
+}

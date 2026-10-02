@@ -1,10 +1,15 @@
 /** Configuración global del sitio. Un solo lugar para tocar nombre, dominio y clusters. */
 
 export const SITE = {
-	name: 'Certificaciones IT',
+	name: 'Desde Cero IT',
 	/** Título por defecto y sufijo de las páginas internas. */
-	titleDefault: 'Certificaciones IT — Guías en español para certificarte y crecer en tecnología',
-	titleTemplate: '%s | Certificaciones IT',
+	titleDefault: 'Desde Cero IT — Guías en español para certificarte y crecer en tecnología',
+	titleTemplate: '%s | Desde Cero IT',
+	/** Titular legal del sitio: páginas legales y Schema.org. */
+	owner: 'Valentín Iglesias — Desde Cero IT',
+	ownerLocation: 'Buenos Aires, Argentina',
+	/** Correo de contacto visible en las páginas legales y de contacto. */
+	contactEmail: 'guias.info@gmail.com',
 	description:
 		'Guías en español sobre certificaciones IT (CompTIA, Cisco, AWS, Azure, ITIL) y cómo construir una carrera en tecnología.',
 	lang: 'es',
@@ -14,6 +19,51 @@ export const SITE = {
 	/** Imagen Open Graph por defecto. La genera scripts/generate-og.mjs. */
 	defaultImage: '/og/home.jpg',
 } as const;
+
+/**
+ * Autores del sitio. La clave es el valor del campo `author` del frontmatter
+ * ("Valentín"), así los artículos no repiten los datos: el layout arma la
+ * entidad Person completa a partir de acá. Un `author` que no esté en esta
+ * tabla rompe el build (ver content.config.ts).
+ */
+export const AUTHORS = {
+	Valentín: {
+		slug: 'valentin-iglesias',
+		name: 'Valentín Iglesias',
+		jobTitle: 'Líder de proyectos de experiencia de usuario (UX)',
+		/** Una o dos líneas para la caja de autor al pie de cada artículo. */
+		shortBio:
+			'Trabajó en soporte técnico e infraestructura IT y hoy lidera proyectos de experiencia de usuario en aplicaciones. Escribe y revisa las guías de Desde Cero IT.',
+		linkedin: 'https://www.linkedin.com/in/valentin-iglesias1/',
+		knowsAbout: [
+			'Soporte técnico',
+			'Infraestructura IT',
+			'Administración de sistemas',
+			'Certificaciones IT',
+			'Experiencia de usuario (UX)',
+			'Microsoft 365',
+			'Microsoft Azure',
+		],
+		/** Certificados de cursos obtenidos. No son exámenes de certificación. */
+		formacion: [
+			{ nombre: 'Administración de sistemas y servicios de infraestructura de TI', emisor: 'Google (Coursera)' },
+			{ nombre: 'Fundamentos de la carrera en administración de sistemas', emisor: 'Microsoft y LinkedIn Learning' },
+			{ nombre: 'Microsoft 365 esencial: Administración', emisor: 'LinkedIn Learning' },
+			{ nombre: 'Microsoft Exchange Online: Administración', emisor: 'LinkedIn Learning' },
+			{ nombre: 'Introducción a AWS: Conceptos de la nube', emisor: 'LinkedIn Learning' },
+			{ nombre: 'Desarrollo Frontend', emisor: 'Coderhouse' },
+		],
+		enCurso: [
+			{ nombre: 'Administración de infraestructura de TI', emisor: 'ISTEA', estado: '' },
+			{ nombre: 'Generative AI Leader', emisor: 'Google Cloud', estado: '' },
+			{ nombre: 'Microsoft Azure Fundamentals (AZ-900)', emisor: 'Microsoft', estado: 'Temario estudiado, examen todavía sin rendir' },
+		],
+	},
+} as const;
+
+export type AuthorKey = keyof typeof AUTHORS;
+
+export const AUTHOR_KEYS = Object.keys(AUTHORS) as AuthorKey[];
 
 export const CLUSTERS = {
 	entrada: {

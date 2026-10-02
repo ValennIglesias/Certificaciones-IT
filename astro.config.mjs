@@ -3,6 +3,8 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { satteri } from '@astrojs/markdown-satteri';
+import { adAnchorsPlugin } from './src/lib/ad-anchors-plugin.mjs';
 
 // El dominio final se define en la variable de entorno SITE_URL (ver .env.example).
 // Es obligatorio para que el sitemap, los canonical y las Open Graph absolutas salgan bien.
@@ -20,7 +22,7 @@ if (site === FALLBACK_SITE) {
 export default defineConfig({
 	site,
 	// La spec define las URLs con barra final. Con 'always' el canonical, el
-	// sitemap y el redirect de Vercel coinciden todos en la misma forma de URL.
+	// sitemap y el hosting (Cloudflare Pages) coinciden todos en la misma forma de URL.
 	trailingSlash: 'always',
 	build: {
 		// /cluster/slug/index.html -> URLs con barra final, como pide la spec
@@ -34,6 +36,9 @@ export default defineConfig({
 		}),
 	],
 	markdown: {
+		// Sätteri es el procesador por defecto de Astro 7; se declara explícito solo
+		// para sumarle el plugin de marcadores de anuncios. MDX hereda este procesador.
+		processor: satteri({ hastPlugins: [adAnchorsPlugin] }),
 		shikiConfig: {
 			theme: 'github-dark',
 			wrap: true,

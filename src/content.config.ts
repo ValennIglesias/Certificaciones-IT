@@ -1,7 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
-import { CLUSTER_IDS } from './consts';
+import { AUTHOR_KEYS, CLUSTER_IDS } from './consts';
 
 const articles = defineCollection({
 	// Los artículos viven en src/content/articles/<cluster>/<slug>.md(x).
@@ -15,7 +15,8 @@ const articles = defineCollection({
 			keyword: z.string().min(1),
 			cluster: z.enum(CLUSTER_IDS as [string, ...string[]]),
 			pubDate: z.coerce.date(),
-			author: z.string().min(1),
+			/** Clave de AUTHORS en consts.ts: de ahí salen el nombre completo y el schema. */
+			author: z.enum(AUTHOR_KEYS as [string, ...string[]]),
 			draft: z.boolean().default(false),
 
 			// --- Opcionales ---

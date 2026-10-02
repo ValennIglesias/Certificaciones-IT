@@ -14,10 +14,10 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { article } = Astro.props;
-const { Content } = await render(article);
+const { Content, headings } = await render(article);
 const related = await getRelatedArticles(article);
 ---
 
-<ArticleLayout article={article} related={related}>
+<ArticleLayout article={article} related={related} headings={headings}>
 	<Content />
 </ArticleLayout>

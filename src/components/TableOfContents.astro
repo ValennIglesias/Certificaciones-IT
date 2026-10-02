@@ -1,0 +1,114 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+/**
+ * Tabla de contenidos generada de los H2 del artículo (SPEC-v2, 7.1). No se
+ * escribe a mano en ningún archivo: sale de los headings que devuelve render().
+ *
+ * Dos variantes del mismo índice, y solo una visible según el ancho:
+ * - Escritorio: en el riel izquierdo del artículo, fijo al hacer scroll.
+ * - Móvil: plegada arriba del cuerpo, para no empujar la intro hacia abajo.
+ * La oculta usa display:none, así que tampoco la anuncian los lectores de pantalla.
+ *
+ * Con menos de tres H2 no aporta navegación y no se renderiza.
+ */
+interface Props {
+	headings: MarkdownHeading[];
+	variant: 'riel' | 'movil';
+}
+
+const { headings, variant } = Astro.props;
+const items = headings.filter((h) => h.depth === 2);
+---
+
+{
+	items.length >= 3 &&
+		(variant === 'riel' ? (
+			<nav class="toc toc-riel" aria-label="En este artículo">
+				<p class="toc-titulo">En este artículo</p>
+				<ol>
+					{items.map((h) => (
+						<li>
+							<a href={`#${h.slug}`}>{h.text}</a>
+						</li>
+					))}
+				</ol>
+			</nav>
+		) : (
+			<details class="toc toc-movil">
+				<summary class="toc-titulo">En este artículo</summary>
+				<nav aria-label="En este artículo">
+					<ol>
+						{items.map((h) => (
+							<li>
+								<a href={`#${h.slug}`}>{h.text}</a>
+							</li>
+						))}
+					</ol>
+				</nav>
+			</details>
+		))
+}
+
+<style>
+	.toc ol {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		gap: 0.5rem;
+	}
+
+	.toc a {
+		color: var(--grafito);
+		text-decoration: none;
+		font-size: 0.8125rem;
+		line-height: 1.4;
+	}
+
+	.toc a:hover {
+		color: var(--tinta);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	.toc-titulo {
+		font-size: 0.8125rem;
+		font-weight: 700;
+		color: var(--tinta);
+	}
+
+	.toc-riel {
+		display: none;
+	}
+
+	.toc-movil {
+		border-block: 1px solid var(--regla);
+		padding-block: 0.75rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.toc-movil summary {
+		cursor: pointer;
+	}
+
+	.toc-movil nav {
+		margin-top: 0.75rem;
+	}
+
+	@media (min-width: 60rem) {
+		.toc-riel {
+			display: block;
+			position: sticky;
+			top: 1.5rem;
+		}
+
+		.toc-riel .toc-titulo {
+			margin-bottom: 0.75rem;
+		}
+
+		.toc-movil {
+			display: none;
+		}
+	}
+</style>

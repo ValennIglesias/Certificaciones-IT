@@ -1,4 +1,4 @@
-# Certificaciones IT
+# Desde Cero IT
 
 Sitio de contenido en español sobre certificaciones IT y carrera en tecnología.
 Astro en modo estático (SSG), sin backend ni base de datos: cada artículo es un
@@ -16,7 +16,7 @@ archivo en el repo.
 | SEO | `@astrojs/sitemap`, `robots.txt` generado, Schema.org |
 | Cookies | Banner propio con Google Consent Mode v2, sin librerías |
 | Diseño | Sistema Swiss propio: un acento por cluster, modo oscuro opcional |
-| Hosting | Vercel (plan gratuito) |
+| Hosting | Cloudflare Pages (plan gratuito, permite uso comercial) |
 
 El sitio envía **0 archivos JavaScript**. Lo único que viaja es ~0,9 kB de
 script inline, sin request extra: el conmutador de tema y, si activás GA4 o
@@ -89,12 +89,12 @@ correspondiente no emite absolutamente nada (cero requests). Ver
 | `PUBLIC_GSC_VERIFICATION` | Meta tag de verificación de Search Console |
 | `PUBLIC_ADSENSE_CLIENT` | Id de AdSense (`ca-pub-...`) |
 | `PUBLIC_ADSENSE_ENABLED` | `"true"` **solo** cuando AdSense apruebe la cuenta |
-| `PUBLIC_ADSENSE_SLOT_ARTICLE` | Id del bloque dentro del artículo |
+| `PUBLIC_ADSENSE_SLOT_ARTICLE` | Id del bloque de los artículos: antes del primer H2, en el medio de los largos y al final |
 | `PUBLIC_ADSENSE_SLOT_CATEGORY` | Id del bloque en los listados por categoría |
 | `PUBLIC_ADSENSE_SLOT_HOME` | Id del bloque en la home |
 
-En Vercel se cargan en *Settings → Environment Variables*. Cambiarlas requiere
-un redeploy: son valores de build, no de runtime.
+En Cloudflare Pages se cargan en *Settings → Variables and Secrets*. Cambiarlas
+requiere un redeploy: son valores de build, no de runtime.
 
 ### Banner de cookies
 
@@ -152,25 +152,50 @@ variables que falten:
 Pasos para encenderlo, una vez aprobada la cuenta: cargá `PUBLIC_ADSENSE_CLIENT`
 y los tres ids de bloque, poné `PUBLIC_ADSENSE_ENABLED="true"` y redeployá.
 
-## Deploy en Vercel
+## Deploy en Cloudflare Pages
 
-1. Importá el repo en Vercel. Detecta Astro solo; `vercel.json` fija el comando
-   de build, el directorio de salida, las cabeceras de caché y el redirect de
-   `/sitemap.xml` → `/sitemap-index.xml`.
-2. Cargá `SITE_URL` con el dominio final antes del primer deploy de producción.
-3. Conectá el dominio propio en *Settings → Domains*.
+El plan Hobby de Vercel no permite uso comercial (publicidad incluida), así que
+el sitio se publica en Cloudflare Pages (ver `docs/SPEC-v2.md`, sección 1).
+
+1. En Cloudflare: *Workers & Pages → Create → Pages → Connect to Git*, y elegí
+   este repo.
+2. Configuración de build:
+   - Framework preset: *None* (o Astro; da lo mismo con estos valores)
+   - Build command: `npm run build`
+   - Build output directory: `dist`
+   - La versión de Node sale de `.node-version`; no hace falta `NODE_VERSION`.
+3. Cargá las variables de entorno (*Settings → Variables and Secrets*), como
+   mínimo `SITE_URL` con el dominio final.
+4. Verificá el sitio en la URL `*.pages.dev` y después conectá el dominio propio
+   en *Custom domains*.
+
+Lo que en Vercel hacía `vercel.json`, acá lo hacen dos archivos de `public/`
+que se copian a la raíz de `dist/`:
+
+- `_headers`: caché inmutable para `/_astro/*`, cabeceras de seguridad y
+  `X-Robots-Tag: noindex` en `*.pages.dev`, para que solo se indexe el dominio
+  propio.
+- `_redirects`: `/sitemap.xml` → `/sitemap-index.xml`.
 
 Las URLs llevan barra final (`/cloud/aws-o-azure-cual-elegir/`); el canonical,
-el sitemap y la config de Vercel coinciden en esa forma para no generar
+el sitemap y Cloudflare Pages coinciden en esa forma para no generar
 redirecciones ni contenido duplicado.
+
+`vercel.json` queda hasta que el sitio esté andando en Cloudflare y se elimine
+el proyecto de Vercel; en ese momento se borra.
 
 ## Antes de pedir la aprobación de AdSense
 
-- [ ] Completar `/sobre-nosotros` con identidad y correo de contacto reales.
-- [ ] Completar `/politica-de-privacidad` (hay TODOs marcados) y hacerla revisar
-      según la jurisdicción que corresponda.
-- [ ] Reemplazar los artículos de ejemplo por contenido propio.
-- [ ] Verificar la propiedad en Search Console y enviar el sitemap.
+El checklist completo está en `docs/SPEC-v2.md`, sección 10. Lo que queda del
+lado del código está hecho; falta lo que depende del dominio y de los paneles:
+
+- [ ] Sitio en Cloudflare Pages con el dominio propio y `SITE_URL` cargada.
+- [ ] Search Console verificado por registro DNS TXT en Cloudflare, y el
+      sitemap enviado.
+- [ ] `PUBLIC_GA_ID` y `PUBLIC_ADSENSE_CLIENT` cargadas (esta última genera
+      `/ads.txt`).
+- [ ] Textos legales revisados por un profesional.
+- [ ] PageSpeed en verde sobre el dominio real, en móvil.
 
 ## Estructura
 
@@ -178,20 +203,25 @@ redirecciones ni contenido duplicado.
 src/
 ├─ assets/              imágenes optimizadas por astro:assets
 ├─ components/          SEO, Header, Footer, ArticleRow, Breadcrumbs, AdSlot,
-│                      Analytics, ConsentBanner, ThemeToggle, JsonLd
+│                      Analytics, ConsentBanner, ThemeToggle, JsonLd,
+│                      AuthorBox, TableOfContents
 ├─ content/articles/    los artículos, una carpeta por cluster
 ├─ layouts/             BaseLayout, ArticleLayout, PageLayout
 ├─ lib/
-│  ├─ articles.ts       filtrado de borradores, orden, slugs, fechas
-│  └─ analytics.ts      lectura central de las env vars de Google
+│  ├─ articles.ts       filtrado de borradores, orden, slugs, fechas, relacionados
+│  ├─ authors.ts        autor: página, foto opcional y schema Person
+│  ├─ analytics.ts      lectura central de las env vars de Google
+│  └─ ad-anchors-plugin.mjs  marcadores de anuncios dentro del cuerpo
 ├─ pages/
 │  ├─ index.astro              /
 │  ├─ [cluster]/index.astro    /entrada/, /redes/, ...
 │  ├─ [cluster]/[slug].astro   /entrada/mi-articulo/
-│  ├─ sobre-nosotros.astro
-│  ├─ politica-de-privacidad.astro
+│  ├─ autor/[slug].astro       /autor/valentin-iglesias/
+│  ├─ sobre-nosotros.astro, contacto.astro, aviso-legal.astro
+│  ├─ politica-de-privacidad.astro, politica-de-cookies.astro
 │  ├─ 404.astro
-│  └─ robots.txt.ts
-├─ consts.ts            nombre del sitio, clusters, menú
+│  ├─ robots.txt.ts
+│  └─ ads.txt.ts
+├─ consts.ts            nombre del sitio, titular, autores, clusters, menú
 └─ content.config.ts    schema Zod de la colección
 ```

@@ -1,16 +1,16 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import { SITE } from '../consts';
+import { SITE, AUTHORS } from '../consts';
 
 // Datos del titular y del autor, provistos por el dueño del sitio.
-const CONTACT_EMAIL = 'guias.info@gmail.com';
-const OWNER = 'Valen — Certificaciones IT';
-const AUTHOR = 'Valentín';
+const AUTHOR = AUTHORS['Valentín'];
+const LAST_UPDATED = '1 de octubre de 2026';
 ---
 
 <PageLayout
 	title="Sobre nosotros"
-	description={`Quiénes somos y cómo trabajamos en ${SITE.name}: guías en español sobre certificaciones IT y carrera en tecnología.`}>
+	description={`Quiénes somos y cómo trabajamos en ${SITE.name}: guías en español sobre certificaciones IT y carrera en tecnología.`}
+	updated={LAST_UPDATED}>
 	<p>
 		<strong>{SITE.name}</strong> es un sitio en español dedicado a explicar certificaciones de
 		tecnología —CompTIA, Cisco, AWS, Microsoft Azure, ITIL y otras— y el camino profesional que hay
@@ -38,20 +38,29 @@ const AUTHOR = 'Valentín';
 		y se usan únicamente con fines descriptivos.
 	</p>
 
+	<h2>Cómo se financia el sitio</h2>
+	<p>
+		El acceso es gratuito y el sitio se sostiene con publicidad de Google AdSense. Los anuncios los
+		elige Google; los anunciantes no intervienen en qué guías publicamos ni en lo que dicen.
+	</p>
+
 	<h2>Quién está detrás</h2>
 	<p>
-		<strong>{OWNER}</strong> es el responsable del sitio y de su contenido editorial.
+		<strong>{SITE.owner}</strong> es el responsable del sitio y de su contenido editorial.
 	</p>
 	<p>
-		Las guías las escribe y revisa <strong>{AUTHOR}</strong>, técnico de soporte IT, actualmente
-		estudiando administración de infraestructura de TI. Combina su experiencia real en soporte con
+		Las guías las escribe y revisa <a href={`/autor/${AUTHOR.slug}/`}>{AUTHOR.name}</a>. Trabajó en
+		soporte técnico e infraestructura IT y hoy lidera proyectos de experiencia de usuario (UX) en
+		aplicaciones, mientras cursa administración de infraestructura de TI en ISTEA. Combina su
+		experiencia real en soporte con
 		investigación propia sobre cada certificación: lo que funciona en un service desk de verdad,
 		contrastado con la documentación oficial de cada examen.
 	</p>
 
 	<h2>Contacto</h2>
 	<p>
-		Escribinos a <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> para correcciones,
+		Escribinos a <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a> (más detalle en la
+		página de <a href="/contacto/">contacto</a>) para correcciones,
 		sugerencias o consultas editoriales. Si detectás un dato desactualizado en alguna guía —un
 		precio, un temario, una versión de examen— avisanos y lo corregimos.
 	</p>

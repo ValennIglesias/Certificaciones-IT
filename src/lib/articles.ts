@@ -33,10 +33,16 @@ export async function getArticles(cluster?: ClusterId): Promise<Article[]> {
 	return entries.sort(byDateDesc);
 }
 
-/** Otros artículos del mismo cluster, para el bloque de "seguí leyendo". */
+/**
+ * Artículos para el bloque de "seguí leyendo": primero los del mismo cluster,
+ * y si no alcanzan, se completa con los más recientes de otros clusters. Así
+ * un cluster chico no deja el bloque con uno o ningún artículo.
+ */
 export async function getRelatedArticles(entry: Article, limit = 3): Promise<Article[]> {
-	const siblings = await getArticles(entry.data.cluster as ClusterId);
-	return siblings.filter((a) => a.id !== entry.id).slice(0, limit);
+	const others = (await getArticles()).filter((a) => a.id !== entry.id);
+	const sameCluster = others.filter((a) => a.data.cluster === entry.data.cluster);
+	const otherClusters = others.filter((a) => a.data.cluster !== entry.data.cluster);
+	return [...sameCluster, ...otherClusters].slice(0, limit);
 }
 
 // timeZone UTC a propósito: "pubDate: 2026-09-10" se parsea como medianoche UTC,

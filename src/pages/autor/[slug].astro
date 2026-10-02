@@ -1,0 +1,182 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ArticleRow from '../../components/ArticleRow.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { AUTHOR_KEYS, SITE } from '../../consts';
+import { getArticles } from '../../lib/articles';
+import { authorPath, authorPhoto, getAuthor, personSchema } from '../../lib/authors';
+
+export const getStaticPaths = (() =>
+	AUTHOR_KEYS.map((key) => ({
+		params: { slug: getAuthor(key).slug },
+		props: { authorKey: key },
+	}))) satisfies GetStaticPaths;
+
+const { authorKey } = Astro.props;
+const author = getAuthor(authorKey);
+const photo = authorPhoto(author);
+const url = new URL(authorPath(author), Astro.site).toString();
+const articles = (await getArticles()).filter((a) => a.data.author === authorKey);
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'ProfilePage',
+			'@id': url,
+			url,
+			name: `${author.name} — ${SITE.name}`,
+			inLanguage: SITE.lang,
+			mainEntity: personSchema(author, Astro.site),
+		},
+		{
+			'@type': 'BreadcrumbList',
+			itemListElement: [
+				{ '@type': 'ListItem', position: 1, name: 'Inicio', item: Astro.site?.toString() },
+				{ '@type': 'ListItem', position: 2, name: author.name, item: url },
+			],
+		},
+	],
+};
+---
+
+<BaseLayout
+	title={author.name}
+	description={`${author.name}, autor de ${SITE.name}: ${author.jobTitle.toLowerCase()}, con experiencia en soporte técnico e infraestructura IT.`}>
+	<JsonLd slot="head" schema={schema} />
+
+	<div class="wrap pagina">
+		<div class="miga">
+			<Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: author.name }]} />
+		</div>
+
+		<header class="cabecera rule-t">
+			{
+				photo && (
+					<Image
+						src={photo}
+						alt={author.name}
+						width={320}
+						height={320}
+						loading="eager"
+						class="foto"
+					/>
+				)
+			}
+			<div>
+				<h1 class="title">{author.name}</h1>
+				<p class="cargo">{author.jobTitle}</p>
+				<p class="meta">
+					<a href={author.linkedin} rel="me noopener" target="_blank">Perfil de LinkedIn</a>
+				</p>
+			</div>
+		</header>
+
+		<div class="prose prose-article max-w-none">
+			<p>
+				Empecé en soporte técnico, resolviendo los problemas del día a día de una infraestructura IT
+				real: equipos, sistemas operativos, cuentas y todo lo que se rompe cuando nadie lo espera.
+				Hoy lidero proyectos de experiencia de usuario (UX) en aplicaciones, donde el trabajo es que
+				la tecnología le resulte clara a quien la usa. En paralelo, curso administración de
+				infraestructura de TI en ISTEA.
+			</p>
+			<p>
+				{SITE.name} junta esas dos cosas: explicar certificaciones y caminos de carrera en IT desde
+				la experiencia de haber arrancado desde abajo, con la exigencia de UX de que cada guía se
+				entienda a la primera. Cada artículo se contrasta con la documentación oficial del proveedor
+				y se actualiza cuando cambia un examen, un precio o un temario.
+			</p>
+
+			<h2>Formación</h2>
+			<ul>
+				{
+					author.formacion.map((item) => (
+						<li>
+							<strong>{item.nombre}</strong> — {item.emisor}
+						</li>
+					))
+				}
+			</ul>
+
+			<h2>En curso</h2>
+			<ul>
+				{
+					author.enCurso.map((item) => (
+						<li>
+							<strong>{item.nombre}</strong> — {item.emisor}
+							{item.estado && <>. {item.estado}.</>}
+						</li>
+					))
+				}
+			</ul>
+		</div>
+
+		{
+			articles.length > 0 && (
+				<section class="rule-t articulos" aria-labelledby="articulos">
+					<h2 id="articulos" class="articulos-titulo">
+						Artículos de {author.name} ({articles.length})
+					</h2>
+					{articles.map((article) => (
+						<ArticleRow article={article} />
+					))}
+				</section>
+			)
+		}
+	</div>
+</BaseLayout>
+
+<style>
+	.pagina {
+		max-width: 48rem;
+	}
+
+	.miga {
+		padding-block: 1.25rem;
+	}
+
+	.cabecera {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+		align-items: center;
+		padding-block: 2.5rem;
+	}
+
+	.foto {
+		width: 8rem;
+		height: 8rem;
+		object-fit: cover;
+		border: 1px solid var(--regla);
+	}
+
+	.cargo {
+		margin-top: 0.5rem;
+		color: var(--grafito);
+		font-size: 1.125rem;
+	}
+
+	.cabecera .meta {
+		margin-top: 0.75rem;
+	}
+
+	.cabecera .meta a {
+		color: var(--tinta);
+		font-weight: 700;
+	}
+
+	.articulos {
+		margin-top: 3rem;
+		padding-top: 2rem;
+	}
+
+	.articulos-titulo {
+		font-size: 0.8125rem;
+		font-weight: 700;
+		color: var(--grafito);
+		margin-bottom: 0.5rem;
+	}
+</style>

@@ -14,11 +14,20 @@
  * Sin librerías: son ~40 líneas de JS inline, sin request adicional.
  * Si no hay GA ni AdSense configurados, no se renderiza nada.
  */
-import { GA_ID, ADSENSE_CLIENT, ADSENSE_ENABLED, CONSENT_REQUIRED, CONSENT_STORAGE_KEY } from '../lib/analytics';
+import {
+	GA_ID,
+	ADSENSE_CLIENT,
+	ADSENSE_ENABLED,
+	CONSENT_REQUIRED,
+	CONSENT_STORAGE_KEY,
+	adSlotFor,
+} from '../lib/analytics';
 
 const config = {
 	ga: GA_ID,
 	ads: ADSENSE_ENABLED ? ADSENSE_CLIENT : '',
+	/** Bloque para los anuncios dentro del cuerpo (marcadores de ad-anchors-plugin). */
+	inlineSlot: adSlotFor('article') ?? '',
 	key: CONSENT_STORAGE_KEY,
 };
 ---
@@ -39,7 +48,7 @@ const config = {
 						<p class="cc-cuerpo">
 							Usamos cookies de Google Analytics para medir el tráfico y de Google AdSense para
 							mostrar publicidad. No se activan si no las aceptás.{' '}
-							<a href="/politica-de-privacidad/">Política de privacidad</a>.
+							<a href="/politica-de-cookies/">Política de cookies</a>.
 						</p>
 					</div>
 
@@ -93,6 +102,25 @@ const config = {
 								'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' +
 								config.ads;
 							document.head.appendChild(ads);
+
+							/*
+							  Anuncios dentro del cuerpo: el CSS ya les reservó la altura a los
+							  marcadores visibles (clase con-anuncios); acá se crea el <ins>.
+							*/
+							if (config.inlineSlot) {
+								var anchors = document.querySelectorAll('.con-anuncios [data-ad-anchor]');
+								for (var j = 0; j < anchors.length; j++) {
+									var ins = document.createElement('ins');
+									ins.className = 'adsbygoogle';
+									ins.style.display = 'block';
+									ins.style.minHeight = '280px';
+									ins.setAttribute('data-ad-client', config.ads);
+									ins.setAttribute('data-ad-slot', config.inlineSlot);
+									ins.setAttribute('data-ad-format', 'auto');
+									ins.setAttribute('data-full-width-responsive', 'true');
+									anchors[j].appendChild(ins);
+								}
+							}
 
 							/* Un push por cada hueco de anuncio presente en la página. */
 							window.adsbygoogle = window.adsbygoogle || [];
