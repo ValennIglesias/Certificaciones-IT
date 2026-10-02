@@ -22,7 +22,7 @@ if (site === FALLBACK_SITE) {
 export default defineConfig({
 	site,
 	// La spec define las URLs con barra final. Con 'always' el canonical, el
-	// sitemap y el redirect de Vercel coinciden todos en la misma forma de URL.
+	// sitemap y el hosting (Cloudflare Pages) coinciden todos en la misma forma de URL.
 	trailingSlash: 'always',
 	build: {
 		// /cluster/slug/index.html -> URLs con barra final, como pide la spec

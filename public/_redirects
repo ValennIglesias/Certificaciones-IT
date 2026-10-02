@@ -1,0 +1,2 @@
+# Redirecciones de Cloudflare Pages. Equivalente al bloque "redirects" de vercel.json.
+/sitemap.xml /sitemap-index.xml 301
