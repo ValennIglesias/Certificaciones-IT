@@ -10,9 +10,7 @@ import { SITE } from '../consts';
 // coincide con el comportamiento real del sitio.
 //
 // Conviene que un profesional revise el texto antes de publicarlo.
-const CONTACT_EMAIL = 'guias.info@gmail.com';
-const OWNER_LOCATION = 'Buenos Aires, Argentina';
-const LAST_UPDATED = '28 de septiembre de 2026';
+const LAST_UPDATED = '1 de octubre de 2026';
 ---
 
 <PageLayout
@@ -21,9 +19,9 @@ const LAST_UPDATED = '28 de septiembre de 2026';
 	updated={LAST_UPDATED}>
 	<h2>Responsable del sitio</h2>
 	<p>
-		<strong>{SITE.owner}</strong>, con domicilio en {OWNER_LOCATION}, es el responsable
+		<strong>{SITE.owner}</strong>, con domicilio en {SITE.ownerLocation}, es el responsable
 		de <strong>{SITE.name}</strong>. Para cualquier consulta sobre privacidad o sobre el
-		tratamiento de tus datos, escribinos a <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+		tratamiento de tus datos, escribinos a <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
 	</p>
 
 	<h2>Qué datos recogemos</h2>
@@ -67,7 +65,8 @@ const LAST_UPDATED = '28 de septiembre de 2026';
 		actúa como tratante independiente de esos datos: podés consultar el detalle en la{' '}
 		<a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">
 			Política de Privacidad de Google</a
-		>.
+		>. El listado de cada cookie, para qué sirve y cuánto dura está en la{' '}
+		<a href="/politica-de-cookies/">política de cookies</a>.
 	</p>
 
 	<h2>Consentimiento</h2>
@@ -138,7 +137,7 @@ const LAST_UPDATED = '28 de septiembre de 2026';
 	<p>
 		Tenés derecho a solicitar el acceso, la rectificación, la actualización y la supresión de tus
 		datos personales, así como a oponerte a su tratamiento. Para ejercerlos, escribinos a{' '}
-		<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+		<a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
 	</p>
 	<p>
 		La Agencia de Acceso a la Información Pública, en su carácter de autoridad de control de la Ley

@@ -1,0 +1,98 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { SITE } from '../consts';
+
+// Datos del titular en consts.ts (SITE.owner, ownerLocation, contactEmail).
+// Jurisdicción: Argentina. Conviene que un profesional revise el texto antes
+// de pedir AdSense; en particular, la cláusula de jurisdicción.
+const LAST_UPDATED = '1 de octubre de 2026';
+---
+
+<PageLayout
+	title="Aviso legal"
+	description={`Titular, condiciones de uso, propiedad intelectual y limitación de responsabilidad de ${SITE.name}.`}
+	updated={LAST_UPDATED}>
+	<h2>Titular del sitio</h2>
+	<ul>
+		<li><strong>Titular:</strong> {SITE.owner}</li>
+		<li><strong>Domicilio:</strong> {SITE.ownerLocation}</li>
+		<li>
+			<strong>Contacto:</strong> <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>
+		</li>
+	</ul>
+
+	<h2>Objeto del sitio</h2>
+	<p>
+		{SITE.name} publica guías informativas en español sobre certificaciones de tecnología y carrera
+		profesional en IT. El acceso es libre y gratuito, y no requiere registro.
+	</p>
+
+	<h2>Condiciones de uso</h2>
+	<p>
+		Al navegar el sitio aceptás estas condiciones. Te comprometés a usar el contenido de forma lícita
+		y a no realizar acciones que puedan dañar el sitio, sobrecargarlo o impedir que otras personas lo
+		usen con normalidad.
+	</p>
+
+	<h2>Carácter informativo del contenido</h2>
+	<p>
+		Las guías tienen fines exclusivamente informativos y de orientación. Precios de exámenes,
+		temarios, requisitos, versiones y datos de sueldos los definen terceros —organismos
+		certificadores, proveedores de formación, empresas— y cambian con frecuencia. Cada artículo
+		indica su fecha de publicación y, cuando corresponde, de última actualización.
+	</p>
+	<p>
+		Antes de tomar una decisión que implique dinero o tiempo —comprar un voucher, inscribirte en un
+		curso, negociar un sueldo— verificá el dato en la fuente oficial. Si encontrás un dato
+		desactualizado, avisanos a <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a> y lo
+		corregimos.
+	</p>
+
+	<h2>Propiedad intelectual</h2>
+	<p>
+		Los textos, tablas, diagramas e imágenes propias del sitio pertenecen a su titular. Podés citar
+		fragmentos breves con un enlace al artículo original; para cualquier otra reproducción, total o
+		parcial, necesitás autorización previa por escrito.
+	</p>
+	<p>
+		Los nombres de certificaciones, productos y empresas mencionados —CompTIA, Cisco, Amazon Web
+		Services, Microsoft, ISC2, Google y otros— son marcas de sus respectivos titulares. Se usan solo
+		con fines descriptivos. {SITE.name} no está afiliado a ninguno de ellos ni cuenta con su respaldo.
+	</p>
+
+	<h2>Enlaces externos</h2>
+	<p>
+		Los artículos enlazan a sitios de terceros, como la documentación oficial de un examen. No
+		controlamos su contenido ni su disponibilidad, y no somos responsables por lo que publiquen ni
+		por sus políticas de privacidad.
+	</p>
+
+	<h2>Publicidad</h2>
+	<p>
+		El sitio se financia con publicidad de Google AdSense. Los anuncios los selecciona Google: su
+		aparición no implica que recomendemos el producto o servicio anunciado, y los anunciantes no
+		intervienen en el contenido editorial. Cómo se usan las cookies publicitarias está explicado en
+		la <a href="/politica-de-cookies/">política de cookies</a>.
+	</p>
+
+	<h2>Limitación de responsabilidad</h2>
+	<p>
+		Trabajamos para que la información sea precisa y esté actualizada, pero no garantizamos que esté
+		libre de errores ni que siga vigente al momento de leerla. El titular no se responsabiliza por
+		decisiones tomadas en base al contenido del sitio, ni por interrupciones o fallas técnicas del
+		servicio.
+	</p>
+
+	<h2>Ley aplicable</h2>
+	<p>
+		Este aviso legal se rige por las leyes de la República Argentina. Cualquier controversia se
+		someterá a los tribunales competentes según la normativa aplicable.
+	</p>
+
+	<h2>Datos personales y cookies</h2>
+	<p>
+		El tratamiento de datos personales se explica en la{' '}
+		<a href="/politica-de-privacidad/">política de privacidad</a>, y el uso de cookies en la{' '}
+		<a href="/politica-de-cookies/">política de cookies</a>.
+	</p>
+</PageLayout>

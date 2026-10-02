@@ -1,0 +1,153 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { SITE } from '../consts';
+import { CONSENT_REQUIRED, CONSENT_STORAGE_KEY } from '../lib/analytics';
+
+// El inventario tiene que coincidir con lo que el sitio hace de verdad:
+// - Analytics.astro / ConsentBanner.astro: GA4 y AdSense solo tras aceptar.
+// - BaseLayout.astro / ThemeToggle.astro: preferencia de tema en localStorage.
+// Si se suma un servicio que instale cookies, va acá antes de activarlo.
+// Cuando AdSense esté aprobado y se reemplace el banner por la CMP de Google
+// (SPEC-v2, sección 5), esta página se revisa entera.
+const LAST_UPDATED = '1 de octubre de 2026';
+---
+
+<PageLayout
+	title="Política de cookies"
+	description={`Qué cookies y almacenamiento local usa ${SITE.name}, para qué sirve cada uno y cómo cambiar tu decisión.`}
+	updated={LAST_UPDATED}>
+	<p>
+		Las cookies son pequeños archivos que un sitio guarda en tu navegador. Esta página explica cuáles
+		usa <strong>{SITE.name}</strong>, quién las instala, para qué sirven y cómo decidir sobre ellas.
+		El tratamiento de los datos que generan está explicado en la{' '}
+		<a href="/politica-de-privacidad/">política de privacidad</a>.
+	</p>
+
+	<h2>El sitio no instala cookies propias</h2>
+	<p>
+		{SITE.name} es un sitio estático: no tiene registro de usuarios, ni comentarios, ni carrito de
+		compras. No instala cookies propias. Lo único que guarda por su cuenta son dos preferencias en
+		el <strong>almacenamiento local</strong> de tu navegador, que nunca salen de tu dispositivo:
+	</p>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Para qué sirve</th>
+				<th>Duración</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code>{CONSENT_STORAGE_KEY}</code></td>
+				<td>Recordar si aceptaste o rechazaste las cookies de terceros, para no volver a preguntarte en cada página</td>
+				<td>Hasta que borres los datos del sitio</td>
+			</tr>
+			<tr>
+				<td><code>cit:theme</code></td>
+				<td>Recordar si elegiste el tema claro u oscuro</td>
+				<td>Hasta que borres los datos del sitio</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>Son estrictamente necesarias para que el sitio recuerde tus elecciones, y no requieren consentimiento.</p>
+
+	<h2>Cookies de terceros, solo si las aceptás</h2>
+	<p>
+		El sitio puede usar dos servicios de Google que sí instalan cookies. <strong
+			>Ninguno se carga antes de que aceptes</strong
+		>: hasta entonces, sus scripts ni siquiera se descargan.
+	</p>
+
+	<h3>Analíticas: Google Analytics 4</h3>
+	<p>Miden de forma agregada cuántas personas visitan el sitio, qué páginas leen y cómo llegaron.</p>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Para qué sirve</th>
+				<th>Duración</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code>_ga</code></td>
+				<td>Distinguir visitantes sin identificarlos personalmente</td>
+				<td>2 años</td>
+			</tr>
+			<tr>
+				<td><code>_ga_&lt;id&gt;</code></td>
+				<td>Mantener el estado de la sesión</td>
+				<td>2 años</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3>Publicitarias: Google AdSense</h3>
+	<p>
+		Google y sus socios publicitarios usan cookies para mostrar anuncios, limitar cuántas veces ves
+		el mismo, medir su rendimiento y, si lo aceptás, personalizarlos según tu navegación. Los nombres
+		y la duración de esas cookies los define Google y cambian con el tiempo: el listado actualizado
+		está en la página de{' '}
+		<a href="https://policies.google.com/technologies/cookies" rel="nofollow noopener" target="_blank"
+			>cookies de Google</a
+		>.
+	</p>
+
+	<h2>Cómo cambiar tu decisión</h2>
+	{
+		CONSENT_REQUIRED ? (
+			<p>
+				Podés revisar lo que elegiste en cualquier momento: el botón de abajo, o el enlace
+				«Preferencias de cookies» al pie de todas las páginas, vuelve a abrir el banner. Si rechazás
+				después de haber aceptado, el sitio borra las cookies de Google Analytics y recarga la página
+				sin ningún script de Google.
+			</p>
+		) : (
+			<p>
+				Hoy ninguno de los dos servicios está activo, así que el sitio no muestra el banner: no hay
+				nada que consentir. Cuando se active alguno, vas a ver el banner en tu próxima visita, y el
+				enlace «Preferencias de cookies» al pie de todas las páginas para cambiar tu decisión cuando
+				quieras.
+			</p>
+		)
+	}
+	{
+		CONSENT_REQUIRED && (
+			<p>
+				<button type="button" data-consent-reopen class="boton-cookies">
+					Cambiar mis preferencias de cookies
+				</button>
+			</p>
+		)
+	}
+	<p>
+		También podés bloquear o borrar cookies desde la configuración de tu navegador. Rechazar las
+		cookies publicitarias no elimina los anuncios: hace que dejen de estar personalizados.
+	</p>
+
+	<h2>Cambios en esta política</h2>
+	<p>
+		Si el sitio suma o deja de usar algún servicio que instale cookies, esta página se actualiza
+		antes del cambio, con su nueva fecha en la cabecera. Para cualquier consulta, escribí a{' '}
+		<a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+	</p>
+</PageLayout>
+
+<style>
+	.boton-cookies {
+		font: inherit;
+		font-size: 0.9375rem;
+		font-weight: 700;
+		padding: 0.625rem 1.25rem;
+		border: 1px solid var(--tinta);
+		background-color: var(--papel);
+		color: var(--tinta);
+		cursor: pointer;
+	}
+
+	.boton-cookies:hover {
+		opacity: 0.85;
+	}
+</style>

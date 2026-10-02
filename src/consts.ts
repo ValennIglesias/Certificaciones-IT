@@ -7,6 +7,9 @@ export const SITE = {
 	titleTemplate: '%s | Desde Cero IT',
 	/** Titular legal del sitio: páginas legales y Schema.org. */
 	owner: 'Valentín Iglesias — Desde Cero IT',
+	ownerLocation: 'Buenos Aires, Argentina',
+	/** Correo de contacto visible en las páginas legales y de contacto. */
+	contactEmail: 'guias.info@gmail.com',
 	description:
 		'Guías en español sobre certificaciones IT (CompTIA, Cisco, AWS, Azure, ITIL) y cómo construir una carrera en tecnología.',
 	lang: 'es',

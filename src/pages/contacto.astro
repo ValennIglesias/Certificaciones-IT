@@ -1,0 +1,48 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { SITE } from '../consts';
+
+// Solo correo visible, sin formulario: un formulario necesita una función o un
+// servicio externo, y el sitio es 100% estático (SPEC-v2, sección 1).
+const LAST_UPDATED = '1 de octubre de 2026';
+---
+
+<PageLayout
+	title="Contacto"
+	description={`Cómo escribirle a ${SITE.name}: correcciones, consultas editoriales y privacidad.`}
+	updated={LAST_UPDATED}>
+	<p>
+		La forma de contactarnos es por correo electrónico:{' '}
+		<a href={`mailto:${SITE.contactEmail}`}><strong>{SITE.contactEmail}</strong></a>.
+	</p>
+
+	<h2>Para qué escribirnos</h2>
+	<ul>
+		<li>
+			<strong>Correcciones.</strong> Si un precio, un temario, un requisito o una versión de examen
+			quedó desactualizado, contanos en qué artículo y, si podés, la fuente oficial. Es la consulta
+			que más nos importa.
+		</li>
+		<li>
+			<strong>Consultas editoriales.</strong> Sugerencias de temas o comentarios sobre una guía.
+		</li>
+		<li>
+			<strong>Privacidad.</strong> Para ejercer tus derechos de acceso, rectificación o supresión de
+			datos personales. El detalle está en la <a href="/politica-de-privacidad/">política de
+			privacidad</a>.
+		</li>
+	</ul>
+
+	<h2>Lo que no podemos responder</h2>
+	<p>
+		No damos asesoramiento personalizado de carrera ni respondemos preguntas sobre el contenido de un
+		examen. Para eso, el punto de partida son las guías del sitio y el{' '}
+		<a href="/carrera/roadmap-certificaciones-it/">roadmap de certificaciones</a>.
+	</p>
+
+	<h2>Quién responde</h2>
+	<p>
+		Los correos los lee {SITE.owner}, titular del sitio. Más información sobre quién escribe las
+		guías en la página <a href="/sobre-nosotros/">sobre nosotros</a>.
+	</p>
+</PageLayout>
