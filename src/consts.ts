@@ -41,16 +41,20 @@ export const AUTHORS = {
 			'Administración de sistemas',
 			'Certificaciones IT',
 			'Experiencia de usuario (UX)',
+			'Microsoft 365',
 			'Microsoft Azure',
 		],
 		/** Certificados de cursos obtenidos. No son exámenes de certificación. */
 		formacion: [
 			{ nombre: 'Administración de sistemas y servicios de infraestructura de TI', emisor: 'Google (Coursera)' },
 			{ nombre: 'Fundamentos de la carrera en administración de sistemas', emisor: 'Microsoft y LinkedIn Learning' },
-			{ nombre: 'Fundamentos de AWS', emisor: 'LinkedIn Learning' },
+			{ nombre: 'Microsoft 365 esencial: Administración', emisor: 'LinkedIn Learning' },
+			{ nombre: 'Microsoft Exchange Online: Administración', emisor: 'LinkedIn Learning' },
+			{ nombre: 'Introducción a AWS: Conceptos de la nube', emisor: 'LinkedIn Learning' },
 			{ nombre: 'Desarrollo Frontend', emisor: 'Coderhouse' },
 		],
 		enCurso: [
+			{ nombre: 'Administración de infraestructura de TI', emisor: 'ISTEA', estado: '' },
 			{ nombre: 'Generative AI Leader', emisor: 'Google Cloud', estado: '' },
 			{ nombre: 'Microsoft Azure Fundamentals (AZ-900)', emisor: 'Microsoft', estado: 'Temario estudiado, examen todavía sin rendir' },
 		],
