@@ -7,11 +7,18 @@ identidad de autor verificable y las señales de SEO que faltan.
 Reemplaza a `SPEC.md` (v1). Los cambios respecto de v1 están marcados
 como **[CAMBIO]**; lo que sigue igual no se repite en detalle.
 
+> **Estado: ejecutado el 3 de octubre de 2026.** Este documento queda como
+> registro de lo que se implementó, no como lista de pendientes. Donde la
+> implementación se apartó del plan original, el texto describe lo que
+> realmente se hizo y lo marca como **[IMPLEMENTADO]**. Lo único que queda
+> abierto está en el checklist de la sección 10 y depende del dominio o de
+> paneles externos (Cloudflare, Search Console, AdSense), no del código.
+
 ---
 
 ## 0. Contexto y estado actual
 
-- Sitio Astro estático, 18 artículos publicados en cinco clusters
+- Sitio Astro estático, 20 artículos publicados en cinco clusters
   (entrada, redes, seguridad, cloud, carrera).
 - Desplegado en Vercel, plan Hobby, sin dominio propio.
 - **No está indexado en Google todavía.** Esto hace que cualquier
@@ -126,7 +133,9 @@ Cloudflare una vez cumplidos los 60 días de bloqueo de ICANN.
 2. Conectar el repositorio de GitHub. Configuración de build:
    - Comando: `npm run build`
    - Directorio de salida: `dist`
-   - Variable de entorno `NODE_VERSION` acorde al proyecto
+   - Versión de Node: **[IMPLEMENTADO]** la fija el archivo
+     `.node-version` del repo (24), que Cloudflare lee solo. No hace falta
+     la variable `NODE_VERSION`.
 3. Migrar todas las variables de entorno del proyecto de Vercel al
    panel de Cloudflare Pages, incluyendo `SITE_URL`.
 4. Verificar que el build pasa y que el sitio funciona en la URL
@@ -146,6 +155,26 @@ duplicado.
 
 Si se mantiene por algún motivo, agregar `noindex` en el despliegue de
 Vercel.
+
+### [IMPLEMENTADO] Equivalente de `vercel.json` en Cloudflare
+
+Cloudflare Pages ignora `vercel.json`. Lo que hacía ese archivo pasa a dos
+archivos de `public/`, que se copian a la raíz de `dist/`:
+
+| Archivo | Contenido |
+| --- | --- |
+| `public/_headers` | Caché inmutable para `/_astro/*`, cabeceras de seguridad y `X-Robots-Tag: noindex` en `*.pages.dev` |
+| `public/_redirects` | `/sitemap.xml` → `/sitemap-index.xml` (301) |
+
+El `noindex` en `*.pages.dev` no estaba en el plan: Cloudflare deja
+accesible la copia en `pages.dev` aunque se conecte el dominio propio, y
+sin esa cabecera Google podría indexar dos copias del sitio. Se verifica
+con el primer deploy.
+
+La barra final de las URLs la resuelve Cloudflare solo, y el comando de
+build y el directorio de salida se cargan en el panel. `vercel.json` se
+borra cuando se elimine el proyecto de Vercel. `sharp` pasó a ser
+dependencia explícita, porque el generador de imágenes OG la usa.
 
 ### Verificación de Astro
 
@@ -213,6 +242,20 @@ Componente reutilizable con foto, nombre, una o dos líneas de bio y
 enlace a la página de autor. Se inserta automáticamente al final del
 layout de artículo, no manualmente por archivo.
 
+### [IMPLEMENTADO] Cómo quedó
+
+- Los datos del autor viven en la tabla `AUTHORS` de `src/consts.ts`,
+  indexada por el valor del campo `author` del frontmatter (`"Valentín"`).
+  Los artículos no se tocaron; un `author` que no esté en la tabla rompe
+  el build.
+- La página usa schema `ProfilePage` con la entidad `Person` como
+  `mainEntity`. El `author` de cada artículo apunta a la misma entidad por
+  su `@id`.
+- La formación se muestra separada en "Formación" (certificados de cursos)
+  y "En curso", sin presentar cursos como exámenes de certificación.
+- La foto es opcional: se toma de `src/assets/autores/<slug>.(jpg|png|webp)`
+  si existe. Hasta que se suba, la página y la caja no muestran imagen.
+
 ### Nota
 
 Esto vincula la identidad real del autor con el sitio de forma pública.
@@ -237,9 +280,24 @@ pero conviene tenerlo presente como decisión consciente.
 
 | Posición | Regla |
 | --- | --- |
-| Tras la introducción | Después de la sección "Lo esencial", antes del primer H2 |
-| Entre secciones | Entre bloques H2, no más de uno cada dos secciones |
-| Al final | Antes de la caja de autor |
+| Tras la introducción | **[IMPLEMENTADO]** Antes del primer H2, en todos los artículos. No depende de que exista "Lo esencial", que falta en varios |
+| Entre secciones | **[IMPLEMENTADO]** Solo en artículos de 6+ H2 y 1.200+ palabras, antes del H2 del medio. Siempre quedan al menos dos secciones entre anuncios |
+| Al final | Antes de los artículos relacionados y de la caja de autor |
+
+### [IMPLEMENTADO] Cómo quedó
+
+- Un plugin de Sätteri (`src/lib/ad-anchors-plugin.mjs`; Sätteri es el
+  procesador de Markdown de Astro 7, que también usa MDX) inserta
+  marcadores vacíos entre nodos del nivel raíz. Por construcción nunca
+  caen dentro de una lista ni de una tabla.
+- Los marcadores no dependen de variables de entorno, porque el HTML del
+  contenido se cachea entre builds. El layout los muestra con la altura
+  reservada solo si `PUBLIC_ADSENSE_SLOT_ARTICLE` es válido, y el script de
+  consentimiento crea el `<ins>`. Medido: 0 saltos de layout.
+- Las tres ubicaciones del artículo usan el mismo bloque,
+  `PUBLIC_ADSENSE_SLOT_ARTICLE`.
+- `/ads.txt` se genera en el build desde `PUBLIC_ADSENSE_CLIENT`, aunque
+  AdSense siga apagado.
 
 ### Prohibiciones
 
@@ -308,8 +366,9 @@ funcionando; el cambio se hace cuando AdSense esté activo.
 - **Política de cookies**: listado de cookies por finalidad (técnicas,
   analíticas, publicitarias), con Google Analytics y Google AdSense
   identificados como terceros, y enlace al gestor de consentimiento.
-- **Contacto**: formulario o dirección de correo visible. AdSense
-  valora una vía de contacto clara.
+- **Contacto**: **[IMPLEMENTADO]** solo dirección de correo visible, sin
+  formulario: un formulario necesita una función o un servicio externo, y
+  el sitio es 100% estático.
 
 Todas deben tener fecha de última actualización visible.
 
@@ -328,6 +387,11 @@ archivo. Mostrar solo si el artículo tiene tres o más H2.
 Debe ser navegable con anclas (`#slug-del-h2`) y no romper el layout en
 móvil.
 
+**[IMPLEMENTADO]** En escritorio va en el riel izquierdo del artículo y
+queda fija al hacer scroll; en móvil va plegada arriba del cuerpo. Así
+nunca queda pegada al anuncio de antes del primer H2, que va después de la
+intro.
+
 ### 7.2 Migas de pan (breadcrumbs)
 
 Visibles y con marcado `BreadcrumbList`:
@@ -336,8 +400,7 @@ Visibles y con marcado `BreadcrumbList`:
 Inicio / <Cluster> / <Título del artículo>
 ```
 
-Ya existe `BreadcrumbList` en el schema del layout de artículo según
-v1; verificar que además estén visibles en la página.
+**[IMPLEMENTADO]** Ya existían, visibles y con `BreadcrumbList`.
 
 ### 7.3 Artículos relacionados
 
@@ -345,7 +408,10 @@ Bloque al final del artículo, antes de la caja de autor, con tres a
 cuatro artículos del mismo cluster.
 
 **Con fallback a otros clusters** si el cluster propio no tiene
-suficientes — este punto ya estaba pendiente y sigue sin resolverse.
+suficientes.
+
+**[IMPLEMENTADO]** Tres artículos. Si el fallback suma artículos de otro
+cluster, el título pasa a "Seguí leyendo" y cada fila muestra su cluster.
 
 ### 7.4 Fecha de actualización visible
 
@@ -363,6 +429,10 @@ updatedDate: 2026-10-15
 Este campo es especialmente relevante para los artículos con datos que
 envejecen (precios de examen, sueldos, versiones de certificación).
 
+**[IMPLEMENTADO]** Ya existía; solo cambió el texto visible de "Act." a
+"Actualizado el". No se puso en ningún artículo todavía: corresponde la
+primera vez que se actualice uno (el de sueldos es el primer candidato).
+
 ---
 
 ## 8. Medición
@@ -370,13 +440,15 @@ envejecen (precios de examen, sueldos, versiones de certificación).
 | Herramienta | Mecanismo |
 | --- | --- |
 | Google Analytics 4 | Variable `PUBLIC_GA_ID`, ya implementado |
-| Search Console | Meta de verificación por variable de entorno |
+| Search Console | **[IMPLEMENTADO]** Verificación por registro DNS TXT en Cloudflare; `PUBLIC_GSC_VERIFICATION` (meta tag) queda como alternativa |
 
-Ambas deben respetar el consentimiento: no cargar antes de que el
-usuario acepte.
+GA4 respeta el consentimiento: no se carga antes de que el usuario acepte.
+La verificación de Search Console no instala cookies, así que no depende
+del consentimiento.
 
-Agregar la variable de verificación de Search Console si no existe:
-`PUBLIC_SEARCH_CONSOLE_VERIFICATION`.
+La variable de Search Console ya existía como `PUBLIC_GSC_VERIFICATION`;
+no se renombró. Con el dominio en Cloudflare, la verificación por DNS no
+necesita código y cubre todos los subdominios.
 
 ---
 
@@ -402,18 +474,31 @@ Puntos de atención específicos:
 
 ## 10. Checklist de salida
 
-- [ ] Dominio registrado en Cloudflare Registrar, con WHOIS privado
+Estado al 3 de octubre de 2026.
+
+**Hecho en el código**
+
+- [x] Marca renombrada en todo el código y metadatos
+- [x] Página de autor publicada con schema `Person` y `sameAs`
+- [x] Caja de autor al final de cada artículo
+- [x] Las cinco páginas legales completas y enlazadas desde el footer
+- [x] Componente de anuncios con altura reservada, desactivado
+- [x] `/ads.txt` generado desde `PUBLIC_ADSENSE_CLIENT`
+- [x] Tabla de contenidos, migas de pan y artículos relacionados
+- [x] `updatedDate` soportado en el schema del frontmatter
+- [x] `public/_headers` y `public/_redirects` equivalentes a `vercel.json`
+- [x] `npm run build` sin errores
+
+**Depende del dominio o de paneles externos**
+
+- [ ] Dominio `desdeceroit.com` registrado en Cloudflare Registrar, con WHOIS privado
 - [ ] Verificación en dos pasos activa en la cuenta de Cloudflare
-- [ ] Sitio desplegado en Cloudflare Pages con dominio propio
-- [ ] Proyecto de Vercel eliminado
+- [ ] Sitio desplegado en Cloudflare Pages con dominio propio, y la variante con o sin `www` redirigiendo con 301
 - [ ] `SITE_URL` apuntando al dominio propio
-- [ ] Marca renombrada en todo el código y metadatos
-- [ ] Página de autor publicada con schema `Person` y `sameAs`
-- [ ] Caja de autor al final de cada artículo
-- [ ] Las cinco páginas legales completas y enlazadas desde el footer
-- [ ] Componente de anuncios con altura reservada, desactivado
-- [ ] Tabla de contenidos, migas de pan y artículos relacionados
-- [ ] `updatedDate` soportado en el schema del frontmatter
-- [ ] GA4 y Search Console configurados por variable de entorno
+- [ ] `noindex` verificado en la copia de `*.pages.dev`
+- [ ] Proyecto de Vercel eliminado y `vercel.json` borrado
+- [ ] Search Console verificado por DNS y sitemap enviado
+- [ ] `PUBLIC_GA_ID` y `PUBLIC_ADSENSE_CLIENT` cargadas en Cloudflare
+- [ ] Foto del autor en `src/assets/autores/valentin-iglesias.jpg`
 - [ ] PageSpeed en verde sobre el dominio real, en móvil
-- [ ] `npm run build` sin errores
+- [ ] CMP de Google, después de la aprobación de AdSense (sección 5)

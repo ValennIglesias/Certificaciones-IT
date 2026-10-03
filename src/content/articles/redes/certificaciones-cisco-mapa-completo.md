@@ -69,12 +69,13 @@ Todos los caminos arrancan igual, con el [CCNA 200-301](/redes/ccna-200-301-tema
 | Objetivo | Camino |
 | --- | --- |
 | Redes empresariales | CCNA → CCNP Enterprise → CCIE Enterprise |
-| Seguridad | CCNA → CCNA Cybersecurity → CCNP Security |
+| Seguridad: operaciones (SOC) | CCNA → CCNA Cybersecurity → CCNP Cybersecurity |
+| Seguridad de infraestructura de red | CCNA → CCNP Security |
 | Automatización / DevOps | CCNA → CCNA Automation → CCNP Automation |
 
 Si todavía no tenés el CCNA, la guía de [cómo prepararte para el CCNA](/redes/curso-ccna-como-prepararte/) compara las tres rutas de estudio según presupuesto, y la de [fundamentos de redes](/redes/fundamentos-de-redes-para-certificarte/) cubre los conceptos que el examen da por sabidos. Si pensás estudiar por Cisco Networking Academy, la guía de [cómo entrar a NetAcad y conseguir el descuento del examen](/redes/cisco-networking-academy-como-entrar/) tiene los requisitos exactos.
 
-Para el camino de seguridad vale una aclaración: la pista de Cisco y las certificaciones de CompTIA no compiten, se complementan. Muchas vacantes de seguridad piden [Security+](/seguridad/security-plus-vale-la-pena/) como base general y una certificación de Cisco como conocimiento específico de infraestructura.
+Para los dos caminos de seguridad vale una aclaración: la pista de Cisco y las certificaciones de CompTIA no compiten, se complementan. Muchas vacantes de seguridad piden [Security+](/seguridad/security-plus-vale-la-pena/) como base general y una certificación de Cisco como conocimiento específico de infraestructura.
 
 ## Vigencia y renovación
 
@@ -87,7 +88,7 @@ Esto significa que si vas escalando de nivel, la renovación se resuelve sola: c
 
 ## Qué hacer ahora
 
-Si estás empezando, ignorá el mapa completo por un rato: **el único camino de entrada es el CCNA 200-301**, y todas las bifurcaciones vienen después de tenerlo. Elegir pista antes de tener la base es un problema que no tenés todavía.
+Si estás empezando, ignorá el mapa completo por un rato: **para roles de redes, el camino estándar de entrada es el CCNA 200-301**; el CCST existe como escalón previo opcional para quien arranca sin ninguna base técnica. Todas las bifurcaciones vienen después del CCNA. Elegir pista antes de tener la base es un problema que no tenés todavía.
 
 Si ya tenés una certificación Cisco, entrá a tu perfil de Certmetrics y verificá cómo figura ahora — sobre todo si era DevNet o CyberOps, porque el nombre con el que la ponés en el CV cambió y conviene que coincida con el oficial.
 

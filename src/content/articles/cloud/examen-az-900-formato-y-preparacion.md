@@ -38,12 +38,25 @@ Un detalle de nomenclatura que conviene saber: **Azure Active Directory ahora se
 
 | Ítem | Detalle |
 | --- | --- |
+| Preguntas | Variable, no fijada por Microsoft |
+| Tiempo de examen | 45 minutos |
 | Puntaje de aprobación | 700 sobre 1.000 (escala ponderada) |
 | Modalidad | Centro Pearson VUE o remoto desde casa |
 | Vencimiento | No vence |
 | Costo | US$99 (varía por región) |
 
-<!-- VERIFICAR: la cantidad de preguntas y la duración varían según la fuente (entre 32-36 y 40-60 preguntas; entre 45 y 85 minutos). Confirmar contra la página oficial de Microsoft Learn antes de publicar estos dos datos. -->
+Sobre la cantidad de preguntas y la duración hay mucha información contradictoria dando vueltas, y conviene entender por qué: **Microsoft no fija un número de preguntas para este examen**. Cada versión se arma a partir de un banco, así que el total varía según la que te toque. Los reportes de quienes lo rindieron van de poco más de 30 a cerca de 50 preguntas.
+
+Con el tiempo pasa algo parecido, y ahí está el origen de la confusión:
+
+| Concepto | Tiempo |
+| --- | --- |
+| Tiempo de examen | 45 minutos |
+| Tiempo total de butaca | ~65 minutos |
+
+Los 65 minutos incluyen las instrucciones previas, el acuerdo de confidencialidad y la encuesta final. Además, el correo de confirmación de Pearson VUE a veces muestra un bloque de 90 minutos, que es la reserva del turno, no el tiempo del examen. **El único número que importa para tu ritmo son los 45 minutos.**
+
+En la práctica el tiempo sobra: la mayoría de los candidatos termina bastante antes del límite.
 
 El puntaje ponderado es la parte que más confunde. Sacar 700 **no** significa haber respondido bien el 70% de las preguntas: Microsoft pesa cada pregunta según su dificultad, así que el porcentaje real de aciertos necesario puede ser mayor o menor.
 

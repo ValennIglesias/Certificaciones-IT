@@ -65,7 +65,9 @@ El registro se hace en netacad.com. Para los cursos de autoestudio alcanza con c
 
 Para los cursos con instructor hay que buscar una academia habilitada: suelen ser universidades, institutos terciarios y centros de formación que tienen convenio con Cisco. El costo y la modalidad los define cada institución, no Cisco.
 
-<!-- VERIFICAR: si querés sumar un listado de academias habilitadas en Argentina o LatAm, el buscador oficial de academias está en el sitio de NetAcad. No incluí instituciones concretas porque el listado cambia. -->
+Para encontrar una, NetAcad tiene un **buscador oficial de academias** en `netacad.com/academy-locator`, donde se filtra por ubicación y por programa. Es la vía recomendada en vez de buscar instituciones sueltas: el listado se actualiza solo y muestra qué cursos dicta cada academia, que no siempre son todos.
+
+Algunas academias además funcionan como **Centro de Soporte para Academias (ASC)**, lo que significa que dan soporte a otras instituciones de la región. No cambia nada para vos como estudiante, pero suele indicar una academia con trayectoria en el programa.
 
 ## Qué hacer ahora
 
