@@ -158,23 +158,32 @@ Vercel.
 
 ### [IMPLEMENTADO] Equivalente de `vercel.json` en Cloudflare
 
-Cloudflare Pages ignora `vercel.json`. Lo que hacía ese archivo pasa a dos
-archivos de `public/`, que se copian a la raíz de `dist/`:
+El proyecto quedó como **Worker con assets estáticos**, no como Pages: el
+asistente de Cloudflare crea Workers por defecto al importar desde GitHub.
+Para un sitio estático el resultado es el mismo, y el Worker también lee
+`_headers` y `_redirects`. Lo que hacía `vercel.json` pasó a dos archivos
+de `public/`, que se copian a la raíz de `dist/`, y `vercel.json` se borró:
 
 | Archivo | Contenido |
 | --- | --- |
-| `public/_headers` | Caché inmutable para `/_astro/*`, cabeceras de seguridad y `X-Robots-Tag: noindex` en `*.pages.dev` |
+| `public/_headers` | Caché inmutable para `/_astro/*` y cabeceras de seguridad |
 | `public/_redirects` | `/sitemap.xml` → `/sitemap-index.xml` (301) |
 
-El `noindex` en `*.pages.dev` no estaba en el plan: Cloudflare deja
-accesible la copia en `pages.dev` aunque se conecte el dominio propio, y
-sin esa cabecera Google podría indexar dos copias del sitio. Se verifica
-con el primer deploy.
+Lecciones de la migración:
 
-La barra final de las URLs la resuelve Cloudflare solo, y el comando de
-build y el directorio de salida se cargan en el panel. `vercel.json` se
-borra cuando se elimine el proyecto de Vercel. `sharp` pasó a ser
-dependencia explícita, porque el generador de imágenes OG la usa.
+- `SITE_URL` tiene que cargarse como variable **de build** (*Settings →
+  Build → Variables and secrets*). Cargada como variable de ejecución, el
+  build no la ve y los canonical salen con el placeholder.
+- *Always Use HTTPS* tiene que estar activado: sin eso el sitio respondía
+  en HTTP plano y `http://www` daba error 522.
+- La copia en `*.workers.dev` se desactiva desde el panel. Mientras exista,
+  el canonical de cada página apunta igual al dominio propio.
+- Las URLs sin barra final redirigen con 307 (comportamiento por defecto del
+  Worker), no con 308. No afecta: todos los enlaces internos, el sitemap y
+  los canonical ya usan la barra.
+
+`sharp` pasó a ser dependencia explícita, porque el generador de imágenes OG
+la usa.
 
 ### Verificación de Astro
 
@@ -486,18 +495,20 @@ Estado al 3 de octubre de 2026.
 - [x] `/ads.txt` generado desde `PUBLIC_ADSENSE_CLIENT`
 - [x] Tabla de contenidos, migas de pan y artículos relacionados
 - [x] `updatedDate` soportado en el schema del frontmatter
-- [x] `public/_headers` y `public/_redirects` equivalentes a `vercel.json`
+- [x] `public/_headers` y `public/_redirects` equivalentes a `vercel.json`, y `vercel.json` borrado
 - [x] `npm run build` sin errores
 
 **Depende del dominio o de paneles externos**
 
-- [ ] Dominio `desdeceroit.com` registrado en Cloudflare Registrar, con WHOIS privado
-- [ ] Verificación en dos pasos activa en la cuenta de Cloudflare
-- [ ] Sitio desplegado en Cloudflare Pages con dominio propio, y la variante con o sin `www` redirigiendo con 301
-- [ ] `SITE_URL` apuntando al dominio propio
-- [ ] `noindex` verificado en la copia de `*.pages.dev`
-- [ ] Proyecto de Vercel eliminado y `vercel.json` borrado
-- [ ] Search Console verificado por DNS y sitemap enviado
+- [x] Dominio `desdeceroit.com` registrado en Cloudflare
+- [ ] Verificación en dos pasos activa en la cuenta de Cloudflare (confirmar)
+- [x] Sitio desplegado en Cloudflare con dominio propio; `www` y `http` redirigen con 301 a `https://desdeceroit.com`
+- [x] `SITE_URL` apuntando al dominio propio
+- [x] Correo `contacto@desdeceroit.com` con Email Routing (MX y SPF publicados)
+- [ ] Copia en `*.workers.dev` desactivada
+- [ ] Proyecto de Vercel eliminado
+- [x] Registro TXT de Search Console publicado en el DNS
+- [ ] Search Console verificado y sitemap enviado (`sitemap-index.xml`)
 - [ ] `PUBLIC_GA_ID` y `PUBLIC_ADSENSE_CLIENT` cargadas en Cloudflare
 - [ ] Foto del autor en `src/assets/autores/valentin-iglesias.jpg`
 - [ ] PageSpeed en verde sobre el dominio real, en móvil

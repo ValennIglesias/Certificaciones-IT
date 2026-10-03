@@ -1,4 +1,4 @@
-# Cabeceras de Cloudflare Pages. Equivalente al bloque "headers" de vercel.json.
+# Cabeceras que aplica Cloudflare (Worker con assets estáticos) a cada respuesta.
 # Cloudflare lee este archivo de la raíz de dist/ (por eso vive en public/).
 
 # Los archivos de /_astro/ llevan hash en el nombre: se pueden cachear para siempre.
@@ -10,7 +10,6 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: SAMEORIGIN
 
-# La copia en *.pages.dev no debe indexarse: el sitio canónico es el dominio
-# propio (SITE_URL). Sin esto, Google podría ver dos copias del mismo contenido.
-https://:project.pages.dev/*
-  X-Robots-Tag: noindex
+# La copia en *.workers.dev se desactiva desde el panel del Worker (Settings ->
+# Domains & Routes). Mientras exista, el canonical de cada página apunta igual
+# al dominio propio (SITE_URL), así que Google consolida todo ahí.

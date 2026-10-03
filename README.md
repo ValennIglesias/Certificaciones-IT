@@ -152,37 +152,34 @@ variables que falten:
 Pasos para encenderlo, una vez aprobada la cuenta: cargá `PUBLIC_ADSENSE_CLIENT`
 y los tres ids de bloque, poné `PUBLIC_ADSENSE_ENABLED="true"` y redeployá.
 
-## Deploy en Cloudflare Pages
+## Deploy en Cloudflare
 
 El plan Hobby de Vercel no permite uso comercial (publicidad incluida), así que
-el sitio se publica en Cloudflare Pages (ver `docs/SPEC-v2.md`, sección 1).
+el sitio se publica en Cloudflare (ver `docs/SPEC-v2.md`, sección 1). El
+proyecto `certificaciones-it` es un **Worker con assets estáticos**, importado
+desde GitHub: cada push a `main` lo vuelve a compilar y publicar.
 
-1. En Cloudflare: *Workers & Pages → Create → Pages → Connect to Git*, y elegí
-   este repo.
-2. Configuración de build:
-   - Framework preset: *None* (o Astro; da lo mismo con estos valores)
-   - Build command: `npm run build`
-   - Build output directory: `dist`
-   - La versión de Node sale de `.node-version`; no hace falta `NODE_VERSION`.
-3. Cargá las variables de entorno (*Settings → Variables and Secrets*), como
-   mínimo `SITE_URL` con el dominio final.
-4. Verificá el sitio en la URL `*.pages.dev` y después conectá el dominio propio
-   en *Custom domains*.
+- **Build:** comando `npm run build`, salida `dist`. La versión de Node sale de
+  `.node-version`.
+- **Variables:** van en *Settings → Build → Variables and secrets*, que son las
+  que ve el build. Las de *Settings → Variables and Secrets* son de ejecución y
+  este sitio estático no las lee: `SITE_URL` cargada ahí no tiene efecto.
+  Cambiar una variable requiere volver a desplegar.
+- **Dominio:** `desdeceroit.com` conectado al Worker. `www` redirige con 301
+  por una Redirect Rule, y *SSL/TLS → Edge Certificates → Always Use HTTPS*
+  está activado (sin eso, `http://www` daba error 522).
+- **`workers.dev`:** conviene desactivarlo en *Settings → Domains & Routes*
+  para que la única copia pública sea el dominio propio.
 
-Lo que en Vercel hacía `vercel.json`, acá lo hacen dos archivos de `public/`
-que se copian a la raíz de `dist/`:
+Dos archivos de `public/` se copian a la raíz de `dist/` y Cloudflare los
+aplica:
 
-- `_headers`: caché inmutable para `/_astro/*`, cabeceras de seguridad y
-  `X-Robots-Tag: noindex` en `*.pages.dev`, para que solo se indexe el dominio
-  propio.
+- `_headers`: caché inmutable para `/_astro/*` y cabeceras de seguridad.
 - `_redirects`: `/sitemap.xml` → `/sitemap-index.xml`.
 
 Las URLs llevan barra final (`/cloud/aws-o-azure-cual-elegir/`); el canonical,
-el sitemap y Cloudflare Pages coinciden en esa forma para no generar
-redirecciones ni contenido duplicado.
-
-`vercel.json` queda hasta que el sitio esté andando en Cloudflare y se elimine
-el proyecto de Vercel; en ese momento se borra.
+el sitemap y los enlaces internos coinciden en esa forma. Una URL sin barra
+redirige a la versión con barra.
 
 ## Antes de pedir la aprobación de AdSense
 

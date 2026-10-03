@@ -1,2 +1,2 @@
-# Redirecciones de Cloudflare Pages. Equivalente al bloque "redirects" de vercel.json.
+# Redirecciones que aplica Cloudflare (Worker con assets estáticos).
 /sitemap.xml /sitemap-index.xml 301
