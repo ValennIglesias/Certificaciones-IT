@@ -1,5 +1,5 @@
 ---
-title: "Cómo estudiar una certificación IT mientras trabajás full-time"
+title: "Cómo estudiar una certificación IT trabajando full-time"
 description: "Cómo encontrar tiempo real para prepararte sin renunciar al trabajo, qué funciona según la evidencia y los errores más comunes que hacen perder meses."
 keyword: "cómo estudiar una certificación IT mientras trabajás full-time"
 cluster: "carrera"

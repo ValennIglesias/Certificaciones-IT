@@ -1,5 +1,5 @@
 ---
-title: "Cisco Networking Academy: cómo entrar y cómo conseguir el descuento del examen"
+title: "Cisco Networking Academy: cómo entrar y lograr el descuento"
 description: "Qué ofrece NetAcad gratis, qué cursos piden instructor y los requisitos exactos para acceder al 58% de descuento en el examen CCNA."
 keyword: "cisco network academy"
 cluster: "redes"

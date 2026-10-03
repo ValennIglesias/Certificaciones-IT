@@ -1,5 +1,5 @@
 ---
-title: "Curso CCNA: cómo prepararte gratis, barato o con acompañamiento"
+title: "Curso CCNA: cómo prepararte gratis, barato o con tutor"
 description: "Las tres rutas para preparar el CCNA 200-301 según tu presupuesto, cuánto cuesta el examen y cuánto tiempo lleva llegar listo."
 keyword: "curso ccna"
 cluster: "redes"

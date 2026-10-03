@@ -18,7 +18,7 @@ convenciones que ya siguen los artículos publicados del sitio.
 >
 > ```yaml
 > ---
-> title: "<máx. 120 caracteres, con la keyword adelante si entra natural>"
+> title: "<máx. 60 caracteres, con la keyword adelante si entra natural>"
 > description: "<máx. 200 caracteres, única en todo el sitio, que funcione como snippet de Google>"
 > keyword: "<la keyword principal, tal cual>"
 > cluster: "<uno de los cinco>"
@@ -102,6 +102,11 @@ convenciones que ya siguen los artículos publicados del sitio.
       Astro solo lee la colección. Si la URL no aparece en el build, es esto.
 - [ ] `npm run build` sin errores (el schema valida el frontmatter y **rompe el
       build** si falta un campo o el cluster no es uno de los cinco).
+- [ ] El `title` tiene **60 caracteres o menos**. El límite aplica al `<title>`
+      final renderizado, incluido cualquier sufijo: los artículos hoy no
+      llevan sufijo, así que coincide con el campo; las páginas internas
+      (clusters, legales, autor) suman ` | Desde Cero IT` (16 caracteres).
+      Bing marca como "Title too long" los que se pasan.
 - [ ] La `description` es única: no repetir la de otro artículo.
 - [ ] La keyword tiene volumen verificado en Keyword Planner y no está ya
       asignada a otro artículo (ver docs/mapa-keywords.md).

@@ -2,8 +2,11 @@
 
 export const SITE = {
 	name: 'Desde Cero IT',
-	/** Título por defecto y sufijo de las páginas internas. */
-	titleDefault: 'Desde Cero IT — Guías en español para certificarte y crecer en tecnología',
+	/**
+	 * Título de la home y sufijo de las páginas internas (clusters, legales,
+	 * autor). Los artículos NO llevan sufijo. Todo <title> final: máx. 60 caracteres.
+	 */
+	titleDefault: 'Desde Cero IT — Guías de certificaciones IT en español',
 	titleTemplate: '%s | Desde Cero IT',
 	/** Titular legal del sitio: páginas legales y Schema.org. */
 	owner: 'Valentín Iglesias — Desde Cero IT',

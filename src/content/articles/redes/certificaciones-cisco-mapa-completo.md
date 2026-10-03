@@ -1,5 +1,5 @@
 ---
-title: "Certificaciones Cisco: el mapa completo después de la reforma de 2026"
+title: "Certificaciones Cisco: mapa completo tras la reforma de 2026"
 description: "Cisco reordenó todo su programa en febrero de 2026. Los cuatro niveles, las especializaciones vigentes y qué cambió respecto de las guías viejas."
 keyword: "certificaciones en cisco"
 cluster: "redes"

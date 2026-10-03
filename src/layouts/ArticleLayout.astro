@@ -32,6 +32,10 @@ const authorData = getAuthor(author);
 // que todos son del cluster actual, y cada fila muestra su cluster.
 const relatedMixed = related.some((a) => a.data.cluster !== cluster);
 
+// El <title> del artículo va sin el sufijo " | Desde Cero IT" (useTitleTemplate
+// false): con él casi todos pasaban los 60 caracteres que marcan los buscadores.
+// La marca sigue en og:site_name y en el schema WebSite.
+
 // Anuncios dentro del cuerpo: los marcadores los pone ad-anchors-plugin.mjs y
 // quedan ocultos. Esta clase los vuelve visibles (con la altura reservada)
 // solo si el bloque del artículo está configurado. En desarrollo, sin AdSense,
@@ -88,6 +92,7 @@ const breadcrumbSchema = {
 	title={title}
 	description={description}
 	type="article"
+	useTitleTemplate={false}
 	image={ogImage}
 	imageAlt={title}
 	publishedTime={pubDate}

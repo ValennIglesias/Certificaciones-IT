@@ -1,5 +1,5 @@
 ---
-title: "Examen CompTIA Security+: formato, puntaje y estrategia de preparación"
+title: "Examen CompTIA Security+: formato, puntaje y estrategia"
 description: "Cómo es el examen SY0-701 por dentro: 90 preguntas en 90 minutos, puntaje 750/900, las PBQ al principio y cómo repartir el estudio."
 keyword: "comptia security+ examen"
 cluster: "seguridad"

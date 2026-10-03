@@ -9,7 +9,7 @@ const articles = defineCollection({
 	loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/articles' }),
 	schema: ({ image }) =>
 		z.object({
-			title: z.string().min(1).max(120),
+			title: z.string().min(1).max(60),
 			description: z.string().min(1).max(200),
 			/** Keyword principal del artículo (definida fuera de este repo). */
 			keyword: z.string().min(1),

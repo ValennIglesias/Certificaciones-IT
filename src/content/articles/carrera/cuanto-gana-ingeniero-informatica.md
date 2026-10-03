@@ -1,5 +1,5 @@
 ---
-title: "Cuánto gana un ingeniero en informática: por qué ninguna fuente coincide"
+title: "Cuánto gana un ingeniero en informática según cada fuente"
 description: "Los sueldos publicados en España, México y Argentina varían hasta siete veces según quién los mida. Qué dice cada fuente y cuál sirve para tu caso."
 keyword: "ingeniero en informatica cuanto gana"
 cluster: "carrera"

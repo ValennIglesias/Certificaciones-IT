@@ -1,5 +1,5 @@
 ---
-title: "CCNA 200-301: el temario completo y dónde conviene poner las horas"
+title: "CCNA 200-301: temario completo y dónde poner las horas"
 description: "Los seis dominios del blueprint v1.1 con sus pesos oficiales, qué entra en cada uno y la fecha en que esta versión del examen se retira."
 keyword: "ccna 200 301"
 cluster: "redes"
