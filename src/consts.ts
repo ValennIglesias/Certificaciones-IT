@@ -9,7 +9,7 @@ export const SITE = {
 	owner: 'Valentín Iglesias — Desde Cero IT',
 	ownerLocation: 'Buenos Aires, Argentina',
 	/** Correo de contacto visible en las páginas legales y de contacto. */
-	contactEmail: 'guias.info@gmail.com',
+	contactEmail: 'contacto@desdeceroit.com',
 	description:
 		'Guías en español sobre certificaciones IT (CompTIA, Cisco, AWS, Azure, ITIL) y cómo construir una carrera en tecnología.',
 	lang: 'es',

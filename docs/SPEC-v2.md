@@ -357,7 +357,7 @@ funcionando; el cambio se hace cuando AdSense esté activo.
 
 - Titular: Valentín Iglesias — Desde Cero IT
 - Domicilio: Buenos Aires, Argentina
-- Contacto: guias.info@gmail.com
+- Contacto: contacto@desdeceroit.com
 
 ### Notas por página
 
