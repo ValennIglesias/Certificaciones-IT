@@ -12,11 +12,18 @@
  *
  * Variables: ver .env.example.
  */
-import { GA_ID, GSC_VERIFICATION, ADSENSE_ENABLED, CONSENT_REQUIRED } from '../lib/analytics';
+import { GA_ID, GSC_VERIFICATION, ADSENSE_CLIENT, ADSENSE_ENABLED, CONSENT_REQUIRED } from '../lib/analytics';
 ---
 
 {/* Verificación de Search Console: es un meta tag, no instala cookies. */}
 {GSC_VERIFICATION && <meta name="google-site-verification" content={GSC_VERIFICATION} />}
+
+{/*
+  Verificación del sitio en AdSense: otro meta tag, sin cookies ni scripts. Sale
+  apenas se carga PUBLIC_ADSENSE_CLIENT, aunque AdSense siga apagado, porque Google
+  lo busca durante la revisión de la cuenta, antes de la aprobación.
+*/}
+{ADSENSE_CLIENT && <meta name="google-adsense-account" content={ADSENSE_CLIENT} />}
 
 {
 	CONSENT_REQUIRED && (

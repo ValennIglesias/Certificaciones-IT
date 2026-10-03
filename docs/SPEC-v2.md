@@ -343,6 +343,10 @@ integra con Consent Mode v2 automáticamente.
 - No cargar scripts de medición ni de publicidad antes del
   consentimiento; la CMP es la excepción necesaria, porque tiene que
   cargar para poder preguntar
+- **[IMPLEMENTADO]** Segunda excepción, decidida en la migración:
+  Cloudflare Web Analytics, que inyecta el hosting. No usa cookies ni
+  almacenamiento local, así que se mantiene y está declarado en las
+  políticas de privacidad y de cookies
 
 ### Nota de orden
 
@@ -505,11 +509,12 @@ Estado al 3 de octubre de 2026.
 - [x] Sitio desplegado en Cloudflare con dominio propio; `www` y `http` redirigen con 301 a `https://desdeceroit.com`
 - [x] `SITE_URL` apuntando al dominio propio
 - [x] Correo `contacto@desdeceroit.com` con Email Routing (MX y SPF publicados)
-- [ ] Copia en `*.workers.dev` desactivada
-- [ ] Proyecto de Vercel eliminado
+- [x] Copia en `*.workers.dev` desactivada (responde error 1042)
+- [x] Proyecto de Vercel eliminado
 - [x] Registro TXT de Search Console publicado en el DNS
-- [ ] Search Console verificado y sitemap enviado (`sitemap-index.xml`)
-- [ ] `PUBLIC_GA_ID` y `PUBLIC_ADSENSE_CLIENT` cargadas en Cloudflare
+- [x] Search Console verificado y sitemap enviado (`sitemap-index.xml`)
+- [x] `PUBLIC_GA_ID` cargada en Cloudflare (G-9M1JSX9E1E), con banner de consentimiento activo
+- [ ] `PUBLIC_ADSENSE_CLIENT` cargada (genera `ads.txt` y el meta tag de verificación)
 - [ ] Foto del autor en `src/assets/autores/valentin-iglesias.jpg`
-- [ ] PageSpeed en verde sobre el dominio real, en móvil
+- [x] PageSpeed en verde sobre el dominio real, en móvil (Lighthouse: 100 en las cuatro categorías; LCP 0,9-1,6 s, CLS 0)
 - [ ] CMP de Google, después de la aprobación de AdSense (sección 5)

@@ -18,9 +18,11 @@ archivo en el repo.
 | Diseño | Sistema Swiss propio: un acento por cluster, modo oscuro opcional |
 | Hosting | Cloudflare Pages (plan gratuito, permite uso comercial) |
 
-El sitio envía **0 archivos JavaScript**. Lo único que viaja es ~0,9 kB de
-script inline, sin request extra: el conmutador de tema y, si activás GA4 o
-AdSense, el banner de consentimiento. El contenido es legible al 100% con
+El código del sitio envía **0 archivos JavaScript**. Lo único que viaja es
+~0,9 kB de script inline, sin request extra: el conmutador de tema y, si activás
+GA4 o AdSense, el banner de consentimiento. Aparte, Cloudflare inyecta su script
+de Web Analytics (`beacon.min.js`, sin cookies), declarado en las políticas de
+privacidad y de cookies. El contenido es legible al 100% con
 JavaScript desactivado; sin JS el sitio queda en modo claro, que es el
 canónico.
 

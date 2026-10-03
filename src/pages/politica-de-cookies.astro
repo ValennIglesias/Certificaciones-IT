@@ -6,6 +6,9 @@ import { CONSENT_REQUIRED, CONSENT_STORAGE_KEY } from '../lib/analytics';
 // El inventario tiene que coincidir con lo que el sitio hace de verdad:
 // - Analytics.astro / ConsentBanner.astro: GA4 y AdSense solo tras aceptar.
 // - BaseLayout.astro / ThemeToggle.astro: preferencia de tema en localStorage.
+// - Cloudflare Web Analytics: lo inyecta Cloudflare (no está en el código), sin
+//   cookies ni localStorage, y se carga sin consentimiento. Si se desactiva en el
+//   panel de Cloudflare, sacar su sección de acá y de la política de privacidad.
 // Si se suma un servicio que instale cookies, va acá antes de activarlo.
 // Cuando AdSense esté aprobado y se reemplace el banner por la CMP de Google
 // (SPEC-v2, sección 5), esta página se revisa entera.
@@ -52,6 +55,17 @@ const LAST_UPDATED = '3 de octubre de 2026';
 		</tbody>
 	</table>
 	<p>Son estrictamente necesarias para que el sitio recuerde tus elecciones, y no requieren consentimiento.</p>
+
+	<h2>Medición sin cookies: Cloudflare Web Analytics</h2>
+	<p>
+		Cloudflare, el proveedor de hosting del sitio, agrega un script de medición propio: Cloudflare
+		Web Analytics. Registra de forma agregada páginas vistas y tiempos de carga, sin instalar
+		cookies ni usar el almacenamiento local, y sin identificar a visitantes individuales. Por eso se
+		carga desde la primera visita, sin esperar el consentimiento. Detalle en la{' '}
+		<a href="https://www.cloudflare.com/privacypolicy/" rel="nofollow noopener" target="_blank"
+			>Política de Privacidad de Cloudflare</a
+		>.
+	</p>
 
 	<h2>Cookies de terceros, solo si las aceptás</h2>
 	<p>

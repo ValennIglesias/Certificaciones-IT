@@ -36,7 +36,12 @@ const LAST_UPDATED = '3 de octubre de 2026';
 		</li>
 		<li>
 			<strong>Datos técnicos de la conexión</strong> (dirección IP y agente de usuario), procesados
-			por el proveedor de hosting para poder servir las páginas.
+			por Cloudflare, el proveedor de hosting, para poder servir las páginas.
+		</li>
+		<li>
+			<strong>Métricas de uso y rendimiento sin cookies</strong> (páginas vistas, tiempos de carga,
+			país aproximado y tipo de navegador), recogidas de forma agregada por Cloudflare Web
+			Analytics.
 		</li>
 		<li>
 			<strong>Datos de publicidad</strong> (identificadores de cookies e interacción con los
@@ -46,10 +51,17 @@ const LAST_UPDATED = '3 de octubre de 2026';
 
 	<h2>Servicios de terceros que utilizamos</h2>
 	<p>
-		Este sitio utiliza dos servicios de Google, ambos proveedores externos que tratan los datos bajo
-		sus propias políticas:
+		Este sitio utiliza estos servicios externos, que tratan los datos bajo sus propias políticas:
 	</p>
 	<ul>
+		<li>
+			<strong>Cloudflare Web Analytics</strong>: lo provee Cloudflare, el hosting del sitio, para
+			medir visitas y rendimiento de forma agregada. No usa cookies ni almacenamiento local, y no
+			identifica a visitantes individuales. Detalle en la{' '}
+			<a href="https://www.cloudflare.com/privacypolicy/" rel="nofollow noopener" target="_blank"
+				>Política de Privacidad de Cloudflare</a
+			>.
+		</li>
 		<li>
 			<strong>Google Analytics 4 (GA4)</strong>: lo usamos para medir el tráfico del sitio —cuánta
 			gente nos visita, qué artículos lee y por qué canal llega—, siempre de forma agregada.
@@ -60,7 +72,7 @@ const LAST_UPDATED = '3 de octubre de 2026';
 		</li>
 	</ul>
 	<p>
-		Ambos servicios utilizan <strong>cookies y tecnologías similares</strong> (identificadores de
+		Google Analytics y Google AdSense utilizan <strong>cookies y tecnologías similares</strong> (identificadores de
 		dispositivo, almacenamiento local y píxeles de seguimiento) para funcionar. Al usarlos, Google
 		actúa como tratante independiente de esos datos: podés consultar el detalle en la{' '}
 		<a href="https://policies.google.com/privacy" rel="nofollow noopener" target="_blank">
@@ -77,6 +89,11 @@ const LAST_UPDATED = '3 de octubre de 2026';
 		aceptación, los scripts de esos servicios ni siquiera se descargan: el sitio arranca con el
 		modo de consentimiento de Google (Consent Mode v2) en estado denegado para las cookies de
 		analítica y de publicidad, y solo cambia a concedido si pulsás «Aceptar».
+	</p>
+	<p>
+		<strong>Cloudflare Web Analytics es la excepción</strong>: se carga desde la primera visita,
+		porque no instala cookies ni guarda nada en tu dispositivo. Solo registra métricas agregadas de
+		uso y rendimiento, sin identificarte.
 	</p>
 	<p>
 		Podés cambiar tu decisión en cualquier momento desde el enlace{' '}
