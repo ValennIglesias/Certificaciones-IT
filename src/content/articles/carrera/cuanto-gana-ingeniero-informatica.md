@@ -93,6 +93,6 @@ No busques "el" sueldo. Buscá el rango de tu combinación específica: tu rol, 
 
 Para eso, las encuestas del sector con dataset público —como la de sysarmy en Argentina o el reporte de CodersLink en México— son mucho más útiles que cualquier promedio nacional, porque te dejan filtrar por tu caso en lugar de darte un número que mezcla realidades incompatibles.
 
-Y si estás decidiendo qué estudiar o certificar para mover ese número, el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) ordena los caminos según el rol al que apuntes. Si venís de soporte técnico, la guía sobre [cómo armar tu primer CV para un puesto IT](/carrera/primer-cv-para-un-puesto-it/) cubre cómo presentar experiencia y certificaciones cuando todavía no tenés años en el sector.
+Y si estás decidiendo qué estudiar o certificar para mover ese número, el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) ordena los caminos según el rol al que apuntes. Si todavía no tenés experiencia en IT, la guía sobre [cómo armar tu primer CV para un puesto IT](/carrera/primer-cv-para-un-puesto-it/) cubre cómo presentar experiencia y certificaciones cuando todavía no tenés años en el sector.
 
 *Datos relevados en septiembre de 2026, correspondientes a informes publicados entre noviembre de 2025 y agosto de 2026. Los sueldos del sector cambian rápido: verificá las fuentes originales antes de usarlos para negociar.*
