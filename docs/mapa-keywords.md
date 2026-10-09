@@ -141,3 +141,24 @@ más rinden.
    Apple, HP y Samsung — intención incompatible.
 5. **Ignorar los volúmenes de EE.UU. y Brasil** para términos que son
    iguales en varios idiomas (ccna, cissp, comptia a+, az 900).
+
+---
+
+## Parte 5 — Keywords asignadas fuera del plan
+
+Artículos publicados después del plan de la Parte 2, o reescritos con una
+keyword distinta. Se registran acá para que ninguna se reasigne a otro
+artículo. **Ninguna es objetivo de tráfico:** el volumen no está verificado
+o Keyword Planner no devolvió datos.
+
+| Artículo | Keyword | Rol |
+| --- | --- | --- |
+| `redes/ccna-1-2-3-cursos-netacad` | `ccna 1` | Satélite de NetAcad. Volumen sin verificar |
+| `carrera/primer-cv-para-un-puesto-it` | `cómo armar un CV para IT sin experiencia` | Apoyo. Volumen sin verificar |
+| `carrera/de-soporte-a-infraestructura` | `cómo pasar de soporte técnico a administrador de sistemas` | **Autoridad y enlazado.** Keyword Planner sin datos |
+
+`carrera/de-soporte-a-infraestructura` es contenido de autoridad, no de
+tráfico: se publica por la experiencia propia del autor (E-E-A-T) y porque
+cubre la transición soporte → infraestructura, que otros artículos
+mencionan al pasar. En revisiones futuras no evaluarlo por impresiones ni
+clics.

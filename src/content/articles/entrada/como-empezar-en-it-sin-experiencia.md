@@ -49,7 +49,7 @@ Visto a la distancia, el ejercicio tenía todo el sentido del mundo. Un día de 
 
 Para el primer puesto, en mi experiencia, no tanto. Cuando yo entré no las tenía y no sentí que me las pidieran; tampoco las veía como requisito excluyente en las búsquedas de entrada.
 
-Donde sí las vi pesar es **más adelante**: para moverte de soporte hacia infraestructura, redes o cloud, la certificación empieza a funcionar como señal de que tu conocimiento está validado por alguien más que tu propio empleador.
+Donde sí las vi pesar es **más adelante**: para moverte de soporte hacia [infraestructura](/carrera/de-soporte-a-infraestructura/), redes o cloud, la certificación empieza a funcionar como señal de que tu conocimiento está validado por alguien más que tu propio empleador.
 
 Esto conviene decirlo porque buena parte de internet sugiere lo contrario, que sin CompTIA A+ no entrás. Puede ser cierto en el mercado estadounidense, donde esa certificación está muy instalada, pero no es lo que se ve en el mercado hispanohablante.
 
