@@ -5,11 +5,13 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { satteri } from '@astrojs/markdown-satteri';
 import { adAnchorsPlugin } from './src/lib/ad-anchors-plugin.mjs';
+import { buildLastmod } from './src/lib/sitemap-lastmod.mjs';
 
 // El dominio final se define en la variable de entorno SITE_URL (ver .env.example).
 // Es obligatorio para que el sitemap, los canonical y las Open Graph absolutas salgan bien.
 const FALLBACK_SITE = 'https://www.tu-dominio.com';
 const site = process.env.SITE_URL ?? FALLBACK_SITE;
+const lastmod = buildLastmod(site);
 
 if (site === FALLBACK_SITE) {
 	console.warn(
@@ -33,6 +35,13 @@ export default defineConfig({
 		sitemap({
 			// Los borradores no se publican, así que tampoco entran al sitemap.
 			filter: (page) => !page.includes('/404'),
+			// <lastmod> desde el frontmatter (updatedDate o pubDate): así Google y Bing
+			// saben qué páginas cambiaron y las vuelven a rastrear antes.
+			serialize(item) {
+				const fecha = lastmod.get(item.url);
+				if (fecha) item.lastmod = fecha;
+				return item;
+			},
 		}),
 	],
 	markdown: {
