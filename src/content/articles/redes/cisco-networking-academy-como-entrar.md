@@ -1,21 +1,22 @@
 ---
 title: "Cisco Networking Academy: cómo entrar y lograr el descuento"
-description: "Qué ofrece NetAcad gratis, qué cursos piden instructor y los requisitos exactos para acceder al 58% de descuento en el examen CCNA."
+description: "Qué ofrece NetAcad gratis, cómo encontrar una academia y qué exige Cisco para el descuento en el examen CCNA: 70% en el primer intento del examen final de ENSA."
 keyword: "cisco network academy"
 cluster: "redes"
 pubDate: 2026-09-26
+updatedDate: 2026-10-12
 author: "Valentín"
 draft: false
 ---
 
-El descuento de NetAcad en el examen CCNA llega al 58%, pero se pierde en el primer intento del examen final del curso — y casi nadie lo sabe antes de rendirlo.
+El descuento de NetAcad en el examen CCNA existe y es oficial, pero se juega en un solo momento: el primer intento del examen final de un curso. Y casi nadie lo sabe antes de rendirlo.
 
 Lo esencial:
 
 - NetAcad ofrece **cursos gratuitos de autoestudio**, sin instructor y sin costo, varios en español.
-- Los cursos que habilitan el **descuento en el examen de certificación** son los dictados **con instructor**, a través de una academia.
-- El descuento ronda el **58%** sobre el precio del examen CCNA, aunque varía según la región.
-- El requisito clave: **70% o más en el primer intento** del examen final del curso. Si desaprobás y recuperás, perdés la elegibilidad.
+- El descuento en el examen CCNA lo habilita el **tercer curso** de la serie: Enterprise Networking, Security and Automation (ENSA).
+- El requisito clave: **70% o más en el primer intento** del examen final de ese curso. Si desaprobás y recuperás, perdés la elegibilidad.
+- Cisco publica los requisitos del descuento, pero **no publica el porcentaje**.
 - **Packet Tracer es gratuito** y se descarga inscribiéndose a un curso corto de la plataforma.
 
 ## Qué ofrece NetAcad
@@ -25,31 +26,31 @@ Cisco Networking Academy es el brazo educativo de Cisco, funcionando desde 1997.
 | Tipo | Costo | Qué incluye |
 | --- | --- | --- |
 | Autoestudio en línea | Sin cargo | Contenido y evaluaciones, sin instructor |
-| Con instructor (vía academia) | Pago, según la institución | Instructor asignado, libro de calificaciones y elegibilidad para el descuento |
+| Con instructor (vía academia) | Pago, según la institución | Instructor asignado, clases y seguimiento de la academia |
 
 Los gratuitos cubren bastante terreno: introducción a ciberseguridad, dispositivos de red y configuración inicial, exploración de redes con Packet Tracer, gestión de amenazas cibernéticas, Linux Essentials. Las duraciones van de 4 a 70 horas según el curso, y muchos están disponibles en español con cohortes propias.
 
 Al completarlos se obtiene una insignia digital en Credly, que sirve para mostrar en LinkedIn aunque no sea una certificación formal.
 
-## El descuento del 58%: los requisitos exactos
+## El descuento en el examen: lo que pide Cisco
 
-Esta es la parte que vale la pena leer con atención, porque las condiciones son estrictas y no se pueden corregir después:
+Cisco da descuentos en tres exámenes de certificación a estudiantes de Networking Academy: **CCNA, Cybersecurity Associate (CBROPS) y DevNet Associate (DEVASC)**. Para el CCNA, el curso que lo habilita es el tercero de la secuencia: Enterprise Networking, Security and Automation (ENSA). Qué cubre cada uno de los tres cursos de la serie, y en qué orden se hacen, está en la guía de [CCNA 1, 2 y 3 en NetAcad](/redes/ccna-1-2-3-cursos-netacad/).
 
-1. **El curso tiene que ser con instructor.** Los cursos gratuitos de autoestudio no habilitan el descuento. La elegibilidad la confirma el instructor en el libro de calificaciones.
-2. **70% o más en el primer intento del examen final.** Este es el filtro que más gente pierde sin saberlo. Si desaprobás y volvés a rendir, aunque saques 100%, ya no calificás para ese curso.
-3. **El curso tiene que figurar como "Completo"** en el libro de calificaciones de NetAcad.
-4. **Hay que solicitar el voucher desde tu perfil** de NetAcad, en la sección correspondiente. No llega solo.
-5. **El voucher vence.** Tiene un período de validez limitado, así que conviene agendar el examen apenas lo recibís.
+Los requisitos que publica Cisco son estrictos y no se pueden corregir después:
 
-Para el CCNA, el curso que habilita el descuento es el tercero de la secuencia: Enterprise Networking, Security and Automation (ENSA). Qué cubre cada uno de los tres cursos de la serie, y en qué orden se hacen, está en la guía de [CCNA 1, 2 y 3 en NetAcad](/redes/ccna-1-2-3-cursos-netacad/).
+1. **70% o más en el primer intento del examen final** del curso habilitante. Este es el filtro que más gente pierde sin saberlo. Si desaprobás y volvés a rendir, aunque saques 100%, ya no calificás.
+2. **La encuesta de cierre del curso, completada.**
+3. **El curso marcado como "Completo"** en el libro de calificaciones de la plataforma.
 
-Dos detalles más que conviene tener presentes: es **un voucher por estudiante y por certificación**, y el porcentaje exacto **puede variar según la región**, porque Cisco ajusta los descuentos según factores económicos locales.
+Cumplidos los tres, el descuento **se solicita desde la plataforma de NetAcad**: no llega solo. Y Cisco aclara que es válido **solo por tiempo limitado**, así que conviene agendar el examen apenas lo recibís.
+
+Lo que la página oficial **no dice es cuánto se descuenta**. Si leíste un porcentaje concreto para el CCNA, no salió de Cisco, y el 20% a 50% que circula corresponde a otro programa de NetAcad, el de los cursos de OpenEDG. El desglose completo de precios y de los dos programas está en [cuánto cuesta el CCNA y cómo pagar menos](/redes/cuanto-cuesta-el-ccna/).
 
 ## El error que arruina el beneficio
 
-Registrarse en Pearson VUE antes de tener el voucher en la mano. El descuento se aplica al momento de inscribirse al examen, así que si ya reservaste y pagaste, no hay forma de aplicarlo retroactivamente.
+Reservar fecha antes de tener el descuento en la mano. Si pagás el examen completo y después recibís el código, no cuentes con poder aplicarlo a una compra que ya hiciste.
 
-Sumado al requisito del primer intento, el orden correcto es: rendir el examen final del curso con la preparación suficiente para superar el 70% de una, esperar la confirmación en el libro de calificaciones, pedir el voucher, y recién entonces reservar fecha en Pearson VUE.
+Sumado al requisito del primer intento, el orden que conviene es: rendir el examen final del curso con la preparación suficiente para superar el 70% de una, esperar la confirmación en el libro de calificaciones, pedir el descuento, y recién entonces reservar fecha para el examen.
 
 ## Packet Tracer
 
@@ -65,7 +66,7 @@ El registro se hace en netacad.com. Para los cursos de autoestudio alcanza con c
 
 Para los cursos con instructor hay que buscar una academia habilitada: suelen ser universidades, institutos terciarios y centros de formación que tienen convenio con Cisco. El costo y la modalidad los define cada institución, no Cisco.
 
-Para encontrar una, NetAcad tiene un **buscador oficial de academias** en `netacad.com/academy-locator`, donde se filtra por ubicación y por programa. Es la vía recomendada en vez de buscar instituciones sueltas: el listado se actualiza solo y muestra qué cursos dicta cada academia, que no siempre son todos.
+Para encontrar una, NetAcad tiene un **buscador oficial de academias** en `netacad.com/academy-locator`, donde se filtra por ubicación y por programa. Es la vía recomendada en vez de buscar instituciones sueltas: el listado se actualiza solo y muestra qué cursos dicta cada academia, que no siempre son todos. Si tu objetivo es el descuento, fijate que la academia dicte ENSA.
 
 Algunas academias además funcionan como **Centro de Soporte para Academias (ASC)**, lo que significa que dan soporte a otras instituciones de la región. No cambia nada para vos como estudiante, pero suele indicar una academia con trayectoria en el programa.
 
@@ -73,4 +74,4 @@ Algunas academias además funcionan como **Centro de Soporte para Academias (ASC
 
 Si todavía no decidiste si vas a pagar un curso, entrá a netacad.com y empezá por los gratuitos: son suficientes para confirmar si el tema te interesa antes de invertir. Y descargá Packet Tracer desde ya, independientemente del camino que elijas.
 
-Si ya decidiste ir por el CCNA y estás evaluando pagar un curso con instructor, hacé la cuenta completa: el descuento del 58% sobre el precio del examen recupera buena parte de lo que pagues, siempre que cumplas los requisitos. Ojo con ese precio: Cisco publica dos cifras distintas, US$300 en la página de temas del examen y US$400 en la página de certificación, y además varía por región, así que conviene verificar el importe al momento de agendar. La comparación de [rutas para preparar el CCNA](/redes/curso-ccna-como-prepararte/) tiene el resto de las opciones y sus costos.
+Si ya decidiste ir por el CCNA, el descuento se define en un único examen: el final de ENSA. Llegá a ese examen tan preparado como al de certificación, porque la nota del primer intento es la que cuenta. La comparación de [rutas para preparar el CCNA](/redes/curso-ccna-como-prepararte/) tiene el resto de las opciones y sus costos.

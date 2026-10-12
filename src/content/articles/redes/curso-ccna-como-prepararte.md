@@ -4,6 +4,7 @@ description: "Las tres rutas para preparar el CCNA 200-301 según tu presupuesto
 keyword: "curso ccna"
 cluster: "redes"
 pubDate: 2026-09-22
+updatedDate: 2026-10-12
 author: "Valentín"
 draft: false
 ---
@@ -12,7 +13,7 @@ Podés prepararte para el CCNA gastando cero en formación, o podés gastar mile
 
 Lo esencial antes de bajar:
 
-- Cisco publica dos precios distintos para el examen CCNA 200-301: **US$300** en la página de temas del examen y **US$400** en la página de certificación. Conviene verificar el importe al momento de agendar, ya que además varía por región. En cualquier caso, no incluye ningún curso.
+- El examen CCNA 200-301 cuesta **US$300**, más los impuestos que correspondan según el país, y eso no incluye ningún curso.
 - Cisco **no exige** hacer un curso ni tener experiencia previa para rendirlo.
 - Los cursos gratuitos de Cisco Networking Academy cubren aproximadamente el primer tercio del temario.
 - Los cursos pagos van desde ~US$15 (video bajo demanda en promoción) hasta US$4.500 (bootcamp presencial).
@@ -35,7 +36,7 @@ La ruta económica es la que mejor relación costo-beneficio tiene para la mayor
 Dos cosas que sí hacen que valga la pena de todos modos:
 
 - **Packet Tracer** es gratis y es el simulador que vas a usar para practicar configuraciones sin comprar un solo router. Es de lo mejor que existe en educación de redes, pago o gratuito.
-- Si después pasás a un curso **con instructor** de NetAcad (pago, a través de una academia), podés acceder a un **descuento cercano al 58% en el examen**, siempre que apruebes el examen final del curso con 70% o más en el primer intento. Los requisitos completos están en la guía de [cómo entrar a Cisco Networking Academy](/redes/cisco-networking-academy-como-entrar/).
+- Si cursás ENSA en NetAcad, el tercer curso de la serie, podés acceder a un **descuento en el examen**, siempre que apruebes su examen final con 70% o más en el primer intento. Cisco no publica el porcentaje; los requisitos completos están en la guía de [cómo entrar a Cisco Networking Academy](/redes/cisco-networking-academy-como-entrar/).
 
 Si querés entender primero los conceptos que todo el temario da por sabidos, la guía de [fundamentos de redes para certificarte](/redes/fundamentos-de-redes-para-certificarte/) cubre el modelo OSI, direccionamiento IP y subredes antes de meterte en material específico de Cisco.
 
@@ -58,9 +59,9 @@ Un cambio importante de 2024: Cisco actualizó el examen a la **versión 1.1**, 
 
 | Concepto | Costo |
 | --- | --- |
-| Examen 200-301 | US$300 o US$400 según la página de Cisco que consultes, + impuestos (varía por región) |
+| Examen 200-301 | US$300 + impuestos (varían según el país) |
 | Examen de práctica oficial de Cisco | ~US$79 |
-| Recuperatorio (si desaprobás) | Se paga de nuevo el precio completo del examen, sin descuento |
+| Recuperatorio (si desaprobás) | Se paga de nuevo el precio completo, salvo que hayas comprado Exam Safeguard Plus (US$450 con segundo intento incluido) |
 | Libro oficial de preparación | US$5 a US$80 |
 
 Dos detalles del recuperatorio que conviene tener presentes: **no hay reintentos gratuitos**, y hay que esperar cinco días calendario antes de volver a rendir. Con una tasa de aprobación que ronda el 50%, presupuestar un solo intento es optimista.
@@ -85,4 +86,4 @@ Si estás trabajando full-time mientras estudiás, las tácticas de [cómo estud
 
 ## Qué hacer ahora
 
-Creá una cuenta gratuita en Cisco Networking Academy y descargá Packet Tracer hoy mismo, antes de decidir si vas a pagar un curso. Con dos o tres semanas de material gratuito vas a tener una idea mucho más concreta de cuánta ayuda externa necesitás de verdad — y si después elegís un curso con instructor de NetAcad y cumplís los requisitos, el descuento en el examen te devuelve parte de lo que pagues. Y si querés ver adónde lleva el CCNA una vez que lo tengas, el [mapa completo de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/) muestra los niveles y especializaciones que vienen después.
+Creá una cuenta gratuita en Cisco Networking Academy y descargá Packet Tracer hoy mismo, antes de decidir si vas a pagar un curso. Con dos o tres semanas de material gratuito vas a tener una idea mucho más concreta de cuánta ayuda externa necesitás de verdad — y si después llegás a ENSA, el tercer curso de la serie, y cumplís los requisitos, el descuento abarata el examen. Y si querés ver adónde lleva el CCNA una vez que lo tengas, el [mapa completo de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/) muestra los niveles y especializaciones que vienen después.

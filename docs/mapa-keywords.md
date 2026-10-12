@@ -156,9 +156,19 @@ o Keyword Planner no devolvió datos.
 | `redes/ccna-1-2-3-cursos-netacad` | `ccna 1` | Satélite de NetAcad. Volumen sin verificar |
 | `carrera/primer-cv-para-un-puesto-it` | `cómo armar un CV para IT sin experiencia` | Apoyo. Volumen sin verificar |
 | `carrera/de-soporte-a-infraestructura` | `cómo pasar de soporte técnico a administrador de sistemas` | **Autoridad y enlazado.** Keyword Planner sin datos |
+| `redes/cuanto-cuesta-el-ccna` | `costo examen ccna` | Cluster NetAcad. Elegida por datos reales, no por volumen (ver nota) |
 
 `carrera/de-soporte-a-infraestructura` es contenido de autoridad, no de
 tráfico: se publica por la experiencia propia del autor (E-E-A-T) y porque
 cubre la transición soporte → infraestructura, que otros artículos
 mencionan al pasar. En revisiones futuras no evaluarlo por impresiones ni
 clics.
+
+`redes/cuanto-cuesta-el-ccna` (keyword `costo examen ccna`, cluster `redes`)
+se eligió por Search Console, no por Keyword Planner: la consulta ya tenía
+una impresión real en posición 26 sin ningún artículo que la targeteara.
+Ataca el mismo público que más impresiones trajo en la primera semana
+(estudiantes que ya cursan NetAcad: `ccna-1-2-3-cursos-netacad` y
+`cisco-networking-academy-como-entrar`, la mitad de las impresiones del
+sitio, ambos en el top 10) y enlaza directo a esas páginas. Este artículo
+sustituye al #10 de la Parte 2 ("Cuánto cuesta el CCNA").
