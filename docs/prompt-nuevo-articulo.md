@@ -119,6 +119,11 @@ convenciones que ya siguen los artículos publicados del sitio.
 - [ ] Ningún H2 promete más de lo que entrega su sección.
 - [ ] `pubDate` es la fecha real de publicación (una fecha futura se publica
       igual y encabeza la home).
+- [ ] **Al modificar un artículo ya publicado**, actualizar `updatedDate` con
+      la fecha del cambio. Se muestra como "Actualizado el…", emite
+      `dateModified` en el schema y alimenta el `<lastmod>` del sitemap: sin
+      eso, Google y Bing no se enteran de que la página cambió. Aplica a
+      cambios de contenido (datos, secciones, títulos), no a erratas.
 - [ ] Datos verificados contra la fuente oficial del proveedor.
 - [ ] Los pendientes van en el campo `verificar` del frontmatter, no en
       comentarios HTML.
