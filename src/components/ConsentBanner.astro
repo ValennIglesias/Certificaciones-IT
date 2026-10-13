@@ -11,6 +11,14 @@
  *     había aceptado antes). Si rechaza, nunca entran al DOM.
  *  3. La decisión se guarda en localStorage y el banner no vuelve a aparecer,
  *     salvo que se use el botón "Cookies" del footer.
+ *  4. Convive con la CMP de Google (Privacidad y mensajes de AdSense). Antes de
+ *     mostrarse, espera hasta 2 s la API de TCF (__tcfapi). Si la CMP responde
+ *     que el visitante está alcanzado por el RGPD (gdprApplies === true: EEE,
+ *     Reino Unido, Suiza), este banner NO aparece y no toca Consent Mode: el
+ *     consentimiento de esa persona lo maneja la CMP de Google. En cualquier
+ *     otro caso (sin __tcfapi, gdprApplies false o no booleano, error) el
+ *     banner funciona exactamente igual que antes. Mientras el mensaje de
+ *     Google no esté publicado, no hay __tcfapi y todos ven este banner.
  *
  * Sin librerías: son ~40 líneas de JS inline, sin request adicional.
  * Si no hay GA ni AdSense configurados, no se renderiza nada.
@@ -81,10 +89,22 @@ const config = {
 						}
 					}
 
+					/* true cuando el banner cedió ante la CMP de Google para este visitante. */
+					var cedido = false;
+					var analyticsLoaded = false;
+					var adsLoaded = false;
+
 					/* Inserta los scripts de Google en el DOM. Solo se llama con consentimiento. */
 					function loadGoogle() {
 						if (loaded) return;
 						loaded = true;
+						loadAnalytics();
+						loadAds();
+					}
+
+					function loadAnalytics() {
+						if (analyticsLoaded) return;
+						analyticsLoaded = true;
 
 						if (config.ga) {
 							var ga = document.createElement('script');
@@ -94,6 +114,11 @@ const config = {
 							gtag('js', new Date());
 							gtag('config', config.ga);
 						}
+					}
+
+					function loadAds() {
+						if (adsLoaded) return;
+						adsLoaded = true;
 
 						/*
 						  El script de AdSense ya está en el <head> (Analytics.astro). Acá solo
@@ -184,14 +209,94 @@ const config = {
 					/* Botón "Cookies" del footer: permite revisar la decisión cuando se quiera. */
 					document.addEventListener('click', function (event) {
 						if (event.target.closest('[data-consent-reopen]')) {
+							/*
+							  Visitante europeo: las preferencias son las de la CMP de Google.
+							  Se reabre su mensaje con la API oficial (googlefc), no este banner.
+							*/
+							if (cedido) {
+								window.googlefc = window.googlefc || {};
+								window.googlefc.callbackQueue = window.googlefc.callbackQueue || [];
+								window.googlefc.callbackQueue.push(function () {
+									window.googlefc.showRevocationMessage();
+								});
+								return;
+							}
 							banner.hidden = false;
 							banner.querySelector('[data-consent]').focus();
 						}
 					});
 
+					/*
+					  TCF: consentimiento para "almacenar o acceder a información en el
+					  dispositivo" (propósito 1). Con eso se carga GA para el visitante
+					  europeo; Consent Mode lo actualiza la CMP de Google, no este banner.
+					*/
+					function consintioAlmacenamiento(tcData) {
+						return (
+							(tcData.eventStatus === 'tcloaded' || tcData.eventStatus === 'useractioncomplete') &&
+							!!tcData.purpose &&
+							!!tcData.purpose.consents &&
+							tcData.purpose.consents[1] === true
+						);
+					}
+
+					/*
+					  Llama a done(true) solo si la CMP de Google responde ok con
+					  gdprApplies === true. Cualquier otra cosa (sin __tcfapi en 2 s,
+					  ok false, gdprApplies false o no booleano, error) es done(false).
+					*/
+					function consultarCmpDeGoogle(done) {
+						var limite = Date.now() + 2000;
+						var terminado = false;
+
+						function fin(ceder) {
+							if (terminado) return;
+							terminado = true;
+							done(ceder);
+						}
+
+						function escuchar() {
+							try {
+								window.__tcfapi('addEventListener', 2, function (tcData, ok) {
+									fin(ok === true && !!tcData && tcData.gdprApplies === true);
+									if (cedido && ok === true && tcData && consintioAlmacenamiento(tcData)) {
+										loadAnalytics();
+									}
+								});
+							} catch (e) {
+								fin(false);
+							}
+						}
+
+						(function esperar() {
+							if (terminado) return;
+							if (typeof window.__tcfapi === 'function') return escuchar();
+							if (Date.now() >= limite) return fin(false);
+							setTimeout(esperar, 50);
+						})();
+
+						/* Si __tcfapi aparece pero nunca contesta, no se espera más de 2 s. */
+						setTimeout(function () {
+							fin(false);
+						}, 2000);
+					}
+
 					var stored = read();
-					if (stored === 'granted') accept();
-					else if (stored !== 'denied') banner.hidden = false;
+					consultarCmpDeGoogle(function (ceder) {
+						if (ceder) {
+							/*
+							  La CMP de Google maneja el consentimiento: no se muestra el banner,
+							  no se llama a gtag('consent', 'update') ni se aplica una decisión
+							  guardada antes. Los bloques de anuncios se cargan igual: con TCF,
+							  Google decide qué anuncio servir según el consentimiento.
+							*/
+							cedido = true;
+							loadAds();
+							return;
+						}
+						if (stored === 'granted') accept();
+						else if (stored !== 'denied') banner.hidden = false;
+					});
 				})();
 			</script>
 		</>
