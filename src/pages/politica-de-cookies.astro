@@ -67,14 +67,17 @@ const LAST_UPDATED = '13 de octubre de 2026';
 		>.
 	</p>
 
-	<h2>Cookies de terceros, solo si las aceptás</h2>
+	<h2>Cookies de terceros: Google Analytics y Google AdSense</h2>
 	<p>
-		El sitio usa dos servicios de Google que sí instalan cookies, y <strong
-			>ninguno las activa antes de que aceptes</strong
-		>. Google Analytics ni siquiera se descarga hasta entonces. El código de Google AdSense sí se
-		carga en todas las páginas, pero con el modo de consentimiento de Google en estado denegado:
-		mientras no aceptes, le indica a Google que no use almacenamiento publicitario ni personalice
-		anuncios.
+		El sitio usa dos servicios de Google que sí instalan cookies. El sitio arranca con el modo de
+		consentimiento de Google (Consent Mode v2) en estado denegado. Google Analytics no se descarga
+		hasta que das tu consentimiento. El código de Google AdSense, en cambio, se carga en todas las
+		páginas y se comunica con servidores de Google desde que se abre la página.
+	</p>
+	<p>
+		Fuera del Espacio Económico Europeo, el Reino Unido y Suiza, el consentimiento se da en el
+		banner del sitio. Desde el Espacio Económico Europeo, el Reino Unido o Suiza, podés ver el
+		mensaje de consentimiento de Google en lugar del banner del sitio.
 	</p>
 
 	<h3>Analíticas: Google Analytics 4</h3>
@@ -117,9 +120,10 @@ const LAST_UPDATED = '13 de octubre de 2026';
 		CONSENT_REQUIRED ? (
 			<p>
 				Podés revisar lo que elegiste en cualquier momento: el botón de abajo, o el enlace
-				«Preferencias de cookies» al pie de todas las páginas, vuelve a abrir el banner. Si rechazás
+				«Preferencias de cookies» al pie de todas las páginas, vuelve a abrir el banner del sitio o,
+				si te corresponde, el mensaje de consentimiento de Google. Si en el banner del sitio rechazás
 				después de haber aceptado, el sitio borra las cookies de Google Analytics y recarga la página
-				sin ningún script de Google.
+				sin Google Analytics.
 			</p>
 		) : (
 			<p>

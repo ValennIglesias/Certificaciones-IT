@@ -47,6 +47,10 @@ const LAST_UPDATED = '13 de octubre de 2026';
 			<strong>Datos de publicidad</strong> (identificadores de cookies e interacción con los
 			anuncios), procesados por Google AdSense y sus proveedores asociados.
 		</li>
+		<li>
+			<strong>Datos que nos mandás por correo</strong> (tu dirección de correo y el contenido del
+			mensaje), si nos escribís a {SITE.contactEmail}.
+		</li>
 	</ul>
 
 	<h2>Servicios de terceros que utilizamos</h2>
@@ -61,6 +65,10 @@ const LAST_UPDATED = '13 de octubre de 2026';
 			<a href="https://www.cloudflare.com/privacypolicy/" rel="nofollow noopener" target="_blank"
 				>Política de Privacidad de Cloudflare</a
 			>.
+		</li>
+		<li>
+			<strong>Cloudflare Email Routing</strong>: los correos que llegan a {SITE.contactEmail} pasan
+			por este servicio de reenvío de Cloudflare antes de llegar a la casilla del titular.
 		</li>
 		<li>
 			<strong>Google Analytics 4 (GA4)</strong>: lo usamos para medir el tráfico del sitio —cuánta
@@ -83,18 +91,26 @@ const LAST_UPDATED = '13 de octubre de 2026';
 
 	<h2>Consentimiento</h2>
 	<p>
-		Las cookies de Google Analytics y de Google AdSense <strong
-			>solo se activan una vez que aceptás su uso</strong
-		> mediante el banner de consentimiento que aparece en tu primera visita. El sitio arranca con
-		el modo de consentimiento de Google (Consent Mode v2) en estado denegado para la analítica, el
-		almacenamiento publicitario y la personalización de anuncios, y solo lo cambia a concedido si
-		pulsás «Aceptar».
+		El sitio arranca con el modo de consentimiento de Google (Consent Mode v2) en estado
+		denegado para la analítica, el almacenamiento publicitario y la personalización de anuncios.
+		Cómo das tu consentimiento depende de desde dónde visitás el sitio:
 	</p>
+	<ul>
+		<li>
+			<strong>Fuera del Espacio Económico Europeo, el Reino Unido y Suiza</strong>, ves el banner
+			de consentimiento del sitio, con dos botones al mismo nivel: «Rechazar» y «Aceptar». Si
+			pulsás «Aceptar», ese estado pasa a concedido.
+		</li>
+		<li>
+			<strong>Desde el Espacio Económico Europeo, el Reino Unido o Suiza</strong>, podés ver el
+			mensaje de consentimiento de Google en lugar del banner del sitio. En ese caso, tu
+			consentimiento lo gestiona ese mensaje.
+		</li>
+	</ul>
 	<p>
-		El script de Google Analytics ni siquiera se descarga hasta que aceptás. El código de Google
-		AdSense, en cambio, se carga en todas las páginas, porque Google lo necesita para operar la
-		cuenta del sitio; se carga después de fijar ese estado denegado, así que mientras no aceptes
-		le indica a Google que no use almacenamiento publicitario ni personalice anuncios.
+		El script de Google Analytics no se descarga hasta que das tu consentimiento. El código de
+		Google AdSense, en cambio, se carga en todas las páginas, porque Google lo necesita para operar
+		la cuenta del sitio, y se comunica con servidores de Google desde que se abre la página.
 	</p>
 	<p>
 		<strong>Cloudflare Web Analytics es la excepción</strong>: se carga desde la primera visita,
@@ -104,8 +120,9 @@ const LAST_UPDATED = '13 de octubre de 2026';
 	<p>
 		Podés cambiar tu decisión en cualquier momento desde el enlace{' '}
 		<strong>«Preferencias de cookies»</strong> que está al pie de todas las páginas: vuelve a abrir
-		el banner para que elijas de nuevo. Rechazar es tan simple como aceptar: son dos botones al
-		mismo nivel, sin pasos intermedios.
+		el banner del sitio o, si te corresponde, el mensaje de consentimiento de Google, para que
+		elijas de nuevo. En el banner del sitio, rechazar es tan simple como aceptar: son dos botones
+		al mismo nivel, sin pasos intermedios.
 	</p>
 
 	<h2>Cómo desactivar el seguimiento y la publicidad personalizada</h2>
@@ -155,7 +172,7 @@ const LAST_UPDATED = '13 de octubre de 2026';
 	<p>
 		Este sitio se rige por la legislación de la <strong>República Argentina</strong>, en particular
 		por la Ley 25.326 de Protección de los Datos Personales. La base legal para el uso de cookies de
-		analítica y publicidad es tu consentimiento, que otorgás mediante el banner descripto más arriba.
+		analítica y publicidad es tu consentimiento, que otorgás mediante el banner o el mensaje descriptos más arriba.
 	</p>
 	<p>
 		Tenés derecho a solicitar el acceso, la rectificación, la actualización y la supresión de tus
