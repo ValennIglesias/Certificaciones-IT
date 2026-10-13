@@ -12,7 +12,7 @@ import { CONSENT_REQUIRED, CONSENT_STORAGE_KEY } from '../lib/analytics';
 // Si se suma un servicio que instale cookies, va acá antes de activarlo.
 // Cuando AdSense esté aprobado y se reemplace el banner por la CMP de Google
 // (SPEC-v2, sección 5), esta página se revisa entera.
-const LAST_UPDATED = '3 de octubre de 2026';
+const LAST_UPDATED = '13 de octubre de 2026';
 ---
 
 <PageLayout
@@ -69,9 +69,12 @@ const LAST_UPDATED = '3 de octubre de 2026';
 
 	<h2>Cookies de terceros, solo si las aceptás</h2>
 	<p>
-		El sitio puede usar dos servicios de Google que sí instalan cookies. <strong
-			>Ninguno se carga antes de que aceptes</strong
-		>: hasta entonces, sus scripts ni siquiera se descargan.
+		El sitio usa dos servicios de Google que sí instalan cookies, y <strong
+			>ninguno las activa antes de que aceptes</strong
+		>. Google Analytics ni siquiera se descarga hasta entonces. El código de Google AdSense sí se
+		carga en todas las páginas, pero con el modo de consentimiento de Google en estado denegado:
+		mientras no aceptes, le indica a Google que no use almacenamiento publicitario ni personalice
+		anuncios.
 	</p>
 
 	<h3>Analíticas: Google Analytics 4</h3>

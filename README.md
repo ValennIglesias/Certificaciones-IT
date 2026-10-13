@@ -191,8 +191,9 @@ lado del código está hecho; falta lo que depende del dominio y de los paneles:
 - [ ] Sitio en Cloudflare Pages con el dominio propio y `SITE_URL` cargada.
 - [ ] Search Console verificado por registro DNS TXT en Cloudflare, y el
       sitemap enviado.
-- [ ] `PUBLIC_GA_ID` y `PUBLIC_ADSENSE_CLIENT` cargadas (esta última genera
-      `/ads.txt`).
+- [ ] `PUBLIC_GA_ID` y `PUBLIC_ADSENSE_CLIENT` cargadas como variables de build
+      (esta última publica el script de AdSense y el meta tag de verificación;
+      `/ads.txt` es un archivo fijo en `public/`).
 - [ ] Textos legales revisados por un profesional.
 - [ ] PageSpeed en verde sobre el dominio real, en móvil.
 
@@ -220,7 +221,6 @@ src/
 │  ├─ politica-de-privacidad.astro, politica-de-cookies.astro
 │  ├─ 404.astro
 │  ├─ robots.txt.ts
-│  └─ ads.txt.ts
 ├─ consts.ts            nombre del sitio, titular, autores, clusters, menú
 └─ content.config.ts    schema Zod de la colección
 ```

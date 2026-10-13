@@ -4,7 +4,8 @@
  *
  * Cómo funciona:
  *  1. Analytics.astro ya dejó Consent Mode v2 en "denied" en el <head>.
- *  2. Este componente NO emite ningún <script src> de Google en el HTML.
+ *  2. Este componente NO emite ningún <script src> de Google en el HTML. (El de
+ *     AdSense lo pone Analytics.astro en el <head>, después de Consent Mode.)
  *     Los scripts de GA4 y AdSense se crean con createElement y se insertan en
  *     el DOM recién cuando el usuario acepta (o en cargas posteriores, si ya
  *     había aceptado antes). Si rechaza, nunca entran al DOM.
@@ -94,15 +95,13 @@ const config = {
 							gtag('config', config.ga);
 						}
 
+						/*
+						  El script de AdSense ya está en el <head> (Analytics.astro). Acá solo
+						  se crean y se llenan los bloques de anuncios, y solo si la cuenta
+						  está aprobada (config.ads vacío mientras PUBLIC_ADSENSE_ENABLED no
+						  sea "true").
+						*/
 						if (config.ads) {
-							var ads = document.createElement('script');
-							ads.async = true;
-							ads.crossOrigin = 'anonymous';
-							ads.src =
-								'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' +
-								config.ads;
-							document.head.appendChild(ads);
-
 							/*
 							  Anuncios dentro del cuerpo: el CSS ya les reservó la altura a los
 							  marcadores visibles (clase con-anuncios); acá se crea el <ins>.

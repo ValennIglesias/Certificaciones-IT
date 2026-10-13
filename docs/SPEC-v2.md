@@ -305,8 +305,15 @@ pero conviene tenerlo presente como decisión consciente.
   consentimiento crea el `<ins>`. Medido: 0 saltos de layout.
 - Las tres ubicaciones del artículo usan el mismo bloque,
   `PUBLIC_ADSENSE_SLOT_ARTICLE`.
-- `/ads.txt` se genera en el build desde `PUBLIC_ADSENSE_CLIENT`, aunque
-  AdSense siga apagado.
+- `/ads.txt` es un archivo fijo en `public/ads.txt` con el ID real
+  (`pub-2261714480132826`). Antes se generaba desde `PUBLIC_ADSENSE_CLIENT`;
+  se pasó a estático el 13/10/2026, con la cuenta ya creada.
+- **[IMPLEMENTADO] Script y anuncios, separados (13/10/2026):** el script
+  `adsbygoogle.js` va en el `<head>` de todas las páginas apenas existe
+  `PUBLIC_ADSENSE_CLIENT`, porque Google lo busca para revisar la cuenta.
+  Los bloques de anuncios siguen dependiendo de `PUBLIC_ADSENSE_ENABLED` y
+  del consentimiento. El script se carga después del bloque que fija
+  Consent Mode en `denied`.
 
 ### Prohibiciones
 
@@ -347,6 +354,12 @@ integra con Consent Mode v2 automáticamente.
   Cloudflare Web Analytics, que inyecta el hosting. No usa cookies ni
   almacenamiento local, así que se mantiene y está declarado en las
   políticas de privacidad y de cookies
+- **[IMPLEMENTADO] Tercera excepción (13/10/2026):** el script de AdSense
+  (`adsbygoogle.js`) se carga en el `<head>` de todas las páginas sin
+  esperar el consentimiento, porque Google lo necesita para revisar la
+  cuenta. Va después del bloque que fija Consent Mode en `denied`, y los
+  bloques de anuncios siguen esperando el consentimiento. Declarado en las
+  políticas de privacidad y de cookies. Se revisa al definir la CMP
 
 ### Nota de orden
 
@@ -496,7 +509,7 @@ Estado al 3 de octubre de 2026.
 - [x] Caja de autor al final de cada artículo
 - [x] Las cinco páginas legales completas y enlazadas desde el footer
 - [x] Componente de anuncios con altura reservada, desactivado
-- [x] `/ads.txt` generado desde `PUBLIC_ADSENSE_CLIENT`
+- [x] `/ads.txt` publicado con el ID real (`public/ads.txt`)
 - [x] Tabla de contenidos, migas de pan y artículos relacionados
 - [x] `updatedDate` soportado en el schema del frontmatter
 - [x] `public/_headers` y `public/_redirects` equivalentes a `vercel.json`, y `vercel.json` borrado
@@ -514,7 +527,7 @@ Estado al 3 de octubre de 2026.
 - [x] Registro TXT de Search Console publicado en el DNS
 - [x] Search Console verificado y sitemap enviado (`sitemap-index.xml`)
 - [x] `PUBLIC_GA_ID` cargada en Cloudflare (G-9M1JSX9E1E), con banner de consentimiento activo
-- [ ] `PUBLIC_ADSENSE_CLIENT` cargada (genera `ads.txt` y el meta tag de verificación)
+- [ ] `PUBLIC_ADSENSE_CLIENT` cargada como variable de build (publica el script de AdSense y el meta tag de verificación)
 - [ ] Foto del autor en `src/assets/autores/valentin-iglesias.jpg`
 - [x] PageSpeed en verde sobre el dominio real, en móvil (Lighthouse: 100 en las cuatro categorías; LCP 0,9-1,6 s, CLS 0)
 - [ ] CMP de Google, después de la aprobación de AdSense (sección 5)

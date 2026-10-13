@@ -5,12 +5,12 @@ import { SITE } from '../consts';
 // Datos del titular provistos por el dueño del sitio (jurisdicción: Argentina).
 //
 // El banner de consentimiento está implementado (ConsentBanner.astro): fija
-// Consent Mode v2 en "denied" y no inyecta los scripts de GA4 ni de AdSense en
+// Consent Mode v2 en "denied" y no inyecta el script de GA4 (ni los bloques de anuncios) en
 // el DOM hasta que el usuario acepta. Lo que dice la sección "Consentimiento"
 // coincide con el comportamiento real del sitio.
 //
 // Conviene que un profesional revise el texto antes de publicarlo.
-const LAST_UPDATED = '3 de octubre de 2026';
+const LAST_UPDATED = '13 de octubre de 2026';
 ---
 
 <PageLayout
@@ -85,10 +85,16 @@ const LAST_UPDATED = '3 de octubre de 2026';
 	<p>
 		Las cookies de Google Analytics y de Google AdSense <strong
 			>solo se activan una vez que aceptás su uso</strong
-		> mediante el banner de consentimiento que aparece en tu primera visita. Hasta que no des esa
-		aceptación, los scripts de esos servicios ni siquiera se descargan: el sitio arranca con el
-		modo de consentimiento de Google (Consent Mode v2) en estado denegado para las cookies de
-		analítica y de publicidad, y solo cambia a concedido si pulsás «Aceptar».
+		> mediante el banner de consentimiento que aparece en tu primera visita. El sitio arranca con
+		el modo de consentimiento de Google (Consent Mode v2) en estado denegado para la analítica, el
+		almacenamiento publicitario y la personalización de anuncios, y solo lo cambia a concedido si
+		pulsás «Aceptar».
+	</p>
+	<p>
+		El script de Google Analytics ni siquiera se descarga hasta que aceptás. El código de Google
+		AdSense, en cambio, se carga en todas las páginas, porque Google lo necesita para operar la
+		cuenta del sitio; se carga después de fijar ese estado denegado, así que mientras no aceptes
+		le indica a Google que no use almacenamiento publicitario ni personalice anuncios.
 	</p>
 	<p>
 		<strong>Cloudflare Web Analytics es la excepción</strong>: se carga desde la primera visita,

@@ -12,7 +12,7 @@
  *
  * Variables: ver .env.example.
  */
-import { GA_ID, GSC_VERIFICATION, ADSENSE_CLIENT, ADSENSE_ENABLED, CONSENT_REQUIRED } from '../lib/analytics';
+import { GA_ID, GSC_VERIFICATION, ADSENSE_CLIENT, ADSENSE_SCRIPT, ADSENSE_ENABLED, CONSENT_REQUIRED } from '../lib/analytics';
 ---
 
 {/* Verificación de Search Console: es un meta tag, no instala cookies. */}
@@ -44,6 +44,25 @@ import { GA_ID, GSC_VERIFICATION, ADSENSE_CLIENT, ADSENSE_ENABLED, CONSENT_REQUI
 				security_storage: 'granted',
 			});
 		</script>
+	)
+}
+
+{
+	/*
+	  Script de AdSense: va en el <head> de todas las páginas apenas hay
+	  PUBLIC_ADSENSE_CLIENT, sin esperar al flag de anuncios, porque Google lo
+	  busca para revisar la cuenta. Va DESPUÉS del bloque de arriba, así ya
+	  encuentra Consent Mode en "denied" para ad_storage, ad_user_data y
+	  ad_personalization. Los bloques de anuncios siguen dependiendo de
+	  PUBLIC_ADSENSE_ENABLED y del consentimiento (ConsentBanner.astro).
+	*/
+	ADSENSE_SCRIPT && (
+		<script
+			is:inline
+			async
+			src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+			crossorigin="anonymous"
+		/>
 	)
 }
 

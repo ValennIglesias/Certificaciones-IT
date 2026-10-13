@@ -10,15 +10,22 @@ export const GA_ID = env('PUBLIC_GA_ID');
 export const GSC_VERIFICATION = env('PUBLIC_GSC_VERIFICATION');
 export const ADSENSE_CLIENT = env('PUBLIC_ADSENSE_CLIENT');
 
-/** AdSense se enciende solo con la cuenta aprobada Y el id cargado. */
-export const ADSENSE_ENABLED = env('PUBLIC_ADSENSE_ENABLED') === 'true' && ADSENSE_CLIENT !== '';
+/**
+ * Dos cosas distintas de AdSense, con dos controles distintos:
+ * - El script adsbygoogle.js en el <head>: sale apenas hay PUBLIC_ADSENSE_CLIENT,
+ *   porque Google lo busca para revisar la cuenta antes de aprobarla.
+ * - Los bloques de anuncios (<ins>): solo con la cuenta aprobada, cuando
+ *   PUBLIC_ADSENSE_ENABLED es "true".
+ */
+export const ADSENSE_SCRIPT = ADSENSE_CLIENT !== '';
+export const ADSENSE_ENABLED = env('PUBLIC_ADSENSE_ENABLED') === 'true' && ADSENSE_SCRIPT;
 
 /**
  * Si no hay nada que pueda instalar cookies, no hay nada que consentir: no se
  * muestra el banner ni se emite JavaScript. Con GA y AdSense apagados, el sitio
  * sigue siendo 100% HTML estático sin scripts.
  */
-export const CONSENT_REQUIRED = GA_ID !== '' || ADSENSE_ENABLED;
+export const CONSENT_REQUIRED = GA_ID !== '' || ADSENSE_SCRIPT;
 
 /** Clave de localStorage donde se guarda la decisión ('granted' | 'denied'). */
 export const CONSENT_STORAGE_KEY = 'cit:consent';
