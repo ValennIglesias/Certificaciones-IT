@@ -157,6 +157,7 @@ o Keyword Planner no devolvió datos.
 | `carrera/primer-cv-para-un-puesto-it` | `cómo armar un CV para IT sin experiencia` | Apoyo. Volumen sin verificar |
 | `carrera/de-soporte-a-infraestructura` | `cómo pasar de soporte técnico a administrador de sistemas` | **Autoridad y enlazado.** Keyword Planner sin datos |
 | `redes/cuanto-cuesta-el-ccna` | `costo examen ccna` | Cluster NetAcad. Elegida por datos reales, no por volumen (ver nota) |
+| `entrada/despues-de-fundamentos-de-analisis-de-datos` | `fundamentos de análisis de datos cisco` | Público NetAcad. Elegida por Search Console (ver nota) |
 
 `carrera/de-soporte-a-infraestructura` es contenido de autoridad, no de
 tráfico: se publica por la experiencia propia del autor (E-E-A-T) y porque
@@ -172,3 +173,10 @@ Ataca el mismo público que más impresiones trajo en la primera semana
 `cisco-networking-academy-como-entrar`, la mitad de las impresiones del
 sitio, ambos en el top 10) y enlaza directo a esas páginas. Este artículo
 sustituye al #10 de la Parte 2 ("Cuánto cuesta el CCNA").
+
+`entrada/despues-de-fundamentos-de-analisis-de-datos` (keyword
+`fundamentos de análisis de datos cisco`) también salió de Search Console:
+la consulta "que sigue despues de fundamentos de análisis de datos de cisco"
+sumó 63 impresiones en posición 8,6 (38 % de las consultas visibles al
+20/10/2026) sin ningún artículo que la respondiera. Va en el cluster
+`entrada` porque no es un curso de redes, y suma al cluster más chico.

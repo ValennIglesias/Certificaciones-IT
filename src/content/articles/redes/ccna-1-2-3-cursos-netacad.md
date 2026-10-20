@@ -4,6 +4,7 @@ description: "Los tres cursos de la serie CCNA de Cisco Networking Academy, qué
 keyword: "ccna 1"
 cluster: "redes"
 pubDate: 2026-09-26
+updatedDate: 2026-10-20
 author: "Valentín"
 draft: false
 ---
@@ -29,6 +30,8 @@ Lo esencial:
 Cada uno figura en el catálogo de NetAcad con una duración estimada de 70 horas, así que la serie completa ronda las 210 horas de estudio.
 
 Están disponibles en español, junto con otros trece idiomas.
+
+La serie CCNA es de redes. Si llegaste a NetAcad por otro catálogo —por ejemplo, terminaste Fundamentos de Análisis de Datos—, qué curso sigue en ese caso está en la guía de [qué curso hacer después de Fundamentos de Análisis de Datos](/entrada/despues-de-fundamentos-de-analisis-de-datos/).
 
 ## El módulo suplementario de la v1.1
 
