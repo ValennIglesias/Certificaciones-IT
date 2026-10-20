@@ -4,7 +4,7 @@ description: "Las tres rutas para preparar el CCNA 200-301 según tu presupuesto
 keyword: "curso ccna"
 cluster: "redes"
 pubDate: 2026-09-22
-updatedDate: 2026-10-12
+updatedDate: 2026-10-20
 author: "Valentín"
 draft: false
 ---
@@ -53,7 +53,7 @@ El CCNA 200-301 se organiza en seis áreas:
 
 Qué entra en cada dominio y cuánto pesa está en el [temario completo del CCNA 200-301](/redes/ccna-200-301-temario/).
 
-Un cambio importante de 2024: Cisco actualizó el examen a la **versión 1.1**, que incorpora temas de inteligencia artificial, cloud y machine learning. El código sigue siendo 200-301, así que es fácil no darse cuenta — pero si comprás material de estudio, verificá que esté alineado a la v1.1 y no a la versión anterior.
+Un cambio importante de 2024: Cisco actualizó el examen a la **versión 1.1**, que incorpora temas de inteligencia artificial, cloud y machine learning. El código sigue siendo 200-301, así que es fácil no darse cuenta — pero si comprás material de estudio, verificá que esté alineado a la v1.1 y no a la versión anterior. Y tené en cuenta que la v1.1 se rinde hasta el 2 de febrero de 2027: desde el día siguiente rige la v2.0, que cambia bastante el temario, como explica la guía de [CCNA v2.0](/redes/ccna-v2-0-cambios/).
 
 ## Cuánto cuesta en total
 

@@ -4,7 +4,7 @@ description: "Los seis dominios del blueprint v1.1 con sus pesos oficiales, qué
 keyword: "ccna 200 301"
 cluster: "redes"
 pubDate: 2026-09-26
-updatedDate: 2026-10-12
+updatedDate: 2026-10-20
 author: "Valentín"
 draft: false
 ---
@@ -61,7 +61,7 @@ Por eso conviene verificar la versión de cualquier material de estudio antes de
 | 2 de febrero de 2027 | Último día para rendir la v1.1 |
 | 3 de febrero de 2027 | Arranca la v2.0, con el mismo número 200-301 |
 
-Esto importa para planificar. Si estás arrancando ahora y tu preparación va a llevarte los dos o tres meses habituales, llegás con margen a rendir la v1.1. Pero si pensás estudiar con calma durante más de un año, vas a terminar rindiendo la v2.0 — y el material que juntes ahora va a estar parcialmente desactualizado para entonces.
+Esto importa para planificar. Si estás arrancando ahora y tu preparación va a llevarte los dos o tres meses habituales, llegás con margen a rendir la v1.1. Pero si pensás estudiar con calma durante más de un año, vas a terminar rindiendo la v2.0 — y el material que juntes ahora va a estar parcialmente desactualizado para entonces. Qué temas salen y cuáles entran en la nueva versión está en [CCNA v2.0: qué cambia](/redes/ccna-v2-0-cambios/).
 
 ## Formato del examen
 

@@ -159,6 +159,7 @@ o Keyword Planner no devolvió datos.
 | `redes/cuanto-cuesta-el-ccna` | `costo examen ccna` | Cluster NetAcad. Elegida por datos reales, no por volumen (ver nota) |
 | `entrada/despues-de-fundamentos-de-analisis-de-datos` | `fundamentos de análisis de datos cisco` | Público NetAcad. Elegida por Search Console (ver nota) |
 | `seguridad/despues-de-introduccion-a-la-ciberseguridad` | `introducción a la ciberseguridad cisco` | Público NetAcad. 500/mes, competencia baja (ver nota) |
+| `redes/ccna-v2-0-cambios` | `ccna v2.0` | Cluster CCNA. 500/mes, competencia baja (ver nota) |
 
 `carrera/de-soporte-a-infraestructura` es contenido de autoridad, no de
 tráfico: se publica por la experiencia propia del autor (E-E-A-T) y porque
@@ -199,7 +200,8 @@ idiomas):
 parte de su volumen probablemente no es hispanohablante. Candidata a un
 artículo propio sobre el examen (keyword libre, competencia baja).
 
-Para el próximo artículo, CCNA v2.0 (mismo relevamiento):
+`redes/ccna-v2-0-cambios` (keyword `ccna v2.0`; Keyword Planner la normaliza
+como `ccna v2 0`) cubre el cambio de examen del 3/2/2027. Mismo relevamiento:
 
 | Keyword | Búsquedas/mes | Competencia | Variación interanual |
 | --- | --- | --- | --- |
