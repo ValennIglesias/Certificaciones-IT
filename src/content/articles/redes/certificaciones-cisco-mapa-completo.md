@@ -1,6 +1,6 @@
 ---
 title: "Certificaciones Cisco: mapa completo tras la reforma de 2026"
-description: "Cisco reordenó todo su programa en febrero de 2026. Los cuatro niveles, las especializaciones vigentes y qué cambió respecto de las guías viejas."
+description: "Los cuatro niveles de las certificaciones Cisco (CCST, CCNA, CCNP y CCIE), las especializaciones vigentes tras la reforma de febrero de 2026 y por dónde empezar."
 keyword: "certificaciones en cisco"
 cluster: "redes"
 pubDate: 2026-09-26

@@ -4,6 +4,7 @@ description: "Por qué casi no existen puestos de ciberseguridad de entrada, cu�
 keyword: "ciberseguridad desde cero"
 cluster: "seguridad"
 pubDate: 2026-09-26
+updatedDate: 2026-10-20
 author: "Valentín"
 draft: false
 ---
@@ -67,6 +68,8 @@ Menos del 7% de quienes se anotaron llegaron a certificarse, con el curso y el e
 | CCNA Cybersecurity | Operaciones de seguridad sobre infraestructura Cisco | Si venís del lado de redes |
 
 [Security+](/seguridad/security-plus-vale-la-pena/) es la que aparece con más frecuencia como requisito en vacantes de seguridad de nivel inicial, y la que más rinde si ya tenés algo de base. Si querés ver cómo es el examen por dentro antes de decidir, está el detalle del [formato y la estrategia de preparación](/seguridad/examen-comptia-security-plus/).
+
+Si empezaste por el curso gratuito Introducción a la Ciberseguridad de Cisco NetAcad, la ruta oficial que sigue, y la certificación CCST Cybersecurity a la que lleva, están en [qué curso hacer después de Introducción a la Ciberseguridad](/seguridad/despues-de-introduccion-a-la-ciberseguridad/).
 
 Del lado de Cisco, lo que antes se llamaba CyberOps Associate ahora es **CCNA Cybersecurity**, tras la reestructuración de febrero de 2026 — el [mapa completo de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/) tiene el detalle de ese cambio.
 

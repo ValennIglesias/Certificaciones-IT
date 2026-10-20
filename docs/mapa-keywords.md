@@ -158,6 +158,7 @@ o Keyword Planner no devolvió datos.
 | `carrera/de-soporte-a-infraestructura` | `cómo pasar de soporte técnico a administrador de sistemas` | **Autoridad y enlazado.** Keyword Planner sin datos |
 | `redes/cuanto-cuesta-el-ccna` | `costo examen ccna` | Cluster NetAcad. Elegida por datos reales, no por volumen (ver nota) |
 | `entrada/despues-de-fundamentos-de-analisis-de-datos` | `fundamentos de análisis de datos cisco` | Público NetAcad. Elegida por Search Console (ver nota) |
+| `seguridad/despues-de-introduccion-a-la-ciberseguridad` | `introducción a la ciberseguridad cisco` | Público NetAcad. 500/mes, competencia baja (ver nota) |
 
 `carrera/de-soporte-a-infraestructura` es contenido de autoridad, no de
 tráfico: se publica por la experiencia propia del autor (E-E-A-T) y porque
@@ -180,3 +181,27 @@ la consulta "que sigue despues de fundamentos de análisis de datos de cisco"
 sumó 63 impresiones en posición 8,6 (38 % de las consultas visibles al
 20/10/2026) sin ningún artículo que la respondiera. Va en el cluster
 `entrada` porque no es un curso de redes, y suma al cluster más chico.
+
+`seguridad/despues-de-introduccion-a-la-ciberseguridad` extrapola el patrón
+de la consulta de análisis de datos al curso más masivo de NetAcad (más de
+10 millones de inscriptos según su página, 20/10/2026). No tiene señal
+propia en Search Console. Keyword Planner (20/10/2026, oct 2025 - sep 2026,
+sin poder filtrar solo por español, así que puede incluir búsquedas en otros
+idiomas):
+
+| Keyword | Búsquedas/mes | Competencia | Variación interanual |
+| --- | --- | --- | --- |
+| `introducción a la ciberseguridad cisco` | 500 | Baja | 0 % |
+| `curso introducción a la ciberseguridad` | 500 | Baja | +900 % |
+| `ccst cybersecurity` | 5.000 | Baja | 0 % |
+
+`ccst cybersecurity` es el término de la certificación, en inglés: buena
+parte de su volumen probablemente no es hispanohablante. Candidata a un
+artículo propio sobre el examen (keyword libre, competencia baja).
+
+Para el próximo artículo, CCNA v2.0 (mismo relevamiento):
+
+| Keyword | Búsquedas/mes | Competencia | Variación interanual |
+| --- | --- | --- | --- |
+| `ccna v2 0` | 500 | Baja | +900 % |
+| `ccna 200 301 v2` | 50 | Media | — |
