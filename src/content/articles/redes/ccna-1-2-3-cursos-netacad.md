@@ -31,6 +31,8 @@ Cada uno figura en el catálogo de NetAcad con una duración estimada de 70 hora
 
 Están disponibles en español, junto con otros trece idiomas.
 
+Si querés un paso previo más corto, NetAcad tiene la ruta gratuita Técnico en Redes: 70 horas en cuatro cursos, con el mismo contenido que el curso con instructor [Networking Essentials](/redes/networking-essentials-cisco/). Prepara para el [CCST Networking](/redes/ccst-networking-examen/), la certificación de entrada anterior al CCNA.
+
 La serie CCNA es de redes. Si llegaste a NetAcad por otro catálogo —por ejemplo, terminaste Fundamentos de Análisis de Datos—, qué curso sigue en ese caso está en la guía de [qué curso hacer después de Fundamentos de Análisis de Datos](/entrada/despues-de-fundamentos-de-analisis-de-datos/).
 
 ## El módulo suplementario de la v1.1
@@ -44,6 +46,8 @@ Cuando Cisco actualizó el examen a la versión 1.1, agregó contenido que los c
 - Autenticación en APIs REST
 
 Vale la pena saber que existe, porque es justo el contenido que el material de estudio más viejo no tiene — el mismo punto ciego que marcamos en el [temario del CCNA 200-301](/redes/ccna-200-301-temario/).
+
+Tené en cuenta también la fecha: la v1.1 se rinde hasta el 2 de febrero de 2027, y desde el día siguiente rige la v2.0, que saca y suma temas. Si vas a rendir después de esa fecha, revisá [qué cambia en la v2.0](/redes/ccna-v2-0-cambios/) antes de presentarte.
 
 ## Por qué el tercero es el que importa
 

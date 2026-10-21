@@ -34,7 +34,7 @@ Al completarlos se obtiene una insignia digital en Credly, que sirve para mostra
 
 ## El descuento en el examen: lo que pide Cisco
 
-Cisco da descuentos en tres exámenes de certificación a estudiantes de Networking Academy: **CCNA, Cybersecurity Associate (CBROPS) y DevNet Associate (DEVASC)**. Para el CCNA, el curso que lo habilita es el tercero de la secuencia: Enterprise Networking, Security and Automation (ENSA). Qué cubre cada uno de los tres cursos de la serie, y en qué orden se hacen, está en la guía de [CCNA 1, 2 y 3 en NetAcad](/redes/ccna-1-2-3-cursos-netacad/).
+Cisco da descuentos en tres exámenes de certificación a estudiantes de Networking Academy: **CCNA, CCNA Cybersecurity (CBROPS) y CCNA Automation (DEVASC)**. En la página de descuentos de NetAcad los dos últimos todavía figuran con sus nombres anteriores a febrero de 2026: Cyber Ops Associate y DevNet Associate. Para el CCNA, el curso que lo habilita es el tercero de la secuencia: Enterprise Networking, Security and Automation (ENSA). Qué cubre cada uno de los tres cursos de la serie, y en qué orden se hacen, está en la guía de [CCNA 1, 2 y 3 en NetAcad](/redes/ccna-1-2-3-cursos-netacad/).
 
 Los requisitos que publica Cisco son estrictos y no se pueden corregir después:
 

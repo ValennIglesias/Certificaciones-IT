@@ -16,7 +16,7 @@ Lo esencial:
 - El programa tiene **cuatro niveles**: CCST (entrada), CCNA (asociado), CCNP (profesional) y CCIE (experto).
 - En febrero de 2026, **DevNet pasó a llamarse Automation** y **CyberOps pasó a llamarse Cybersecurity**, ambas absorbidas bajo los nombres CCNA, CCNP y CCIE.
 - Quien tenía una certificación DevNet o CyberOps activa **fue migrado automáticamente**, sin trámite.
-- El **CCNA 200-301 no cambió**: sigue siendo la certificación de entrada a redes empresariales.
+- El **CCNA 200-301 no cambió** con la reforma: sigue siendo la certificación de entrada a redes empresariales. Su temario sí cambia el 3 de febrero de 2027, con la [v2.0](/redes/ccna-v2-0-cambios/).
 - Las certificaciones CCNA, CCNP y CCIE **vencen a los tres años**; las CCST obtenidas desde el 15 de julio de 2025, a los cinco.
 
 ## Los cuatro niveles

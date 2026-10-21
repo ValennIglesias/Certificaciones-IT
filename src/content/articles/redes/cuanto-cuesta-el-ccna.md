@@ -4,6 +4,7 @@ description: "El examen cuesta US$300. Qué publica Cisco sobre el descuento de 
 keyword: "costo examen ccna"
 cluster: "redes"
 pubDate: 2026-10-12
+updatedDate: 2026-10-20
 author: "Valentín"
 draft: false
 ---
@@ -32,7 +33,7 @@ Dos datos de formato que conviene tener antes de pagar: el examen dura **120 min
 
 ## El descuento de NetAcad: lo que Cisco publica y lo que no
 
-Cisco ofrece descuentos en los exámenes de certificación a estudiantes e instructores de Networking Academy. Aplica a tres exámenes: **CCNA, Cybersecurity Associate (CBROPS) y DevNet Associate (DEVASC)**.
+Cisco ofrece descuentos en los exámenes de certificación a estudiantes e instructores de Networking Academy. Aplica a tres exámenes: **CCNA, CCNA Cybersecurity (CBROPS) y CCNA Automation (DEVASC)**. En la página de descuentos de NetAcad los dos últimos todavía figuran con sus nombres anteriores a febrero de 2026: Cyber Ops Associate y DevNet Associate.
 
 Los requisitos, textuales de Cisco, son completar el curso habilitante con:
 

@@ -309,17 +309,6 @@
 	vertical-align: top;
 }
 
-/* La ultima columna suele ser el dato duro: peso, costo, plazo. */
-.prose-article th:last-child,
-.prose-article td:last-child {
-	text-align: right;
-}
-
-.prose-article th:only-child,
-.prose-article td:only-child {
-	text-align: left;
-}
-
 /* --- Anuncios dentro del cuerpo ------------------------------------------ */
 /* Marcadores de ad-anchors-plugin.mjs, ocultos por defecto. Con AdSense,
    la altura se reserva desde el primer pintado: el <ins> que llega después no
