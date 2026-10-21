@@ -4,7 +4,7 @@ description: "Qué ofrece NetAcad gratis, cómo encontrar una academia y qué ex
 keyword: "cisco network academy"
 cluster: "redes"
 pubDate: 2026-09-26
-updatedDate: 2026-10-12
+updatedDate: 2026-10-20
 author: "Valentín"
 draft: false
 ---
@@ -64,7 +64,7 @@ Es la respuesta al problema que tiene todo el mundo que estudia redes sin equipa
 
 El registro se hace en netacad.com. Para los cursos de autoestudio alcanza con crear la cuenta y elegir el curso del catálogo.
 
-Para los cursos con instructor hay que buscar una academia habilitada: suelen ser universidades, institutos terciarios y centros de formación que tienen convenio con Cisco. El costo y la modalidad los define cada institución, no Cisco.
+Para los cursos con instructor hay que buscar una academia habilitada: suelen ser universidades, institutos terciarios y centros de formación que tienen convenio con Cisco. El costo y la modalidad los define cada institución, no Cisco. Algunos cursos, como Networking Essentials, figuran solo con instructor, aunque su contenido está gratis en autoestudio repartido en otros cursos: el detalle está en la guía de [Networking Essentials](/redes/networking-essentials-cisco/).
 
 Para encontrar una, NetAcad tiene un **buscador oficial de academias** en `netacad.com/academy-locator`, donde se filtra por ubicación y por programa. Es la vía recomendada en vez de buscar instituciones sueltas: el listado se actualiza solo y muestra qué cursos dicta cada academia, que no siempre son todos. Si tu objetivo es el descuento, fijate que la academia dicte ENSA.
 

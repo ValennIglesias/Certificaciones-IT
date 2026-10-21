@@ -66,6 +66,8 @@ La ruta oficial es **Técnico en Redes** de Cisco Networking Academy. Es gratuit
 | 3. Direccionamiento de red y solución de problemas básicos | 14 h |
 | 4. Soporte y seguridad de red | 12 h |
 
+Si en el catálogo te cruzaste con el curso Networking Essentials, que solo se cursa con instructor: tiene los mismos módulos que esta ruta, como explica la guía de [Networking Essentials](/redes/networking-essentials-cisco/).
+
 NetAcad recomienda, sin que sea obligatorio, tener nociones de hardware y sistemas operativos antes de empezar. Para eso tiene dos cursos aparte: Conceptos básicos de hardware informático y Conceptos básicos de sistemas operativos.
 
 Un dato útil: los dos primeros cursos de esta ruta también forman parte de la ruta de ciberseguridad. Si ya hiciste la ruta [que sigue a Introducción a la Ciberseguridad](/seguridad/despues-de-introduccion-a-la-ciberseguridad/), tenés 44 de las 70 horas hechas.
