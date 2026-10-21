@@ -4,6 +4,7 @@ description: "Los cuatro niveles de las certificaciones Cisco (CCST, CCNA, CCNP 
 keyword: "certificaciones en cisco"
 cluster: "redes"
 pubDate: 2026-09-26
+updatedDate: 2026-10-20
 author: "Valentín"
 draft: false
 ---
@@ -16,7 +17,7 @@ Lo esencial:
 - En febrero de 2026, **DevNet pasó a llamarse Automation** y **CyberOps pasó a llamarse Cybersecurity**, ambas absorbidas bajo los nombres CCNA, CCNP y CCIE.
 - Quien tenía una certificación DevNet o CyberOps activa **fue migrado automáticamente**, sin trámite.
 - El **CCNA 200-301 no cambió**: sigue siendo la certificación de entrada a redes empresariales.
-- Todas las certificaciones Cisco **vencen a los tres años**.
+- Las certificaciones CCNA, CCNP y CCIE **vencen a los tres años**; las CCST obtenidas desde el 15 de julio de 2025, a los cinco.
 
 ## Los cuatro niveles
 
@@ -79,12 +80,14 @@ Para los dos caminos de seguridad vale una aclaración: la pista de Cisco y las 
 
 ## Vigencia y renovación
 
-Todas las certificaciones Cisco duran **tres años**. Para renovar tenés dos opciones:
+Las certificaciones CCNA, CCNP y CCIE duran **tres años**. Para renovar tenés dos opciones:
 
 - Aprobar cualquier examen vigente de nivel igual o superior (un CCNP renueva automáticamente el CCNA que tengas activo).
 - Acumular créditos del programa de Educación Continua de Cisco.
 
 Esto significa que si vas escalando de nivel, la renovación se resuelve sola: cada certificación nueva renueva las anteriores.
+
+Las CCST siguen otra regla. Las obtenidas antes del 15 de julio de 2025 son de por vida, y las posteriores duran cinco años. Se renuevan solo aprobando otro examen de Cisco: la Educación Continua no aplica. El detalle, con el ejemplo del examen de ciberseguridad, está en la guía del [CCST Cybersecurity](/seguridad/ccst-cybersecurity-examen/).
 
 ## Qué hacer ahora
 

@@ -50,7 +50,7 @@ La insignia de la ruta no es una certificación. La certificación es un examen 
 | Duración | 50 minutos |
 | Idiomas | Inglés, árabe, chino, español, francés, japonés y portugués |
 
-Es el nivel de entrada del programa de certificaciones de Cisco, y Cisco la presenta como un primer paso hacia su certificación de ciberseguridad de nivel asociado. Dónde encaja dentro de todos los niveles está en el [mapa de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/).
+Es el nivel de entrada del programa de certificaciones de Cisco, y Cisco la presenta como un primer paso hacia su certificación de ciberseguridad de nivel asociado. El temario completo, la vigencia y cómo se rinde están en la guía del [examen CCST Cybersecurity](/seguridad/ccst-cybersecurity-examen/). Dónde encaja dentro de todos los niveles está en el [mapa de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/).
 
 Como referencia de precio: el examen de [Security+](/seguridad/security-plus-vale-la-pena/) ronda los US$400-425, más de tres veces lo que cuesta el CCST Cybersecurity.
 

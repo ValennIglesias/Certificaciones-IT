@@ -160,6 +160,7 @@ o Keyword Planner no devolvió datos.
 | `entrada/despues-de-fundamentos-de-analisis-de-datos` | `fundamentos de análisis de datos cisco` | Público NetAcad. Elegida por Search Console (ver nota) |
 | `seguridad/despues-de-introduccion-a-la-ciberseguridad` | `introducción a la ciberseguridad cisco` | Público NetAcad. 500/mes, competencia baja (ver nota) |
 | `redes/ccna-v2-0-cambios` | `ccna v2.0` | Cluster CCNA. 500/mes, competencia baja (ver nota) |
+| `seguridad/ccst-cybersecurity-examen` | `ccst cybersecurity` | Cierra la ruta Junior Cybersecurity Analyst. 5.000/mes, competencia baja (ver nota) |
 
 `carrera/de-soporte-a-infraestructura` es contenido de autoridad, no de
 tráfico: se publica por la experiencia propia del autor (E-E-A-T) y porque
@@ -207,3 +208,20 @@ como `ccna v2 0`) cubre el cambio de examen del 3/2/2027. Mismo relevamiento:
 | --- | --- | --- | --- |
 | `ccna v2 0` | 500 | Baja | +900 % |
 | `ccna 200 301 v2` | 50 | Media | — |
+
+`seguridad/ccst-cybersecurity-examen` toma `ccst cybersecurity` (5.000/mes,
+ver tabla de arriba). Relevamiento siguiente (Keyword Planner, 20/10/2026,
+mismo período y misma limitación de idioma):
+
+| Keyword | Búsquedas/mes | Competencia | Variación interanual |
+| --- | --- | --- | --- |
+| `ccst networking` | 5.000 | Baja | 0 % |
+| `networking essentials cisco` | 500 | Baja | 0 % |
+| `certificación ccst` | 50 | Baja | 0 % |
+| `conceptos básicos de redes cisco` | 50 | Baja | 0 % |
+| `python essentials cisco` | 50 | Baja | 0 % |
+| `ccst cybersecurity examen` | sin datos | — | — |
+| `examen 100 150` | sin datos | — | — |
+
+`ccst networking` es la candidata siguiente: mismo volumen que
+`ccst cybersecurity` y engancha con el cluster CCNA.
