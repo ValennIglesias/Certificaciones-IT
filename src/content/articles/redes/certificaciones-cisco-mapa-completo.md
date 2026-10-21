@@ -91,7 +91,7 @@ Las CCST siguen otra regla. Las obtenidas antes del 15 de julio de 2025 son de p
 
 ## Qué hacer ahora
 
-Si estás empezando, ignorá el mapa completo por un rato: **para roles de redes, el camino estándar de entrada es el CCNA 200-301**; el CCST existe como escalón previo opcional para quien arranca sin ninguna base técnica. Todas las bifurcaciones vienen después del CCNA. Elegir pista antes de tener la base es un problema que no tenés todavía.
+Si estás empezando, ignorá el mapa completo por un rato: **para roles de redes, el camino estándar de entrada es el CCNA 200-301**; el CCST existe como escalón previo opcional para quien arranca sin ninguna base técnica (cómo es y cuándo conviene está en la guía del [CCST Networking](/redes/ccst-networking-examen/)). Todas las bifurcaciones vienen después del CCNA. Elegir pista antes de tener la base es un problema que no tenés todavía.
 
 Si ya tenés una certificación Cisco, entrá a tu perfil de Certmetrics y verificá cómo figura ahora — sobre todo si era DevNet o CyberOps, porque el nombre con el que la ponés en el CV cambió y conviene que coincida con el oficial.
 

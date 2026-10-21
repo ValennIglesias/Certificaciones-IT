@@ -161,6 +161,7 @@ o Keyword Planner no devolvió datos.
 | `seguridad/despues-de-introduccion-a-la-ciberseguridad` | `introducción a la ciberseguridad cisco` | Público NetAcad. 500/mes, competencia baja (ver nota) |
 | `redes/ccna-v2-0-cambios` | `ccna v2.0` | Cluster CCNA. 500/mes, competencia baja (ver nota) |
 | `seguridad/ccst-cybersecurity-examen` | `ccst cybersecurity` | Cierra la ruta Junior Cybersecurity Analyst. 5.000/mes, competencia baja (ver nota) |
+| `redes/ccst-networking-examen` | `ccst networking` | Escalón previo al CCNA. 5.000/mes, competencia baja (ver nota) |
 
 `carrera/de-soporte-a-infraestructura` es contenido de autoridad, no de
 tráfico: se publica por la experiencia propia del autor (E-E-A-T) y porque
@@ -223,5 +224,5 @@ mismo período y misma limitación de idioma):
 | `ccst cybersecurity examen` | sin datos | — | — |
 | `examen 100 150` | sin datos | — | — |
 
-`ccst networking` es la candidata siguiente: mismo volumen que
-`ccst cybersecurity` y engancha con el cluster CCNA.
+`ccst networking` quedó asignada a `redes/ccst-networking-examen`.
+`networking essentials cisco` (500/mes) es la candidata siguiente.
