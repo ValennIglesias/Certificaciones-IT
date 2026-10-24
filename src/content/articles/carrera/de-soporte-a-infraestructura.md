@@ -62,7 +62,9 @@ Si estás en esa etapa, las tácticas para [estudiar una certificación trabajan
 
 No hubo una entrevista para el puesto de infraestructura. Se abrió la posibilidad de sumar a alguien que ya trabajara en la empresa para capacitarlo con tareas básicas, y yo venía mostrando interés por aprender cosas fuera de soporte.
 
-Ese proceso duró poco más de un año, y durante todo ese tiempo hice tareas de los dos puestos en simultáneo. Fui dejando de a poco algunas de soporte para tomar más de infraestructura, hasta que llegó el momento de pasar al 100%. Si hubo una "entrevista", creo que fue esa capacitación: lo que se evaluaba era el interés, las ganas de aprender y la motivación por hacer cosas nuevas.
+Ese proceso duró poco más de un año, y durante todo ese tiempo hice tareas de los dos puestos en simultáneo. Fui dejando de a poco algunas de soporte para tomar más de infraestructura, hasta que llegó el momento de pasar al 100%.
+
+Un ejemplo concreto de ese cruce: en soporte ayudaba a los usuarios a entrar a las carpetas compartidas y les dejaba un acceso directo configurado, pero no podía tocar los permisos. Durante la transición empecé a administrarlos yo, y ahí pude ir más allá del caso a caso: armé un script para automatizar la asignación de permisos y creé grupos por área para las rutas principales, en vez de dar acceso usuario por usuario. Es la diferencia entre resolver un ticket y hacer que ese tipo de ticket deje de entrar. Si hubo una "entrevista", creo que fue esa capacitación: lo que se evaluaba era el interés, las ganas de aprender y la motivación por hacer cosas nuevas.
 
 Lo cuento porque cambia cómo conviene prepararse. Si el pase se da adentro de la empresa, no se gana en una entrevista: se gana durante meses, en el día a día, antes de que exista la vacante.
 

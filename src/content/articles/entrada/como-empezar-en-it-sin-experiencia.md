@@ -69,6 +69,8 @@ Lo que más usé al principio no fue conocimiento de hardware ni de sistemas ope
 
 **Las aplicaciones propias de la empresa.** Cada organización tiene sistemas internos que no existen en ningún otro lado, con sus procedimientos particulares. Eso no se estudia: se aprende adentro, preguntando.
 
+Con el tiempo se suman los pedidos técnicos clásicos: impresoras que no imprimen, Outlook que no sincroniza, equipos lentos, drivers para reinstalar, accesos a carpetas compartidas o a la VPN. La lista completa de lo que me tocaba, cruzada con el temario de A+, está en la guía de [CompTIA A+](/entrada/certificacion-comptia-a-plus/).
+
 Y una característica del puesto que no esperaba: **cada llamada podía ser algo distinto**. No es un trabajo repetitivo. Eso lo hace interesante, y también exige tolerancia a no saber la respuesta de entrada.
 
 ## Dos cosas que te sacan presión

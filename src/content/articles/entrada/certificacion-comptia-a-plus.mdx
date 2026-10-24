@@ -64,18 +64,26 @@ Si ya tenés claro que tu objetivo es redes o seguridad de entrada, puede conven
 
 ## Lo que se usa de verdad en soporte
 
-Cuando trabajé en mesa de ayuda, estas eran tareas de todos los días. Las ordené según el examen y el área de A+ donde encaja cada una, para que veas qué parte del temario tiene uso inmediato:
+Cuando trabajé en mesa de ayuda, estas eran tareas de todos los días. Las crucé con el documento oficial de objetivos del Core 2 (220-1202) para que veas qué parte del temario tiene uso inmediato:
 
-| Tarea real en soporte | Dónde encaja en A+ |
+| Tarea real en soporte | Objetivo del Core 2 |
 | --- | --- |
-| Desbloquear cuentas y blanquear contraseñas en Active Directory | Core 2: seguridad |
-| Optimizar equipos que andan lentos | Core 2: solución de problemas de software |
-| Conectarse a los equipos con escritorio remoto (AnyDesk, TeamViewer) | Core 2: procedimientos operativos |
-| Diagnosticar accesos a la VPN con ping y resolución de nombres | Core 1: redes y solución de problemas de red |
-| Documentar todo en el ticket y derivar lo que excedía mis permisos | Core 2: procedimientos operativos |
-| Separar un correo de phishing reportado y enviarlo al equipo de seguridad | Core 2: seguridad |
+| Desbloquear cuentas y blanquear contraseñas en Active Directory | 2.2 (Active Directory) y 2.7 (bloqueo por intentos fallidos) |
+| Restablecer el MFA de un usuario en Microsoft 365 | 2.1 (MFA y servicios de directorio) y 1.11 (herramientas de productividad en la nube) |
+| Equipos que andan lentos | 3.1 (rendimiento degradado) y 1.4 (Administrador de tareas, Monitor de recursos) |
+| Reinstalar o actualizar drivers | 1.4 (Administrador de dispositivos) y 1.2 (drivers de terceros) |
+| Impresoras que no imprimen o no aparecen: verificar que esté instalada, que responda, reconfigurarla desde el servidor o por IP | 1.6 (Dispositivos e impresoras) y 1.7 (recursos compartidos e impresoras en dominio) |
+| Outlook que no sincroniza: activar o desactivar el modo caché, sumar una cuenta, revisar un buzón compartido, respaldar archivos .pst | 1.11 (correo y sincronización en la nube), 1.6 (Correo) y 4.3 (respaldos) |
+| Accesos a carpetas compartidas y accesos directos a rutas de red | 1.7 (unidades mapeadas y rutas de red) y 2.2 (permisos NTFS y de recursos compartidos) |
+| Equipos sin IP o sin internet: revisar la VPN, reiniciar el adaptador de red | 1.7 (configuración de red del cliente y VPN) y 1.5 (ipconfig, ping, nslookup) |
+| Accesos a la VPN: verificar ping y resolución de nombres | 1.5 (comandos de red) y 1.7 (VPN) |
+| Instalar programas, con y sin permisos de administrador | 1.10 (instalación de aplicaciones) y 2.2 (ejecutar como administrador, UAC) |
+| Conectarse a los equipos con escritorio remoto (AnyDesk, TeamViewer) | 4.9 (tecnologías de acceso remoto y herramientas de terceros) |
+| Altas y bajas de usuarios: pedir aprobaciones, derivar y asistir en la configuración inicial | 4.1 (checklists de alta y de baja de usuarios) |
+| Documentar todo en el ticket y derivar lo que excedía mis permisos | 4.1 (sistemas de tickets y niveles de escalamiento) |
+| Separar un correo de phishing reportado y enviarlo al equipo de seguridad | 2.5 (ingeniería social y phishing) |
 
-La relación es mía: CompTIA no publica una lista de tareas por puesto. Pero sirve para ver algo importante: lo que más se usa en soporte está en el Core 2, y el Core 1 aparece sobre todo cuando hay problemas de red.
+Dos conclusiones. Todo lo que hacía en soporte cae en el Core 2: sistemas operativos, seguridad, solución de problemas de software y procedimientos operativos. El Core 1, con hardware y redes, es la base, pero el día a día de una mesa de ayuda corporativa está en el segundo examen. Y la otra: el temario usa los mismos nombres que vas a ver en el trabajo —Administrador de dispositivos, UAC, unidades mapeadas, tickets—, así que estudiarlo con una máquina Windows al lado rinde el doble.
 
 ## Cómo prepararla sin gastar de más
 
@@ -96,6 +104,7 @@ Si decidís que A+ es tu punto de partida: elegí la modalidad de examen (presen
 
 ## Fuentes
 
+- [Objetivos oficiales del Core 2 (220-1202), versión 4.0 (PDF)](https://lecbyo.files.cmp.optimizely.com/download/cefedfb2b8a511ef809306d06d323538): los objetivos numerados de la tabla de tareas.
 - [CompTIA A+ Core 1 (220-1201)](https://www.comptia.org/en-us/certifications/a/core-1-v15/) y [Core 2 (220-1202)](https://www.comptia.org/en-us/certifications/a/core-2-v15/): fecha de lanzamiento, retiro estimado, preguntas, duración, puntajes, idiomas, experiencia recomendada y dominios.
 - [CompTIA A+](https://www.comptia.org/en-us/certifications/a/): los dos exámenes y el puesto al que apunta.
 - [Buscador de centros de Pearson VUE para CompTIA](https://www.pearsonvue.com/us/en/comptia.html): sedes para rendir presencial.
