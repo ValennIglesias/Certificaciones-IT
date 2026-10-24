@@ -14,7 +14,7 @@ export const SITE = {
 	/** Correo de contacto visible en las páginas legales y de contacto. */
 	contactEmail: 'contacto@desdeceroit.com',
 	description:
-		'Guías en español sobre certificaciones IT (CompTIA, Cisco, AWS, Azure, ITIL) y cómo construir una carrera en tecnología.',
+		'Guías en español sobre certificaciones IT (CompTIA, Cisco, AWS, Microsoft Azure, ISC2) y cómo construir una carrera en tecnología.',
 	lang: 'es',
 	locale: 'es_ES',
 	/** Autor por defecto. Hoy cada artículo declara el suyo en el frontmatter. */
@@ -73,7 +73,10 @@ export const CLUSTERS = {
 		name: 'Certificaciones de entrada',
 		short: 'Entrada',
 		description:
-			'Las primeras certificaciones de una carrera IT: CompTIA ITF+, A+, Google IT Support y cómo elegir por dónde empezar.',
+			'Las primeras certificaciones de una carrera IT: CompTIA A+, los cursos de entrada de Cisco NetAcad y cómo empezar sin experiencia.',
+		/** Texto propio de la página de categoría: por dónde empezar. Admite enlaces. */
+		intro:
+			'Si todavía no trabajás en IT, empezá por <a href="/entrada/como-empezar-en-it-sin-experiencia/">cómo empezar sin experiencia</a>: qué puestos toman gente sin experiencia y qué pesa en la primera entrevista. Con eso claro, <a href="/entrada/certificacion-comptia-a-plus/">CompTIA A+</a> es la certificación de entrada clásica para soporte técnico.',
 		/** Acento del cluster. `accent` es estructura; `accentInk` es texto
 		 * sobre claro (>=4.5:1); `accentDark` sirve para ambos sobre oscuro. */
 		accent: '#FF4F00',
@@ -84,7 +87,9 @@ export const CLUSTERS = {
 		name: 'Redes',
 		short: 'Redes',
 		description:
-			'Certificaciones de networking: CompTIA Network+, Cisco CCNA y los fundamentos que piden las vacantes de redes.',
+			'Certificaciones de redes de Cisco: CCST, CCNA, los cursos de Networking Academy y los fundamentos que piden las vacantes de redes.',
+		intro:
+			'El camino de Cisco tiene un orden. Si arrancás de cero, el primer paso es la ruta gratuita de NetAcad o el <a href="/redes/ccst-networking-examen/">CCST Networking</a>; después viene el CCNA. Para el CCNA, leé primero el <a href="/redes/ccna-200-301-temario/">temario</a> y <a href="/redes/ccna-v2-0-cambios/">qué cambia en la v2.0</a>, porque la versión que rindas depende de la fecha, y recién ahí elegí <a href="/redes/curso-ccna-como-prepararte/">cómo prepararlo</a>.',
 		/** Acento del cluster. `accent` es estructura; `accentInk` es texto
 		 * sobre claro (>=4.5:1); `accentDark` sirve para ambos sobre oscuro. */
 		accent: '#002FA7',
@@ -95,7 +100,9 @@ export const CLUSTERS = {
 		name: 'Seguridad',
 		short: 'Seguridad',
 		description:
-			'Ciberseguridad desde cero hasta nivel profesional: CompTIA Security+, CySA+, CEH, CISSP y rutas de especialización.',
+			'Ciberseguridad desde cero hasta nivel profesional: CCST Cybersecurity, CompTIA Security+, CISSP y las rutas para entrar al área.',
+		intro:
+			'Casi nadie entra a ciberseguridad de forma directa: <a href="/seguridad/ciberseguridad-desde-cero/">ciberseguridad desde cero</a> explica los puestos puente por los que se suele llegar. Las certificaciones van de menor a mayor: <a href="/seguridad/ccst-cybersecurity-examen/">CCST Cybersecurity</a> como primer paso, <a href="/seguridad/examen-comptia-security-plus/">Security+</a> como certificación de entrada sin atarte a un fabricante y <a href="/seguridad/cissp-requisitos-costo-experiencia/">CISSP</a> recién con años de experiencia.',
 		/** Acento del cluster. `accent` es estructura; `accentInk` es texto
 		 * sobre claro (>=4.5:1); `accentDark` sirve para ambos sobre oscuro. */
 		accent: '#E4002B',
@@ -106,7 +113,9 @@ export const CLUSTERS = {
 		name: 'Cloud',
 		short: 'Cloud',
 		description:
-			'Certificaciones de nube: AWS, Microsoft Azure, Google Cloud y qué camino conviene según el perfil que buscás.',
+			'Certificaciones de nube de entrada: AWS Cloud Practitioner, Microsoft AZ-900 y cuál conviene según el mercado en el que buscás trabajo.',
+		intro:
+			'Las dos certificaciones de entrada son <a href="/cloud/aws-cloud-practitioner-guia-completa/">AWS Cloud Practitioner</a> y el <a href="/cloud/examen-az-900-formato-y-preparacion/">AZ-900</a> de Microsoft. Si no sabés cuál elegir, <a href="/cloud/aws-o-azure-cual-elegir/">la comparación</a> propone mirar primero qué nube usan las empresas donde buscás trabajo.',
 		/** Acento del cluster. `accent` es estructura; `accentInk` es texto
 		 * sobre claro (>=4.5:1); `accentDark` sirve para ambos sobre oscuro. */
 		accent: '#00707A',
@@ -118,6 +127,8 @@ export const CLUSTERS = {
 		short: 'Carrera',
 		description:
 			'Sueldos, CV, entrevistas, primer empleo y crecimiento profesional en tecnología. La parte que las certificaciones no cubren.',
+		intro:
+			'Dos de estas guías salen de la experiencia del autor: <a href="/carrera/primer-cv-para-un-puesto-it/">cómo armar el primer CV</a> y <a href="/carrera/de-soporte-a-infraestructura/">cómo pasar de soporte a infraestructura</a>. Para ver todas las certificaciones en orden, según el rol al que apuntes, está el <a href="/carrera/roadmap-certificaciones-it/">roadmap de certificaciones</a>.',
 		/** Acento del cluster. `accent` es estructura; `accentInk` es texto
 		 * sobre claro (>=4.5:1); `accentDark` sirve para ambos sobre oscuro. */
 		accent: '#5B2C8D',

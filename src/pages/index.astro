@@ -4,6 +4,7 @@ import AdSlot from '../components/AdSlot.astro';
 import JsonLd from '../components/JsonLd.astro';
 import { SITE, CLUSTERS, CLUSTER_IDS } from '../consts';
 import { getArticles } from '../lib/articles';
+import { authorPath, getAuthor } from '../lib/authors';
 
 const articles = await getArticles();
 
@@ -13,6 +14,8 @@ const porCluster = CLUSTER_IDS.map((id) => ({
 	meta: CLUSTERS[id],
 	total: articles.filter((a) => a.data.cluster === id).length,
 }));
+
+const autor = getAuthor(SITE.author);
 
 const siteUrl = Astro.site?.toString();
 
@@ -45,10 +48,15 @@ const siteSchema = {
 	<section class="wrap portada">
 		<h1 class="display">Certificaciones IT explicadas en español, sin humo</h1>
 		<div class="portada-pie">
-			<p class="portada-bajada">
-				Qué certificación sirve para qué, cuánto cuesta, cuánto lleva prepararla y qué puestos
-				abre de verdad. Desde la primera certificación hasta la especialización.
-			</p>
+			<div>
+				<p class="portada-bajada">
+					Qué certificación sirve para qué, cuánto cuesta, cuánto lleva prepararla y qué puestos
+					abre de verdad. Desde la primera certificación hasta la especialización.
+				</p>
+				<p class="portada-autor">
+					Por <a href={authorPath(autor)}>{autor.name}</a>. {autor.shortBio}
+				</p>
+			</div>
 			<p class="portada-total figure">
 				{articles.length}
 				<span>{articles.length === 1 ? 'guía' : 'guías'}</span>
@@ -115,6 +123,20 @@ const siteSchema = {
 		color: var(--grafito);
 		font-size: 1.0625rem;
 		max-width: 40rem;
+	}
+
+	.portada-autor {
+		margin-top: 1rem;
+		font-size: 0.9375rem;
+		color: var(--grafito);
+		max-width: 40rem;
+	}
+
+	.portada-autor a {
+		color: var(--tinta);
+		font-weight: 600;
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
 	}
 
 	.portada-total {
