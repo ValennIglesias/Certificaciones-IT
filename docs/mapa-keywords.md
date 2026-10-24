@@ -237,3 +237,22 @@ mismo período y misma limitación de idioma):
 
 Las dos URLs retiradas redirigen con 301 (`public/_redirects`). Las
 referencias de arriba a esos slugs quedan como historial del plan.
+
+## Serie "Soporte técnico en la práctica" (24/10/2026)
+
+Keyword Planner, 24/10/2026, todos los países e idiomas, oct 2025 - sep 2026:
+
+| Keyword | Búsquedas/mes | Competencia | Asignada a |
+| --- | --- | --- | --- |
+| `que hace un soporte tecnico` | 500 | Baja | `carrera/que-hace-un-soporte-tecnico` |
+| `mesa de ayuda que es` | 500 | Baja | `carrera/que-hace-un-soporte-tecnico` (misma intención, no se separa) |
+| `pc lenta que hacer` | 500 | Baja | Próxima guía |
+| `impresora no imprime` | 500 (-90% interanual) | Baja | Pendiente |
+| `outlook no sincroniza` | 50 | Baja | Sección dentro de otra guía |
+| `desbloquear usuario active directory` | 50 | Baja | Sección dentro de otra guía |
+| `no tengo internet pero estoy conectado` | 50 | Baja | Sección dentro de otra guía |
+| `permisos carpeta compartida windows` | sin datos | — | — |
+
+`que hace un soporte tecnico` no es el término contaminado de la regla 4 de
+la Parte 4: la frase completa tiene intención de carrera, no de atención al
+cliente de una marca.

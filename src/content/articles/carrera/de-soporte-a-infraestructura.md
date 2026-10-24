@@ -32,6 +32,8 @@ Si recién arrancás, la diferencia no es obvia desde el nombre del puesto:
 
 Esa última fila es la que más cambia el día a día. En soporte respondés a lo que entra; en infraestructura buena parte del tiempo se va en que las cosas no lleguen a entrar.
 
+Cómo es el día a día del lado de soporte, con los niveles, los tickets y lo que se deriva, está en [qué hace un soporte técnico](/carrera/que-hace-un-soporte-tecnico/).
+
 ## Lo que aprendí en el puesto, antes de cualquier certificación
 
 Cuando entré no tenía certificaciones ni experiencia laboral en tecnología — solo sabía manejar bien Windows por curiosidad propia, que fue [lo que me alcanzó para entrar](/entrada/como-empezar-en-it-sin-experiencia/).
