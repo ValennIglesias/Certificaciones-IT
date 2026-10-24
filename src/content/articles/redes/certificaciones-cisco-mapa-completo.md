@@ -4,7 +4,7 @@ description: "Los cuatro niveles de las certificaciones Cisco (CCST, CCNA, CCNP 
 keyword: "certificaciones en cisco"
 cluster: "redes"
 pubDate: 2026-09-26
-updatedDate: 2026-10-20
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -96,3 +96,10 @@ Si estás empezando, ignorá el mapa completo por un rato: **para roles de redes
 Si ya tenés una certificación Cisco, entrá a tu perfil de Certmetrics y verificá cómo figura ahora — sobre todo si era DevNet o CyberOps, porque el nombre con el que la ponés en el CV cambió y conviene que coincida con el oficial.
 
 Y si todavía estás decidiendo si Cisco es tu camino o te conviene otro proveedor, el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) compara las rutas de redes, seguridad y cloud según el objetivo de cada una.
+
+## Fuentes
+
+- [A new era for Cisco certifications (Cisco Learning Network)](https://learningnetwork.cisco.com/s/a-new-era-for-cisco-certifications): los cambios de nombre del 3 de febrero de 2026 y la migración automática.
+- [Nuevas certificaciones Wireless de Cisco](https://learningnetwork.cisco.com/s/new-wireless-certifications): el regreso de CCNP y CCIE Wireless.
+- [CCNA (Cisco)](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html): vigencia de tres años y opciones de renovación.
+- [Preguntas frecuentes de las certificaciones CCST](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/support-technician/faq.html): la vigencia de cinco años de las CCST.

@@ -4,7 +4,7 @@ description: "Los seis dominios del blueprint v1.1 con sus pesos oficiales, qué
 keyword: "ccna 200 301"
 cluster: "redes"
 pubDate: 2026-09-26
-updatedDate: 2026-10-20
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -15,7 +15,7 @@ Lo esencial:
 
 - El blueprint v1.1 tiene **seis dominios y 53 objetivos numerados**.
 - **Los dominios 1, 2 y 3 concentran el 65% del examen**: ahí es donde rinde el tiempo de estudio.
-- El examen dura **120 minutos** y cuesta **US$300**, más los impuestos que correspondan según el país.
+- El examen dura **120 minutos**, cuesta **US$300** y se rinde en inglés o japonés: no hay versión en español.
 - **Cisco no publica el puntaje mínimo de aprobación.** Cualquier cifra exacta que encuentres circulando es una estimación de terceros.
 - La **v2.0 arranca el 3 de febrero de 2027**, manteniendo el mismo número de examen: 200-301.
 
@@ -42,14 +42,13 @@ Si los fundamentos todavía no te cierran del todo, la guía de [fundamentos de 
 
 ## Qué cambió en la v1.1
 
-La versión 1.1 entró en vigencia el 20 de agosto de 2024 y mantuvo los seis dominios de la versión anterior, pero incorporó contenido nuevo:
+La versión 1.1 entró en vigencia el 20 de agosto de 2024. Cisco la presentó como un cambio menor —menos del 10% del examen— que mantuvo los seis dominios, pero incorporó contenido nuevo:
 
 - Inteligencia artificial generativa y predictiva
-- Aprendizaje automático
-- Gestión de redes en la nube
-- Más énfasis en automatización
+- Aprendizaje automático en la operación de redes
+- Gestión de equipos desde la nube
 
-También sumó detalle en temas que ya estaban: la v1.1 nombra explícitamente las protecciones de Spanning Tree (root guard, loop guard, BPDU guard y BPDU filter), que antes quedaban implícitas.
+También sumó al objetivo de Spanning Tree las protecciones root guard, loop guard, BPDU filter y BPDU guard, y sacó la gestión de equipos con DNA Center.
 
 Por eso conviene verificar la versión de cualquier material de estudio antes de comprarlo: un curso de 2023 cubre casi todo el temario, pero justo se pierde lo agregado en la v1.1.
 
@@ -68,17 +67,26 @@ Esto importa para planificar. Si estás arrancando ahora y tu preparación va a 
 | Ítem | Detalle |
 | --- | --- |
 | Duración | 120 minutos |
-| Preguntas | Entre 100 y 120 aproximadamente |
-| Tipos de pregunta | Opción múltiple y de selección múltiple, arrastrar y soltar, simulaciones |
+| Preguntas | Cisco no publica la cantidad |
+| Tipos de pregunta | Opción múltiple, arrastrar y soltar, y preguntas basadas en desempeño |
+| Idiomas | Inglés y japonés |
+| Resultado | Aprobado o desaprobado, en línea, normalmente dentro de las 48 horas |
 | Puntaje de aprobación | Cisco no lo publica |
 | Vigencia | 3 años |
 
 El punto del puntaje merece aclaración porque circula mucha información contradictoria: **Cisco no publica el puntaje de corte del CCNA**. Los números que vas a encontrar en foros y sitios de preparación son estimaciones basadas en reportes de candidatos, no datos oficiales. El único indicador confiable de si estás listo son los simulacros consistentes, no apuntar a una cifra inventada.
-
-Lo que Cisco sí entrega es un informe con tu porcentaje de acierto **por dominio**, que es lo más útil si desaprobás: te dice exactamente dónde reforzar.
 
 ## Qué hacer ahora
 
 Descargá el PDF oficial de objetivos del examen desde el sitio de Cisco y usalo como índice: son 53 líneas numeradas, y cada pregunta del examen se corresponde con alguna de ellas. Marcá cuáles dominás y cuáles no, y armá el plan desde ahí en vez de seguir el índice de un curso.
 
 Para elegir cómo estudiarlo, la comparación de [rutas para preparar el CCNA](/redes/curso-ccna-como-prepararte/) cubre las opciones gratuitas, económicas y con acompañamiento. Y si todavía estás definiendo si Cisco es tu camino, el [mapa completo de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/) muestra hacia dónde sigue el recorrido después del CCNA.
+
+## Fuentes
+
+- [200-301 CCNA v1.1: temas del examen (Cisco Learning Network)](https://learningnetwork.cisco.com/s/ccna-exam-topics): dominios y pesos, precio, duración, idiomas, tipos de pregunta y fechas de la v1.1 y la v2.0.
+- [PDF oficial de objetivos del CCNA v1.1](https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf): los 53 objetivos numerados.
+- [Notas de la versión 1.1](https://learningcontent.cisco.com/documents/marketing/exam-topics/CCNA_1_1_release_notes.pdf) y [anuncio de Cisco sobre la v1.1](https://blogs.cisco.com/learning/understanding-the-updated-ccna-v1-1-with-ai-machine-learning-and-more): qué se agregó y qué se quitó.
+- [CCNA (Cisco)](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html): vigencia de tres años y opciones de renovación.
+
+*Datos verificados el 24 de octubre de 2026 en las páginas oficiales de Cisco.*

@@ -4,7 +4,7 @@ description: "CCNA 1, 2 y 3 son los cursos ITN, SRWE y ENSA de NetAcad, de unas 
 keyword: "ccna 1"
 cluster: "redes"
 pubDate: 2026-09-26
-updatedDate: 2026-10-20
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -24,10 +24,10 @@ Lo esencial:
 | Curso | Nombre oficial | Qué cubre |
 | --- | --- | --- |
 | CCNA 1 | Introducción a las redes (ITN) | Fundamentos, modelo OSI, direccionamiento IP, subredes, configuración básica |
-| CCNA 2 | Switching, Routing y Wireless Essentials (SRWE) | VLANs, enrutamiento, redes inalámbricas (WLAN), seguridad de red |
+| CCNA 2 | Fundamentos de Conmutación, Enrutamiento y Redes Inalámbricas (SRWE) | VLANs, enrutamiento, redes inalámbricas (WLAN), seguridad de red |
 | CCNA 3 | Redes Empresariales, Seguridad y Automatización (ENSA) | Redes de área amplia (WAN), automatización, APIs, seguridad avanzada |
 
-Cada uno figura en el catálogo de NetAcad con una duración estimada de 70 horas, así que la serie completa ronda las 210 horas de estudio.
+Cada uno figura en el catálogo de NetAcad con una duración estimada de 70 horas —con 90, 52 y 47 laboratorios, respectivamente—, así que la serie completa ronda las 210 horas de estudio. Y los tres figuran **solo con instructor**: no hay versión de autoestudio, así que se cursan en una academia, que define el costo y la modalidad.
 
 Están disponibles en español, junto con otros trece idiomas.
 
@@ -37,13 +37,7 @@ La serie CCNA es de redes. Si llegaste a NetAcad por otro catálogo —por ejemp
 
 ## El módulo suplementario de la v1.1
 
-Cuando Cisco actualizó el examen a la versión 1.1, agregó contenido que los cursos originales no cubrían. En vez de rehacer toda la serie, sumó un **módulo suplementario al final de ENSA** con esos temas:
-
-- Inteligencia artificial y aprendizaje automático
-- IA y ML aplicados a redes
-- Gestión de dispositivos
-- Ansible y Terraform
-- Autenticación en APIs REST
+Cuando Cisco actualizó el examen a la versión 1.1, agregó contenido que los cursos originales no cubrían: según Cisco, inteligencia artificial generativa y predictiva, aprendizaje automático y gestión de equipos desde la nube. En vez de rehacer toda la serie, sumó al final de ENSA un **módulo suplementario para la v1.1** (figura como "CCNA 200-301 Exam v1.1 Supplemental Module" en el temario del curso).
 
 Vale la pena saber que existe, porque es justo el contenido que el material de estudio más viejo no tiene — el mismo punto ciego que marcamos en el [temario del CCNA 200-301](/redes/ccna-200-301-temario/).
 
@@ -72,7 +66,7 @@ Tampoco es obligatorio hacer los cursos para rendir: el examen no tiene requisit
 
 El orden es secuencial por diseño: SRWE da por sabido ITN, y ENSA da por sabidos los dos anteriores. Saltear pasos no está habilitado en la mayoría de las academias, y tampoco tendría mucho sentido porque el contenido se apoya en lo anterior.
 
-Con 70 horas por curso, el ritmo real depende de la modalidad: las academias suelen dictarlos a lo largo de varios meses cada uno. Lo que NetAcad ofrece gratis en autoestudio cubre aproximadamente el primer tercio del temario del examen; ese tramo sí lo hacés a tu ritmo.
+Con 70 horas por curso, el ritmo real lo define la academia: cada una arma su calendario. Si querés avanzar por tu cuenta antes de anotarte, lo gratuito y a tu ritmo es la ruta Técnico en Redes, que cubre la base previa.
 
 Si querés dimensionar cuánto es eso en la práctica, la estimación general para preparar el CCNA desde cero es de dos a tres meses de estudio enfocado — pero esa cifra asume una preparación intensiva, no el ritmo pausado de una cursada académica.
 
@@ -81,3 +75,10 @@ Si querés dimensionar cuánto es eso en la práctica, la estimación general pa
 Si todavía no empezaste, entrá al catálogo de NetAcad y mirá ITN: es el punto de partida obligado y te va a dar una idea concreta del nivel antes de comprometerte con la serie completa.
 
 Si ya estás decidiendo entre hacer la serie de NetAcad o prepararte por otra vía, la comparación de [rutas para preparar el CCNA](/redes/curso-ccna-como-prepararte/) pone lado a lado las opciones gratuitas, económicas y con acompañamiento, con sus costos reales.
+
+## Fuentes
+
+- Los tres cursos en el catálogo de Cisco Networking Academy, con modalidad, duración, laboratorios e idiomas: [Introducción a las redes](https://www.netacad.com/courses/ccna-introduction-networks), [Fundamentos de Conmutación, Enrutamiento y Redes Inalámbricas](https://www.netacad.com/courses/ccna-switching-routing-wireless-essentials) y [Redes Empresariales, Seguridad y Automatización](https://www.netacad.com/courses/ccna-enterprise-networking-security-automation), donde figura el módulo suplementario de la v1.1.
+- [Anuncio de Cisco sobre la v1.1](https://blogs.cisco.com/learning/understanding-the-updated-ccna-v1-1-with-ai-machine-learning-and-more): los temas agregados.
+- [Descuentos en exámenes de certificación (Cisco Networking Academy)](https://www.netacad.com/articles/news/s-receive-a-discount-for-your-certification-exam): el requisito del 70% en el primer intento.
+- [CCNA (Cisco)](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html): el examen no tiene requisitos previos.

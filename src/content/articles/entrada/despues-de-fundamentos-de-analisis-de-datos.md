@@ -4,6 +4,7 @@ description: "Qué sigue después del curso Fundamentos de Análisis de Datos de
 keyword: "fundamentos de análisis de datos cisco"
 cluster: "entrada"
 pubDate: 2026-10-20
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -75,5 +76,10 @@ Lo que más pesa frente a quien selecciona es el portafolio: un análisis comple
 Si no lo hiciste, completá el módulo 10 del curso: es la recomendación de Cisco desde adentro. Después elegí según tu objetivo: Python si querés seguir en datos y el inglés te alcanza, Introducción a la IA moderna si preferís seguir en español, o la serie CCNA si apuntás a un puesto técnico de IT.
 
 Y antes de empezar el curso siguiente, publicá el portafolio de películas en un lugar donde alguien pueda verlo. Un proyecto terminado y visible vale más que dos cursos más en curso.
+
+## Fuentes
+
+- [Fundamentos de Análisis de Datos / Data Analytics Essentials (Cisco Networking Academy)](https://www.netacad.com/courses/data-analytics-essentials): duración, laboratorios y módulos.
+- [Data Science Essentials with Python](https://www.netacad.com/courses/data-science-essentials-with-python), [Introducción a la Ciencia de Datos](https://www.netacad.com/courses/introduction-data-science) e [Introducción a la IA moderna](https://www.netacad.com/courses/introduction-to-modern-ai): nivel, duración e idiomas de cada curso.
 
 *Cursos, duraciones e idiomas verificados en octubre de 2026 en el catálogo oficial de Cisco Networking Academy. Cisco actualiza su catálogo con frecuencia: confirmá en netacad.com antes de inscribirte.*

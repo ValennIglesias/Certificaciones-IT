@@ -4,6 +4,7 @@ description: "Qué sigue después de Introducción a la Ciberseguridad de Cisco 
 keyword: "introducción a la ciberseguridad cisco"
 cluster: "seguridad"
 pubDate: 2026-10-20
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -71,5 +72,11 @@ Antes de elegir certificación, conviene tener claro cómo se entra al área. La
 Si te interesó la seguridad, el paso con menos fricción es seguir la ruta oficial: inscribite en Conceptos básicos de redes, que es gratis, está en español y es el curso que sigue. No te saltees los dos de redes: son los que hacen que el resto tenga sentido.
 
 Y si llegás al final, evaluá el examen CCST Cybersecurity antes de decidir por otra certificación: por US$125 y en español, es la forma más barata de convertir las 120 horas de cursos en una certificación de Cisco.
+
+## Fuentes
+
+- [Introducción a la Ciberseguridad (Cisco Networking Academy)](https://www.netacad.com/courses/introduction-to-cybersecurity): duración, laboratorios e inscriptos.
+- [Ruta Analista Junior en Ciberseguridad (Cisco Networking Academy)](https://www.netacad.com/career-paths/cybersecurity): cursos, duraciones y certificación a la que apunta.
+- [Examen CCST Cybersecurity (Cisco)](https://www.cisco.com/site/us/en/learn/training-certifications/exams/ccst-cybersecurity.html): código, precio, duración e idiomas.
 
 *Cursos, duraciones, idiomas y datos del examen verificados en octubre de 2026 en las páginas oficiales de Cisco y Cisco Networking Academy. Cisco actualiza su catálogo y sus precios con frecuencia: confirmá en la fuente antes de inscribirte o pagar.*

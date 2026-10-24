@@ -4,6 +4,7 @@ description: "Cómo es el CCST Networking de Cisco: examen 100-150 de 50 minutos
 keyword: "ccst networking"
 cluster: "redes"
 pubDate: 2026-10-20
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -20,21 +21,19 @@ Lo esencial:
 
 ## Ficha del examen
 
-| Dato | Detalle |
+| Dato | CCST Networking |
 | --- | --- |
-| Código | 100-150 |
-| Duración | 50 minutos |
-| Precio | US$125 (Cisco fija el precio por región) |
-| Idioma | Disponible en español, entre otros |
-| Cantidad de preguntas | Varía según el examen |
-| Puntaje de aprobación | Cisco no lo publica: el resultado es aprobado o desaprobado |
-| Intentos | Ilimitados |
-| Requisitos | Ninguno |
-| Modalidad | Con supervisión, en un centro de examen o en línea |
+| Examen | 100-150, de 50 minutos |
+| Precio | US$125, ajustado por Cisco según la región |
+| Idioma | Se puede rendir en español |
+| Preguntas y aprobación | Cisco no publica ni la cantidad de preguntas ni el puntaje mínimo; el resultado es aprobado o desaprobado |
+| Reintentos | Sin límite |
+| Requisitos previos | No tiene |
+| Dónde se rinde | Con supervisión, en un centro de examen o desde tu casa |
 
-La cantidad de preguntas varía porque el examen incluye ítems prácticos que simulan un entorno de laboratorio.
+Que la cantidad de preguntas no sea fija tiene una explicación: el examen mezcla preguntas clásicas con ítems prácticos que simulan un laboratorio.
 
-Las condiciones son las mismas que las del [CCST Cybersecurity](/seguridad/ccst-cybersecurity-examen/): mismo precio, misma duración, intentos ilimitados y sin descuentos directos para estudiantes ni instructores. Los precios especiales son para las instituciones educativas.
+Si leíste la guía del [CCST Cybersecurity](/seguridad/ccst-cybersecurity-examen/), las condiciones te van a sonar: los dos exámenes CCST comparten precio, duración y política de reintentos. Tampoco hay descuento directo para estudiantes ni docentes: los precios especiales son para las instituciones educativas.
 
 ## Los seis dominios del temario
 
@@ -102,5 +101,12 @@ Si obtuviste el CCST antes del 15 de julio de 2025, es de por vida. Desde esa fe
 Si arrancás de cero, inscribite en Conceptos básicos de redes en NetAcad: es el primer curso de la ruta, es gratis y en 22 horas te muestra si las redes te interesan. Al terminar la ruta, decidí entre el CCST y el CCNA con lo que sepas para entonces.
 
 Si ya tenés base, descargá el PDF de objetivos del CCST y fijate cuánto dominás. Si te resulta fácil, es la señal para ir directo al CCNA. Todos los niveles del programa de Cisco están en el [mapa de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/).
+
+## Fuentes
+
+- [Examen CCST Networking (Cisco)](https://www.cisco.com/site/us/en/learn/training-certifications/exams/ccst-networking.html): código, duración, precio e idiomas.
+- [Temas del examen (Cisco Learning Network)](https://learningnetwork.cisco.com/s/ccst-networking-exam-topics) y [PDF oficial de objetivos](https://learningcontent.cisco.com/documents/CCST+Networking+Objective+Domain_Cisco_Final_wCiscoLogo.pdf): los seis dominios y el perfil del candidato.
+- [Preguntas frecuentes de las certificaciones CCST](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/support-technician/faq.html): intentos, descuentos, vigencia y renovación.
+- [Ruta Técnico en Redes (Cisco Networking Academy)](https://www.netacad.com/career-paths/network-technician): cursos, duración e idiomas.
 
 *Datos del examen, temario y vigencia verificados en octubre de 2026 en las páginas oficiales de Cisco, la FAQ de las certificaciones CCST, Cisco Learning Network y el PDF oficial de objetivos del examen. Cursos y duraciones verificados en el catálogo de Cisco Networking Academy. Cisco puede cambiar precios y condiciones: confirmá en la fuente antes de pagar.*

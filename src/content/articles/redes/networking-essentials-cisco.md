@@ -4,6 +4,7 @@ description: "Networking Essentials (Fundamentos de Redes) de Cisco NetAcad solo
 keyword: "networking essentials cisco"
 cluster: "redes"
 pubDate: 2026-10-20
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -85,5 +86,11 @@ Los dos primeros cursos de la ruta Técnico en Redes también forman parte de la
 Si no tenés una academia en vista, no esperes: inscribite en Conceptos básicos de redes en NetAcad, que es el primer curso de la ruta y equivale a los módulos 1 a 17 de Networking Essentials. Es gratis y está en español.
 
 Si preferís cursar con instructor, buscá una academia desde la página del curso y preguntá fechas, modalidad y costo antes de anotarte.
+
+## Fuentes
+
+- [Networking Essentials / Fundamentos de Redes (Cisco Networking Academy)](https://www.netacad.com/courses/networking-essentials): modalidad, duración y los 39 módulos.
+- [Ruta Técnico en Redes](https://www.netacad.com/career-paths/network-technician): duración total, certificación a la que apunta e insignia final.
+- Los cuatro cursos de la ruta, con sus módulos y duraciones: [Conceptos básicos de redes](https://www.netacad.com/courses/networking-basics), [Dispositivos de red y configuración inicial](https://www.netacad.com/courses/networking-devices-and-initial-configuration), [Direccionamiento de red y solución de problemas básicos](https://www.netacad.com/courses/network-addressing-and-basic-troubleshooting) y [Soporte y seguridad de red](https://www.netacad.com/courses/network-support-security).
 
 *Cursos, módulos, duraciones e idiomas verificados en octubre de 2026 en el catálogo oficial de Cisco Networking Academy, comparando el temario de Fundamentos de Redes con el de los cuatro cursos de la ruta Técnico en Redes. Cisco actualiza su catálogo con frecuencia: confirmá en netacad.com antes de inscribirte.*

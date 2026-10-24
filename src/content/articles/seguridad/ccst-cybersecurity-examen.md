@@ -4,6 +4,7 @@ description: "Cómo es el examen CCST Cybersecurity de Cisco: 50 minutos, US$125
 keyword: "ccst cybersecurity"
 cluster: "seguridad"
 pubDate: 2026-10-20
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -97,5 +98,12 @@ El camino es el CCNA de redes, con el [CCST Networking](/redes/ccst-networking-e
 Si todavía no empezaste, inscribite en Introducción a la Ciberseguridad en NetAcad: es gratis, dura 6 horas y te dice rápido si el tema te interesa. Si ya estás en la ruta, descargá el PDF de objetivos y marcá qué dominás.
 
 Cuando lo tengas todo marcado, rendí. Con intentos ilimitados y US$125 de costo, es la certificación de Cisco con menos riesgo para dar el primer paso. Y si recién estás viendo cómo se entra al área, la guía de [ciberseguridad desde cero](/seguridad/ciberseguridad-desde-cero/) explica cuáles son los puestos por los que se suele empezar.
+
+## Fuentes
+
+- [Examen CCST Cybersecurity (Cisco)](https://www.cisco.com/site/us/en/learn/training-certifications/exams/ccst-cybersecurity.html): código, duración, precio e idiomas.
+- [Temas del examen (Cisco Learning Network)](https://learningnetwork.cisco.com/s/ccst-cybersecurity-exam-topics) y [PDF oficial de objetivos](https://learningcontent.cisco.com/documents/CCST+Cybersecurity+Objecitve+Domain_Cisco_Final_wCiscoLogo.pdf): los cinco dominios y el perfil del candidato.
+- [Preguntas frecuentes de las certificaciones CCST](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/support-technician/faq.html): intentos, descuentos, vigencia y renovación.
+- [A new era for Cisco certifications](https://learningnetwork.cisco.com/s/a-new-era-for-cisco-certifications) y [CCNA Cybersecurity (Cisco)](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/cyberops/cyberops-associate/index.html): el cambio de nombre y los datos del examen 200-301.
 
 *Datos del examen, temario, idiomas y vigencia verificados en octubre de 2026 en las páginas oficiales de Cisco, la FAQ de las certificaciones CCST, Cisco Learning Network y el PDF oficial de objetivos del examen. Cisco puede cambiar precios y condiciones: confirmá en la fuente antes de pagar.*

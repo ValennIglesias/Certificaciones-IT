@@ -4,7 +4,7 @@ description: "Qué ofrece NetAcad gratis, cómo encontrar una academia y qué ex
 keyword: "cisco network academy"
 cluster: "redes"
 pubDate: 2026-09-26
-updatedDate: 2026-10-20
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -32,9 +32,11 @@ Los gratuitos cubren bastante terreno: introducción a ciberseguridad, dispositi
 
 Al completarlos se obtiene una insignia digital en Credly, que sirve para mostrar en LinkedIn aunque no sea una certificación formal.
 
+Ojo con un detalle que confunde a mucha gente: los tres cursos de la serie CCNA, incluido ENSA, el que habilita el descuento, figuran **solo con instructor**. Para hacerlos hay que anotarse en una academia.
+
 ## El descuento en el examen: lo que pide Cisco
 
-Cisco da descuentos en tres exámenes de certificación a estudiantes de Networking Academy: **CCNA, CCNA Cybersecurity (CBROPS) y CCNA Automation (DEVASC)**. En la página de descuentos de NetAcad los dos últimos todavía figuran con sus nombres anteriores a febrero de 2026: Cyber Ops Associate y DevNet Associate. Para el CCNA, el curso que lo habilita es el tercero de la secuencia: Enterprise Networking, Security and Automation (ENSA). Qué cubre cada uno de los tres cursos de la serie, y en qué orden se hacen, está en la guía de [CCNA 1, 2 y 3 en NetAcad](/redes/ccna-1-2-3-cursos-netacad/).
+El descuento cubre tres exámenes: **el CCNA, el CCNA Cybersecurity (CBROPS) y el CCNA Automation (DEVASC)**. Si los buscás en NetAcad, los vas a encontrar como Cyber Ops Associate y DevNet Associate, que eran sus nombres hasta febrero de 2026. Para el CCNA, el curso que lo habilita es el tercero de la secuencia: Enterprise Networking, Security and Automation (ENSA). Qué cubre cada uno de los tres cursos de la serie, y en qué orden se hacen, está en la guía de [CCNA 1, 2 y 3 en NetAcad](/redes/ccna-1-2-3-cursos-netacad/).
 
 Los requisitos que publica Cisco son estrictos y no se pueden corregir después:
 
@@ -75,3 +77,10 @@ Algunas academias además funcionan como **Centro de Soporte para Academias (ASC
 Si todavía no decidiste si vas a pagar un curso, entrá a netacad.com y empezá por los gratuitos: son suficientes para confirmar si el tema te interesa antes de invertir. Y descargá Packet Tracer desde ya, independientemente del camino que elijas.
 
 Si ya decidiste ir por el CCNA, el descuento se define en un único examen: el final de ENSA. Llegá a ese examen tan preparado como al de certificación, porque la nota del primer intento es la que cuenta. La comparación de [rutas para preparar el CCNA](/redes/curso-ccna-como-prepararte/) tiene el resto de las opciones y sus costos.
+
+## Fuentes
+
+- [Sobre Cisco Networking Academy](https://www.netacad.com/about-networking-academy): origen del programa en 1997.
+- [Descuentos en exámenes de certificación (Cisco Networking Academy)](https://www.netacad.com/articles/news/s-receive-a-discount-for-your-certification-exam): exámenes incluidos, requisitos y cómo pedirlo.
+- [Curso gratuito de Cisco Packet Tracer](https://www.netacad.com/courses/getting-started-cisco-packet-tracer): la vía para descargar el simulador.
+- [Buscador de academias](https://www.netacad.com/academy-locator): academias habilitadas y cursos que dicta cada una.

@@ -4,7 +4,7 @@ description: "El examen cuesta US$300. Qué publica Cisco sobre el descuento de 
 keyword: "costo examen ccna"
 cluster: "redes"
 pubDate: 2026-10-12
-updatedDate: 2026-10-20
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -25,15 +25,15 @@ Lo esencial:
 | --- | --- | --- |
 | Examen 200-301 | US$300 | Pago directo o con Cisco Learning Credits |
 | Voucher nivel associate | US$300 | Válido 365 días desde la compra |
-| Exam Safeguard Plus | US$450 | Incluye un segundo intento dentro de 90 días |
+| Exam Safeguard Plus | US$450 | Segundo intento sin costo y examen de práctica oficial; 90 días desde la compra para usarlo todo |
 
-Son precios de lista que Cisco publica en dólares. Lo que termines pagando puede variar por impuestos locales y por el tipo de cambio que te aplique el medio de pago, así que tomalos como piso.
+Son precios de lista en dólares de las páginas de Cisco. Lo que termines pagando puede variar por impuestos locales y por el tipo de cambio que te aplique el medio de pago, así que tomalos como piso.
 
 Dos datos de formato que conviene tener antes de pagar: el examen dura **120 minutos** y, si lo desaprobás, hay que **esperar cinco días corridos** antes de volver a rendirlo.
 
 ## El descuento de NetAcad: lo que Cisco publica y lo que no
 
-Cisco ofrece descuentos en los exámenes de certificación a estudiantes e instructores de Networking Academy. Aplica a tres exámenes: **CCNA, CCNA Cybersecurity (CBROPS) y CCNA Automation (DEVASC)**. En la página de descuentos de NetAcad los dos últimos todavía figuran con sus nombres anteriores a febrero de 2026: Cyber Ops Associate y DevNet Associate.
+Networking Academy ofrece descuentos a sus estudiantes e instructores en tres exámenes de Cisco: el CCNA y los que hoy se llaman CCNA Cybersecurity (CBROPS) y CCNA Automation (DEVASC). NetAcad todavía los nombra como Cyber Ops Associate y DevNet Associate, sus nombres anteriores a febrero de 2026.
 
 Los requisitos, textuales de Cisco, son completar el curso habilitante con:
 
@@ -69,7 +69,7 @@ Por eso vale la aclaración: si alguien te promete un porcentaje exacto de descu
 
 ## Safeguard Plus: cuándo conviene y cuándo no
 
-Esta es la única parte del costo que podés optimizar con aritmética en vez de con requisitos.
+Cisco vende dos opciones para asegurarte un segundo intento: **Exam Safeguard**, que incluye el reintento sin costo extra, y **Safeguard Plus**, que además suma el examen de práctica oficial de Cisco. Acá va la cuenta con la Plus, que es la del precio de la tabla. Es la única parte del costo que podés optimizar con aritmética en vez de con requisitos.
 
 | Escenario | Costo total |
 | --- | --- |
@@ -79,7 +79,7 @@ Esta es la única parte del costo que podés optimizar con aritmética en vez de
 
 Leído al derecho: **Safeguard Plus te ahorra US$150 si desaprobás y te cuesta US$150 extra si aprobás.** El punto de equilibrio está exactamente en 50%: conviene solo si creés que es más probable que desapruebes que que apruebes.
 
-Hay una condición que casi no se menciona y que puede dejarlo sin efecto: el segundo intento tiene que usarse **dentro de 90 días** del primero. Combinado con los cinco días de espera obligatoria, tu ventana real para volver a rendir va del día 5 al día 90. Si desaprobás y calculás que necesitás cuatro o cinco meses para volver preparado, Safeguard no te sirve — pagaste US$150 por un intento que se vence antes de poder usarlo.
+Hay una condición que casi no se menciona y que puede dejarlo sin efecto: los **90 días corren desde la compra**, no desde el primer intento, y en ese plazo tenés que rendir los dos. Si lo comprás antes de estar listo, el reloj ya está corriendo. Y entre un intento y otro hay que esperar cinco días corridos. Si desaprobás y calculás que necesitás meses para volver preparado, Safeguard no te sirve: pagaste US$150 por un intento que se vence antes de poder usarlo. Comprarlo tiene sentido recién cuando ya tenés fecha de examen cercana.
 
 Mi lectura: si venís de los cursos de NetAcad y aprobaste los exámenes finales sin dificultad, el cálculo no lo justifica. Si estás preparándote por tu cuenta, sin práctica en laboratorio y con los simuladores dándote resultados justos, ahí sí.
 
@@ -87,9 +87,7 @@ Mi lectura: si venís de los cursos de NetAcad y aprobaste los exámenes finales
 
 **El examen no está en español.**
 
-Y hay una inconsistencia en la propia documentación de Cisco que conviene conocer: la sección de preguntas frecuentes del CCNA dice que el examen se ofrece en **inglés y japonés**, mientras que la sección de detalles del mismo examen lista **solo inglés**. Las dos versiones están publicadas por Cisco, en sus propias páginas.
-
-No importa cuál de las dos sea la correcta: en ninguna aparece el español. Si estás presupuestando el CCNA, el costo real incluye la capacidad de leer y razonar en inglés técnico bajo presión de tiempo, con 120 minutos para el examen completo.
+Cisco lo ofrece en **inglés y japonés**, tanto la v1.1 vigente como la v2.0 que arranca en febrero de 2027. El español no está en ninguna de las dos. Si estás presupuestando el CCNA, el costo real incluye la capacidad de leer y razonar en inglés técnico bajo presión de tiempo, con 120 minutos para el examen completo.
 
 Esto no es menor para quien estudia la teoría en español —los cursos de NetAcad sí están traducidos— y después se encuentra el examen en otro idioma. Conviene practicar con material en inglés desde antes, aunque el curso lo estés haciendo traducido.
 
@@ -100,5 +98,14 @@ Si todavía no empezaste los cursos de NetAcad, el orden importa por el descuent
 Si ya estás cursando, revisá en qué curso estás y si todavía tenés por delante el examen final de ENSA. Si lo rendís sin saber que la nota del primer intento define el descuento, perdés la oportunidad sin enterarte.
 
 Y si te estás preparando por fuera de NetAcad, el descuento no está disponible: el costo es US$300 y la decisión que te queda es Safeguard Plus o no. Las rutas de preparación, con y sin presupuesto, están en [cómo prepararte para el CCNA](/redes/curso-ccna-como-prepararte/).
+
+## Fuentes
+
+- [200-301 CCNA v1.1 (Cisco Learning Network)](https://learningnetwork.cisco.com/s/ccna-exam-topics) y [CCNA v2.0](https://learningnetwork.cisco.com/s/ccna-v2-exam-topics): precio, duración e idiomas de las dos versiones.
+- [Cisco Exam Safeguard](https://learningnetwork.cisco.com/s/cisco-exam-safeguard) y [200-301 CCNA Exam Safeguard Plus (Cisco U.)](https://u.cisco.com/content-bundle/200301-ccna-exam-safeguard-plus-20469): qué incluye cada opción y el acceso de 90 días.
+- [Políticas de exámenes de Cisco](https://www.cisco.com/site/us/en/learn/training-certifications/exams/policies.html): los cinco días corridos de espera para volver a rendir.
+- [Programa de vouchers de Cisco](https://learningnetwork.cisco.com/s/exam-vouchers-program): vencimiento de los vouchers.
+- [Descuentos en exámenes de certificación (Cisco Networking Academy)](https://www.netacad.com/articles/news/s-receive-a-discount-for-your-certification-exam): exámenes incluidos y requisitos.
+- [Descuentos por cursos de OpenEDG (Cisco Networking Academy)](https://www.netacad.com/articles/news/s-obtain-a-certification-discount-code-for-openedg-partner-courses): el 20% a 50%, la nota mínima y la validez de 30 días.
 
 *Precios y condiciones verificados en octubre de 2026 en las páginas oficiales de Cisco y Cisco Networking Academy. Cisco cambia precios y políticas sin aviso: confirmá en la fuente antes de pagar.*

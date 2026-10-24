@@ -4,6 +4,7 @@ description: "El CCNA 200-301 v2.0 se rinde desde el 3 de febrero de 2027. Qué 
 keyword: "ccna v2.0"
 cluster: "redes"
 pubDate: 2026-10-20
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -98,5 +99,12 @@ Los tres cursos cubren la base que comparten las dos versiones. Qué entra en ca
 Fijate cuánto te falta para estar listo y compará con el 2 de febrero de 2027: esa fecha define qué versión vas a rendir. Después descargá el PDF de objetivos de esa versión desde el sitio de Cisco y usalo para armar tu plan.
 
 Para elegir cómo prepararte, la comparación de [rutas para preparar el CCNA](/redes/curso-ccna-como-prepararte/) cubre las opciones gratuitas, económicas y con acompañamiento. El precio del examen y los costos que se suman están en [cuánto cuesta el CCNA](/redes/cuanto-cuesta-el-ccna/). Y para ver hacia dónde sigue el recorrido después, está el [mapa de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/).
+
+## Fuentes
+
+- [CCNA v2.0: temas del examen (Cisco Learning Network)](https://learningnetwork.cisco.com/s/ccna-v2-exam-topics): dominios, pesos y primera fecha para rendir.
+- [PDF oficial de objetivos del CCNA v2.0](https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301_CCNA_v2.0_Exam_Topics_PDF.pdf) y [PDF del CCNA v1.1](https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf): la comparación de objetivos que sale y entra.
+- [200-301 CCNA v1.1 (Cisco Learning Network)](https://learningnetwork.cisco.com/s/ccna-exam-topics): último día para rendir la v1.1, precio, duración e idiomas.
+- [Steps to the Future: The Modern CCNA](https://learningnetwork.cisco.com/s/blogs/a0DQO00000616W92AI/steps-to-the-future-the-modern-ccna) y [Built for What's Next (blog de Cisco)](https://blogs.cisco.com/learning/ai-updates-ccna-ccie-automation): el anuncio y el enfoque del examen nuevo.
 
 *Fechas, dominios, pesos y objetivos verificados en octubre de 2026 en las páginas oficiales del examen en Cisco Learning Network, en el anuncio de Cisco del 20 de mayo de 2026 y en los PDF de objetivos de las versiones 1.1 y 2.0. Cisco puede ajustar el temario antes del lanzamiento: confirmá en la fuente antes de rendir.*
