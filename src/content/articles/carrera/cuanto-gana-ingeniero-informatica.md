@@ -4,6 +4,7 @@ description: "Los sueldos publicados en España, México y Argentina varían has
 keyword: "ingeniero en informatica cuanto gana"
 cluster: "carrera"
 pubDate: 2026-09-26
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -95,4 +96,10 @@ Para eso, las encuestas del sector con dataset público —como la de sysarmy en
 
 Y si estás decidiendo qué estudiar o certificar para mover ese número, el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) ordena los caminos según el rol al que apuntes. Si todavía no tenés experiencia en IT, la guía sobre [cómo armar tu primer CV para un puesto IT](/carrera/primer-cv-para-un-puesto-it/) cubre cómo presentar experiencia y certificaciones cuando todavía no tenés años en el sector.
 
-*Datos relevados en septiembre de 2026, correspondientes a informes publicados entre noviembre de 2025 y agosto de 2026. Los sueldos del sector cambian rápido: verificá las fuentes originales antes de usarlos para negociar.*
+## Fuentes
+
+- **Argentina:** [encuesta de sueldos de sysarmy, edición 2026.01 (openqube)](https://sueldos.openqube.io/encuesta-sueldos-2026.01/), con participantes, medianas, evolución frente a la inflación y dataset público; e [inflación del INDEC](https://www.indec.gob.ar/indec/web/Nivel4-Tema-3-5-31).
+- **México:** [reporte de salarios de tecnología 2026 de CodersLink](https://coderslink.com/employers/tech-salaries-report), con 10.254 salarios verificados entre el cuarto trimestre de 2025 y el primero de 2026; [Data México (Secretaría de Economía)](https://www.economia.gob.mx/datamexico/); e [Indeed México](https://mx.indeed.com/career/salaries).
+- **España:** [guía de tendencias salariales 2026 de Randstad Research](https://www.randstadresearch.es/tendencias-salariales/), [tablas del XIX Convenio TIC (CCOO Servicios)](https://www.ccoo-servicios.es/tic/negociatic/), publicadas en el BOE, y [Talent.com](https://es.talent.com/salary?job=ingeniero+informatico).
+
+*Datos relevados en septiembre de 2026, correspondientes a informes publicados entre noviembre de 2025 y agosto de 2026; los de sysarmy y Talent.com se volvieron a comprobar el 24 de octubre de 2026. Los sueldos del sector cambian rápido: verificá las fuentes originales antes de usarlos para negociar.*

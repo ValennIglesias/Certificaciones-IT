@@ -1,36 +1,81 @@
 ---
 title: "AZ-900 vs AWS Cloud Practitioner: cuál elegir primero"
-description: "AZ-900 vs AWS Cloud Practitioner: criterios concretos para decidir qué certificación de cloud sacar primero según el mercado en el que buscás trabajo."
+description: "AZ-900 vs AWS Cloud Practitioner lado a lado: precio, duración, puntaje, idiomas y vigencia, y cómo decidir cuál sacar primero según dónde buscás trabajo."
 keyword: "az 900 vs aws cloud practitioner"
 cluster: "cloud"
 pubDate: 2026-09-19
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
 
-Entre AZ-900 y AWS Cloud Practitioner, la respuesta corta es: mirá las vacantes de tu ciudad antes que los rankings globales de cuota de mercado.
+AZ-900 y AWS Cloud Practitioner son las dos certificaciones de entrada a la nube más conocidas, y en lo básico se parecen mucho: cuestan casi lo mismo, se aprueban con 700 puntos y se pueden rendir en español. Las diferencias están en los detalles, y la decisión, más que en los exámenes, está en el mercado donde vas a buscar trabajo.
 
-## Criterios de decisión
+## Los dos exámenes, lado a lado
 
-- **Demanda local**: qué nube usan de verdad las empresas que te contratarían. En Argentina y buena parte de LatAm, AWS suele tener más presencia en startups y empresas de tecnología; Azure aparece más en empresas que ya usan el ecosistema Microsoft (Active Directory, Office 365).
-- **Punto de partida**: si en tu trabajo actual ya usás herramientas de Microsoft, Azure reduce la curva de aprendizaje inicial.
-- **Rol objetivo**: infraestructura, datos, seguridad y desarrollo tienen rutas de certificación distintas en cada proveedor — conviene mirar la ruta completa, no solo el primer escalón.
-
-## AZ-900 vs AWS Cloud Practitioner, lado a lado
-
-| | AWS | Azure |
+| Dato | AWS Cloud Practitioner (CLF-C02) | Microsoft AZ-900 |
 | --- | --- | --- |
-| Certificación de entrada | AWS Certified Cloud Practitioner | Microsoft Azure Fundamentals (AZ-900) |
-| Requiere experiencia previa | No | No |
-| Enfoque | Conceptos de la nube de AWS y su modelo de facturación | Conceptos de la nube en general + servicios core de Azure |
-| Siguiente escalón típico | AWS Certified Solutions Architect – Associate | Azure Administrator Associate (AZ-104) |
+| Precio | US$100 | US$99, ajustado según el país |
+| Duración | 90 minutos | 45 minutos |
+| Preguntas | 65 (50 cuentan para el puntaje) | Microsoft no fija la cantidad |
+| Aprobación | 700 sobre 1.000 | 700 sobre 1.000 |
+| Español | Sí, de Latinoamérica y de España | Sí |
+| Vigencia | 3 años | No vence |
+| Requisitos | Ninguno | Ninguno |
 
-## Lo que se transfiere entre proveedores (y lo que no)
+Dos diferencias que pesan en la práctica:
 
-Los conceptos de fondo —redes virtuales, gestión de identidades y accesos (IAM), almacenamiento por capas, alta disponibilidad— se transfieren casi enteros entre AWS, Azure y Google Cloud. Lo que no se transfiere son los nombres de los servicios y la consola de cada proveedor: aprender AWS primero no te ahorra estudiar Azure después, solo te da el marco conceptual para que sea más rápido.
+- **La vigencia.** El AZ-900 no vence: es una credencial de por vida. El Cloud Practitioner dura tres años, y después hay que renovarlo.
+- **Lo que viene después.** Aprobar cualquier certificación de AWS te da un 50% de descuento en otros exámenes de AWS. Si tu plan es seguir en AWS, ese beneficio abarata el siguiente paso.
 
-## Nuestra recomendación de arranque
+## Qué evalúa cada uno
 
-Si todavía no tenés un empleador ni un rol objetivo definido, empezar por **AWS Cloud Practitioner** es la apuesta más segura: es el proveedor con más cuota de mercado global y la certificación de entrada más reconocida en procesos de selección. Si ya trabajás en una empresa con infraestructura Microsoft, **AZ-900** tiene sentido inmediato porque vas a usar esos conceptos en tu día a día desde ya. La [guía del examen AZ-900](/cloud/examen-az-900-formato-y-preparacion/) tiene el formato, el puntaje y cómo rendirlo gratis.
+Los dos son conceptuales: ninguno te pide programar ni configurar servicios. Pero el enfoque cambia:
 
-Elegir proveedor es un escalón dentro de un recorrido más largo: el [roadmap de certificaciones IT](/carrera/roadmap-certificaciones-it/) muestra qué viene antes y qué después de la certificación de entrada de cloud.
+| Área | AWS Cloud Practitioner | AZ-900 |
+| --- | --- | --- |
+| Conceptos de la nube | 24% | 25-30% |
+| Servicios y arquitectura | 34% (tecnología y servicios) | 35-40% (arquitectura y servicios) |
+| Seguridad | 30% (seguridad y cumplimiento) | Dentro de arquitectura y servicios |
+| Costos, gestión y gobernanza | 12% (facturación, precios y soporte) | 30-35% (gestión y gobernanza) |
+
+El Cloud Practitioner le da mucho peso a la seguridad y el cumplimiento, con un dominio propio del 30%. El AZ-900 pone más peso en la gestión y la gobernanza: costos, políticas, herramientas de administración y monitoreo.
+
+## Lo que se transfiere entre proveedores, y lo que no
+
+Los conceptos de fondo —redes virtuales, gestión de identidades y accesos, tipos de almacenamiento, alta disponibilidad, el modelo de responsabilidad compartida— se transfieren casi enteros entre AWS, Azure y Google Cloud. Lo que no se transfiere son los nombres de los servicios y la consola de cada proveedor.
+
+En la práctica, eso significa que la primera certificación de nube es la que más cuesta. La segunda se apoya en el marco conceptual de la primera: aprender AWS no te ahorra estudiar Azure, pero hace que Azure se aprenda más rápido, y al revés.
+
+## Cómo decidir
+
+### Mirá las vacantes de tu ciudad
+
+Es el criterio que más pesa, y el único que nadie puede resolver por vos. Buscá en los portales de empleo de tu ciudad puestos de entrada que mencionen AWS y Azure, y fijate cuál aparece más en las empresas donde te gustaría trabajar. Diez minutos de búsqueda te dicen más que cualquier ranking global.
+
+### Mirá dónde trabajás hoy
+
+Si tu empresa ya usa Microsoft 365, Entra ID o Active Directory, el AZ-900 tiene una ventaja inmediata: muchos conceptos los vas a ver en tu trabajo. Si trabajás en una empresa que ya está en AWS, el Cloud Practitioner se apoya en lo que tenés alrededor.
+
+### Mirá el segundo paso, no solo el primero
+
+Cada proveedor tiene su ruta de nivel asociado: en AWS, la más común después del Cloud Practitioner es Solutions Architect – Associate; en Azure, Azure Administrator Associate. Elegir la certificación de entrada es elegir en qué ruta vas a invertir los próximos meses.
+
+### Si todavía no tenés ninguna de esas pistas
+
+Mi recomendación es empezar por la que te resulte más barata en tiempo: el AZ-900, por ser más corto (45 minutos) y no vencer, es una buena primera certificación para probar si la nube te interesa. Si después las vacantes de tu ciudad piden AWS, el Cloud Practitioner se prepara bastante más rápido con esa base.
+
+## Las guías de cada examen
+
+- [AZ-900: cómo es el examen y cómo prepararlo gratis](/cloud/examen-az-900-formato-y-preparacion/)
+- [AWS Cloud Practitioner: qué mide y cómo prepararlo gratis](/cloud/aws-cloud-practitioner-guia-completa/)
+
+Y para ver qué viene antes y después de la certificación de entrada de nube, está el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/).
+
+## Fuentes
+
+- [AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/) y [guía oficial del examen CLF-C02](https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02.html): precio, formato, idiomas, vigencia, dominios y el descuento del 50%.
+- [Microsoft Certified: Azure Fundamentals](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/) y [guía de estudio del AZ-900](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900): precio, duración, idiomas y áreas del examen.
+- [Renovación de certificaciones de Microsoft](https://learn.microsoft.com/en-us/credentials/certifications/renew-your-microsoft-certification): las Fundamentals no vencen.
+
+*Datos verificados el 24 de octubre de 2026 en las páginas oficiales de AWS y Microsoft.*

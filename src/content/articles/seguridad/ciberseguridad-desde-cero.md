@@ -4,7 +4,7 @@ description: "Por qué casi no existen puestos de ciberseguridad de entrada, cu�
 keyword: "ciberseguridad desde cero"
 cluster: "seguridad"
 pubDate: 2026-09-26
-updatedDate: 2026-10-20
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -15,7 +15,7 @@ Lo esencial:
 
 - A ciberseguridad **se entra de costado**, desde un rol de IT, no de forma directa.
 - Los puestos puente más transitados son **mesa de ayuda, soporte técnico, operaciones de red y administración de sistemas**.
-- El camino típico lleva **de 12 a 24 meses** desde el primer empleo de IT hasta un rol de seguridad.
+- Como referencia, el salto desde el primer empleo de IT hasta un rol de seguridad suele llevar **uno o dos años**: es una estimación propia, no un dato oficial.
 - El **programa gratuito de certificación de ISC2 cerró el 20 de mayo de 2026**; esa vía ya no está disponible para nuevos participantes.
 - Sin fundamentos de redes y sistemas operativos, el contenido de seguridad no se sostiene.
 
@@ -88,3 +88,10 @@ Es la parte que más gente intenta saltear porque no suena a "ciberseguridad", y
 Si todavía no trabajás en IT, el paso más corto hacia seguridad no es una certificación de seguridad: es conseguir un puesto de mesa de ayuda o soporte y usar esos meses para construir la base técnica mientras cobrás por aprenderla.
 
 Si ya estás en IT, la secuencia que más rinde es fundamentos de redes, después Security+, y en paralelo un laboratorio propio donde puedas mostrar algo concreto en una entrevista. El [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) ordena el resto del recorrido según hacia dónde quieras ir después.
+
+## Fuentes
+
+- [Employer Perspective on Hiring (NICE, NIST)](https://www.nist.gov/system/files/documents/2022/12/14/Employer%20Project%20for%20MTM_508compliant.pdf) y [carta del proyecto sobre puestos de entrada (NICE)](https://www.nist.gov/system/files/documents/2022/08/11/NICE%20Project%20Charter%20-%20MTM%20-%20Cyber%20Career-Entry%20Guidance%20for%20Job%20Seekers%20%26%20Employers.pdf): los pocos puestos definidos como de entrada y la discusión sobre el término.
+- [Cierre del programa One Million Certified in Cybersecurity (ISC2)](https://www.isc2.org/Insights/2026/04/one-million-certified-cyber-conclusion): fechas y números finales del programa.
+- [Preguntas del programa (ISC2)](https://www.isc2.org/landing/1mcc) y [precios de los exámenes de ISC2](https://www.isc2.org/register-for-exam/isc2-exam-pricing): el plazo para usar los códigos y el precio de la CC.
+- [CompTIA Security+](https://www.comptia.org/en-us/certifications/security/): puestos a los que apunta la certificación.
