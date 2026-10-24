@@ -89,7 +89,7 @@ Esto significa que si vas escalando de nivel, la renovación se resuelve sola: c
 
 Las CCST siguen otra regla. Las obtenidas antes del 15 de julio de 2025 son de por vida, y las posteriores duran cinco años. Se renuevan solo aprobando otro examen de Cisco: la Educación Continua no aplica. El detalle, con el ejemplo del examen de ciberseguridad, está en la guía del [CCST Cybersecurity](/seguridad/ccst-cybersecurity-examen/).
 
-## Qué hacer ahora
+## Cómo usar este mapa
 
 Si estás empezando, ignorá el mapa completo por un rato: **para roles de redes, el camino estándar de entrada es el CCNA 200-301**; el CCST existe como escalón previo opcional para quien arranca sin ninguna base técnica (cómo es y cuándo conviene está en la guía del [CCST Networking](/redes/ccst-networking-examen/)). Todas las bifurcaciones vienen después del CCNA. Elegir pista antes de tener la base es un problema que no tenés todavía.
 

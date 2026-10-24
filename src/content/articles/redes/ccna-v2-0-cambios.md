@@ -94,7 +94,7 @@ Estudiá directo para la v2.0 y usá su PDF de objetivos como índice. El núcle
 
 Los tres cursos cubren la base que comparten las dos versiones. Qué entra en cada uno está en [CCNA 1, 2 y 3](/redes/ccna-1-2-3-cursos-netacad/). Si vas a rendir la v2.0, sumá por tu cuenta los temas nuevos antes de presentarte.
 
-## Qué hacer ahora
+## Cómo decidir qué versión rendir
 
 Fijate cuánto te falta para estar listo y compará con el 2 de febrero de 2027: esa fecha define qué versión vas a rendir. Después descargá el PDF de objetivos de esa versión desde el sitio de Cisco y usalo para armar tu plan.
 

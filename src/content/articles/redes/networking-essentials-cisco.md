@@ -81,7 +81,7 @@ Si querés seguir en redes, el paso siguiente en NetAcad es la serie CCNA, que p
 
 Los dos primeros cursos de la ruta Técnico en Redes también forman parte de la ruta de ciberseguridad de NetAcad. Si te interesa la seguridad, ya tenés 44 horas hechas. La ruta completa está en [qué hacer después de Introducción a la Ciberseguridad](/seguridad/despues-de-introduccion-a-la-ciberseguridad/).
 
-## Qué hacer ahora
+## Cómo empezar sin esperar a una academia
 
 Si no tenés una academia en vista, no esperes: inscribite en Conceptos básicos de redes en NetAcad, que es el primer curso de la ruta y equivale a los módulos 1 a 17 de Networking Essentials. Es gratis y está en español.
 

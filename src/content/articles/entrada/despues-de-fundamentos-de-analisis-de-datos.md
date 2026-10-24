@@ -71,7 +71,7 @@ Al completarlo obtenés una insignia digital, que podés mostrar en tu perfil pr
 
 Lo que más pesa frente a quien selecciona es el portafolio: un análisis completo, con Excel, SQL y Tableau, sobre datos reales. Es justo el tipo de proyecto terminado que sirve en un CV cuando todavía no tenés experiencia, como explica la guía de [cómo armar tu primer CV para un puesto IT](/carrera/primer-cv-para-un-puesto-it/).
 
-## Qué hacer ahora
+## Cómo elegir el siguiente curso
 
 Si no lo hiciste, completá el módulo 10 del curso: es la recomendación de Cisco desde adentro. Después elegí según tu objetivo: Python si querés seguir en datos y el inglés te alcanza, Introducción a la IA moderna si preferís seguir en español, o la serie CCNA si apuntás a un puesto técnico de IT.
 

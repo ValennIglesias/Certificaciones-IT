@@ -91,7 +91,7 @@ Cisco lo ofrece en **inglés y japonés**, tanto la v1.1 vigente como la v2.0 qu
 
 Esto no es menor para quien estudia la teoría en español —los cursos de NetAcad sí están traducidos— y después se encuentra el examen en otro idioma. Conviene practicar con material en inglés desde antes, aunque el curso lo estés haciendo traducido.
 
-## Qué hacer ahora
+## Cómo pagar menos, según dónde estés
 
 Si todavía no empezaste los cursos de NetAcad, el orden importa por el descuento: anotate sabiendo que **el requisito se cumple en el examen final del tercer curso**, y tratá ese examen con el mismo cuidado que el de certificación. Cómo inscribirte está en [cómo entrar a Cisco Networking Academy](/redes/cisco-networking-academy-como-entrar/).
 

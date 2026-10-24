@@ -54,6 +54,8 @@ Leyendo los objetivos, hay un detalle que define el examen. Varios objetivos pla
 
 Es decir, el CCST Networking evalúa el trabajo de un técnico de soporte o de mesa de ayuda, no el de un administrador de redes. El documento oficial lo confirma: el candidato es un técnico de redes o de soporte de nivel de entrada, un estudiante o un pasante, con al menos 150 horas de formación y práctica. El diseño de redes, el enrutamiento dinámico y la configuración en serio quedan para el CCNA.
 
+Lo confirmo por experiencia. Cuando trabajé en soporte, un caso típico era un usuario sin acceso a la VPN: lo primero era verificar la conectividad con ping y que los nombres resolvieran por DNS, y con eso documentado en el ticket, si el problema seguía, se derivaba al área que correspondía. Ese circuito está casi literal en el temario: metodología de soporte y tickets (objetivo 5.1), comandos de diagnóstico como ping y nslookup (5.3), acceso remoto y VPN (5.4), y conceptos como AAA, MFA y Active Directory (6.2).
+
 ## Cómo prepararlo
 
 La ruta oficial es **Técnico en Redes** de Cisco Networking Academy. Es gratuita, suma 70 horas y sus cuatro cursos están en español:
@@ -96,7 +98,7 @@ Si vas por el CCNA, tené en cuenta la fecha: la versión actual se rinde hasta 
 
 Si obtuviste el CCST antes del 15 de julio de 2025, es de por vida. Desde esa fecha, dura cinco años: Cisco atribuye el cambio a una ley estatal de Estados Unidos. Para renovarlo hay que aprobar otro examen de Cisco, ya sea un CCST o uno de nivel asociado o superior. Aprobar el CCNA, entonces, también lo renueva.
 
-## Qué hacer ahora
+## Por dónde empezar
 
 Si arrancás de cero, inscribite en Conceptos básicos de redes en NetAcad: es el primer curso de la ruta, es gratis y en 22 horas te muestra si las redes te interesan. Al terminar la ruta, decidí entre el CCST y el CCNA con lo que sepas para entonces.
 

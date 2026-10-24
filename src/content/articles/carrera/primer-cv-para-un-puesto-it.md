@@ -85,7 +85,7 @@ Lo importante no es cuál elijas: es que puedas explicarlo en una entrevista sin
 - **Foto, edad y estado civil**, salvo que el mercado local lo pida expresamente.
 - **Más de una página.** Sin experiencia laboral en el rubro, dos páginas se llenan con relleno y se nota.
 
-## Qué hacer ahora
+## Antes de mandar el próximo CV
 
 Revisá tu CV y buscá una sola cosa: **si alguien lo lee en treinta segundos, ¿queda claro que terminaste algo?** Si la respuesta es no, ese es el trabajo pendiente, y pesa más que cualquier otra corrección de formato.
 

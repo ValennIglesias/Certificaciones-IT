@@ -70,7 +70,7 @@ Con 70 horas por curso, el ritmo real lo define la academia: cada una arma su ca
 
 Si querés dimensionar cuánto es eso en la práctica, la estimación general para preparar el CCNA desde cero es de dos a tres meses de estudio enfocado — pero esa cifra asume una preparación intensiva, no el ritmo pausado de una cursada académica.
 
-## Qué hacer ahora
+## Por dónde arrancar la serie
 
 Si todavía no empezaste, entrá al catálogo de NetAcad y mirá ITN: es el punto de partida obligado y te va a dar una idea concreta del nivel antes de comprometerte con la serie completa.
 

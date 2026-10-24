@@ -4,7 +4,7 @@ description: "Qué piden realmente las búsquedas de soporte técnico, cómo es 
 keyword: "cómo empezar a trabajar en soporte técnico sin experiencia"
 cluster: "entrada"
 pubDate: 2026-09-19
-updatedDate: 2026-10-05
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -26,7 +26,7 @@ Si querés certificarte igual, [CompTIA A+](/entrada/certificacion-comptia-a-plu
 | Camino | Certificación de referencia |
 | --- | --- |
 | Soporte técnico / mesa de ayuda | CompTIA A+ o ITIL Foundation |
-| Redes | [CompTIA Network+](/redes/fundamentos-de-redes-para-certificarte/) |
+| Redes | [CCST Networking](/redes/ccst-networking-examen/) o CCNA |
 | Cloud | [AWS Cloud Practitioner o Azure AZ-900](/cloud/aws-o-azure-cual-elegir/) |
 
 Soporte es el más transitado por una razón simple: es el único donde las empresas contratan gente sin experiencia previa de forma sistemática.
@@ -54,6 +54,8 @@ Donde sí las vi pesar es **más adelante**: para moverte de soporte hacia [infr
 Esto conviene decirlo porque buena parte de internet sugiere lo contrario, que sin CompTIA A+ no entrás. Puede ser cierto en el mercado estadounidense, donde esa certificación está muy instalada, pero no es lo que se ve en el mercado hispanohablante.
 
 Si querés sacarla igual, no está de más: ordena conocimientos y no hace daño. Pero no la pongas como condición para empezar a buscar trabajo.
+
+Si lo que buscás es un curso que ordene todo lo que toca un puesto de soporte, el que recomiendo es el certificado profesional de Soporte de TI de Google, en Coursera: son cinco cursos en español —asistencia técnica, redes, sistemas operativos, administración de sistemas y seguridad—, pensados para unas diez horas por semana. Hice el de administración de sistemas, y la serie da una buena recorrida por las distintas áreas que alguien de soporte necesita conocer. Ojo: es un certificado de cursos, no una certificación con examen como A+.
 
 ## Lo que vas a usar el primer mes
 
@@ -95,8 +97,12 @@ Vale la pena decirlo, porque ahorra tiempo y frustración:
 - Si **necesitás saber siempre la respuesta** para sentirte cómodo, vas a pasarla mal al principio: la mitad de los casos son nuevos.
 - Si **buscás un salto salarial inmediato**, soporte es un punto de partida, no de llegada. El salto viene después, al especializarte.
 
-## Qué hacer ahora
+## Tu próximo paso
 
 Si todavía no estás trabajando en IT, empezá a postularte **antes** de sentirte listo. La entrevista de entrada probablemente mida tu forma de razonar y de comunicarte más que tu conocimiento técnico, y eso no se consigue estudiando tres meses más.
 
 En paralelo, si querés ir armando base, el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) ordena los caminos según hacia dónde quieras ir. Y si ya conseguiste el primer puesto, la guía de [cómo estudiar una certificación trabajando full-time](/carrera/estudiar-certificacion-trabajando-full-time/) cubre cómo avanzar sin dejar el trabajo.
+
+## Fuentes
+
+- [Certificado profesional de Soporte de TI de Google (Coursera)](https://www.coursera.org/professional-certificates/soporte-de-tecnologias-de-informacion-google/): cursos, idioma y dedicación sugerida.

@@ -57,6 +57,8 @@ Es el criterio que más pesa, y el único que nadie puede resolver por vos. Busc
 
 Si tu empresa ya usa Microsoft 365, Entra ID o Active Directory, el AZ-900 tiene una ventaja inmediata: muchos conceptos los vas a ver en tu trabajo. Si trabajás en una empresa que ya está en AWS, el Cloud Practitioner se apoya en lo que tenés alrededor.
 
+Me pasó a mí: estudié el temario del AZ-900 mientras trabajaba en soporte con Microsoft 365 y Entra ID, y cuando cambié a una empresa que no usa Microsoft como infraestructura, dejé de tener motivo para rendirlo.
+
 ### Mirá el segundo paso, no solo el primero
 
 Cada proveedor tiene su ruta de nivel asociado: en AWS, la más común después del Cloud Practitioner es Solutions Architect – Associate; en Azure, Azure Administrator Associate. Elegir la certificación de entrada es elegir en qué ruta vas a invertir los próximos meses.

@@ -72,6 +72,14 @@ Con el material oficial cubriendo el temario completo, un curso pago se justific
 
 Y una advertencia: los volcados de preguntas reales ("dumps") violan el acuerdo del candidato de Microsoft, que aceptás al empezar el examen, y pueden costarte la certificación.
 
+### Cómo lo estudié yo
+
+Estudié todo el temario del AZ-900 en Microsoft Learn, sin cursos pagos, dedicándole entre 30 minutos y una hora por día como mucho. El material oficial alcanza para cubrirlo entero.
+
+Antes, trabajando en soporte, usaba a diario la parte de Microsoft que el examen nombra: administraba usuarios de Entra ID, restablecía el MFA cuando alguien perdía el acceso y armaba reglas de correo y grupos en Exchange. Esa es la parte del temario que más conecta con el trabajo de mesa de ayuda.
+
+No llegué a rendirlo, por el costo y porque cambié a un trabajo donde la infraestructura no es de Microsoft. Lo cuento porque es un buen criterio para decidir: el AZ-900 rinde más si lo vas a usar donde trabajás o donde querés trabajar.
+
 ## ¿Se puede rendir gratis o con descuento?
 
 Microsoft organiza los **Azure Virtual Training Days: Fundamentals**, eventos en línea gratuitos de dos partes. En algunas ediciones, quienes asisten a las dos partes acceden a un descuento en el AZ-900. Las condiciones cambiaron con el tiempo y no todas las sesiones lo ofrecen, así que confirmalo en la página de inscripción del evento antes de anotarte. Si lo ofrece, el descuento queda asociado al perfil de Microsoft Learn del correo con el que te inscribiste.

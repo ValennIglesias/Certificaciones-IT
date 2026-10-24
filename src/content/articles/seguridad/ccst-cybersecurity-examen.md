@@ -93,7 +93,7 @@ El paso siguiente es el **CCNA Cybersecurity**, que hasta febrero de 2026 se lla
 
 El camino es el CCNA de redes, con el [CCST Networking](/redes/ccst-networking-examen/) como escalón previo opcional. Qué cubre y cómo está cambiando está en el [temario del CCNA 200-301](/redes/ccna-200-301-temario/), y todos los niveles del programa de Cisco están en el [mapa de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/).
 
-## Qué hacer ahora
+## Cuándo rendirlo
 
 Si todavía no empezaste, inscribite en Introducción a la Ciberseguridad en NetAcad: es gratis, dura 6 horas y te dice rápido si el tema te interesa. Si ya estás en la ruta, descargá el PDF de objetivos y marcá qué dominás.
 

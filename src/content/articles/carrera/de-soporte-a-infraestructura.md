@@ -4,6 +4,7 @@ description: "Cómo se pasa de soporte técnico a administrar servidores, qué s
 keyword: "cómo pasar de soporte técnico a administrador de sistemas"
 cluster: "carrera"
 pubDate: 2026-10-09
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
@@ -57,6 +58,14 @@ No digo que sea el único orden posible ni el mejor. Pero sí explica por qué t
 
 Si estás en esa etapa, las tácticas para [estudiar una certificación trabajando full-time](/carrera/estudiar-certificacion-trabajando-full-time/) aplican directo — es justo el escenario.
 
+## Cómo fue el pase, en concreto
+
+No hubo una entrevista para el puesto de infraestructura. Se abrió la posibilidad de sumar a alguien que ya trabajara en la empresa para capacitarlo con tareas básicas, y yo venía mostrando interés por aprender cosas fuera de soporte.
+
+Ese proceso duró poco más de un año, y durante todo ese tiempo hice tareas de los dos puestos en simultáneo. Fui dejando de a poco algunas de soporte para tomar más de infraestructura, hasta que llegó el momento de pasar al 100%. Si hubo una "entrevista", creo que fue esa capacitación: lo que se evaluaba era el interés, las ganas de aprender y la motivación por hacer cosas nuevas.
+
+Lo cuento porque cambia cómo conviene prepararse. Si el pase se da adentro de la empresa, no se gana en una entrevista: se gana durante meses, en el día a día, antes de que exista la vacante.
+
 ## Lo que mueve el salto
 
 Ordenado por lo que más me sirvió:
@@ -78,7 +87,7 @@ Si querés llegar preparado al momento en que la oportunidad aparezca, esto es l
 - **Virtualización.** Montar máquinas virtuales en tu propia PC alcanza para entender el concepto.
 - **Nociones de cloud**, cada vez más presentes en infraestructura. [AZ-900 o AWS Cloud Practitioner](/cloud/aws-o-azure-cual-elegir/) son los puntos de entrada.
 
-## Qué hacer ahora
+## Un primer paso para esta semana
 
 Si ya estás en soporte, lo más útil que podés hacer esta semana no es inscribirte a un curso: es **elegir un ticket que hayas escalado y preguntarle al equipo que lo resolvió cómo lo hizo**. Repetirlo durante unos meses enseña más que cualquier temario, y de paso te hace visible para el área a la que querés moverte.
 

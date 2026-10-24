@@ -76,7 +76,7 @@ Esto importa para planificar. Si estás arrancando ahora y tu preparación va a 
 
 El punto del puntaje merece aclaración porque circula mucha información contradictoria: **Cisco no publica el puntaje de corte del CCNA**. Los números que vas a encontrar en foros y sitios de preparación son estimaciones basadas en reportes de candidatos, no datos oficiales. El único indicador confiable de si estás listo son los simulacros consistentes, no apuntar a una cifra inventada.
 
-## Qué hacer ahora
+## Cómo usar el temario para estudiar
 
 Descargá el PDF oficial de objetivos del examen desde el sitio de Cisco y usalo como índice: son 53 líneas numeradas, y cada pregunta del examen se corresponde con alguna de ellas. Marcá cuáles dominás y cuáles no, y armá el plan desde ahí en vez de seguir el índice de un curso.
 

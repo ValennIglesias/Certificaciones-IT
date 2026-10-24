@@ -72,7 +72,7 @@ Para encontrar una, NetAcad tiene un **buscador oficial de academias** en `netac
 
 Algunas academias además funcionan como **Centro de Soporte para Academias (ASC)**, lo que significa que dan soporte a otras instituciones de la región. No cambia nada para vos como estudiante, pero suele indicar una academia con trayectoria en el programa.
 
-## Qué hacer ahora
+## Para aprovechar NetAcad desde el primer día
 
 Si todavía no decidiste si vas a pagar un curso, entrá a netacad.com y empezá por los gratuitos: son suficientes para confirmar si el tema te interesa antes de invertir. Y descargá Packet Tracer desde ya, independientemente del camino que elijas.
 

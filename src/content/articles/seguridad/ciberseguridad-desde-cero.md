@@ -38,6 +38,8 @@ La lectura correcta no es "es imposible entrar", es **"se entra por otra puerta"
 
 El analista SOC de nivel 1 es el único de la lista que ya es un puesto de seguridad, y es también el más disputado. Los otros tres son más accesibles y construyen exactamente lo que después hace falta.
 
+Un ejemplo de mi paso por soporte: cuando alguien reportaba un correo de phishing, extraíamos el mail desde su cuenta y lo enviábamos al equipo de seguridad para que lo analizara. Es una tarea chica, pero es exactamente el contacto con incidentes reales del que hablo: ves cómo llega un ataque, cómo se reporta y quién lo analiza.
+
 Si estás en la etapa anterior a todo esto —conseguir el primer empleo de IT—, la guía de [cómo empezar en IT sin experiencia previa](/entrada/como-empezar-en-it-sin-experiencia/) cubre esa parte del camino.
 
 ## Qué cambió en 2026: se cerró la puerta gratuita
@@ -83,7 +85,7 @@ Antes de cualquier certificación de seguridad, esto es lo que el contenido va a
 
 Es la parte que más gente intenta saltear porque no suena a "ciberseguridad", y la que más caro sale omitir: sin eso, el material de seguridad se estudia de memoria en vez de entenderse.
 
-## Qué hacer ahora
+## El paso más corto hacia seguridad
 
 Si todavía no trabajás en IT, el paso más corto hacia seguridad no es una certificación de seguridad: es conseguir un puesto de mesa de ayuda o soporte y usar esos meses para construir la base técnica mientras cobrás por aprenderla.
 

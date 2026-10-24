@@ -67,7 +67,7 @@ La serie CCNA de NetAcad prepara para la certificación CCNA, el siguiente nivel
 
 Antes de elegir certificación, conviene tener claro cómo se entra al área. La guía de [ciberseguridad desde cero](/seguridad/ciberseguridad-desde-cero/) explica cuáles son los puestos puente reales. Para ver todos los caminos según el rol al que apuntes, está el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/).
 
-## Qué hacer ahora
+## Mi recomendación
 
 Si te interesó la seguridad, el paso con menos fricción es seguir la ruta oficial: inscribite en Conceptos básicos de redes, que es gratis, está en español y es el curso que sigue. No te saltees los dos de redes: son los que hacen que el resto tenga sentido.
 

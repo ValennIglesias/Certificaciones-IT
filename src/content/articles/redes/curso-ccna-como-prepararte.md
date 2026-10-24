@@ -85,7 +85,7 @@ Si estás trabajando full-time mientras estudiás, las tácticas de [cómo estud
 - **Pagar un bootcamp de US$4.500 como primera opción.** Tiene sentido si necesitás la presión externa de una fecha y un tutor, pero no compra conocimiento que un curso de US$20 y disciplina propia no te den.
 - **Arrancar por CCNA sin saber si tu objetivo es redes.** Es una inversión de tiempo y plata considerable; el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) te ayuda a confirmar que este es el camino correcto antes de empezar.
 
-## Qué hacer ahora
+## Para arrancar esta semana
 
 Creá una cuenta gratuita en Cisco Networking Academy y descargá Packet Tracer hoy mismo, antes de decidir si vas a pagar un curso. Con dos o tres semanas de material gratuito vas a tener una idea mucho más concreta de cuánta ayuda externa necesitás de verdad. Y si después cursás la serie CCNA en una academia y cumplís los requisitos en ENSA, el tercer curso, el descuento abarata el examen. Y si querés ver adónde lleva el CCNA una vez que lo tengas, el [mapa completo de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/) muestra los niveles y especializaciones que vienen después.
 
