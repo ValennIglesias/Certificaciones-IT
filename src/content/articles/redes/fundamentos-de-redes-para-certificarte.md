@@ -3,7 +3,7 @@ title: "CCNA desde cero: los fundamentos de redes que te va a pedir"
 description: "Para preparar el CCNA desde cero: modelo OSI, direccionamiento IP, subredes y enrutamiento, la misma base que piden Network+ y cualquier examen de redes."
 keyword: "ccna desde cero"
 cluster: "redes"
-pubDate: 2026-09-12
+pubDate: 2026-09-19
 author: "Valentín"
 draft: false
 ---

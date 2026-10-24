@@ -76,7 +76,7 @@ Todos los caminos arrancan igual, con el [CCNA 200-301](/redes/ccna-200-301-tema
 
 Si todavía no tenés el CCNA, la guía de [cómo prepararte para el CCNA](/redes/curso-ccna-como-prepararte/) compara las tres rutas de estudio según presupuesto, y la de [fundamentos de redes](/redes/fundamentos-de-redes-para-certificarte/) cubre los conceptos que el examen da por sabidos. Si pensás estudiar por Cisco Networking Academy, la guía de [cómo entrar a NetAcad y conseguir el descuento del examen](/redes/cisco-networking-academy-como-entrar/) tiene los requisitos exactos.
 
-Para los dos caminos de seguridad vale una aclaración: la pista de Cisco y las certificaciones de CompTIA no compiten, se complementan. Muchas vacantes de seguridad piden [Security+](/seguridad/security-plus-vale-la-pena/) como base general y una certificación de Cisco como conocimiento específico de infraestructura.
+Para los dos caminos de seguridad vale una aclaración: la pista de Cisco y las certificaciones de CompTIA no compiten, se complementan. Es habitual combinarlas: [Security+](/seguridad/examen-comptia-security-plus/) como base general de seguridad, independiente de fabricantes, y una certificación de Cisco como conocimiento específico de infraestructura.
 
 ## Vigencia y renovación
 

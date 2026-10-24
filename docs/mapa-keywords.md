@@ -227,3 +227,13 @@ mismo período y misma limitación de idioma):
 
 `ccst networking` quedó asignada a `redes/ccst-networking-examen`.
 `networking essentials cisco` quedó asignada a `redes/networking-essentials-cisco`.
+
+## Fusiones del 24/10/2026 (tras el rechazo de AdSense)
+
+| Artículo retirado | Fusionado en | Keyword resultante |
+| --- | --- | --- |
+| `seguridad/security-plus-vale-la-pena` | `seguridad/examen-comptia-security-plus` | `security+` (absorbe `comptia security+ examen`) |
+| `cloud/curso-az-900-opciones` | `cloud/examen-az-900-formato-y-preparacion` | `az 900` (absorbe `curso az 900` y `az 900 examen`) |
+
+Las dos URLs retiradas redirigen con 301 (`public/_redirects`). Las
+referencias de arriba a esos slugs quedan como historial del plan.

@@ -1,2 +1,4 @@
 # Redirecciones que aplica Cloudflare (Worker con assets estáticos).
 /sitemap.xml /sitemap-index.xml 301
+/seguridad/security-plus-vale-la-pena/ /seguridad/examen-comptia-security-plus/ 301
+/cloud/curso-az-900-opciones/ /cloud/examen-az-900-formato-y-preparacion/ 301

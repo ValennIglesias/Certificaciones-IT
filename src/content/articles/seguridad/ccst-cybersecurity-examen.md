@@ -86,7 +86,7 @@ El paso siguiente es el **CCNA Cybersecurity**, que hasta febrero de 2026 se lla
 
 ### Si querés una certificación que no dependa de un fabricante
 
-[Security+](/seguridad/security-plus-vale-la-pena/), de CompTIA, es la alternativa más conocida. Cuesta bastante más que el CCST, pero no está atada a los productos de Cisco. Cómo es por dentro está en la guía del [examen CompTIA Security+](/seguridad/examen-comptia-security-plus/).
+[Security+](/seguridad/examen-comptia-security-plus/), de CompTIA, es la alternativa que no depende de un fabricante: no está atada a los productos de Cisco. La guía cubre cómo es el examen y qué cambia con su versión 8, que sale en noviembre de 2026.
 
 ### Si te interesó más la parte de redes
 

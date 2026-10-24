@@ -3,7 +3,7 @@ title: "AZ-900 vs AWS Cloud Practitioner: cuál elegir primero"
 description: "AZ-900 vs AWS Cloud Practitioner: criterios concretos para decidir qué certificación de cloud sacar primero según el mercado en el que buscás trabajo."
 keyword: "az 900 vs aws cloud practitioner"
 cluster: "cloud"
-pubDate: 2026-09-08
+pubDate: 2026-09-19
 author: "Valentín"
 draft: false
 ---

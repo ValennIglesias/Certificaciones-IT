@@ -3,7 +3,7 @@ title: "Cómo empezar en IT sin experiencia previa"
 description: "Qué piden realmente las búsquedas de soporte técnico, cómo es una entrevista de entrada y qué certificación conviene cuando arrancás desde cero."
 keyword: "cómo empezar a trabajar en soporte técnico sin experiencia"
 cluster: "entrada"
-pubDate: 2026-09-15
+pubDate: 2026-09-19
 updatedDate: 2026-10-05
 author: "Valentín"
 draft: false

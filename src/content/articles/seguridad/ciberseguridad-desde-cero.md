@@ -67,7 +67,7 @@ Menos del 7% de quienes se anotaron llegaron a certificarse, con el curso y el e
 | CompTIA Security+ | Base de seguridad reconocida por empleadores | Cuando ya tenés fundamentos de IT |
 | CCNA Cybersecurity | Operaciones de seguridad sobre infraestructura Cisco | Si venís del lado de redes |
 
-[Security+](/seguridad/security-plus-vale-la-pena/) es la que aparece con más frecuencia como requisito en vacantes de seguridad de nivel inicial, y la que más rinde si ya tenés algo de base. Si querés ver cómo es el examen por dentro antes de decidir, está el detalle del [formato y la estrategia de preparación](/seguridad/examen-comptia-security-plus/).
+[Security+](/seguridad/examen-comptia-security-plus/) es la certificación de seguridad de CompTIA, independiente de fabricantes, que CompTIA orienta a puestos de analista de seguridad, ingeniero de seguridad y administrador de sistemas. Rinde más si ya tenés algo de base técnica; la guía cubre cómo es el examen y qué cambia con la V8 de noviembre de 2026.
 
 Si empezaste por el curso gratuito Introducción a la Ciberseguridad de Cisco NetAcad, la ruta oficial que sigue, y la certificación CCST Cybersecurity a la que lleva, están en [qué curso hacer después de Introducción a la Ciberseguridad](/seguridad/despues-de-introduccion-a-la-ciberseguridad/).
 

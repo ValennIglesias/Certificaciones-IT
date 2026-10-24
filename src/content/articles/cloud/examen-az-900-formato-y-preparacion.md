@@ -1,88 +1,98 @@
 ---
-title: "Examen AZ-900: formato, puntaje y cómo rendirlo gratis"
-description: "Qué evalúa el examen AZ-900, cuánto cuesta, cuál es el puntaje mínimo para aprobar y el camino legítimo para rendirlo sin pagar."
-keyword: "az 900 examen"
+title: "AZ-900: cómo es el examen y cómo prepararlo gratis"
+description: "El AZ-900 de Microsoft: US$99, 45 minutos, 700 puntos para aprobar y sin vencimiento. Qué evalúa, qué cambió en julio de 2026 y cómo prepararlo con los recursos gratuitos de Microsoft."
+keyword: "az 900"
 cluster: "cloud"
-pubDate: 2026-09-24
+pubDate: 2026-09-26
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
 
-El AZ-900 cuesta US$99, pero hay una forma oficial de rendirlo gratis que Microsoft ofrece de manera regular y muy poca gente aprovecha.
+El AZ-900 es el examen de entrada a la nube de Microsoft: el que da la certificación Azure Fundamentals. Tiene dos particularidades que lo hacen distinto de casi cualquier otra certificación: no vence nunca, y todo el material oficial para prepararlo es gratuito. Lo único que se paga es el examen.
 
-Lo esencial:
+## Ficha del examen
 
-- Cuesta **US$99** por intento, aunque el precio varía según el país.
-- Se aprueba con **700 puntos sobre 1.000**, en escala ponderada (no equivale a acertar el 70% de las preguntas).
-- **No tiene requisitos previos**: podés rendirlo sin experiencia en cloud.
-- **No vence nunca**: las certificaciones Fundamentals de Microsoft son credenciales de por vida.
-- Microsoft regala vouchers del 100% a quienes completan sus **Virtual Training Days**.
-
-## Qué evalúa el examen
-
-El temario de 2026 se organiza en tres dominios:
-
-| Dominio | Peso |
+| Dato | Detalle |
 | --- | --- |
-| Arquitectura y servicios de Azure | 35-40% |
-| Gestión y gobernanza de Azure | 30-35% |
-| Conceptos de cloud | 25-30% |
+| Precio | US$99 en Estados Unidos; Microsoft lo ajusta según el país donde lo rindas |
+| Duración | 45 minutos de examen, 65 en total contando instrucciones y acuerdo de confidencialidad |
+| Preguntas | Microsoft no fija una cantidad para cada examen |
+| Aprobación | 700 sobre 1.000, en escala ponderada |
+| Idiomas | Trece, entre ellos español |
+| Requisitos | Ninguno |
+| Si desaprobás | Podés volver a rendir a las 24 horas |
+| Vencimiento | No vence: las certificaciones Fundamentals no requieren renovación |
+| Modalidad | Con Pearson VUE, en un centro o en línea; estudiantes y docentes, con Certiport |
 
-Desde el **20 de julio de 2026** rige una versión nueva del temario que incorpora contenido de inteligencia artificial, Copilot e IA responsable. Los pesos de los tres dominios no cambiaron: lo nuevo se sumó dentro de ellos, así que el material anterior a esa fecha cubre la estructura pero no ese contenido.
+Dos detalles de la ficha que generan confusión:
 
-Es un examen **conceptual**, no de implementación: se evalúa que sepas describir qué hace cada servicio y cuándo se usa, no que sepas configurarlo. Aun así, entre el 30% y el 40% de las preguntas vienen planteadas como escenarios ("una empresa necesita X, ¿qué servicio corresponde?"), que es donde más gente tropieza por estudiar definiciones sueltas.
+- **Los 700 puntos no son un 70%.** Microsoft lo aclara: es un puntaje escalado según la dificultad de las preguntas, así que no equivale a acertar el 70%. Tampoco hay penalización por respuestas incorrectas, y algunas preguntas pueden no contar para el puntaje sin que sepas cuáles: conviene responder todas.
+- **El turno dura más que el examen.** Los 45 minutos son para responder; Microsoft recomienda reservar 65, porque el resto se va en instrucciones y en aceptar el acuerdo del candidato. Si el examen no está en tu idioma, podés pedir 30 minutos extra.
 
-Un detalle de nomenclatura que conviene saber: **Azure Active Directory ahora se llama Microsoft Entra ID**. Microsoft fue cambiando el lenguaje de a poco, así que podés encontrarte cualquiera de los dos nombres tanto en el material de estudio como en el examen.
+## Qué evalúa
 
-## Formato y puntaje
+El examen tiene tres áreas, con estos pesos según la guía oficial:
 
-| Ítem | Detalle |
+| Área | Peso | Qué entra |
+| --- | --- | --- |
+| Conceptos de la nube | 25-30% | Modelos de nube (pública, privada, híbrida), responsabilidad compartida, IaaS, PaaS y SaaS, beneficios de la nube |
+| Arquitectura y servicios de Azure | 35-40% | Regiones y zonas de disponibilidad, suscripciones y grupos de recursos, máquinas virtuales, contenedores y funciones, redes virtuales, almacenamiento, Microsoft Entra ID y control de acceso |
+| Gestión y gobernanza | 30-35% | Costos y calculadora de precios, Azure Policy, bloqueos de recursos, Microsoft Purview, portal, CLI y PowerShell, infraestructura como código y monitoreo |
+
+Es un examen conceptual: evalúa que sepas describir qué hace cada servicio y cuándo conviene, no que sepas configurarlo.
+
+### Qué cambió el 20 de julio de 2026
+
+Microsoft actualizó el temario con vigencia desde el 20 de julio de 2026. Según el registro de cambios de la guía oficial, las tres áreas se mantienen y los cambios son menores: tocan los servicios de cómputo y redes, las herramientas para administrar y desplegar recursos, y las de monitoreo. Los pesos no cambiaron. Las versiones en otros idiomas se actualizan unas ocho semanas después que la versión en inglés.
+
+## Cómo prepararlo con lo gratuito
+
+Microsoft ofrece gratis todo lo necesario para prepararlo:
+
+| Recurso | Para qué sirve |
 | --- | --- |
-| Preguntas | Variable, no fijada por Microsoft |
-| Tiempo de examen | 45 minutos |
-| Puntaje de aprobación | 700 sobre 1.000 (escala ponderada) |
-| Modalidad | Centro Pearson VUE o remoto desde casa |
-| Vencimiento | No vence |
-| Costo | US$99 (varía por región) |
+| Rutas de aprendizaje en Microsoft Learn | La teoría completa, alineada con el temario del examen |
+| Evaluación de práctica oficial | Ver el estilo, la redacción y la dificultad de las preguntas |
+| Simulador del examen (exam sandbox) | Conocer la interfaz y los tipos de pregunta antes del día |
+| Cuenta gratuita de Azure | Practicar en la consola real: incluye US$200 de crédito por 30 días |
 
-Sobre la cantidad de preguntas y la duración hay mucha información contradictoria dando vueltas, y conviene entender por qué: **Microsoft no fija un número de preguntas para este examen**. Cada versión se arma a partir de un banco, así que el total varía según la que te toque. Los reportes de quienes lo rindieron van de poco más de 30 a cerca de 50 preguntas.
+### Un orden que funciona
 
-Con el tiempo pasa algo parecido, y ahí está el origen de la confusión:
+1. **Recorré la ruta de aprendizaje de Microsoft Learn** de punta a punta. Es la referencia: la escribe el mismo que arma el examen.
+2. **Abrí la cuenta gratuita de Azure en paralelo** y creá lo básico: una máquina virtual, una cuenta de almacenamiento y una red virtual. Las preguntas plantean escenarios ("una empresa necesita X, ¿qué servicio usa?"), y haber visto la consola ayuda a responderlas.
+3. **Rendí la evaluación de práctica oficial** cuando termines la teoría, y anotá en qué temas fallaste para volver a esos módulos.
+4. **Probá el simulador del examen** antes de la fecha, para que la interfaz no te sorprenda.
 
-| Concepto | Tiempo |
-| --- | --- |
-| Tiempo de examen | 45 minutos |
-| Tiempo total de butaca | ~65 minutos |
+Ojo con el crédito de la cuenta gratuita: dura 30 días. Conviene abrirla cuando ya vayas a usarla, no al principio de todo.
 
-Los 65 minutos incluyen las instrucciones previas, el acuerdo de confidencialidad y la encuesta final. Además, el correo de confirmación de Pearson VUE a veces muestra un bloque de 90 minutos, que es la reserva del turno, no el tiempo del examen. **El único número que importa para tu ritmo son los 45 minutos.**
+### Cuándo tiene sentido pagar un curso
 
-En la práctica el tiempo sobra: la mayoría de los candidatos termina bastante antes del límite.
+Con el material oficial cubriendo el temario completo, un curso pago se justifica por la forma, no por el contenido: si necesitás fechas y un instructor que te obliguen a avanzar, o si aprendés mejor con video que leyendo. Antes de comprar cualquier curso, fijate que esté actualizado al temario de julio de 2026.
 
-El puntaje ponderado es la parte que más confunde. Sacar 700 **no** significa haber respondido bien el 70% de las preguntas: Microsoft pesa cada pregunta según su dificultad, así que el porcentaje real de aciertos necesario puede ser mayor o menor.
+Y una advertencia: los volcados de preguntas reales ("dumps") violan el acuerdo del candidato de Microsoft, que aceptás al empezar el examen, y pueden costarte la certificación.
 
-## Cómo rendirlo gratis
+## ¿Se puede rendir gratis o con descuento?
 
-Este es el camino que más vale la pena conocer y el menos difundido:
+Microsoft organiza los **Azure Virtual Training Days: Fundamentals**, eventos en línea gratuitos de dos partes. En algunas ediciones, quienes asisten a las dos partes acceden a un descuento en el AZ-900. Las condiciones cambiaron con el tiempo y no todas las sesiones lo ofrecen, así que confirmalo en la página de inscripción del evento antes de anotarte. Si lo ofrece, el descuento queda asociado al perfil de Microsoft Learn del correo con el que te inscribiste.
 
-1. Inscribite a un **Microsoft Azure Virtual Training Day**, un evento gratuito de dos días que Microsoft organiza de forma recurrente.
-2. Completá **ambas sesiones** — no alcanza con asistir a una.
-3. Microsoft te envía por correo un voucher de 100% de descuento para el AZ-900, en un plazo aproximado de 5 a 10 días hábiles.
+Los estudiantes y docentes pueden rendirlo a través de Certiport, el canal educativo de Microsoft.
 
-No es una promoción puntual ni un truco: es un canal oficial y permanente de Microsoft. Entre eso y que los recursos de estudio de **Microsoft Learn son gratuitos**, el AZ-900 puede salir literalmente cero pesos.
+## AZ-900 o AWS Cloud Practitioner
 
-## Cómo prepararlo
+Si todavía no decidiste entre la nube de Microsoft y la de Amazon, la comparación [AZ-900 vs AWS Cloud Practitioner](/cloud/aws-o-azure-cual-elegir/) cubre esa decisión. Y si después del AZ-900 querés seguir hacia un puesto técnico de Azure, el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) muestra el resto del camino.
 
-Todo el material oficial para prepararlo es gratuito. Qué recurso usar en cada etapa, en qué orden y cuándo conviene pagar un curso está en la guía de [cursos y recursos para el AZ-900](/cloud/curso-az-900-opciones/).
+## Por dónde empezar
 
-Si todavía estás decidiendo entre el ecosistema de Microsoft y el de Amazon, la comparación [AZ-900 vs AWS Cloud Practitioner](/cloud/aws-o-azure-cual-elegir/) cubre esa decisión antes de que inviertas tiempo en cualquiera de las dos.
+Entrá a la página de la certificación en Microsoft Learn y empezá por la ruta de aprendizaje, hoy, antes de evaluar cualquier curso pago. Con dos o tres módulos vas a saber si te alcanza con el material oficial. Y revisá si hay un Virtual Training Day próximo: si incluye descuento, conviene anotarte antes de comprar el examen.
 
-## Errores comunes
+## Fuentes
 
-- **Subestimarlo por el nombre.** Se llama "Fundamentals", pero la gente desaprueba con regularidad. No es difícil, pero tampoco se aprueba leyendo por encima la noche anterior.
-- **Estudiar definiciones en vez de escenarios.** Saber qué es una máquina virtual no alcanza si la pregunta te da un caso de negocio y pide el servicio correcto.
-- **Pagar los US$99 sin averiguar por el Virtual Training Day.** Es el error más caro y el más evitable de esta lista.
-- **Ignorar el dominio de gestión y gobernanza.** Es entre el 30% y el 35% del examen y suele ser el menos estudiado por parecer aburrido.
+- [Microsoft Certified: Azure Fundamentals](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/): precio, duración, idiomas, evaluación de práctica, simulador y política de reintento.
+- [Guía de estudio del examen AZ-900](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900): áreas, pesos y registro de cambios del 20 de julio de 2026.
+- [Puntaje y reportes de los exámenes](https://learn.microsoft.com/en-us/credentials/certifications/exam-scoring-reports): los 700 puntos y la escala ponderada.
+- [Duración y experiencia del examen](https://learn.microsoft.com/en-us/credentials/support/exam-duration-exam-experience): 45 minutos de examen y 65 de turno.
+- [Renovación de certificaciones de Microsoft](https://learn.microsoft.com/en-us/credentials/certifications/renew-your-microsoft-certification): las Fundamentals no vencen.
+- [Cuenta gratuita de Azure](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account): crédito y servicios incluidos.
 
-## Qué hacer ahora
-
-Antes que nada, fijate cuándo es el próximo Azure Virtual Training Day y anotate: el voucher tarda hasta diez días hábiles en llegar, así que conviene arrancar por ahí y estudiar mientras esperás. Si después de esta certificación querés seguir hacia un rol técnico de Azure, el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) tiene el resto del camino ordenado.
+*Datos verificados el 24 de octubre de 2026 en Microsoft Learn y en el sitio de Azure. Microsoft cambia precios, temarios y promociones con frecuencia: confirmá en la fuente antes de pagar.*

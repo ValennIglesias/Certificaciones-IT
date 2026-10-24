@@ -52,13 +52,11 @@ La insignia de la ruta no es una certificación. La certificación es un examen 
 
 Es el nivel de entrada del programa de certificaciones de Cisco, y Cisco la presenta como un primer paso hacia su certificación de ciberseguridad de nivel asociado. El temario completo, la vigencia y cómo se rinde están en la guía del [examen CCST Cybersecurity](/seguridad/ccst-cybersecurity-examen/). Dónde encaja dentro de todos los niveles está en el [mapa de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/).
 
-Como referencia de precio: el examen de [Security+](/seguridad/security-plus-vale-la-pena/) ronda los US$400-425, más de tres veces lo que cuesta el CCST Cybersecurity.
-
 ## Si no querés seguir la ruta
 
-### Si buscás la certificación más pedida en las vacantes
+### Si buscás una certificación que no dependa de un fabricante
 
-Security+ es la certificación de seguridad que más aparece como requisito en las vacantes de nivel inicial. Es más cara que el CCST Cybersecurity, pero es de CompTIA, que no depende de ningún fabricante: no está atada a los productos de Cisco. Cómo es el examen por dentro está en la guía del [examen CompTIA Security+](/seguridad/examen-comptia-security-plus/).
+Security+ es la certificación de seguridad de CompTIA, que no depende de ningún fabricante: no está atada a los productos de Cisco. CompTIA la orienta a puestos de analista de seguridad, ingeniero de seguridad y administrador de sistemas. Cómo es el examen, y qué cambia con la versión que sale en noviembre de 2026, está en la guía de [CompTIA Security+](/seguridad/examen-comptia-security-plus/).
 
 ### Si lo que más te gustó fue la parte de redes
 
