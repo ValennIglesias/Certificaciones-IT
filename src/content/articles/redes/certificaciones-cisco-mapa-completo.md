@@ -11,7 +11,7 @@ draft: false
 
 Si encontraste una guía de certificaciones Cisco y menciona DevNet o CyberOps como pistas separadas, está desactualizada: esas dos dejaron de existir con esos nombres el 3 de febrero de 2026.
 
-Lo esencial:
+Cómo quedó el programa:
 
 - El programa tiene **cuatro niveles**: CCST (entrada), CCNA (asociado), CCNP (profesional) y CCIE (experto).
 - En febrero de 2026, **DevNet pasó a llamarse Automation** y **CyberOps pasó a llamarse Cybersecurity**, ambas absorbidas bajo los nombres CCNA, CCNP y CCIE.

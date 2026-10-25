@@ -11,7 +11,7 @@ draft: false
 
 En mi primera entrevista para un puesto de IT no me preguntaron nada técnico. Y entré igual.
 
-Lo esencial:
+Lo que me hubiera gustado saber antes de empezar:
 
 - La puerta de entrada más transitada es **soporte técnico o mesa de ayuda**, no un rol técnico especializado.
 - Para el primer puesto, **las certificaciones suelen pesar menos de lo que internet sugiere**. Para crecer después, sí pesan.

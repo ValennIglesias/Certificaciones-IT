@@ -11,7 +11,7 @@ draft: false
 
 El descuento de NetAcad en el examen CCNA existe y es oficial, pero se juega en un solo momento: el primer intento del examen final de un curso. Y casi nadie lo sabe antes de rendirlo.
 
-Lo esencial:
+Lo que hay que saber antes de inscribirte:
 
 - NetAcad ofrece **cursos gratuitos de autoestudio**, sin instructor y sin costo, varios en español.
 - El descuento en el examen CCNA lo habilita el **tercer curso** de la serie: Enterprise Networking, Security and Automation (ENSA).

@@ -11,7 +11,7 @@ draft: false
 
 El CCST Cybersecurity es la certificación de ciberseguridad de nivel de entrada de Cisco, y una de las pocas de su programa que se pueden rendir en español. Es el examen al que apunta la ruta gratuita *Junior Cybersecurity Analyst* de Cisco Networking Academy, pero se puede rendir sin haber hecho ningún curso.
 
-Lo esencial:
+El examen de un vistazo:
 
 - El examen es el **100-160**: dura **50 minutos**, cuesta **US$125** y está disponible en **español**.
 - Cubre **cinco dominios**: principios de seguridad, seguridad de red, seguridad de equipos, gestión de vulnerabilidades y riesgos, y manejo de incidentes.

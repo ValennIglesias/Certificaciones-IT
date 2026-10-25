@@ -11,7 +11,7 @@ draft: false
 
 La ciberseguridad casi no tiene puestos de entrada. No es una opinión de foro: los documentos de trabajo del NICE, el programa de formación en ciberseguridad del NIST, registran que hay muy pocos puestos claramente definidos como entry level, y que los propios profesionales del sector discuten si esa categoría siquiera existe.
 
-Lo esencial:
+Cómo se entra, en síntesis:
 
 - A ciberseguridad **se entra de costado**, desde un rol de IT, no de forma directa.
 - Los puestos puente más transitados son **mesa de ayuda, soporte técnico, operaciones de red y administración de sistemas**.

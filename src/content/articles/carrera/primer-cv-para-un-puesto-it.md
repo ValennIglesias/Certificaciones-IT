@@ -4,14 +4,14 @@ description: "Qué poner en el CV cuando no tenés experiencia en tecnología, p
 keyword: "cómo armar un CV para IT sin experiencia"
 cluster: "carrera"
 pubDate: 2026-09-19
-updatedDate: 2026-10-09
+updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
 ---
 
 Mi primer CV para un puesto de IT tenía un solo proyecto propio: una web de productos que había hecho para un cliente durante un curso. Nada que ver con soporte técnico. Y alcanzó.
 
-Lo esencial:
+Las claves, de entrada:
 
 - Un CV de entrada no compite por experiencia: **compite por evidencia de que terminaste algo**.
 - Lo que muestres **no tiene por qué ser del área a la que aplicás**.
@@ -90,3 +90,9 @@ Lo importante no es cuál elijas: es que puedas explicarlo en una entrevista sin
 Revisá tu CV y buscá una sola cosa: **si alguien lo lee en treinta segundos, ¿queda claro que terminaste algo?** Si la respuesta es no, ese es el trabajo pendiente, y pesa más que cualquier otra corrección de formato.
 
 Y tené presente para qué sirve el CV: **para conseguir la entrevista, no el puesto**. En la mía no hubo una sola pregunta técnica — lo que midieron fue cómo razonaba y cómo me comunicaba. Si querés saber cómo suele ser ese paso, está en [cómo empezar en IT sin experiencia previa](/entrada/como-empezar-en-it-sin-experiencia/). Y si ya estás pensando qué certificación sumar después del primer puesto, el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) ordena los caminos según hacia dónde quieras ir.
+
+## Fuentes
+
+- [Curso gratuito de Cisco Packet Tracer (Cisco Networking Academy)](https://www.netacad.com/courses/getting-started-cisco-packet-tracer): la vía oficial para descargar el simulador.
+
+*Basado en mi experiencia al buscar mi primer puesto en IT. No es una plantilla universal: adaptala al puesto y al país donde busques.*

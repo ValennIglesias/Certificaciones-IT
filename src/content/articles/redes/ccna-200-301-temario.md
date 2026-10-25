@@ -11,7 +11,7 @@ draft: false
 
 Si empezás a estudiar el CCNA hoy, estás estudiando la versión 1.1 del examen — y esa versión se retira el 2 de febrero de 2027. Eso te deja una ventana concreta para rendir con el material que estás juntando ahora.
 
-Lo esencial:
+Los datos que importan:
 
 - El blueprint v1.1 tiene **seis dominios y 53 objetivos numerados**.
 - **Los dominios 1, 2 y 3 concentran el 65% del examen**: ahí es donde rinde el tiempo de estudio.

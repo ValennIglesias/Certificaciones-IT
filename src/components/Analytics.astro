@@ -73,4 +73,13 @@ import { GA_ID, GSC_VERIFICATION, ADSENSE_CLIENT, ADSENSE_SCRIPT, ADSENSE_ENABLE
 	*/
 	GA_ID && <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 }
-{ADSENSE_ENABLED && <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />}
+{
+	/* El script de AdSense se carga siempre que hay cliente: adelantar la conexión
+	   a sus dos orígenes principales le ahorra el handshake (Lighthouse, ~300 ms). */
+	ADSENSE_SCRIPT && (
+		<>
+			<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
+			<link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin />
+		</>
+	)
+}

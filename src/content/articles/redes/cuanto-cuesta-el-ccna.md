@@ -11,7 +11,7 @@ draft: false
 
 El CCNA cuesta US$300 y existe un descuento oficial para estudiantes de NetAcad. Lo que casi nadie dice es que Cisco **no publica el porcentaje** de ese descuento, y que el 50% que circula por todos lados es de un programa distinto.
 
-Lo esencial:
+Los números, de entrada:
 
 - El examen **200-301 cuesta US$300**, y el voucher vale lo mismo y dura **365 días**.
 - El descuento de NetAcad existe y es oficial, pero **Cisco no publica cuánto es**.
@@ -55,7 +55,7 @@ Porque existe, pero es de otro programa.
 
 NetAcad también da códigos de descuento por terminar los **cursos de OpenEDG** —el socio detrás de las certificaciones de Python, entre otras— y ahí sí hay un rango publicado:
 
-| | Descuento Cisco | Descuento OpenEDG |
+| Dato | Descuento Cisco | Descuento OpenEDG |
 | --- | --- | --- |
 | Porcentaje publicado | No publicado | 20% a 50% según el examen |
 | Curso habilitante | CCNA ENSA, CyberOps o DevNet | Cursos de OpenEDG en NetAcad |

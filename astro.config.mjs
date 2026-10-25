@@ -29,6 +29,8 @@ export default defineConfig({
 	build: {
 		// /cluster/slug/index.html -> URLs con barra final, como pide la spec
 		format: 'directory',
+		// El CSS pesa ~6 KB: en línea evita una petición que bloquea el primer render.
+		inlineStylesheets: 'always',
 	},
 	integrations: [
 		mdx(),

@@ -11,7 +11,7 @@ draft: false
 
 Si buscaste Networking Essentials en Cisco Networking Academy, probablemente te encontraste con que no hay un botón para empezarlo por tu cuenta: el curso solo se ofrece con instructor, a través de una academia. Lo que la página no dice es que el mismo contenido, módulo por módulo, está disponible gratis y a tu ritmo, repartido en cuatro cursos.
 
-Lo esencial:
+La versión corta:
 
 - Networking Essentials se llama **Fundamentos de Redes** en español: son **70 horas y 39 módulos**.
 - En el catálogo de NetAcad figura **solo con instructor**, así que para cursarlo hay que anotarse en una academia.

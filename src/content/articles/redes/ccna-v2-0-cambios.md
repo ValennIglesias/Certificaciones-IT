@@ -11,7 +11,7 @@ draft: false
 
 El 20 de mayo de 2026 Cisco publicó los objetivos de la versión 2.0 del CCNA. La presenta como el primer cambio grande del temario desde 2019, y comparando los PDF oficiales de las dos versiones se entiende por qué: cambian los dominios y sus pesos, salen temas que estaban hace años y entran otros que nunca habían aparecido. Lo que no cambia es el código: sigue siendo el examen 200-301.
 
-Lo esencial:
+El cambio, en cinco puntos:
 
 - La v2.0 se rinde **desde el 3 de febrero de 2027**, y el último día para rendir la v1.1 es el **2 de febrero de 2027**.
 - El código sigue siendo **200-301**, con **120 minutos** de duración y un precio de **US$300**.

@@ -11,7 +11,7 @@ draft: false
 
 Terminaste Fundamentos de Análisis de Datos en Cisco Networking Academy y la pregunta es lógica: ¿y ahora qué? Cisco no publica una secuencia obligatoria, pero su propio catálogo deja bastante claro cuál es el paso natural, y tiene un detalle que conviene saber antes de inscribirte: ese curso está solo en inglés.
 
-Lo esencial:
+La respuesta corta:
 
 - Cisco **no fija un curso siguiente**: en NetAcad no hay una ruta oficial de analista de datos con un orden publicado.
 - El paso natural de su catálogo de datos es **Data Science Essentials with Python**: gratis, 40 horas, nivel intermedio.

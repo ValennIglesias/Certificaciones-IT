@@ -1,9 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import PageLayout from '../layouts/PageLayout.astro';
 import { SITE, AUTHORS } from '../consts';
+import { authorPhoto } from '../lib/authors';
 
 // Datos del titular y del autor, provistos por el dueño del sitio.
 const AUTHOR = AUTHORS['Valentín'];
+const PHOTO = authorPhoto(AUTHOR);
 const LAST_UPDATED = '24 de octubre de 2026';
 ---
 
@@ -45,6 +48,11 @@ const LAST_UPDATED = '24 de octubre de 2026';
 	</p>
 
 	<h2>Quién está detrás</h2>
+	{
+		PHOTO && (
+			<Image src={PHOTO} alt={AUTHOR.name} width={160} height={160} class="foto-autor" loading="lazy" />
+		)
+	}
 	<p>
 		<strong>{SITE.owner}</strong> es el responsable del sitio y de su contenido editorial.
 	</p>
@@ -54,7 +62,7 @@ const LAST_UPDATED = '24 de octubre de 2026';
 		aplicaciones, mientras cursa administración de infraestructura de TI en ISTEA. Combina su
 		experiencia real en soporte con
 		investigación propia sobre cada certificación: lo que funciona en un service desk de verdad,
-		contrastado con la documentación oficial de cada examen.
+		contrastado con la documentación oficial de cada examen. Su trayectoria completa está en <a href={AUTHOR.linkedin} rel="me noopener" target="_blank">su perfil de LinkedIn</a>.
 	</p>
 
 	<h2>Contacto</h2>
@@ -69,3 +77,10 @@ const LAST_UPDATED = '24 de octubre de 2026';
 		nuestra <a href="/politica-de-privacidad/">política de privacidad</a>.
 	</p>
 </PageLayout>
+
+<style>
+	.foto-autor {
+		border-radius: 50%;
+		margin-block: 0.5rem 1rem;
+	}
+</style>

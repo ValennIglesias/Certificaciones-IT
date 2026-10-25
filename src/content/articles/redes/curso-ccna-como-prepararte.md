@@ -11,7 +11,7 @@ draft: false
 
 Podés prepararte para el CCNA gastando cero en formación, o podés gastar miles de dólares. La diferencia no está en si aprobás, está en cuánto tiempo y disciplina propia estás dispuesto a poner.
 
-Lo esencial antes de bajar:
+Lo básico antes de elegir:
 
 - El examen CCNA 200-301 cuesta **US$300**, más los impuestos que correspondan según el país, y eso no incluye ningún curso.
 - Cisco **no exige** hacer un curso ni tener experiencia previa para rendirlo.

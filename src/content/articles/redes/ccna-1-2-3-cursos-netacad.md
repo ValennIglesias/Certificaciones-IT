@@ -11,7 +11,7 @@ draft: false
 
 Los llaman CCNA 1, CCNA 2 y CCNA 3, pero ninguno de los tres es la certificación CCNA. Son los cursos que te preparan para rendirla, y confundir una cosa con la otra es el malentendido más común del tema.
 
-Lo esencial:
+Lo que conviene tener claro:
 
 - Son **tres cursos consecutivos** de Cisco Networking Academy, cada uno de unas **70 horas**.
 - Completarlos **no te certifica**: el examen 200-301 se rinde aparte, en Pearson VUE.
@@ -53,7 +53,7 @@ Esto tiene una consecuencia de planificación que conviene tener clara desde el 
 
 Esta distinción confunde a mucha gente, así que conviene dejarla explícita:
 
-| | Qué es | Dónde |
+| Concepto | Qué es | Dónde |
 | --- | --- | --- |
 | CCNA 1, 2 y 3 | Cursos de formación de NetAcad | Plataforma de Cisco Networking Academy |
 | Certificación CCNA | Examen 200-301 | Centro Pearson VUE o supervisión remota |

@@ -11,7 +11,7 @@ draft: false
 
 Introducción a la Ciberseguridad es el curso más masivo de Cisco Networking Academy: más de 10 millones de inscriptos. Y a diferencia de otros cursos de NetAcad, este sí tiene un camino oficial publicado: es el primero de seis cursos de una ruta que termina en una certificación.
 
-Lo esencial:
+Qué sigue, en corto:
 
 - El curso es el **primero de seis** de la ruta oficial *Junior Cybersecurity Analyst* de NetAcad.
 - El siguiente en esa ruta es **Conceptos básicos de redes**: 22 horas, gratis.

@@ -11,7 +11,7 @@ draft: false
 
 El CCST Networking es la certificación de redes de nivel de entrada de Cisco: el escalón anterior al CCNA. Cuesta menos de la mitad, dura menos de la mitad y se puede rendir en español. La pregunta que vale la pena hacerse no es tanto cómo es el examen, sino si te conviene rendirlo o ir directo al CCNA.
 
-Lo esencial:
+El examen, en resumen:
 
 - El examen es el **100-150**: dura **50 minutos**, cuesta **US$125** y está disponible en **español**.
 - Cubre **seis dominios**, con foco en soporte técnico: cableado, comandos de diagnóstico, Wireshark y comandos *show* en equipos Cisco.

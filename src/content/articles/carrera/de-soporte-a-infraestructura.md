@@ -11,7 +11,7 @@ draft: false
 
 Entré a IT como trainee en una mesa de ayuda y terminé administrando servidores Windows. En el medio no hubo un curso que me habilitara: hubo tres años de hacer preguntas.
 
-Lo esencial:
+Lo que aprendí en el camino, resumido:
 
 - El salto de soporte a infraestructura **se hace adentro del trabajo**, no estudiando desde afuera.
 - En mi caso, **la práctica vino antes que la certificación y que la carrera**, no al revés.
@@ -96,3 +96,5 @@ Si querés llegar preparado al momento en que la oportunidad aparezca, esto es l
 Si ya estás en soporte, lo más útil que podés hacer esta semana no es inscribirte a un curso: es **elegir un ticket que hayas escalado y preguntarle al equipo que lo resolvió cómo lo hizo**. Repetirlo durante unos meses enseña más que cualquier temario, y de paso te hace visible para el área a la que querés moverte.
 
 Cuando quieras formalizarlo con una certificación, el [roadmap de certificaciones](/carrera/roadmap-certificaciones-it/) ordena los caminos de redes, seguridad y cloud según el rol al que apuntes.
+
+*Basado en mi experiencia: de trainee en una mesa de ayuda al pase gradual a infraestructura, dentro de la misma empresa. Cada organización arma ese camino a su manera.*
