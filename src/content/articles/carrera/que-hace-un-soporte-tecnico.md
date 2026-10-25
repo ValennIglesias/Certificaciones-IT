@@ -21,7 +21,7 @@ En pocas palabras:
 
 La mesa de ayuda (help desk o service desk) es el equipo que recibe los pedidos y los problemas de los usuarios de una organización: una contraseña bloqueada, una impresora que no aparece, un programa para instalar, un sistema que no responde. Cada pedido se registra en una herramienta de tickets, con quién lo pidió, en qué equipo, qué pasa, qué categoría y prioridad tiene, y cómo se resolvió.
 
-En la empresa donde trabajé, los pedidos entraban sobre todo por teléfono y por mail, y se cargaban en una herramienta de tipo service desk. Dábamos soporte a una nómina de unas 3.000 personas.
+En la empresa donde trabajé, los pedidos entraban sobre todo por teléfono y por mail, y se cargaban en ServiceDesk Plus, la herramienta de mesa de ayuda de ManageEngine. Dábamos soporte a una nómina de unas 3.000 personas.
 
 ## Los tres niveles
 
@@ -97,6 +97,7 @@ Y si te preguntás qué viene después: desde la mesa de ayuda se puede crecer h
 ## Fuentes
 
 - [Objetivos oficiales de CompTIA A+ Core 2 (220-1202)](https://lecbyo.files.cmp.optimizely.com/download/cefedfb2b8a511ef809306d06d323538): sistemas de tickets y niveles de escalamiento (4.1) y comunicación y profesionalismo (4.7).
+- [ServiceDesk Plus (ManageEngine)](https://www.manageengine.com/products/service-desk/): la herramienta de tickets que usábamos.
 - [Combinaciones de teclas de Chrome (Ayuda de Google)](https://support.google.com/chrome/answer/157179?hl=es): el atajo para volver a abrir pestañas cerradas.
 
 *Basado en mi experiencia como soporte de nivel 1. Cada empresa organiza su mesa de ayuda a su manera: los números y los niveles cambian según el tamaño y el sector.*
