@@ -55,7 +55,7 @@ Estos eran los pedidos más comunes:
 - Restablecer el MFA cuando alguien perdía el acceso a su segundo factor.
 - Outlook que no sincroniza: activar o desactivar el modo caché, sumar una cuenta, revisar un buzón compartido, respaldar archivos .pst.
 - Impresoras que no imprimen o no aparecen.
-- Equipos lentos, y drivers para reinstalar o actualizar.
+- [Equipos lentos](/entrada/pc-lenta-que-hacer/), y drivers para reinstalar o actualizar.
 - Equipos sin internet: revisar la VPN o reiniciar el adaptador de red.
 - Instalación de programas.
 - Altas y bajas de usuarios: pedir las aprobaciones, derivar y asistir en la configuración inicial.

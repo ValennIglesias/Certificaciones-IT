@@ -5,12 +5,21 @@ keyword: "pc lenta que hacer"
 cluster: "entrada"
 pubDate: 2026-10-31
 author: "Valentín"
-draft: true
+draft: false
 ---
 
 "La computadora anda lenta" era de los pedidos más comunes en la mesa de ayuda donde trabajé. Casi nunca era una sola cosa, y casi nunca hacía falta cambiar el equipo: con un orden de revisión claro, la mayoría se resolvía en un rato y a distancia.
 
 Este es el orden que usaba, de lo más rápido y seguro a lo más delicado. Los pasos están probados contra la guía oficial de Microsoft para Windows 11; en Windows 10 algunos menús cambian de nombre.
+
+El orden, en corto:
+
+- Mirar qué consume el equipo en el **Administrador de tareas**.
+- Deshabilitar los **programas que arrancan con Windows**.
+- **Liberar espacio** en el disco.
+- Pasar el **antivirus** e instalar las **actualizaciones** pendientes.
+- Bajar los **efectos visuales**.
+- Si nada de eso alcanza, revisar el **hardware**.
 
 ## 1. Mirar qué está consumiendo el equipo
 
@@ -65,7 +74,7 @@ Si después de todo esto el equipo sigue lento, toca revisar el hardware. En la 
 
 ## Por qué esto aparece en los exámenes
 
-Este orden de revisión no es un invento de la mesa de ayuda: está casi entero en el temario de CompTIA A+. El objetivo 3.1 del Core 2 incluye el rendimiento degradado entre los problemas de Windows que hay que saber resolver, y el 1.4 nombra las herramientas que usé acá: el Administrador de tareas con sus pestañas de procesos, inicio y rendimiento, el Monitor de recursos, el Liberador de espacio en disco y el Editor del Registro. El resto de las tareas típicas de soporte, cruzadas con el temario, están en la guía de [CompTIA A+](/entrada/certificacion-comptia-a-plus/).
+Este orden de revisión no es un invento de la mesa de ayuda: está casi entero en el temario de CompTIA A+. El objetivo 3.1 del Core 2 incluye el rendimiento degradado entre los problemas de Windows que hay que saber resolver, y el 1.4 nombra las herramientas de esta guía: el Administrador de tareas con sus pestañas de procesos, inicio y rendimiento, el Liberador de espacio en disco y el Editor del Registro. Suma además el Monitor de recursos, que no usamos acá. El resto de las tareas típicas de soporte, cruzadas con el temario, están en la guía de [CompTIA A+](/entrada/certificacion-comptia-a-plus/).
 
 ## Fuentes
 
