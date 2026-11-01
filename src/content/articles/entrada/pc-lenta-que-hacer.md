@@ -19,6 +19,7 @@ El orden, en corto:
 - **Liberar espacio** en el disco.
 - Pasar el **antivirus** e instalar las **actualizaciones** pendientes.
 - Bajar los **efectos visuales**.
+- Si es una notebook, revisar el **modo de energía**.
 - Si nada de eso alcanza, revisar el **hardware**.
 
 ## 1. Mirar qué está consumiendo el equipo
@@ -68,6 +69,14 @@ En algunos casos llegué a modificar valores del **registro de Windows** (regedi
 
 Si alguna vez lo necesitás, la regla que sigue Microsoft es simple: **antes de tocar una clave, exportala como copia de seguridad**, y si es posible creá un punto de restauración. Desde Windows 10, versión 1803, el sistema ya no guarda copias automáticas del registro en la carpeta RegBack, así que el respaldo lo tenés que hacer vos.
 
+## Si es una notebook
+
+Todo lo anterior vale igual para una notebook, pero suma algo que una PC de escritorio no tiene: el **modo de energía**. Windows puede priorizar la duración de la batería por sobre el rendimiento, y una notebook configurada así anda más lenta sin tener ningún problema.
+
+Para revisarlo en Windows 11, entrá a **Inicio > Configuración > Sistema > Energía y batería** (en algunas versiones figura como *Alimentación y batería*) y, en **Modo de energía**, elegí entre **Mejor eficiencia energética**, **Equilibrado** y **Mejor rendimiento**. Se puede fijar un modo distinto para cuando está enchufada y para cuando funciona con batería, así que conviene revisar los dos. En Windows 10, el ajuste está en el ícono de batería de la barra de tareas.
+
+Si la notebook anda bien enchufada y lenta con batería, empezá por acá.
+
 ## Cuándo no es software
 
 Si después de todo esto el equipo sigue lento, toca revisar el hardware. En la empresa donde trabajé, eso ya no era de la mesa de ayuda: se derivaba al soporte en sitio, que podía revisar el equipo físicamente. Cómo se reparte el trabajo entre esos niveles está en la guía de [qué hace un soporte técnico](/carrera/que-hace-un-soporte-tecnico/).
@@ -80,6 +89,7 @@ Este orden de revisión no es un invento de la mesa de ayuda: está casi entero 
 
 - [Sugerencias para mejorar el rendimiento del equipo en Windows (Microsoft)](https://support.microsoft.com/es-es/windows/sugerencias-para-mejorar-el-rendimiento-del-equipo-en-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96): los pasos oficiales de actualizaciones, antivirus, espacio en disco, aplicaciones de inicio, efectos visuales y uso de recursos.
 - [Hacer una copia de seguridad del registro y restaurarlo (Microsoft)](https://support.microsoft.com/es-es/topic/hacer-una-copia-de-seguridad-del-registro-y-restaurarlo-en-windows-855140ad-e318-2a13-2829-d428a2ab0692) y [el registro ya no se respalda en RegBack desde Windows 10, versión 1803 (Microsoft Learn)](https://learn.microsoft.com/es-es/troubleshoot/windows-client/installing-updates-features-roles/system-registry-no-backed-up-regback-folder): cómo respaldar antes de editar.
+- [Cambiar el modo de energía de tu PC Windows (Microsoft)](https://support.microsoft.com/es-es/windows/cambiar-el-modo-de-energ%C3%ADa-de-tu-pc-con-windows-c2aff038-22c9-f46d-5ca0-78696fdf2de8): los modos de energía, enchufada y con batería.
 - [Objetivos oficiales de CompTIA A+ Core 2 (220-1202)](https://lecbyo.files.cmp.optimizely.com/download/cefedfb2b8a511ef809306d06d323538): los objetivos 1.4 y 3.1.
 
 *Pasos verificados en octubre de 2026 en la documentación oficial de Microsoft para Windows 11. El orden de revisión es el que usaba como soporte de nivel 1.*

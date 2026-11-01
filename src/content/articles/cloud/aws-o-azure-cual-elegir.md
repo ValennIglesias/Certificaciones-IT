@@ -4,7 +4,7 @@ description: "AZ-900 vs AWS Cloud Practitioner lado a lado: precio, duración, p
 keyword: "az 900 vs aws cloud practitioner"
 cluster: "cloud"
 pubDate: 2026-09-19
-updatedDate: 2026-10-24
+updatedDate: 2026-11-01
 author: "Valentín"
 draft: false
 ---
@@ -25,8 +25,40 @@ AZ-900 y AWS Cloud Practitioner son las dos certificaciones de entrada a la nube
 
 Dos diferencias que pesan en la práctica:
 
-- **La vigencia.** El AZ-900 no vence: es una credencial de por vida. El Cloud Practitioner dura tres años, y después hay que renovarlo.
+- **La vigencia.** El AZ-900 no vence: es una credencial de por vida. El Cloud Practitioner dura tres años, y después hay que renovarlo (más abajo, cuánto cuesta eso en la práctica).
 - **Lo que viene después.** Aprobar cualquier certificación de AWS te da un 50% de descuento en otros exámenes de AWS. Si tu plan es seguir en AWS, ese beneficio abarata el siguiente paso.
+
+## Si desaprobás
+
+Las reglas para volver a rendir cambian bastante entre los dos, y en los dos casos cada intento se paga completo:
+
+| Regla | AWS Cloud Practitioner | AZ-900 |
+| --- | --- | --- |
+| Espera después del primer intento | 14 días | 24 horas |
+| Espera entre los siguientes | 14 días | 14 días |
+| Límite de intentos | Sin límite | 5 en 12 meses |
+| Se vuelve a pagar | Sí, el precio completo | Sí |
+
+En la práctica, el AZ-900 te deja corregir rápido un mal día: al día siguiente podés estar rindiendo de nuevo. Con AWS la espera mínima son dos semanas, que conviene aprovechar para repasar los dominios donde te sentiste más flojo.
+
+## Renovar el Cloud Practitioner: menos trabajo de lo que parece
+
+Que el Cloud Practitioner venza a los tres años suena peor de lo que es. AWS ofrece cuatro formas de renovarlo, y cada una suma otros tres años:
+
+- **Completar AWS Cloud Quest: Recertify Cloud Practitioner**, una capacitación en formato de juego. Es gratis y no tiene examen.
+- Aprobar la versión vigente del examen CLF.
+- Aprobar **cualquier examen de nivel Associate**.
+- Aprobar cualquier examen de nivel Professional.
+
+Las tres opciones con examen se pueden pagar con el voucher del 50% que te da la certificación. La consecuencia práctica: si dentro de esos tres años rendís, por ejemplo, el Solutions Architect – Associate, el Cloud Practitioner se renueva solo. El vencimiento solo pesa si sacás la certificación y te quedás ahí.
+
+## Rendir desde casa
+
+Los dos se pueden rendir en un centro de Pearson VUE o en línea, desde tu computadora, con un supervisor remoto. Algunos detalles de AWS que conviene conocer antes de reservar el turno:
+
+- **La supervisión en línea en español de Latinoamérica tiene horario:** de lunes a viernes, de 10:00 a 17:45 (hora del Este de Estados Unidos). En inglés hay supervisión las 24 horas, todos los días.
+- **Si rendís en inglés y no es tu idioma nativo, podés pedir 30 minutos extra.** Se solicita una sola vez desde tu cuenta de AWS Certification, antes de registrarte (en *Request Exam Accommodations*, la opción *ESL +30 MINUTES*), y queda aplicada para todos tus exámenes futuros.
+- **El resultado oficial tarda hasta cinco días hábiles** en aparecer en tu cuenta.
 
 ## Qué evalúa cada uno
 
@@ -79,5 +111,8 @@ Y para ver qué viene antes y después de la certificación de entrada de nube, 
 - [AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/) y [guía oficial del examen CLF-C02](https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02.html): precio, formato, idiomas, vigencia, dominios y el descuento del 50%.
 - [Microsoft Certified: Azure Fundamentals](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/) y [guía de estudio del AZ-900](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900): precio, duración, idiomas y áreas del examen.
 - [Renovación de certificaciones de Microsoft](https://learn.microsoft.com/en-us/credentials/certifications/renew-your-microsoft-certification): las Fundamentals no vencen.
+- [Política de reintentos de Microsoft](https://learn.microsoft.com/en-us/credentials/support/retake-policy): esperas y límite de intentos del AZ-900.
+- [Políticas de AWS antes del examen](https://aws.amazon.com/certification/policies/before-testing/) y [después del examen](https://aws.amazon.com/certification/policies/after-testing/): supervisión en línea, los 30 minutos extra, reintentos y plazo de resultados.
+- [Recertificación de AWS](https://aws.amazon.com/certification/recertification/): las cuatro formas de renovar el Cloud Practitioner.
 
-*Datos verificados el 24 de octubre de 2026 en las páginas oficiales de AWS y Microsoft.*
+*Datos verificados el 1 de noviembre de 2026 en las páginas oficiales de AWS y Microsoft.*
