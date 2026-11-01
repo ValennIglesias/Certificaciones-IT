@@ -1,32 +1,27 @@
 # AdSense Action Plan
 
 URL: https://desdeceroit.com/
-Fecha: 24/10/2026
-Contexto: rechazo por "Contenido de poco valor". Detalle en `adsense-audit/audit.md` y `docs/auditoria-contenido.md`.
+Fecha: 01/11/2026
+Contexto: re-auditoría tras el rechazo por "Contenido de poco valor" (76/100, CONDITIONAL PASS). Detalle en `adsense-audit/audit.md`.
 
 ## Immediate Fixes
 
-- [ ] Ajustar la descripción del sitio y de las categorías a los temas que realmente tienen artículos (quitar ITIL, Network+, ITF+, Google IT Support, CySA+, CEH y Google Cloud mientras no existan). — *AdSense Content guidance: entregar lo que se promete*
-- [ ] Mostrar el autor en la portada, con enlace a /autor/. — *E-E-A-T (Trust)*
-- [ ] Agregar a cada página de categoría un texto propio de orientación: por dónde empezar y en qué orden leer. — *Low value content: selección y mantenimiento estructural*
-- [ ] Decidir qué hacer con las 8 fechas de publicación anteriores al primer commit: corregirlas si no hubo una versión previa publicada. — *Trust*
-- [ ] Fusionar security-plus-vale-la-pena en examen-comptia-security-plus, con 301. — *"Muchas páginas casi idénticas: combinarlas"; Thin content*
-- [ ] **No volver a enviar todavía.** — *Site eligibility: presencia constante e interés de usuarios*
+- [ ] Servir la 404 real: agregar al repo la config del Worker con `assets.not_found_handling: "404-page"` (o activarlo desde el panel de Cloudflare) y verificar que `/esto-no-existe/` muestre la página con navegación. — *Issue 2 · AdSense — Site navigation*
+- [ ] **No reenviar todavía.** Fecha objetivo: principios de diciembre de 2026, solo si Search Console muestra impresiones y clics creciendo. — *Issue 1 · AdSense — Low value content / Site eligibility*
+- [ ] Compartir los datos de Search Console (indexadas, impresiones y clics de 4 semanas) para completar la evaluación de interés de usuarios. — *Issue 1 · Evidencia faltante*
 
 ## 30-Day Fixes
 
-- [ ] Agregar una sección "Fuentes" con enlaces a las páginas oficiales en cada artículo, empezando por los de precios, sueldos y temarios. — *E-E-A-T (Trust); Low value content*
-- [ ] Sumar experiencia propia donde exista: estudiar trabajando full-time (el autor cursa en ISTEA mientras trabaja), AZ-900 (temario estudiado), soporte técnico en A+ y en Networking. — *Low value content: originalidad*
-- [ ] Ampliar o retirar los artículos finos: aws-o-azure-cual-elegir (respaldar la afirmación de cuota de mercado o retirarlo), fundamentos-de-redes-para-certificarte, cissp-requisitos-costo-experiencia. — *Thin content*
-- [ ] Reescribir la ficha que comparten los dos CCST y el párrafo del descuento repetido en dos artículos. — *Contenido duplicado entre páginas*
-- [ ] Quitar o respaldar las afirmaciones sin fuente (AZ-900 "la mayoría termina antes"; "más cuota de mercado global"). — *Trust*
-- [ ] Romper la plantilla: no todos los artículos necesitan "Lo esencial" ni "Qué hacer ahora". — *Scaled content abuse (percepción)*
-- [ ] Publicar a ritmo constante (1–2 por semana), no en ráfagas. — *Scaled content abuse (percepción)*
+- [ ] Publicar el mensaje GDPR en AdSense → Privacidad y mensajes (el banner propio ya le cede el lugar automáticamente). — *Issue 3 · Google Publisher Policies — EU user consent policy*
+- [ ] Publicar a ritmo constante, 1–2 artículos por semana en días distintos; nada de ráfagas. — *Issue 4 · Spam Policies — Scaled content abuse (percepción)*
+- [ ] Al revisar artículos, actualizar `updatedDate` solo cuando cambia el contenido, no todos el mismo día. — *Issue 4 · Scaled content abuse (percepción)*
+- [ ] Confirmar si los 18 artículos con fecha 19–28/09 se publicaron antes en `*.workers.dev`; si no, alinear `pubDate` con la fecha real de publicación. — *Issue 5 · Trust*
+- [ ] Sumar experiencia propia a 3–4 artículos de Redes/Seguridad/Cloud donde exista (cómo estudiás, qué te costó entender, qué viste en el trabajo). — *Issue 6 · Low value content (originalidad)*
 
 ## 90-Day Improvements
 
-- [ ] Decidir AZ-900: fusionar curso y examen en una sola guía, o mantenerlas separadas con intenciones bien distintas. — *Low value content*
-- [ ] Decidir si despues-de-fundamentos-de-analisis-de-datos se mantiene o pasa a noindex. — *Temática del sitio*
-- [ ] Crear contenido que solo este sitio puede tener: experiencia rindiendo el AZ-900 cuando ocurra, datos propios (por ejemplo, vacantes relevadas a mano), una herramienta útil (costo total del examen por país). — *Originalidad*
-- [ ] Volver a enviar después de 60–90 días, con tráfico orgánico creciente en Search Console. — *Site eligibility*
-- [ ] Sumar foto y LinkedIn a "Sobre nosotros". — *Trust*
+- [ ] Rendir el AZ-900 y escribir la experiencia real (o actualizar el perfil cuando ocurra). — *Issue 7 · E-E-A-T*
+- [ ] Variar la estructura: renombrar o fundir las secciones "Ficha del examen" y "Vigencia y renovación" donde no aporten. — *Issue 8 · Scaled content abuse (percepción)*
+- [ ] Enlazar las fuentes externas que cite de-soporte-a-infraestructura, si las hay. — *Issue 9 · E-E-A-T (Trust)*
+- [ ] Decidir si despues-de-fundamentos-de-analisis-de-datos se mantiene, se reorienta a infraestructura o pasa a noindex. — *Issue 10 · Coherencia temática*
+- [ ] Crear contenido que solo este sitio puede tener: datos propios (vacantes relevadas a mano), costo total del examen por país, más guías de "Soporte técnico en la práctica". — *Low value content (originalidad)*

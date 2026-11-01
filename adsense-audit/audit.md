@@ -1,93 +1,101 @@
 # AdSense Compliance Audit
 
 URL: https://desdeceroit.com/
-Fecha: 24/10/2026
-Contexto: re-auditoría tras el rechazo de AdSense por **"Contenido de poco valor"** (Low value content). Reemplaza la auditoría anterior (CONDITIONAL PASS, 79/100), que subestimó el peso del aporte propio y de la madurez del sitio.
-Evidencia: los 28 artículos del repo (`main`, commit `7b01426`), el build local, el historial de git, el sitio publicado y la guía oficial de Google "Contenido y experiencia de usuario" (support.google.com/adsense/answer/10015918). Detalle por artículo en `docs/auditoria-contenido.md`.
+Fecha: 01/11/2026
+Contexto: re-auditoría después del rechazo por **"Contenido de poco valor"** y de los cambios hechos desde la auditoría del 24/10/2026 (68/100, FAIL de hecho: "no volver a enviar todavía"). Reemplaza esa auditoría.
+Evidencia: los 28 artículos publicados del repo (`main`, commit `a35a838`, ya en producción), el sitio en vivo (texto de páginas, cookies antes del consentimiento, `robots.txt`, `ads.txt`, sitemap, 404, vista móvil 375 px) y el registro del dominio (RDAP de Verisign).
+**Evidencia que falta:** datos de Search Console (páginas indexadas, impresiones y clics de las últimas 4 semanas) y el estado actual de la solicitud en AdSense. Sin eso, la parte de "interés genuino de los usuarios" se evalúa a ciegas.
 
 ## Executive Summary
 
-Overall Score: **68/100 — Needs Significant Improvements** (promedio simple de las cinco dimensiones).
-Approval Probability: **baja (≈15–25%) si se vuelve a enviar ahora**; razonable después de 60–90 días con los cambios de abajo y tráfico orgánico creciente.
+Overall Score: **76/100 — Mostly Ready** (promedio simple de las cinco dimensiones).
+Approval Probability: **media-baja (≈35–45%) si se reenvía hoy**; razonable (≈60–70%) si se reenvía a principios de diciembre de 2026 con Search Console mostrando impresiones crecientes y la página 404 corregida.
 
-El sitio no tiene problemas de políticas de contenido ni de spam en sentido estricto, y la parte técnica está bien. El rechazo es por valor: la mayoría de los artículos reordenan documentación oficial sin enlazarla y sin experiencia propia. Además, el sitio tiene ~5 semanas, publicó en ráfagas y casi no tiene tráfico. Los tres criterios del rechazo (información auténtica de calidad, mantenimiento continuo, interés genuino de los usuarios) apuntan a eso, no a una página puntual.
+El contenido dejó de ser el problema principal. Desde el rechazo, el sitio sumó fuentes oficiales enlazadas en los 28 artículos, experiencia propia en cerca de la mitad, textos de orientación en las categorías, el autor en la portada, ningún artículo por debajo de ~870 palabras y se fusionó el duplicado de Security+. Lo que sigue en contra es la **madurez**: el dominio se registró el **03/10/2026 (29 días)**, el contenido tiene ~6 semanas y no hay evidencia de tráfico. Eso no se arregla editando.
 
-| Dimensión | Puntaje | Motivo principal |
-| --- | --- | --- |
-| Content Quality | 55 | 18 de 28 artículos sin aporte propio; 0 fuentes enlazadas; 4 artículos de menos de 500 palabras |
-| Policy Compliance | 85 | Sin contenido prohibido ni restringido; riesgo de percepción de contenido a escala por plantilla y ráfagas |
-| Trust Signals | 72 | Autor real y bien presentado; fechas anteriores al primer commit; promesas de temas sin contenido |
-| UX Quality | 86 | Navegación clara, mobile correcto, sin enlaces rotos; portada sin autor y categorías sin texto propio |
-| Monetization Readiness | 42 | Sitio de ~5 semanas, tráfico orgánico mínimo, sin historial |
+| Dimensión | Puntaje | Antes (24/10) | Motivo principal |
+| --- | --- | --- | --- |
+| Content Quality | 74 | 55 | Fuentes en 28/28 y análisis propio; la mitad sin experiencia en primera persona; plantilla todavía reconocible |
+| Policy Compliance | 88 | 85 | Sin contenido prohibido ni restringido; riesgo de percepción de contenido a escala (ráfagas, actualización masiva) |
+| Trust Signals | 85 | 72 | Autor real, legales completos, fuentes; fechas de artículos anteriores al registro del dominio |
+| UX Quality | 82 | 86 | Móvil correcto, categorías con criterio editorial; **la 404 devuelve una página vacía** |
+| Monetization Readiness | 50 | 42 | Dominio de 29 días, tráfico sin evidencia, CMP para Europa sin publicar |
 
 ## Critical Issues
 
-1. **La mayoría del contenido no aporta valor propio sobre la documentación oficial.** *Confirmado.* Solo 3 artículos tienen experiencia en primera persona y 7 análisis propio; 18 reordenan fichas, temarios y precios de Cisco, CompTIA, AWS o Microsoft. Es justo lo que Google describe como contenido que no agrega "valor sustancial" frente a otros sitios. — *AdSense Program Policies — Low value content; Google Spam Policies — Thin content (contenido sin valor añadido).*
-2. **Ninguna fuente enlazada.** *Confirmado.* 1 enlace externo en 28 artículos. Ocho artículos dicen "verificado en las páginas oficiales", pero el lector y el revisor no pueden comprobarlo. En un sitio de precios, temarios y sueldos, eso convierte datos correctos en afirmaciones sin respaldo. — *Search Quality Rater Guidelines — E-E-A-T (Trust); AdSense — Low value content.*
-3. **Madurez e interés de usuarios insuficientes.** *Confirmado (dato de Search Console y del repo).* Primer commit el 19/09/2026; tráfico orgánico de pocas decenas de clics. El mensaje de rechazo pide "presencia constante en la Web" e "interés genuino": no se arregla editando. — *AdSense — Site eligibility / Low value content.*
+1. **Madurez del sitio e interés de usuarios sin demostrar.** *Confirmado (dominio) / Sin evidencia (tráfico).* Dominio registrado el 03/10/2026; primer artículo con fecha 19/09/2026. El rechazo por poco valor pide "presencia constante" e "interés genuino": un reenvío inmediato se evalúa con el mismo historial que el rechazo. — *AdSense Program Policies — Low value content / Site eligibility.*
 
 ## High Priority Issues
 
-4. **Patrón de plantilla visible.** *Confirmado.* "Lo esencial" con 5 viñetas al inicio y "Qué hacer ahora" al cierre en 22 de 28 artículos; secciones calcadas ("Cómo prepararlo", "Vigencia y renovación"). Sumado a las ráfagas, se parece a contenido producido a escala. — *Spam Policies — Scaled content abuse (riesgo de percepción, no violación).*
-5. **Publicación en ráfagas.** *Confirmado.* 8 artículos el 26/09 y 6 el 20/10. — *Spam Policies — Scaled content abuse (riesgo potencial).*
-6. **Artículos finos.** *Confirmado.* security-plus-vale-la-pena (296 palabras), aws-o-azure-cual-elegir (372), fundamentos-de-redes-para-certificarte (463), cissp-requisitos-costo-experiencia (482). — *Spam Policies — Thin content.*
-7. **Dos artículos con la misma intención.** *Confirmado.* security-plus-vale-la-pena repite dominios, formato y precio de examen-comptia-security-plus. — *AdSense Content guidance — "muchas páginas casi idénticas: ampliarlas o combinarlas".*
-8. **Fechas de publicación anteriores al sitio.** *Riesgo potencial.* 8 artículos con `pubDate` anterior a su primer commit (hasta el 05/09, con el repo creado el 19/09). Si no hubo una versión previa publicada, es una fecha que no corresponde. — *Search Quality Guidelines — Trust; Google guía de fechas en la Búsqueda.*
+2. **La página 404 llega vacía.** *Confirmado.* `/esto-no-existe/` responde 404 con 0 bytes: el revisor (o un enlace roto) ve una pantalla en blanco, sin navegación. El build sí genera `dist/404.html`, pero el Worker de Cloudflare no está configurado para servirlo (no hay `wrangler.json` en el repo; el default es `not_found_handling: "none"`). — *AdSense — Site navigation / Google Publisher Policies — Ad experience (páginas sin contenido).*
+3. **Mensaje de consentimiento para Europa sin publicar.** *Confirmado.* No hay `__tcfapi` en el sitio: la CMP de Google (AdSense → Privacidad y mensajes) no está activa. Google exige una CMP certificada para servir anuncios a usuarios del EEE, Reino Unido y Suiza. No bloquea la aprobación, pero sin ella esas visitas no monetizan como corresponde. El banner propio ya está preparado para cederle el lugar. — *Google Publisher Policies — EU user consent policy.*
+4. **Señales de producción en serie todavía visibles.** *Riesgo potencial, no violación.* 9 artículos con fecha 26/09 y 6 con fecha 20/10; 24 de 28 muestran "Actualizado el 24 de octubre de 2026" (varios publicados 4 días antes); la misma estructura (resumen en viñetas → tablas → "Fuentes" → "Datos verificados el…") en casi todos. Ninguno es contenido genérico, pero el conjunto se parece al patrón que Google describe. — *Spam Policies — Scaled content abuse (percepción).*
 
 ## Medium Priority Issues
 
-9. **El sitio promete temas que no tiene.** *Confirmado.* La descripción general y las de categorías nombran ITIL, Network+, ITF+, Google IT Support, CySA+, CEH y Google Cloud, sin artículos. Google pide que el sitio entregue lo que promete. — *AdSense Content guidance — navegación y contenido prometido.*
-10. **Páginas de categoría sin texto propio.** *Confirmado.* Solo una línea de descripción y el listado. No muestran criterio editorial ("selección y mantenimiento estructural"). — *AdSense — Low value content.*
-11. **El autor no aparece en la portada.** *Confirmado.* La autoría solo se ve dentro de cada artículo y en /autor/. — *Search Quality Guidelines — E-E-A-T.*
-12. **Texto repetido entre pares.** *Confirmado.* La ficha del examen CCST (2 artículos) y el párrafo del descuento de NetAcad (2 artículos). Volumen bajo, pero es lo único que el análisis de similitud marcó. — *AdSense Content guidance — contenido duplicado entre páginas.*
-13. **Cifras de sueldos sin fuente enlazada.** *Confirmado* en cuanto-gana-ingeniero-informatica. — *E-E-A-T (Trust).*
-14. **Afirmaciones sin respaldo.** *Confirmado:* "la mayoría de los candidatos termina bastante antes" (AZ-900); "el proveedor con más cuota de mercado global" (AWS vs Azure). — *E-E-A-T (Trust).*
+5. **Fechas de artículos anteriores al registro del dominio.** *Riesgo potencial.* 18 artículos tienen `pubDate` entre el 19 y el 28/09/2026; el dominio existe desde el 03/10. Si estuvieron publicados antes en `*.workers.dev`, la fecha es verdadera; si no, es una fecha que no corresponde. — *Search Quality Guidelines — Trust; guía de Google sobre fechas.*
+6. **La mitad de los artículos no tiene experiencia propia.** *Confirmado.* ~13 de 28 (sobre todo Redes, Cloud y Seguridad) son recopilación ordenada y verificada de documentación oficial, con buen análisis pero sin nada que solo el autor pueda contar. Es la diferencia entre "correcto" y "de valor" para un revisor. — *AdSense — Low value content (originalidad).*
+7. **El autor escribe sobre certificaciones que no tiene.** *Confirmado, declarado con honestidad.* El perfil dice "AZ-900: temario estudiado, examen todavía sin rendir" y no hay certificaciones de CompTIA, Cisco o ISC2. La transparencia es buena; la autoridad en temas de examen es limitada. — *Search Quality Guidelines — E-E-A-T (Experience/Expertise).*
 
 ## Low Priority Issues
 
-15. "Sobre nosotros" sin foto ni LinkedIn (sí están en /autor/). — *Trust.*
-16. Artículo temáticamente periférico: despues-de-fundamentos-de-analisis-de-datos. — *AdSense Content guidance — texto no relacionado con la temática.* Duda, no violación.
+8. **Restos de plantilla.** "## Ficha del examen" en 4 artículos y "Vigencia y renovación" en 3. — *Spam Policies — Scaled content abuse (percepción, menor).*
+9. **de-soporte-a-infraestructura sin sección de fuentes.** Es un artículo de experiencia, así que es razonable; si cita datos externos, enlazarlos. — *E-E-A-T (Trust).*
+10. **despues-de-fundamentos-de-analisis-de-datos**, temáticamente periférico (análisis de datos en un sitio de infraestructura). Pendiente desde la auditoría anterior. — *AdSense Content guidance — coherencia temática.*
 
 ## Content Quality Assessment
 
-28 artículos, mediana ≈ 900 palabras, con tablas útiles y enlazado interno denso. La similitud entre artículos es baja (Jaccard de 5-gramas máximo 0,078): no hay contenido duplicado ni copiado entre páginas. Lo que falla es el aporte: los artículos con experiencia propia (soporte → infraestructura, primer CV, primera entrevista) y los de análisis propio (diferencias v1.1/v2.0 del CCNA, equivalencia Networking Essentials ↔ Técnico en Redes, el descuento de NetAcad) son los que un revisor consideraría de valor. El resto es correcto pero sustituible por la página oficial.
+**¿Es original?** Sí. No hay texto copiado entre páginas ni de las fuentes: los datos oficiales están parafraseados y reorganizados, y varios artículos tienen análisis que no está en ningún otro lado (la equivalencia módulo por módulo entre Networking Essentials y la ruta gratuita Técnico en Redes, las diferencias CCNA v1.1/v2.0, las condiciones reales del descuento de NetAcad, el orden de revisión de una mesa de ayuda en "PC lenta").
+
+**¿Es de valor?** Mayormente sí. 28 artículos de 870 a 1.500 palabras, con tablas, enlaces a la fuente oficial de cada dato, fecha de verificación y enlazado interno con criterio. Los más fuertes son los que combinan experiencia + dato verificado (soporte técnico, primer CV, de soporte a infraestructura, PC lenta, AZ-900 vs AWS). Los más débiles son las fichas de examen que un lector también encuentra en la página del proveedor.
+
+**¿Parece hecho con IA de forma masiva?** Google no penaliza el uso de IA en sí, sino el contenido a escala sin valor. A favor del sitio: anécdotas específicas y verificables (ServiceDesk Plus, ISTEA, el AZ-900 estudiado y no rendido), opiniones propias, límites declarados y fuentes. En contra: ritmo de publicación alto para una sola persona que trabaja y estudia (28 artículos en 6 semanas, en ráfagas), estructura muy pareja y la misma fecha de actualización en 24 páginas. Un revisor humano que lea dos o tres artículos va a ver contenido cuidado; un sistema que mire patrones puede ver producción en serie. **Riesgo medio de percepción, no violación.**
+
+**¿Es de interés para el lector?** El tema tiene demanda real (certificaciones IT en español, con precios y caminos concretos para Latinoamérica) y el enfoque responde preguntas que se buscan. Que haya interés *demostrado* depende del tráfico, del que no hay evidencia.
 
 ## Publisher Policy Assessment
 
-Sin contenido para adultos, peligroso, violento, de odio, engañoso, ni infracciones de derechos de autor detectadas. Los datos de Cisco y CompTIA están parafraseados, no copiados. **Sin violaciones confirmadas.**
+Sin contenido para adultos, peligroso, violento, de odio, engañoso ni malware. La única mención sensible es una advertencia contra los "dumps" de exámenes (AZ-900), que es lo correcto. Imágenes: OG propias por artículo y dos fotos de portada locales; no se detectaron materiales de terceros. **Sin violaciones confirmadas.**
 
 ## Publisher Restriction Assessment
 
-Sin alcohol, apuestas, citas, salud ni política. **Sin restricciones aplicables.**
+Ninguna categoría restringida (alcohol, apuestas, citas, salud, política, religión). El artículo de sueldos es información laboral con fuentes. **Sin restricciones aplicables.**
 
 ## Invalid Traffic Assessment
 
-Sin incentivos a clics, sin tráfico pagado, sin ubicaciones engañosas: los espacios de anuncios están desactivados (`PUBLIC_ADSENSE_ENABLED=false`) y los anuncios automáticos apagados. **Sin riesgo detectado.**
+Sin incentivos a clics, sin textos que inviten a tocar anuncios, sin anuncios activos todavía (los bloques dependen de `PUBLIC_ADSENSE_ENABLED`). Los huecos reservados en el cuerpo tienen altura fija y no se confunden con contenido. Sin evidencia de fuentes de tráfico artificiales (falta Search Console/Analytics para confirmarlo). **Riesgo bajo.**
 
 ## Spam Policy Assessment
 
-Sin cloaking, contenido oculto, páginas puerta ni dominios caducados. El único riesgo es de percepción: **contenido a escala** (plantilla repetida + ráfagas de publicación) y **contenido fino** en 4 artículos. *Riesgo potencial, no violación confirmada.*
+Sin contenido oculto, cloaking, doorway pages ni dominio expirado (registro nuevo, sin historial previo). Las redirecciones 301 son legítimas (fusiones de artículos). Único punto: **Scaled content abuse — riesgo de percepción** por ráfagas y plantilla (ver issue 4). **Sin violaciones confirmadas.**
 
 ## Trust & Transparency Assessment
 
-Bien: autor con nombre real, foto, LinkedIn, trayectoria honesta (declara el AZ-900 sin rendir), contacto por correo propio, política de privacidad, cookies y aviso legal, declaración de independencia y de financiamiento. Falta: fuentes enlazadas, autor visible en la portada, fechas coherentes con la historia del sitio y descripciones que no prometan temas inexistentes.
+Muy bien resuelto: "Sobre nosotros" con responsable, financiamiento por AdSense e independencia de los certificadores; página de autor con formación real y LinkedIn; contacto por email con propósito claro; aviso legal con titular y domicilio (Buenos Aires); políticas de privacidad y de cookies completas y fechadas. **Cookies:** verificado en producción que antes de aceptar no hay cookies propias, Google Analytics no se carga y Consent Mode v2 está en `denied`; `adsbygoogle.js` se carga para la revisión de la cuenta, como recomienda Google. `ads.txt` correcto (`pub-2261714480132826`). Puntos débiles: fechas anteriores al dominio y la CMP europea sin publicar.
 
 ## User Experience Assessment
 
-Navegación por cinco categorías sin solapamiento, breadcrumbs, índice en cada artículo, modo oscuro, tablas legibles en mobile (corregido el 20/10), sin enlaces rotos y sin noindex fuera de la 404. Mejorable: las páginas de categoría no orientan ("por dónde empiezo") y la portada no dice quién escribe.
+Navegación por 5 categorías, breadcrumbs, fecha de publicación y de actualización, autor y tiempo de lectura visibles. En móvil (375 px) no hay scroll horizontal y las tablas entran. Banner de cookies con "Aceptar" y "Rechazar" del mismo peso. Categorías con texto de orientación propio. `robots.txt` y sitemap correctos. **Falla:** la 404 vacía.
 
 ## Monetization Assessment
 
-Temática con buen valor publicitario (formación y certificaciones IT), audiencia hispanohablante con España como primer país. Pero sin tráfico no hay caso comercial, y Google lo evalúa ("interés que justifique una asociación publicitaria").
+Nicho IT/educación, con anunciantes de buen CPC (cursos, bootcamps, proveedores cloud) y contenido 100% apto para anunciantes. El volumen (28 artículos) alcanza para la revisión. Limita la madurez: 29 días de dominio, sin tráfico demostrado y sin la CMP europea.
 
 ## Revenue Optimization Opportunities
 
-Prematuro hasta la aprobación. Después: priorizar los clusters con impresiones (NetAcad/CCNA), y medir con GA4 qué artículos retienen antes de activar espacios.
+- Priorizar los artículos de intención comercial alta ya existentes (cuánto cuesta el CCNA, Security+, AZ-900 vs AWS, sueldos): son los que atraen anuncios de formación.
+- Publicar la CMP europea para monetizar visitas de España, que es parte del público hispanohablante.
+- Sumar 1–2 artículos por semana del cluster "Soporte técnico en la práctica" (PC lenta, impresora): búsquedas de volumen alto que traen tráfico nuevo al sitio.
 
 ## Ad Placement Recommendations
 
-Sin cambios: mantener los espacios desactivados durante la revisión. Tras la aprobación, empezar con un anuncio en el cuerpo y otro al final del artículo (marcadores ya implementados), sin anuncios automáticos hasta medir.
+- Mantener el esquema actual: anuncios dentro del cuerpo en marcadores con altura reservada (sin CLS), uno en categorías y uno en portada.
+- No poner anuncios arriba del primer párrafo ni pegados a tablas o a la sección "Fuentes" (riesgo de clics accidentales).
+- En artículos de menos de 1.000 palabras, no más de dos bloques en el cuerpo.
+- Activar Auto ads solo después de la aprobación y con los formatos de anclaje e intersticiales revisados en móvil.
 
 ## Approval Readiness Verdict
 
-**FAIL** (confirmado por el rechazo). Volver a enviar sin cambios de contenido y sin más historial tiene alta probabilidad de un segundo rechazo.
+**CONDITIONAL PASS**
+
+El contenido y la parte legal/técnica están en condiciones. La condición es de tiempo y evidencia: corregir la 404, no reenviar antes de principios de diciembre de 2026 y hacerlo solo si Search Console muestra impresiones y clics creciendo, mientras se publica a ritmo constante. Reenviar hoy repite el mismo historial que llevó al rechazo.
