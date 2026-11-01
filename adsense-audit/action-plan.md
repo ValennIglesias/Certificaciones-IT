@@ -15,7 +15,7 @@ Contexto: re-auditoría tras el rechazo por "Contenido de poco valor" (76/100, C
 - [ ] Revisar en AdSense → Sitios el estado de desdeceroit.com; cuando pase a "Listo", comprobar con `?fc=alwaysshow&fctype=gdpr` que el mensaje europeo (ya publicado) aparece. — *Issue 3 · Google Publisher Policies — EU user consent policy*
 - [ ] Publicar a ritmo constante, 1–2 artículos por semana en días distintos; nada de ráfagas. — *Issue 4 · Spam Policies — Scaled content abuse (percepción)*
 - [ ] Al revisar artículos, actualizar `updatedDate` solo cuando cambia el contenido, no todos el mismo día. — *Issue 4 · Scaled content abuse (percepción)*
-- [ ] Pasar el `pubDate` de los 18 artículos fechados entre el 19 y el 28/09 a la fecha real de salida del sitio (03/10/2026). No repartir fechas inventadas. — *Issue 5 · Trust*
+- [x] Pasar el `pubDate` de los 18 artículos fechados entre el 19 y el 28/09 a la fecha real de salida del sitio (03/10/2026). No repartir fechas inventadas. — *Issue 5 · Trust*
 - [ ] Sumar experiencia propia a 3–4 artículos de Redes/Seguridad/Cloud donde exista (cómo estudiás, qué te costó entender, qué viste en el trabajo). — *Issue 6 · Low value content (originalidad)*
 
 ## 90-Day Improvements

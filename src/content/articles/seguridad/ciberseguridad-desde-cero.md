@@ -3,7 +3,7 @@ title: "Ciberseguridad desde cero: por dónde se entra de verdad"
 description: "Por qué casi no existen puestos de ciberseguridad de entrada, cuáles son los roles puente reales y qué cambió en 2026 con el cierre del programa gratuito de ISC2."
 keyword: "ciberseguridad desde cero"
 cluster: "seguridad"
-pubDate: 2026-09-26
+pubDate: 2026-10-03
 updatedDate: 2026-10-24
 author: "Valentín"
 draft: false

@@ -3,7 +3,7 @@ title: "Cisco Networking Academy: cómo entrar y lograr el descuento"
 description: "Qué ofrece NetAcad gratis, cómo encontrar una academia y qué exige Cisco para el descuento en el examen CCNA: 70% en el primer intento del examen final de ENSA."
 keyword: "cisco network academy"
 cluster: "redes"
-pubDate: 2026-09-26
+pubDate: 2026-10-03
 updatedDate: 2026-10-24
 author: "Valentín"
 draft: false

@@ -3,7 +3,7 @@ title: "CompTIA Security+: qué es, cómo es el examen y la V8"
 description: "Security+ de CompTIA: dominios, formato (90 preguntas, 90 minutos, 750/900), qué cambia con la V8 de noviembre de 2026 y hasta cuándo se rinde la V7 en español."
 keyword: "security+"
 cluster: "seguridad"
-pubDate: 2026-09-26
+pubDate: 2026-10-03
 updatedDate: 2026-10-24
 author: "Valentín"
 draft: false

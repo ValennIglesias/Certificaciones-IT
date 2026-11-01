@@ -3,7 +3,7 @@ title: "AZ-900: cómo es el examen y cómo prepararlo gratis"
 description: "El AZ-900 de Microsoft: US$99, 45 minutos, 700 puntos para aprobar y sin vencimiento. Qué evalúa, qué cambió en julio de 2026 y cómo prepararlo con los recursos gratuitos de Microsoft."
 keyword: "az 900"
 cluster: "cloud"
-pubDate: 2026-09-26
+pubDate: 2026-10-03
 updatedDate: 2026-10-24
 author: "Valentín"
 draft: false

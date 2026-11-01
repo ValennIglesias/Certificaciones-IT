@@ -3,7 +3,7 @@ title: "Cuánto gana un ingeniero en informática según cada fuente"
 description: "Los sueldos de informática publicados en España, México y Argentina cambian varias veces según quién los mida y para qué perfil. Qué dice cada fuente y cuál sirve para tu caso."
 keyword: "ingeniero en informatica cuanto gana"
 cluster: "carrera"
-pubDate: 2026-09-26
+pubDate: 2026-10-03
 updatedDate: 2026-10-24
 author: "Valentín"
 draft: false

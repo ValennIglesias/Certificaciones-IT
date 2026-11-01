@@ -3,7 +3,7 @@ title: "CCNA 200-301: temario completo y dónde poner las horas"
 description: "Los seis dominios del blueprint v1.1 con sus pesos oficiales, qué entra en cada uno y la fecha en que esta versión del examen se retira."
 keyword: "ccna 200 301"
 cluster: "redes"
-pubDate: 2026-09-26
+pubDate: 2026-10-03
 updatedDate: 2026-10-24
 author: "Valentín"
 draft: false

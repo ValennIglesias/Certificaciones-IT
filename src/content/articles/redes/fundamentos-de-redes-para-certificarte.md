@@ -3,7 +3,7 @@ title: "CCNA desde cero: los fundamentos de redes que te va a pedir"
 description: "Para preparar el CCNA desde cero: modelo OSI, subredes con un ejemplo resuelto, enrutamiento y servicios, y en qué objetivos oficiales del CCNA y del CCST aparece cada tema."
 keyword: "ccna desde cero"
 cluster: "redes"
-pubDate: 2026-09-19
+pubDate: 2026-10-03
 updatedDate: 2026-10-24
 author: "Valentín"
 draft: false
