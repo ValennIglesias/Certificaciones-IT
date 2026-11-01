@@ -1,0 +1,11 @@
+// Config del Worker con assets estáticos que publica Cloudflare en cada push a main.
+// El nombre tiene que coincidir con el Worker conectado en Workers Builds.
+{
+	"name": "certificaciones-it",
+	"compatibility_date": "2026-10-01",
+	"assets": {
+		"directory": "./dist",
+		// Sin esto, una URL inexistente responde 404 con el cuerpo vacío.
+		"not_found_handling": "404-page"
+	}
+}
