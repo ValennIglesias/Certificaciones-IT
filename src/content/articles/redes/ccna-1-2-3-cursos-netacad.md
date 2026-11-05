@@ -1,5 +1,5 @@
 ---
-title: "CCNA 1, 2 y 3: qué cubre cada curso de NetAcad"
+title: "CCNA 1, 2 y 3 no son la certificación: qué cubre cada curso"
 description: "CCNA 1, 2 y 3 son los cursos ITN, SRWE y ENSA de NetAcad, de unas 70 horas cada uno. Qué enseña cada uno, en qué orden van y por qué el tercero define el descuento del examen."
 keyword: "ccna 1"
 cluster: "redes"

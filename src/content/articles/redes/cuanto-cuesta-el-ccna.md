@@ -1,5 +1,5 @@
 ---
-title: "Cuánto cuesta el CCNA y cómo pagar menos"
+title: "Cuánto cuesta el CCNA: US$300 y cómo pagar menos"
 description: "El examen cuesta US$300. Qué publica Cisco sobre el descuento de NetAcad, por qué el 50% que circula es de otro programa y cuándo conviene pagar el reintento por adelantado."
 keyword: "costo examen ccna"
 cluster: "redes"
