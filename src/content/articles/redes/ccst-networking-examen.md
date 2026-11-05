@@ -1,5 +1,5 @@
 ---
-title: "CCST Networking: examen 100-150, temario y precio"
+title: "CCST Networking: precio (US$125), temario y cómo prepararlo"
 description: "Cómo es el CCST Networking de Cisco: examen 100-150 de 50 minutos, US$125 y en español. Sus seis dominios, la ruta gratuita de NetAcad y si conviene antes del CCNA."
 keyword: "ccst networking"
 cluster: "redes"

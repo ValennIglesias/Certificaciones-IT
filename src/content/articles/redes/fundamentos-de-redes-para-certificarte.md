@@ -86,7 +86,7 @@ Un primer ejercicio que recomiendo: armar esa topología, asignar subredes disti
 
 Si arrancás de cero absoluto, la ruta gratuita Técnico en Redes de NetAcad cubre esta base en 70 horas y prepara para el [CCST Networking](/redes/ccst-networking-examen/). Si ya la tenés, el [temario del CCNA 200-301](/redes/ccna-200-301-temario/) muestra cuánto pesa cada dominio, y el [mapa de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/), hacia dónde sigue el recorrido.
 
-Si todavía estás decidiendo si redes es tu camino, el [roadmap de certificaciones IT](/carrera/roadmap-certificaciones-it/) compara las rutas de soporte, redes, seguridad y cloud.
+Si tu objetivo es el CCNA, la guía de [curso CCNA](/redes/curso-ccna-como-prepararte/) compara las rutas de preparación. Si todavía estás decidiendo si redes es tu camino, el [roadmap de certificaciones IT](/carrera/roadmap-certificaciones-it/) compara las rutas de soporte, redes, seguridad y cloud.
 
 ## Fuentes
 

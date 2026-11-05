@@ -1,6 +1,6 @@
 ---
 title: "Cómo armar tu primer CV para un puesto IT"
-description: "Qué poner en el CV cuando no tenés experiencia en tecnología, por qué un proyecto propio pesa más que una lista de intereses y qué hacer si no tenés nada para mostrar."
+description: "Qué poner en el CV sin experiencia en tecnología, por qué un proyecto propio pesa más que una lista de intereses y qué hacer si todavía no hay nada para mostrar."
 keyword: "cómo armar un CV para IT sin experiencia"
 cluster: "carrera"
 pubDate: 2026-10-03

@@ -68,7 +68,7 @@ El orden es secuencial por diseño: SRWE da por sabido ITN, y ENSA da por sabido
 
 Con 70 horas por curso, el ritmo real lo define la academia: cada una arma su calendario. Si querés avanzar por tu cuenta antes de anotarte, lo gratuito y a tu ritmo es la ruta Técnico en Redes, que cubre la base previa.
 
-Si querés dimensionar cuánto es eso en la práctica, la estimación general para preparar el CCNA desde cero es de dos a tres meses de estudio enfocado — pero esa cifra asume una preparación intensiva, no el ritmo pausado de una cursada académica.
+Si querés dimensionar cuánto es eso en la práctica, la estimación general para [preparar el CCNA desde cero](/redes/curso-ccna-como-prepararte/#ccna-desde-cero) es de dos a tres meses de estudio enfocado — pero esa cifra asume una preparación intensiva, no el ritmo pausado de una cursada académica.
 
 ## Por dónde arrancar la serie
 

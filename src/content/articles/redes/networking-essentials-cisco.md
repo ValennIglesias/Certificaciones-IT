@@ -75,7 +75,7 @@ Es el examen al que apuntan los dos formatos: el 100-150, de 50 minutos, US$125 
 
 ### La serie CCNA
 
-Si querés seguir en redes, el paso siguiente en NetAcad es la serie CCNA, que prepara para la certificación de nivel asociado. Qué cubre cada curso está en [CCNA 1, 2 y 3](/redes/ccna-1-2-3-cursos-netacad/).
+Si querés seguir en redes, el paso siguiente en NetAcad es la serie CCNA, que prepara para la certificación de nivel asociado. Qué cubre cada curso está en [CCNA 1, 2 y 3](/redes/ccna-1-2-3-cursos-netacad/), y las otras formas de prepararlo, en la guía de [curso CCNA](/redes/curso-ccna-como-prepararte/).
 
 ### Ciberseguridad
 

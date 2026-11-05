@@ -1,10 +1,10 @@
 ---
 title: "Curso CCNA: cómo prepararte gratis, barato o con tutor"
-description: "Las tres rutas para preparar el CCNA 200-301 según tu presupuesto, cuánto cuesta el examen y cuánto tiempo lleva llegar listo."
+description: "Cómo preparar el CCNA 200-301 desde cero: tres rutas según tu presupuesto, cuánto cuesta el examen, cuánto tiempo lleva y en qué orden practicar en Packet Tracer."
 keyword: "curso ccna"
 cluster: "redes"
 pubDate: 2026-10-03
-updatedDate: 2026-10-24
+updatedDate: 2026-11-04
 author: "Valentín"
 draft: false
 ---
@@ -78,6 +78,43 @@ Cisco no pide requisitos y aclara que el CCNA asume poco o ningún conocimiento 
 
 Si estás trabajando full-time mientras estudiás, las tácticas de [cómo estudiar una certificación trabajando](/carrera/estudiar-certificacion-trabajando-full-time/) aplican directo acá: el bloque largo del fin de semana conviene reservarlo para Packet Tracer, que es lo que más foco continuo necesita.
 
+## CCNA desde cero
+
+Empecé con redes en ISTEA: las materias Redes 1 y 2 dan una versión resumida del programa del CCNA, y ahí armábamos esquemas de red en Packet Tracer: a lo largo de la cursada simulamos tanto una empresa con sectores como una red con varias sedes. Aclaro algo antes de seguir: no rendí el CCNA. Vi el programa, así que esto no es una receta para aprobar, es cómo lo encararía.
+
+Lo que más me costó fueron las VLAN y el enrutamiento. Y lo que más me sirvió fue entender cómo se comunica todo dentro de una infraestructura, simulándola lo más real posible. Por eso, si arrancara hoy, armaría una sola red en Packet Tracer y la haría crecer tema por tema:
+
+1. **La base.** Modelo OSI, direccionamiento IP y subredes, con la guía de [fundamentos de redes](/redes/fundamentos-de-redes-para-certificarte/).
+2. **Una red chica.** Dos PC y un switch en la misma subred, hasta que se hagan ping.
+3. **VLAN.** Separá esas PC en dos VLAN, como si fueran dos sectores de una empresa, y comprobá que dejan de verse.
+4. **Enrutamiento entre VLAN.** Dale una subred a cada VLAN, sumá un router y hacé que los dos sectores vuelvan a comunicarse.
+5. **Otra sede.** Agregá un segundo router con su propia red, conectá todo con rutas estáticas y después reemplazalas por OSPF.
+
+En cada paso, explicá por qué el ping pasa o por qué no antes de seguir. Son temas que pesan: en la v1.1, Acceso a la red vale el 20% del examen y Conectividad IP, el 25%.
+
+### Qué suele trabar en VLAN
+
+Una VLAN separa redes dentro de un mismo switch, y cada VLAN lleva su propia subred. El examen pide configurarlas entre varios switches, y estos son los errores más comunes al hacerlo:
+
+- **Confundir acceso con trunk.** Un puerto de acceso pertenece a una sola VLAN y es el que va a una PC. Un trunk transporta varias VLAN entre switches, o hacia un router, y marca cada trama con una etiqueta 802.1Q. Si el enlace entre switches queda como acceso, pasa una sola VLAN.
+- **Crear la VLAN en un solo switch.** Si no existe en el otro, o el trunk no la permite, sus equipos no se ven de un switch a otro.
+- **Dejar distinta la VLAN nativa.** Su tráfico viaja sin etiqueta, así que las dos puntas del trunk tienen que coincidir.
+- **Esperar que dos VLAN se hablen solas.** Un switch de capa 2 no las comunica: hace falta un router o un switch de capa 3.
+
+Para revisar, `show vlan brief` muestra qué puerto está en cada VLAN, y `show interfaces trunk`, qué enlaces son trunk y qué VLAN permiten.
+
+### Qué suele trabar en enrutamiento
+
+Acá el examen pide leer la tabla de enrutamiento, configurar rutas estáticas y OSPFv2 de área única. Los tropiezos típicos:
+
+- **El gateway de la PC.** Si falta o está mal, la PC llega a su propia red y a ninguna otra.
+- **El enrutamiento entre VLAN.** Con un solo router se usa una subinterfaz por VLAN, con `encapsulation dot1Q` y la IP que hace de gateway de esa VLAN. El puerto del switch que va al router tiene que ser trunk, y la interfaz física del router, estar activa.
+- **Pensar solo en la ida.** Una ruta estática resuelve un sentido. Si el router del otro lado no sabe volver, el ping falla aunque el paquete haya llegado.
+- **Leer mal la tabla.** Cuando varias rutas coinciden con el destino, gana la de prefijo más largo, es decir, la más específica. Si el prefijo es el mismo, deciden la distancia administrativa y después la métrica.
+- **Vecinos OSPF que no se forman.** Lo primero a revisar es que las dos puntas estén en la misma subred y la misma área, con los mismos temporizadores hello y dead.
+
+Para revisar, `show ip interface brief` muestra el estado y la IP de cada interfaz; `show ip route`, la tabla de enrutamiento, y `show ip ospf neighbor`, los vecinos OSPF.
+
 ## Errores comunes al elegir curso
 
 - **Comprar material de la versión anterior del examen.** Con el cambio a v1.1 hay mucho contenido desactualizado circulando que no lo aclara.
@@ -92,7 +129,7 @@ Creá una cuenta gratuita en Cisco Networking Academy y descargá Packet Tracer 
 ## Fuentes
 
 - [CCNA (Cisco)](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html): requisitos, precio, vigencia y curso oficial.
-- [200-301 CCNA v1.1 (Cisco Learning Network)](https://learningnetwork.cisco.com/s/ccna-exam-topics): dominios, tipos de pregunta y fechas.
+- [200-301 CCNA v1.1 (Cisco Learning Network)](https://learningnetwork.cisco.com/s/ccna-exam-topics): dominios, objetivos, tipos de pregunta y fechas.
 - [Built for What's Next (blog de Cisco)](https://blogs.cisco.com/learning/ai-updates-ccna-ccie-automation): el material gratuito en Cisco U. hasta la v2.0.
 - [Políticas de exámenes de Cisco](https://www.cisco.com/site/us/en/learn/training-certifications/exams/policies.html): los cinco días de espera para volver a rendir.
 - [Cisco Exam Safeguard](https://learningnetwork.cisco.com/s/cisco-exam-safeguard): el reintento incluido.

@@ -1,6 +1,6 @@
 ---
 title: "AZ-900 vs AWS Cloud Practitioner: cuál elegir primero"
-description: "AZ-900 vs AWS Cloud Practitioner lado a lado: precio, duración, puntaje, idiomas y vigencia, y cómo decidir cuál sacar primero según dónde buscás trabajo."
+description: "AZ-900 vs AWS Cloud Practitioner lado a lado: precio, duración, puntaje, idiomas y vigencia, y cómo decidir cuál sacar primero según dónde quieras trabajar."
 keyword: "az 900 vs aws cloud practitioner"
 cluster: "cloud"
 pubDate: 2026-10-03
