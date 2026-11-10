@@ -1,10 +1,10 @@
 ---
-title: "Cisco Networking Academy: cómo entrar y lograr el descuento"
-description: "Qué ofrece NetAcad gratis, cómo encontrar una academia y qué exige Cisco para el descuento en el examen CCNA: 70% en el primer intento del examen final de ENSA."
+title: "Cisco Networking Academy: qué es, cómo entrar y el descuento"
+description: "Qué es Cisco Networking Academy (NetAcad), qué ofrece gratis, cómo encontrar una academia y qué exige Cisco para el descuento del CCNA: 70% en el primer intento del final de ENSA."
 keyword: "cisco network academy"
 cluster: "redes"
 pubDate: 2026-10-03
-updatedDate: 2026-10-24
+updatedDate: 2026-11-10
 author: "Valentín"
 draft: false
 ---
@@ -19,9 +19,9 @@ Lo que hay que saber antes de inscribirte:
 - Cisco publica los requisitos del descuento, pero **no publica el porcentaje**.
 - **Packet Tracer es gratuito** y se descarga inscribiéndose a un curso corto de la plataforma.
 
-## Qué ofrece NetAcad
+## Qué es NetAcad y qué ofrece
 
-Cisco Networking Academy es el brazo educativo de Cisco, funcionando desde 1997. Su catálogo se divide en dos tipos de curso que conviene no confundir:
+Cisco Networking Academy, o NetAcad, es el programa educativo de Cisco, que funciona desde 1997. Tiene dos partes: una plataforma en línea, netacad.com, con cursos de redes, ciberseguridad y otras áreas de tecnología, y una red de academias, que son instituciones educativas que dictan esos cursos con instructor. Su catálogo se divide en dos tipos de curso que conviene no confundir:
 
 | Tipo | Costo | Qué incluye |
 | --- | --- | --- |

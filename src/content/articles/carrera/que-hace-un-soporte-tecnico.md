@@ -1,9 +1,10 @@
 ---
 title: "Qué hace un soporte técnico: un día en la mesa de ayuda"
-description: "Qué es una mesa de ayuda y qué hace un soporte técnico de nivel 1, contado desde adentro: los tres niveles, cuántos tickets llegan, qué se resuelve y qué se deriva, y qué habilidades pesan."
+description: "Qué es el soporte técnico, qué es una mesa de ayuda y qué hace un soporte de nivel 1, contado desde adentro: los tres niveles, cuántos tickets llegan, qué se resuelve y qué se deriva."
 keyword: "que hace un soporte tecnico"
 cluster: "carrera"
 pubDate: 2026-10-24
+updatedDate: 2026-11-10
 author: "Valentín"
 draft: false
 ---
@@ -16,6 +17,10 @@ En pocas palabras:
 - El soporte se organiza en **niveles**: el nivel 1 resuelve la mayoría y deriva lo que necesita manos en el equipo, permisos especiales o un área especializada.
 - En mi caso eran **entre 30 y 50 tickets por día**, por teléfono y por mail, con cobertura las 24 horas.
 - Lo técnico se aprende rápido; lo que más pesa es **explicar cosas técnicas de forma simple** y manejar la frustración del otro.
+
+## Qué es el soporte técnico
+
+El soporte técnico, también llamado soporte TI, es el trabajo de resolver los problemas de tecnología de las personas que usan los equipos y sistemas: desde una contraseña bloqueada hasta una notebook que no enciende. Puede ser para clientes de un producto o, como en mi caso, para los empleados de una empresa. Ahí suele organizarse alrededor de una mesa de ayuda.
 
 ## Qué es una mesa de ayuda
 

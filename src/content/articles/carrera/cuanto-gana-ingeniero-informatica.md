@@ -1,10 +1,10 @@
 ---
-title: "Cuánto gana un ingeniero en informática según cada fuente"
-description: "Los sueldos de informática publicados en España, México y Argentina cambian varias veces según quién los mida y para qué perfil. Qué dice cada fuente y cuál sirve para tu caso."
+title: "Cuánto gana un ingeniero en informática: sueldos por país"
+description: "Cuánto gana un ingeniero en informática en España, México y Argentina según Randstad, Data México y sysarmy, por qué las cifras no coinciden y cuál sirve para cada caso."
 keyword: "ingeniero en informatica cuanto gana"
 cluster: "carrera"
 pubDate: 2026-10-03
-updatedDate: 2026-10-24
+updatedDate: 2026-11-10
 author: "Valentín"
 draft: false
 ---
@@ -14,10 +14,19 @@ Si buscaste este dato antes, ya te habrá pasado: cada sitio dice un número dis
 Antes de mirar cualquier cifra:
 
 - **No existe un sueldo de "ingeniero en informática"**: es un título universitario, no un puesto, y el mercado paga por rol y seniority.
-- En España, el rango de Randstad para un desarrollador va de **€22.000 a €81.000 anuales** según la experiencia.
 - Las estadísticas oficiales miden a toda la fuerza laboral; las encuestas del sector miden a quienes participan en comunidades técnicas. Nunca dan lo mismo.
 - El factor que más mueve el número no es el país: es **el origen de la empresa que paga**.
 - Los datos provienen de informes publicados entre noviembre de 2025 y agosto de 2026, y envejecen rápido.
+
+Las cifras de referencia, por país:
+
+| País | Fuente | Cifra |
+| --- | --- | --- |
+| España | Randstad Research, desarrollador/a | €22.000 a €81.000 anuales, según la experiencia |
+| México | Data México, desarrolladores y analistas de software | ~$11.000 MXN mensuales de promedio |
+| Argentina | Encuesta de sysarmy, todos los puestos de IT | $3.254.000 ARS brutos mensuales de mediana (enero de 2026) |
+
+El detalle de cada país, y por qué una cifra no se puede comparar con la otra, está más abajo.
 
 ## Por qué ninguna fuente coincide
 
@@ -102,4 +111,4 @@ Y si estás decidiendo qué estudiar o certificar para mover ese número, el [ro
 - **México:** [reporte de salarios de tecnología 2026 de CodersLink](https://coderslink.com/employers/tech-salaries-report), con 10.246 salarios verificados entre el cuarto trimestre de 2025 y el primero de 2026, y la [ficha de desarrolladores y analistas de software de Data México (Secretaría de Economía)](https://www.economia.gob.mx/datamexico/es/profile/occupation/desarrolladores-y-analistas-de-software-y-multimedia).
 - **España:** [informe de tendencias salariales 2026 de Randstad Research](https://www.randstadresearch.es/tendencias-salariales/) y su [infografía del sector IT y Telecom (PDF)](https://d2xlh7jfmz7hr5.cloudfront.net/wp-content/uploads/2025/12/RANDSTAD-Infografia-Salarios-2026-IT-y-Telecom.pdf), con los rangos por perfil, y [Talent.com](https://es.talent.com/salary?job=ingeniero+informatico).
 
-*Datos relevados en septiembre de 2026, correspondientes a informes publicados entre noviembre de 2025 y agosto de 2026; todas las cifras se volvieron a comprobar en las fuentes originales el 24 de octubre de 2026. Los sueldos del sector cambian rápido: verificá las fuentes originales antes de usarlos para negociar.*
+*Datos relevados en septiembre de 2026, correspondientes a informes publicados entre noviembre de 2025 y agosto de 2026; todas las cifras se volvieron a comprobar en las fuentes originales el 24 de octubre de 2026, y el 10 de noviembre se confirmó que la edición 2026.01 de sysarmy sigue siendo la más reciente. Los sueldos del sector cambian rápido: verificá las fuentes originales antes de usarlos para negociar.*

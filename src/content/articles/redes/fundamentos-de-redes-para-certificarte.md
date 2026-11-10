@@ -42,7 +42,7 @@ Dos lecturas útiles. Todo lo que pide el CCST, el CCNA lo vuelve a pedir con m�
 
 Cuando algo falla, saber "en qué capa vive el problema" es la habilidad que más rápido separa a quien recién empieza de quien ya tiene experiencia. En soporte técnico lo vas a usar todos los días: un cable desconectado es capa 1, una VLAN mal asignada es capa 2, un gateway mal configurado es capa 3.
 
-## Subredes sin calculadora: un ejemplo resuelto
+## Cómo calcular subredes sin calculadora: un ejemplo resuelto
 
 Una dirección IPv4 tiene 32 bits, agrupados en cuatro octetos (por ejemplo, 192.168.10.70). La notación CIDR (/24, /26) indica cuántos de esos bits son de red, y de ahí sale el tamaño de cada subred.
 
