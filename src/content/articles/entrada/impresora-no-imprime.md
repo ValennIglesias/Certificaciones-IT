@@ -3,9 +3,9 @@ title: "Impresora no imprime: qué revisar, paso a paso"
 description: "Qué hacer si la impresora no imprime en Windows: el orden de revisión que usaba en la mesa de ayuda, de la cola de impresión trabada al servidor de impresión, con los pasos oficiales de Microsoft."
 keyword: "impresora no imprime"
 cluster: "entrada"
-pubDate: 2026-11-07
+pubDate: 2026-11-10
 author: "Valentín"
-draft: true
+draft: false
 ---
 
 "No puedo imprimir" era de los pedidos más repetidos en la mesa de ayuda donde trabajé. El reporte casi nunca decía más que eso, así que el trabajo empezaba por indagar qué pasaba. Y lo más común era que la impresión no salía porque había quedado colgada en la cola de impresión.
@@ -62,7 +62,7 @@ Para esto hacen falta permisos de administrador. En una empresa, además, la col
 En el peor de los casos, toca reconfigurarla en el equipo:
 
 - **Quitarla:** en **Impresoras y escáneres**, seleccionala y elegí **Quitar**.
-- **Volver a agregarla desde el servidor,** si la empresa tiene uno: con **Agregar dispositivo** o, si no aparece sola, con **Agregar manualmente** e indicando su ruta (por ejemplo, `\servidor\impresora`). Es la opción que usaba siempre que podía, porque el servidor ya tiene el driver correcto.
+- **Volver a agregarla desde el servidor,** si la empresa tiene uno: con **Agregar dispositivo** o, si no aparece sola, con **Agregar manualmente** e indicando su ruta (por ejemplo, `\\servidor\impresora`). Es la opción que usaba siempre que podía.
 - **Agregarla a mano con su IP y su driver,** cuando desde el servidor no se podía. El driver más reciente sale de Windows Update o de la página del fabricante.
 
 ## Cuándo no es la computadora

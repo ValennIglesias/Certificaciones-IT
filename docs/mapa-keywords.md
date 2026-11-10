@@ -247,7 +247,7 @@ Keyword Planner, 24/10/2026, todos los países e idiomas, oct 2025 - sep 2026:
 | `que hace un soporte tecnico` | 500 | Baja | `carrera/que-hace-un-soporte-tecnico` |
 | `mesa de ayuda que es` | 500 | Baja | `carrera/que-hace-un-soporte-tecnico` (misma intención, no se separa) |
 | `pc lenta que hacer` | 500 | Baja | `entrada/pc-lenta-que-hacer` (publicada 31/10/2026) |
-| `impresora no imprime` | 500 (-90% interanual) | Baja | Pendiente |
+| `impresora no imprime` | 500 (-90% interanual) | Baja | `entrada/impresora-no-imprime` (publicada 10/11/2026) |
 | `outlook no sincroniza` | 50 | Baja | Sección dentro de otra guía |
 | `desbloquear usuario active directory` | 50 | Baja | Sección dentro de otra guía |
 | `no tengo internet pero estoy conectado` | 50 | Baja | Sección dentro de otra guía |
