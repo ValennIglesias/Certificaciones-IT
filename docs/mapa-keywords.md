@@ -263,7 +263,7 @@ Keyword Planner, 10/11/2026, oct 2025 - sep 2026 (moneda ARS; la ubicación no f
 
 | Keyword | Búsquedas/mes | Competencia | Asignada a |
 | --- | --- | --- | --- |
-| `packet tracer` | 500.000 (+900% en tres meses) | Baja | `redes/packet-tracer-que-es-y-como-descargarlo` (borrador) |
+| `packet tracer` | 500.000 (+900% en tres meses) | Baja | `redes/packet-tracer-que-es-y-como-descargarlo` (publicada 12/11/2026) |
 | `descargar packet tracer` | 5.000 (-90% interanual) | Baja | `redes/packet-tracer-que-es-y-como-descargarlo` (misma intención) |
 | `como calcular subredes` | 500 | Baja | `redes/fundamentos-de-redes-para-certificarte` (sección de subredes) |
 | `ccna gratis` | 500 | Baja | `redes/curso-ccna-como-prepararte` (después de la medición de fin de noviembre) |

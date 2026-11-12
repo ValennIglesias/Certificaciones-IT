@@ -124,7 +124,7 @@ Para revisar, `show ip interface brief` muestra el estado y la IP de cada interf
 
 ## Para arrancar esta semana
 
-Creá una cuenta gratuita en Cisco Networking Academy y descargá Packet Tracer hoy mismo, antes de decidir si vas a pagar un curso. Con dos o tres semanas de material gratuito vas a tener una idea mucho más concreta de cuánta ayuda externa necesitás de verdad. Y si después cursás la serie CCNA en una academia y cumplís los requisitos en ENSA, el tercer curso, el descuento abarata el examen. Y si querés ver adónde lleva el CCNA una vez que lo tengas, el [mapa completo de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/) muestra los niveles y especializaciones que vienen después.
+Creá una cuenta gratuita en Cisco Networking Academy y [descargá Packet Tracer](/redes/packet-tracer-que-es-y-como-descargarlo/) hoy mismo, antes de decidir si vas a pagar un curso. Con dos o tres semanas de material gratuito vas a tener una idea mucho más concreta de cuánta ayuda externa necesitás de verdad. Y si después cursás la serie CCNA en una academia y cumplís los requisitos en ENSA, el tercer curso, el descuento abarata el examen. Y si querés ver adónde lleva el CCNA una vez que lo tengas, el [mapa completo de certificaciones Cisco](/redes/certificaciones-cisco-mapa-completo/) muestra los niveles y especializaciones que vienen después.
 
 ## Fuentes
 

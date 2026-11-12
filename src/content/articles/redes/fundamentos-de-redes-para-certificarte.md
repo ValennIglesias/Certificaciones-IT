@@ -74,7 +74,7 @@ Los tres son también los primeros sospechosos en soporte: "tengo red pero no na
 
 ## Cómo practicar sin comprar equipos
 
-Cisco Packet Tracer es gratuito: se descarga desde un curso corto de Cisco Networking Academy, y alcanza para practicar VLANs, rutas estáticas, OSPF, NAT y DHCP sin un solo equipo físico. Es la herramienta que usamos en ISTEA para los trabajos prácticos de redes.
+Cisco Packet Tracer es gratuito: se descarga desde un curso corto de Cisco Networking Academy, como explica la guía de [cómo descargar Packet Tracer](/redes/packet-tracer-que-es-y-como-descargarlo/), y alcanza para practicar VLANs, rutas estáticas, OSPF, NAT y DHCP sin un solo equipo físico. Es la herramienta que usamos en ISTEA para los trabajos prácticos de redes.
 
 ```
 PC1 --- SW1 --- R1 --- R2 --- SW2 --- PC2

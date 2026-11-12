@@ -3,9 +3,9 @@ title: "Packet Tracer: qué es y cómo descargarlo gratis"
 description: "Qué es Cisco Packet Tracer, cómo descargarlo gratis desde NetAcad (versión 9.0.1 para Windows, macOS y Ubuntu), qué pide tu computadora y qué practicar primero."
 keyword: "packet tracer"
 cluster: "redes"
-pubDate: 2026-11-14
+pubDate: 2026-11-12
 author: "Valentín"
-draft: true
+draft: false
 ---
 
 Packet Tracer es el programa con el que hacíamos los trabajos prácticos de redes en ISTEA. Lo publica Cisco, es gratuito y permite armar una red completa, con routers, switches, servidores, PC, impresoras y Wi-Fi, sin comprar un solo equipo.

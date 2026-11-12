@@ -58,7 +58,7 @@ Sumado al requisito del primer intento, el orden que conviene es: rendir el exam
 
 Packet Tracer merece mención aparte porque es lo más valioso que NetAcad ofrece gratis: es el simulador donde vas a practicar configuraciones sin comprar un solo router.
 
-Se descarga inscribiéndose al curso corto de introducción a la herramienta, que también es gratuito. No hace falta pagar nada ni estar en un curso con instructor para usarlo.
+Se descarga inscribiéndose al curso corto de introducción a la herramienta, que también es gratuito. Los pasos, los requisitos de la computadora y qué practicar primero están en la guía de [Packet Tracer](/redes/packet-tracer-que-es-y-como-descargarlo/). No hace falta pagar nada ni estar en un curso con instructor para usarlo.
 
 Es la respuesta al problema que tiene todo el mundo que estudia redes sin equipamiento: los temas de configuración del [temario del CCNA 200-301](/redes/ccna-200-301-temario/) —VLANs, Spanning Tree, OSPF— se practican ahí igual que en equipos reales.
 

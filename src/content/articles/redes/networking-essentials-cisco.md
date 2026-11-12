@@ -65,7 +65,7 @@ El contenido es el mismo, así que la decisión depende de cómo estudiás:
 - **A tu ritmo** si sos constante por tu cuenta y no querés pagar: la ruta Técnico en Redes es gratis y la empezás hoy.
 - **Con instructor** si necesitás horarios fijos, alguien a quien consultar y el seguimiento de una academia. A cambio, dependés de sus fechas y de su costo.
 
-En cualquiera de los dos casos, practicá con Packet Tracer, el simulador gratuito de Cisco: en un curso de redes, las horas de laboratorio pesan tanto como la teoría.
+En cualquiera de los dos casos, practicá con [Packet Tracer](/redes/packet-tracer-que-es-y-como-descargarlo/), el simulador gratuito de Cisco: en un curso de redes, las horas de laboratorio pesan tanto como la teoría.
 
 ## Qué sigue después
 
