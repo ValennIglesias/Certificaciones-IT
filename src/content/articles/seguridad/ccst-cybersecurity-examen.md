@@ -1,5 +1,5 @@
 ---
-title: "CCST Cybersecurity: examen 100-160, temario y precio"
+title: "CCST Cybersecurity: precio (US$125), temario y preparación"
 description: "Cómo es el examen CCST Cybersecurity de Cisco: 50 minutos, US$125 y en español. Sus cinco dominios, la vigencia de 5 años y qué certificación sigue después."
 keyword: "ccst cybersecurity"
 cluster: "seguridad"

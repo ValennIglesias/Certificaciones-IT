@@ -1,10 +1,10 @@
 ---
 title: "CCNA 200-301: temario completo y dónde poner las horas"
-description: "Los seis dominios del blueprint v1.1 con sus pesos oficiales, qué entra en cada uno y la fecha en que esta versión del examen se retira."
+description: "Temario del CCNA 200-301 v1.1: los seis dominios con sus pesos oficiales (20, 20, 25, 10, 15 y 10%), qué entra en cada uno, dónde poner las horas y hasta cuándo se rinde."
 keyword: "ccna 200 301"
 cluster: "redes"
 pubDate: 2026-10-03
-updatedDate: 2026-10-24
+updatedDate: 2026-11-16
 author: "Valentín"
 draft: false
 ---
@@ -34,7 +34,7 @@ Los datos que importan:
 
 El dominio 3 solo, con su 25%, pesa más que los dominios 4 y 6 juntos. Y los tres primeros suman el 65% del examen.
 
-Eso tiene una consecuencia práctica clara: **subredes, VLANs, Spanning Tree, la tabla de enrutamiento y OSPF son donde cada hora de estudio devuelve más puntaje**. Repartir el tiempo en partes iguales entre los seis dominios —el error más común de planificación— deja mal cubierto justo lo que más pesa.
+Eso tiene una consecuencia práctica clara: **subredes, VLANs, Spanning Tree, la tabla de enrutamiento y OSPF son donde cada hora de estudio devuelve más puntaje**. Repartir el tiempo en partes iguales entre los seis dominios —el error más común de planificación— deja mal cubierto justo lo que más pesa. Las VLAN y el enrutamiento fueron, además, lo que más me costó en las materias de redes de ISTEA: la sección [CCNA desde cero](/redes/curso-ccna-como-prepararte/#ccna-desde-cero) los recorre paso a paso, con los errores más comunes.
 
 Eso no significa ignorar los dominios chicos. Automatización es solo el 10%, pero son temas compactos y muy preguntables: rinde repasarlos, no saltearlos.
 
