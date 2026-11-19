@@ -268,3 +268,13 @@ Keyword Planner, 10/11/2026, oct 2025 - sep 2026 (moneda ARS; la ubicación no f
 | `como calcular subredes` | 500 | Baja | `redes/fundamentos-de-redes-para-certificarte` (sección de subredes) |
 | `ccna gratis` | 500 | Baja | `redes/curso-ccna-como-prepararte` (después de la medición de fin de noviembre) |
 | `configurar vlan packet tracer` | 50 | Baja | Sección dentro de otra guía, no artículo propio |
+
+Keyword Planner, 16/11/2026, nov 2025 - oct 2026 (moneda ARS; la ubicación no figura en el export):
+
+| Keyword | Búsquedas/mes | Competencia | Asignada a |
+| --- | --- | --- | --- |
+| `comptia network+` | 50.000 | Baja | `redes/comptia-network-plus` (publicada 18/11/2026) |
+| `modelo osi` | 50.000 | Baja | `redes/fundamentos-de-redes-para-certificarte` (sección del modelo OSI) |
+| `que es una vlan` | 5.000 | Baja | `redes/fundamentos-de-redes-para-certificarte` (sección "Qué es una VLAN") |
+| `comandos basicos cisco` | 500 | Baja | Candidata a guía propia, pendiente |
+| `packet tracer ejercicios` | 50 | Baja | `redes/packet-tracer-que-es-y-como-descargarlo` (misma intención) |

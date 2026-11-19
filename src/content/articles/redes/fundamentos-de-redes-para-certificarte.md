@@ -4,7 +4,7 @@ description: "Para preparar el CCNA desde cero: modelo OSI, subredes con un ejem
 keyword: "ccna desde cero"
 cluster: "redes"
 pubDate: 2026-10-03
-updatedDate: 2026-10-24
+updatedDate: 2026-11-16
 author: "Valentín"
 draft: false
 ---
@@ -28,7 +28,9 @@ Esta tabla cruza los fundamentos de esta guía con los objetivos numerados de lo
 
 Dos lecturas útiles. Todo lo que pide el CCST, el CCNA lo vuelve a pedir con más detalle: si arrancás por el CCST, nada de lo que estudies se pierde. Y en el CCNA el salto está en el enrutamiento: el CCST pide entender qué es un gateway por defecto, el CCNA pide configurar y verificar rutas estáticas y OSPF.
 
-## El modelo de capas
+## El modelo OSI: las siete capas
+
+El modelo OSI es un modelo de referencia que divide la comunicación en red en siete capas, desde la física, que son los cables y las señales, hasta la de aplicación, que son los protocolos que usan los programas. Lo publicó la ISO. En la práctica, Internet funciona con el modelo TCP/IP, que agrupa esas funciones en menos capas, pero OSI sigue siendo el vocabulario común para describir dónde está un problema, y lo piden tanto los exámenes de Cisco como CompTIA Network+.
 
 | Capa OSI | Qué resuelve |
 | --- | --- |
@@ -63,6 +65,12 @@ IPv6 también está en los dos exámenes: el CCST pide identificar direcciones y
 - **VLANs**: separan una red física en redes lógicas independientes, aunque compartan el mismo switch.
 - **Rutas estáticas**: las configura una persona a mano; funcionan, pero no se adaptan solas a cambios en la red.
 - **Enrutamiento dinámico**: la red se adapta sola cuando algo cambia. El protocolo que evalúa el CCNA v1.1 es **OSPFv2 de área única**; la v2.0, que arranca en febrero de 2027, suma OSPFv3 para IPv6.
+
+### Qué es una VLAN
+
+Una VLAN (red de área local virtual) es una red lógica dentro de un switch: los equipos de una VLAN solo se ven entre sí, aunque estén conectados al mismo switch que los de otra. Sirve para separar sectores, por ejemplo usuarios y servidores, sin comprar un switch para cada uno, y cada VLAN lleva su propia subred.
+
+Para que dos VLAN se comuniquen hace falta un router o un switch de capa 3. Cómo se arma eso paso a paso, y los errores más comunes al configurarlas, está en la sección [CCNA desde cero](/redes/curso-ccna-como-prepararte/#ccna-desde-cero).
 
 ## Servicios que sostienen toda la red
 

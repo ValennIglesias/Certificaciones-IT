@@ -1,24 +1,24 @@
 ---
 title: "CompTIA Security+: qué es, cómo es el examen y la V8"
-description: "Security+ de CompTIA: dominios, formato (90 preguntas, 90 minutos, 750/900), qué cambia con la V8 de noviembre de 2026 y hasta cuándo se rinde la V7 en español."
+description: "Security+ de CompTIA: US$307 en Argentina y México y €323 en España, 90 preguntas en 90 minutos. Qué cambia con la V8, lanzada en noviembre de 2026, y hasta cuándo se rinde la V7 en español."
 keyword: "security+"
 cluster: "seguridad"
 pubDate: 2026-10-03
-updatedDate: 2026-10-24
+updatedDate: 2026-11-18
 author: "Valentín"
 draft: false
 heroImage: "../../../assets/hero-security-plus.jpg"
 heroAlt: "Placa con el texto «Security+», certificación de ciberseguridad"
 ---
 
-Security+ es la certificación de seguridad de CompTIA, una organización que no depende de ningún fabricante: lo que evalúa no está atado a los productos de una marca. Y está en un momento de cambio. CompTIA lanza la versión 8 del examen alrededor del 17 de noviembre de 2026, mientras la versión 7 sigue vigente hasta 2027. Si lo vas a rendir en español, esa diferencia de fechas importa.
+Security+ es la certificación de seguridad de CompTIA, una organización que no depende de ningún fabricante: lo que evalúa no está atado a los productos de una marca. Y está en un momento de cambio. CompTIA lanzó la versión 8 del examen el 17 de noviembre de 2026, y la versión 7 sigue vigente hasta 2027. Si lo vas a rendir en español, esa diferencia de fechas importa.
 
 ## Ficha del examen
 
 | Dato | Security+ V7 (SY0-701) | Security+ V8 (SY0-801) |
 | --- | --- | --- |
-| Lanzamiento | 7 de noviembre de 2023 | Alrededor del 17 de noviembre de 2026 |
-| Retiro | 11 de junio de 2027 en inglés; 13 de agosto de 2027 en español, japonés, portugués y tailandés | Unos tres años después del lanzamiento |
+| Lanzamiento | 7 de noviembre de 2023 | 17 de noviembre de 2026 |
+| Retiro | 11 de junio de 2027 en inglés; 13 de agosto de 2027 en español, japonés, portugués y tailandés | CompTIA lo estima para unos tres años después del lanzamiento |
 | Idiomas | Inglés, español, japonés, portugués y tailandés | Inglés |
 | Preguntas | Hasta 90, de opción múltiple y basadas en desempeño | Igual |
 | Duración | 90 minutos | Igual |
@@ -26,7 +26,7 @@ Security+ es la certificación de seguridad de CompTIA, una organización que no
 
 El formato no cambia entre versiones. Lo que cambia es el temario, y el idioma: al lanzamiento, la V8 solo se ofrece en inglés.
 
-CompTIA no exige requisitos para inscribirse. Para la V7 recomienda tener Network+ y dos años de experiencia en un puesto de administración de sistemas o de seguridad; para la V8, dos años de experiencia práctica como administrador de seguridad.
+CompTIA no exige requisitos para inscribirse. Para la V7 recomienda tener [Network+](/redes/comptia-network-plus/) y dos años de experiencia en un puesto de administración de sistemas o de seguridad; para la V8, dos años de experiencia práctica como administrador de seguridad.
 
 ## V7 o V8: cuál rendir
 
@@ -82,7 +82,15 @@ La certificación vence a los tres años. Para renovarla, CompTIA pide 50 unidad
 
 ## Cuánto cuesta
 
-CompTIA vende el voucher del examen en su tienda y el precio depende de la región, así que no hay un precio único para citar. Confirmalo en la tienda oficial para tu país antes de planificar.
+CompTIA cobra distinto según la región, y el voucher cuesta lo mismo para la V7 y para la V8:
+
+| Región | Voucher | Voucher con reintento |
+| --- | --- | --- |
+| Argentina y México | US$307 | US$405 |
+| España | €323 | €426 |
+| Estados Unidos | US$439 | US$579 |
+
+En Argentina y México el reintento suma US$98, alrededor del 32% de un voucher nuevo. Conviene pagarlo de entrada si creés que tenés más o menos esa probabilidad de desaprobar. Los mismos números para A+ y Network+ están en las guías de [CompTIA A+](/entrada/certificacion-comptia-a-plus/) y [CompTIA Network+](/redes/comptia-network-plus/).
 
 ## Por dónde empezar
 
@@ -96,6 +104,6 @@ Si después de Security+ pensás seguir escalando, el artículo sobre [requisito
 - [CompTIA Security+ V8 (SY0-801)](https://www.comptia.org/en-us/certifications/security/v8/): fecha de lanzamiento, dominios, idioma y contenido nuevo.
 - [CompTIA Security+](https://www.comptia.org/en-us/certifications/security/): puestos a los que apunta la certificación.
 - [Renovación de Security+](https://www.comptia.org/en-us/resources/ce/renew-options/renewing-security-single/): las 50 CEU del ciclo de tres años.
-- [Cuánto cuesta Security+ (blog de CompTIA)](https://www.comptia.org/en-us/blog/how-much-does-the-comptia-security-certification-cost/): compra del voucher y reintentos.
+- Precios por región en la sección de compra de CompTIA: [Argentina y México (Emerging Market)](https://www.comptia.org/en-em/certifications/security/v8/#buy-now), [España (Europa)](https://www.comptia.org/en-eu/certifications/security/v8/#buy-now) y [Estados Unidos](https://www.comptia.org/en-us/certifications/security/v8/#buy-now).
 
-*Datos verificados el 24 de octubre de 2026 en las páginas oficiales de CompTIA. La V8 se lanza en noviembre de 2026 y sus detalles pueden ajustarse: confirmá en la fuente antes de pagar.*
+*Datos verificados el 24 de octubre de 2026 en las páginas oficiales de CompTIA; lanzamiento de la V8, dominios y precios por región, el 18 de noviembre de 2026.*
